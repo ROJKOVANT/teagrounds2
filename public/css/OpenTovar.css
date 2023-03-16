@@ -1,0 +1,2978 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #212529;
+}
+/*Начало шапки сайта*/
+header{
+    top: 0;
+    width: 100%;
+    background-color: #212529;
+    border-bottom: 2px solid white;
+    position: fixed;
+}
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher', sans-serif;
+}
+.logo{
+    font-size: 1.8vw;
+}
+.navigation a{
+    color: white;
+}
+/*подчеркивание у ссылок*/
+.link-effect::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+.link-effect:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+/*Конец шапки сайта*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+.open_tovar{
+   display: flex;
+   margin: 7vw 100px 7vw;
+   flex-direction: column;
+}
+.open_tovar h1{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2.2vw;
+    padding-bottom: 0.5vw;
+    border-bottom: 1px solid white ;
+    margin: 5vw 0 0.5vw;
+}
+.tovar_product{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+/**/
+.tovar_img{
+    display: flex;
+    margin-top: 2.5vw;
+    flex-direction: row;
+    width: 850px;
+    height: 650px;
+    border: 1px solid white;
+   justify-content: center;
+   align-items: center;
+}
+.tovar_img img{
+    border-radius: 25vw;
+}
+/**/
+.tovar_info{
+    display: flex;
+    margin-top: 2.5vw;
+    flex-direction: column;
+    width: 500px;
+    height: 650px;
+    border: 1px solid white;
+    justify-content: center;
+}
+/*cont1*/
+.cont1{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 0 1vw;
+}
+.cont1 h4{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.5vw;
+}
+.cont1 p{
+    color: white;
+    font-family: 'Comfortaa';
+    font-size: 0.9vw;
+    word-wrap: break-all;
+    padding-bottom: 0.5vw;
+    border-bottom: 1px solid white;
+}
+/*cont2*/
+.cont2{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 0 1vw;
+    margin-top: 2.5vw;
+}
+.cont2 h4{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.5vw;
+}
+.cont2 p{
+    color: white;
+    font-family: 'Comfortaa';
+    font-size: 0.9vw;
+    word-wrap: break-all;
+    padding-bottom: 0.5vw;
+    border-bottom: 1px solid white;
+}
+.cont3{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 0 1vw;
+    margin-top: 2.5vw;
+}
+.cont3 ul > h4{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+}
+.cont3 ul > p{
+    color: white;
+    font-family: 'Comfortaa';
+    font-size: 1vw;
+}
+/**/
+.price_info{
+    display: flex;
+    margin-top: 2.5vw;
+    flex-direction: column;
+    width: 350px;
+    height: 650px;
+    border: 1px solid white;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 0.5vw;
+    padding: 2vw 1.2vw;
+}
+/*contprice1*/
+.contprice1{
+    margin-top: 0.5vw;
+    display: flex;
+}
+.contprice1 p{
+    color: white;
+    font-size: 2.2vw;
+    font-family: 'Philosopher', sans-serif;
+}
+.btn_top1{
+    display: flex;
+    justify-content: center;
+    margin: 0.5vw 0;
+    gap: 1vw;
+}
+.btn_top1_more1{
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: auto;
+    height: auto;
+    font-size: 0.9vw;
+    padding: 0.3vw 1vw;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2.5px;
+    transition: 2s;
+}
+.btn_top1_more1:hover{
+    background: white;
+    color: black;
+}
+.btn_top1_more2{
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: auto;
+    height: auto;
+    font-size: 0.9vw;
+    padding: 0.3vw 1vw;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2.5px;
+    transition: 2s;
+}
+.btn_top1_more2:hover{
+    background: white;
+    color: black;
+}
+.delivery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 1vw;
+}
+.delivery img{
+    width: 50px;
+    height: 50px;
+}
+.delivery p{
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Philosopher';
+}
+.info_price{
+    display: flex;
+    margin-top: 2vw;
+}
+.info_price p{
+    color: white;
+    font-size: 0.9vw;
+    font-family: 'Comfortaa';
+}
+/*описание*/
+    .paragraph h3{
+        color: white;
+        font-family: 'Philosopher', sans-serif;
+        font-size: 2.2vw;
+        margin: 7vw 100px 2.5vw;
+        text-align: center;
+        padding-bottom: 1.5vw;
+        border-bottom: 2px solid white;
+    }
+    .paragraph p{
+        margin: 2vw 100px 0;
+        color: white;
+        font-size: 1.2vw;
+        font-family: 'Comfortaa';
+        line-height: 2vw;
+    }
+    .container_btn{
+        display: flex;
+        /*justify-content: space-evenly;*/
+        justify-content: center;
+        gap: 6vw;
+        margin: 3vw 0;
+    }
+    /*1*/
+    .btn_contain1{
+        display: flex;
+        justify-content: center;
+    }
+    .btn_contain1_more1{
+        text-decoration: none;
+        background-color: transparent;
+        background-color: white;
+        color: black;
+        border: 1px solid white;
+        width: auto;
+        height: auto;
+        padding: 0.3vw 1.5vw;
+        font-size: 1.2vw;
+        font-family: 'Philosopher', sans-serif;
+        letter-spacing: 2.5px;
+        transition: 2s;
+    }
+    .btn_contain1_more1:hover{
+    background: white;
+    color: black;
+    }
+    /*2*/
+    .btn_contain2{
+        display: flex;
+        justify-content: center;
+    }
+    .btn_contain2_more2{
+        text-decoration: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        width: auto;
+        height: auto;
+        padding: 0.3vw 1.5vw;
+        font-size: 1.2vw;
+        font-family: 'Philosopher', sans-serif;
+        letter-spacing: 2.5px;
+        transition: 2s;
+    }
+    .btn_contain2_more2:hover{
+    background: white;
+    color: black;
+    }
+    /*3*/
+    .btn_contain3{
+        display: flex;
+        justify-content: center;
+        margin: 0.5vw 0;
+    }
+    .btn_contain3_more3{
+        text-decoration: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        width: auto;
+        height: auto;
+        padding: 0.3vw 1.5vw;
+        font-size: 1.2vw;
+        font-family: 'Philosopher', sans-serif;
+        letter-spacing: 2.5px;
+        transition: 2s;
+    }
+    .btn_contain3_more3:hover{
+    background: white;
+    color: black;
+    }
+    /*4*/
+    .btn_contain4{
+        display: flex;
+        justify-content: center;
+        margin: 0.5vw 0;
+    }
+    .btn_contain4_more4{
+        text-decoration: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        width: auto;
+        height: auto;
+        padding: 0.3vw 1.5vw;
+        font-size: 1.2vw;
+        font-family: 'Philosopher', sans-serif;
+        letter-spacing: 2.5px;
+        transition: 2s;
+    }
+    .btn_contain4_more4:hover{
+    background: white;
+    color: black;
+    }
+    /*5*/
+    .btn_contain5{
+        display: flex;
+        justify-content: center;
+        margin: 0.5vw 0;
+    }
+    .btn_contain5_more5{
+        text-decoration: none;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        width: auto;
+        height: auto;
+        padding: 0.3vw 1.5vw;
+        font-size: 1.2vw;
+        font-family: 'Philosopher', sans-serif;
+        letter-spacing: 2.5px;
+        transition: 2s;
+    }
+    .btn_contain5_more5:hover{
+    background: white;
+    color: black;
+    }
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Начало блока Footer*/
+.navigation_footer{
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5vw;
+    font-family: 'Philosopher';
+}
+footer{
+    height: 100%;
+    background-color: #191D21;
+    border-top: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vw;
+}
+footer .navigation_footer{
+    padding-top: 5vh;
+    width: 100%;
+}
+.logo > a{
+    font-size: 1.8vw;
+}
+.conf{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.conf > a{
+    font-size:1.2vw;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Philosopher';
+}
+footer a{
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Philosopher';
+    margin-top: 2.5vh;
+}
+.cop{
+    color: white;
+    font-family: 'Philosopher';
+    font-size: 1.4vw;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+/*Конец блока Footer*/
+
+/*верстка адаптива*/
+
+@media screen and (max-width: 1581px) {
+    /*шапка*/
+    .navigation {
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+        font-size: 1.5vw;
+    }
+    .logo {
+        font-size: 2vw;
+    }
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 6vw 100px 7vw;
+    }
+    .open_tovar h1{
+        font-size: 2.2vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 850px;
+        height: 650px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 500px;
+        height: 650px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 1.5vw;
+    }
+    .cont1 p{
+        font-size: 0.9vw;
+        padding-bottom: 0.5vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.5vw;
+    }
+    .cont2 p{
+        font-size: 0.9vw;
+        padding-bottom: 0.5vw;
+    }
+    .cont3{
+        gap: 2vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.2vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-size: 1vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 650px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 2.2vw;
+    }
+    .btn_top1{
+        margin: 0.5vw 0;
+        gap: 1vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 0.9vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 0.9vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 1vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 50px;
+        height: 50px;
+    }
+    .delivery p{
+        font-size: 1.2vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 0.9vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2vw;
+        margin: 7vw 100px 3vw;
+        padding-bottom: 1vw;
+    }
+    .paragraph p{
+        margin: 2vw 100px 0;
+        font-size: 1.3vw;
+        line-height: 2vw;
+    }
+    .container_btn{
+        margin: 3vw 0;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        font-size: 1.25vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        border: 1px solid white;
+        font-size: 1.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3{
+        margin: 0.5vw 0;
+    }
+    .btn_contain3_more3{
+        font-size: 1.25vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4{
+        margin: 0.5vw 0;
+    }
+    .btn_contain4_more4{
+        font-size: 1.25vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5{
+        margin: 0.5vw 0;
+    }
+    .btn_contain5_more5{
+        font-size: 1.25vw;
+        letter-spacing: 2.5px;
+    }
+    /*Начало блока Footer*/
+    .navigation_footer{
+        display: flex;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.5vw;
+        font-family: 'Philosopher';
+    }
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    footer .navigation_footer{
+        padding-top: 5vh;
+        width: 100%;
+    }
+    .logo > a{
+        font-size: 2vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.3vw;
+    }
+    footer a{
+        font-size: 1.5vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.4vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1441px){
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 6vw 100px 7vw;
+    }
+    .open_tovar h1{
+        font-size: 2.2vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 850px;
+        height: 650px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 500px;
+        height: 650px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 1.5vw;
+    }
+    .cont1 p{
+        font-size: 0.9vw;
+        padding-bottom: 0.5vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.5vw;
+    }
+    .cont2 p{
+        font-size: 0.9vw;
+        padding-bottom: 0.5vw;
+    }
+    .cont3{
+        gap: 2vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.2vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-size: 1vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 650px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 2.2vw;
+    }
+    .btn_top1{
+        margin: 0.5vw 0;
+        gap: 1vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 0.9vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 0.9vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 1vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 50px;
+        height: 50px;
+    }
+    .delivery p{
+        font-size: 1.2vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 0.9vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2vw;
+        margin: 7vw 100px 3vw;
+        padding-bottom: 1vw;
+    }
+    .paragraph p{
+        margin: 2vw 100px 0;
+        font-size: 1.3vw;
+        line-height: 2vw;
+    }
+    .container_btn{
+        margin: 3vw 0;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        border: 1px solid white;
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3{
+        margin: 0.5vw 0;
+    }
+    .btn_contain3_more3{
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4{
+        margin: 0.5vw 0;
+    }
+    .btn_contain4_more4{
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5{
+        margin: 0.5vw 0;
+    }
+    .btn_contain5_more5{
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+}
+@media screen and (max-width: 1301px) {
+    /*шапка*/
+    .navigation {
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+    }
+    .logo > a {
+        font-size: 2.5vw;
+    }
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 6vw 100px 7vw;
+    }
+    .open_tovar h1{
+        font-size: 2.2vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 850px;
+        height: 550px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 500px;
+        height: 550px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 1.5vw;
+    }
+    .cont1 p{
+        font-size: 0.9vw;
+        padding-bottom: 0.5vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.5vw;
+    }
+    .cont2 p{
+        font-size: 0.9vw;
+        padding-bottom: 0.5vw;
+    }
+    .cont3{
+        gap: 2vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.2vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-size: 1vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 550px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 2.2vw;
+    }
+    .btn_top1{
+        margin: 0.5vw 0;
+        gap: 1vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 0.9vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 0.9vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 1vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 50px;
+        height: 50px;
+    }
+    .delivery p{
+        font-size: 1.2vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 0.9vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2vw;
+        margin: 7vw 100px 3vw;
+        padding-bottom: 1vw;
+    }
+    .paragraph p{
+        margin: 2vw 100px 0;
+        font-size: 1.3vw;
+        line-height: 2vw;
+    }
+    .container_btn{
+        margin: 3vw 0;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        border: 1px solid white;
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3{
+        margin: 0.5vw 0;
+    }
+    .btn_contain3_more3{
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4{
+        margin: 0.5vw 0;
+    }
+    .btn_contain4_more4{
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5{
+        margin: 0.5vw 0;
+    }
+    .btn_contain5_more5{
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*Начало блока Footer*/
+    .navigation_footer{
+        display: flex;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 1.7vw;
+        font-family: 'Philosopher';
+    }
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    footer .navigation_footer{
+        padding-top: 5vh;
+        width: 100%;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.4vw;
+    }
+    footer a{
+        font-size: 1.6vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.5vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1282px) {
+    /*шапка*/
+    .navigation {
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+    }
+    .logo > a {
+        font-size: 2.5vw;
+    }
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 6vw 100px 7vw;
+    }
+    .open_tovar h1{
+        font-size: 2.2vw;
+        padding-bottom: 0.7vw;
+        margin: 7vw 0 2vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 600px;
+        height: 475px;
+    }
+    .tovar_img img{
+        width: 350px;
+        height: 350px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 500px;
+        height: 475px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 1.6vw;
+    }
+    .cont1 p{
+        font-size: 1vw;
+        padding-bottom: 0.7vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.6vw;
+    }
+    .cont2 p{
+        font-size: 1vw;
+        padding-bottom: 0.7vw;
+    }
+    .cont3{
+        gap: 2vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.3vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-size: 1.1vw;
+    }
+    /*цена*/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 475px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 2.3vw;
+    }
+    .btn_top1{
+        margin: 0.5vw 0;
+        gap: 1vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 1.1vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 1.1vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 1vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 40px;
+        height: 40px;
+    }
+    .delivery p{
+        font-size: 1.3vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2.1vw;
+        margin: 7vw 100px 3vw;
+        padding-bottom: 1vw;
+    }
+    .paragraph p{
+        margin: 2vw 100px 0;
+        font-size: 1.4vw;
+        line-height: 2vw;
+    }
+    .container_btn{
+        margin: 3vw 0;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 0.4vw 1.5vw;
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 0.4vw 1.5vw;
+        border: 1px solid white;
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3{
+        margin: 0.5vw 0;
+    }
+    .btn_contain3_more3{
+        padding: 0.4vw 1.5vw;
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4{
+        margin: 0.5vw 0;
+    }
+    .btn_contain4_more4{
+        padding: 0.4vw 1.5vw;
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5{
+        margin: 0.5vw 0;
+    }
+    .btn_contain5_more5{
+        padding: 0.4vw 1.5vw;
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*Начало блока Footer*/
+    .navigation_footer{
+        font-size: 1.7vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    footer .navigation_footer{
+        padding-top: 5vh;
+        width: 100%;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.5vw;
+    }
+    footer a{
+        font-size: 1.7vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.6vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1141px) {
+    /*шапка*/
+    .navigation {
+        margin-top: 1.8vw;
+        margin-bottom: 1.8vw;
+        font-size: 1.8vw;
+    }
+
+    .logo > a {
+        font-size: 2.6vw;
+    }
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 7vw 100px 7vw;
+    }
+    .open_tovar h1{
+        font-size: 2.3vw;
+        padding-bottom: 0.7vw;
+        margin: 7vw 0 2vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 525px;
+        height: 455px;
+    }
+    .tovar_img img{
+        width: 275px;
+        height: 275px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 500px;
+        height: 455px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 1.6vw;
+    }
+    .cont1 p{
+        font-size: 1.1vw;
+        padding-bottom: 0.7vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.6vw;
+    }
+    .cont2 p{
+        font-size: 1.1vw;
+        padding-bottom: 0.7vw;
+    }
+    .cont3{
+        gap: 2vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.3vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-size: 1.2vw;
+    }
+    /*цена*/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 455px;
+        gap: 1vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 2.3vw;
+    }
+    .btn_top1{
+        flex-direction: column;
+        margin: 0.5vw 0;
+        gap: 1.5vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 1.3vw;
+        padding: 0.5vw 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 1.3vw;
+        padding: 0.6vw 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 1vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 35px;
+        height: 35px;
+    }
+    .delivery p{
+        font-size: 1.4vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.1vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2.2vw;
+        margin: 7vw 100px 4vw;
+        padding-bottom: 1vw;
+    }
+    .paragraph p{
+        margin: 2vw 100px 0;
+        font-size: 1.5vw;
+        line-height: 2vw;
+    }
+    .container_btn{
+        margin: 3vw 0;
+        gap: 5vw;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 0.5vw 1.5vw;
+        font-size: 1.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 0.5vw 1.5vw;
+        border: 1px solid white;
+        font-size: 1.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 0.5vw 1.5vw;
+        font-size: 1.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 0.5vw 1.5vw;
+        font-size: 1.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 0.5vw 1.5vw;
+        font-size: 1.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*Начало блока Footer*/
+    .navigation_footer{
+        font-size: 1.7vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    footer .navigation_footer{
+        padding-top: 5vh;
+        width: 100%;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.55vw;
+    }
+    footer a{
+        font-size: 1.8vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.7vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1041px) {
+    /*шапка*/
+    .navigation {
+        margin-top: 1.9vw;
+        margin-bottom: 1.9vw;
+        font-size: 1.9vw;
+    }
+    .logo > a {
+        font-size: 2.7vw;
+    }
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 9vw 100px 10vw;
+    }
+    .open_tovar h1{
+        font-size: 2.5vw;
+        padding-bottom: 0.8vw;
+        margin: 7vw 0 2vw;
+    }
+    .tovar_product{
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+    }
+    /**/
+    .tovar_img{
+        height: 455px;
+        width: 100%;
+        margin: 2.5vw 100px 0;
+    }
+    .tovar_img img{
+        width: 350px;
+        height: 350px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 400px;
+        gap: 1vw;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 3vw;
+    }
+    .cont1 h4{
+        font-size: 1.9vw;
+        padding-bottom: 1vw;
+    }
+    .cont1 p{
+        font-size: 1.5vw;
+        padding-bottom: 0.9vw;
+        line-height: 2vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.9vw;
+        padding-bottom: 1vw;
+    }
+    .cont2 p{
+        font-size: 1.5vw;
+        padding-bottom: 0.9vw;
+        line-height: 2vw;
+    }
+    .cont3{
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 3vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.9vw;
+        padding-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-size: 1.5vw;
+    }
+    /*цена*/
+    .price_info{
+        justify-content: center;
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 350px;
+        gap: 2vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 3.5vw;
+    }
+    .btn_top1{
+        flex-direction: row;
+        margin: 0.5vw 0;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 1.6vw;
+        padding: 0.7vw 4vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 1.6vw;
+        padding: 0.7vw 4vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 5vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 55px;
+        height: 55px;
+    }
+    .delivery p{
+        font-size: 1.9vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.5vw;
+        line-height: 2vw;
+        padding: 0 3vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2.5vw;
+        margin: 8vw 100px 4vw;
+        padding-bottom: 1vw;
+    }
+    .paragraph p{
+        margin: 2vw 100px 0;
+        font-size: 1.6vw;
+        line-height: 2vw;
+    }
+    .container_btn{
+        margin: 3vw 0;
+        gap: 5vw;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 0.7vw 1.5vw;
+        border: 1px solid white;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*Начало блока Footer*/
+    .navigation_footer{
+        font-size: 1.7vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    footer .navigation_footer{
+        padding-top: 5vh;
+        width: 100%;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.65vw;
+    }
+    footer a{
+        font-size: 1.9vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.8vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1000px) {
+    /*шапка*/
+    .navigation {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2vw;
+    }
+
+    .logo > a {
+        font-size: 2.8vw;
+    }
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 9vw 100px 10vw;
+    }
+    .open_tovar h1{
+        font-size: 2.5vw;
+        padding-bottom: 0.8vw;
+        margin: 7vw 0 2vw;
+    }
+    .tovar_product{
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+    }
+    /**/
+    .tovar_img{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 455px;
+    }
+    .tovar_img img{
+        width: 350px;
+        height: 350px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 400px;
+        gap: 1vw;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 3vw;
+    }
+    .cont1 h4{
+        font-size: 1.9vw;
+        padding-bottom: 1vw;
+    }
+    .cont1 p{
+        font-size: 1.5vw;
+        padding-bottom: 0.9vw;
+        line-height: 2vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.9vw;
+        padding-bottom: 1vw;
+    }
+    .cont2 p{
+        font-size: 1.5vw;
+        padding-bottom: 0.9vw;
+        line-height: 2vw;
+    }
+    .cont3{
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 3vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.9vw;
+        padding-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-size: 1.5vw;
+    }
+    /*цена*/
+    .price_info{
+        justify-content: center;
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 350px;
+        gap: 2vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 3.5vw;
+    }
+    .btn_top1{
+        flex-direction: row;
+        margin: 0.5vw 0;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 1.6vw;
+        padding: 0.7vw 4vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 1.6vw;
+        padding: 0.7vw 4vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 5vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 55px;
+        height: 55px;
+    }
+    .delivery p{
+        font-size: 1.9vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.5vw;
+        line-height: 2vw;
+        padding: 0 3vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2.5vw;
+        margin: 8vw 100px 4vw;
+        padding-bottom: 1vw;
+    }
+    .paragraph p{
+        margin: 2vw 100px 0;
+        font-size: 1.6vw;
+        line-height: 2vw;
+    }
+    .container_btn{
+        margin: 3vw 0;
+        gap: 5vw;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 0.7vw 1.5vw;
+        border: 1px solid white;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+    }
+    /*Начало блока Footer*/
+    .navigation_footer{
+        font-size: 1.7vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    footer .navigation_footer{
+        padding-top: 5vh;
+        width: 100%;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.8vw;
+    }
+    footer a{
+        font-size: 2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.9vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 901px) {
+    /*шапка*/
+    .navigation {
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.2vw;
+    }
+
+    .logo > a {
+        font-size: 3vw;
+    }
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 9vw 100px 10vw;
+    }
+    .open_tovar h1{
+        font-size: 2.6vw;
+        padding-bottom: 0.9vw;
+        margin: 7vw 0 2vw;
+    }
+    .tovar_product{
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+    }
+    /**/
+    .tovar_img{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 455px;
+    }
+    .tovar_img img{
+        width: 350px;
+        height: 350px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 400px;
+        gap: 1vw;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 3vw;
+    }
+    .cont1 h4{
+        font-size: 2.1vw;
+        padding-bottom: 1.5vw;
+    }
+    .cont1 p{
+        font-size: 1.7vw;
+        padding-bottom: 1.2vw;
+        line-height: 2vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 2.1vw;
+        padding-bottom: 1.5vw;
+    }
+    .cont2 p{
+        font-size: 1.7vw;
+        padding-bottom: 1.2vw;
+        line-height: 2vw;
+    }
+    .cont3{
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 3vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 2.1vw;
+        padding-bottom: 1.5vw;
+    }
+    .cont3 ul > p{
+        font-size: 1.7vw;
+    }
+    /*цена*/
+    .price_info{
+        justify-content: center;
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 350px;
+        gap: 2vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 3.7vw;
+    }
+    .btn_top1{
+        flex-direction: row;
+        margin: 0.5vw 0;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 1.7vw;
+        padding: 0.7vw 4vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 1.7vw;
+        padding: 0.7vw 4vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 5vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 55px;
+        height: 55px;
+    }
+    .delivery p{
+        font-size: 2.2vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.7vw;
+        line-height: 2vw;
+        padding: 0 3vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2.7vw;
+        margin: 8.5vw 100px 4vw;
+        padding-bottom: 1.1vw;
+    }
+    .paragraph p{
+        margin: 1.2vw 100px 0;
+        font-size: 1.75vw;
+        line-height: 2.2vw;
+    }
+    .container_btn{
+        margin: 3vw 0;
+        gap: 2.5vw;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.7vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 0.7vw 1.5vw;
+        border: 1px solid white;
+        font-size: 1.7vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.7vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.7vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.7vw;
+        letter-spacing: 2.5px;
+    }
+    /*Начало блока Footer*/
+    .navigation_footer{
+        font-size: 1.7vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    footer .navigation_footer{
+        padding-top: 5vh;
+        width: 100%;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:2.1vw;
+    }
+    footer a{
+        font-size: 2.3vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.15vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 769px){
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 9vw 100px 10vw;
+    }
+    .open_tovar h1{
+        font-size: 2.8vw;
+        padding-bottom: 1vw;
+        margin: 7vw 0 2vw;
+    }
+    .tovar_product{
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+    }
+    /**/
+    .tovar_img{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 455px;
+    }
+    .tovar_img img{
+        width: 350px;
+        height: 350px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 400px;
+        gap: 1vw;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 3vw;
+    }
+    .cont1 h4{
+        font-size: 2.25vw;
+        padding-bottom: 1.5vw;
+    }
+    .cont1 p{
+        font-size: 1.85vw;
+        padding-bottom: 1.2vw;
+        line-height: 2vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 2.25vw;
+        padding-bottom: 1.5vw;
+    }
+    .cont2 p{
+        font-size: 1.85vw;
+        padding-bottom: 1.2vw;
+        line-height: 2vw;
+    }
+    .cont3{
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 2vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 2.2vw;
+        padding-bottom: 1.5vw;
+    }
+    .cont3 ul > p{
+        font-size: 1.8vw;
+    }
+    /*цена*/
+    .price_info{
+        justify-content: center;
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 350px;
+        gap: 2vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 4vw;
+    }
+    .btn_top1{
+        flex-direction: row;
+        margin: 0.5vw 0;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 1.85vw;
+        padding: 0.7vw 4vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 1.85vw;
+        padding: 0.7vw 4vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 5vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 50px;
+        height: 50px;
+    }
+    .delivery p{
+        font-size: 2.3vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.8vw;
+        line-height: 2.2vw;
+        padding: 0 3vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 2.9vw;
+        margin: 8.5vw 100px 4vw;
+        padding-bottom: 1.1vw;
+    }
+    .paragraph p{
+        margin: 1.2vw 100px 0;
+        font-size: 1.9vw;
+        line-height: 3vw;
+    }
+    .container_btn{
+        gap: 4vw;
+        flex-wrap: wrap;
+        margin: 3vw 100px;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.85vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 0.7vw 1.5vw;
+        border: 1px solid white;
+        font-size: 1.85vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.85vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.85vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 0.7vw 1.5vw;
+        font-size: 1.85vw;
+        letter-spacing: 2.5px;
+    }
+}
+@media screen and (max-width: 701px) {
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 11vw 60px 10vw;
+    }
+    .open_tovar h1{
+        font-size: 3vw;
+        padding-bottom: 1.1vw;
+        margin: 7vw 0 2vw;
+    }
+    .tovar_product{
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+    }
+    /**/
+    .tovar_img{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 455px;
+    }
+    .tovar_img img{
+        width: 350px;
+        height: 350px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        width: 100%;
+        margin: 2.5vw 100px 0;
+        height: 400px;
+        gap: 2vw;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 3vw;
+    }
+    .cont1 h4{
+        font-size: 2.7vw;
+        padding-bottom: 2vw;
+    }
+    .cont1 p{
+        font-size: 2vw;
+        padding-bottom: 1.5vw;
+        line-height: 2.5vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 2.7vw;
+        padding-bottom: 2vw;
+    }
+    .cont2 p{
+        font-size: 2vw;
+        padding-bottom: 1.5vw;
+        line-height: 2.5vw;
+    }
+    .cont3{
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 2vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 2.5vw;
+        padding-bottom: 1.5vw;
+    }
+    .cont3 ul > p{
+        font-size: 2vw;
+    }
+    /*цена*/
+    .price_info{
+        justify-content: center;
+        width: 100%;
+        margin: 2.5vw 60px 0;
+        height: 325px;
+        gap: 2.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 4.2vw;
+    }
+    .btn_top1{
+        flex-direction: row;
+        margin: 0.5vw 0;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 2.1vw;
+        padding: 0.9vw 4.5vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 2.1vw;
+        padding: 0.9vw 4.5vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 5vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 50px;
+        height: 50px;
+    }
+    .delivery p{
+        font-size: 2.5vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 2vw;
+        line-height: 2.5vw;
+        padding: 0 3vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 3.2vw;
+        margin: 8.5vw 60px 4vw;
+        padding-bottom: 1.4vw;
+    }
+    .paragraph p{
+        margin: 1.2vw 60px 0;
+        font-size: 2.1vw;
+        line-height: 3.2vw;
+    }
+    .container_btn{
+        gap: 4vw;
+        flex-wrap: wrap;
+        margin: 3vw 100px;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 0.9vw 2.2vw;
+        font-size: 2.2vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 0.9vw 2.2vw;
+        font-size: 2.2vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 0.9vw 2.2vw;
+        font-size: 2.2vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 0.9vw 2.2vw;
+        font-size: 2.2vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 0.9vw 2.2vw;
+        font-size: 2.2vw;
+        letter-spacing: 2.5px;
+    }
+}
+@media screen and (max-width: 589px) {
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 13vw 50px 10vw;
+    }
+    .open_tovar h1{
+        font-size: 3.4vw;
+        padding-bottom: 1.2vw;
+        margin: 9vw 0 2vw;
+    }
+    .tovar_product{
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+    }
+    /**/
+    .tovar_img{
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 455px;
+    }
+    .tovar_img img{
+        width: 350px;
+        height: 350px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 400px;
+        gap: 2vw;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 3vw;
+    }
+    .cont1 h4{
+        font-size: 3vw;
+        padding-bottom: 2.5vw;
+    }
+    .cont1 p{
+        font-size: 2.25vw;
+        padding-bottom: 1.5vw;
+        line-height: 2.7vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 3vw;
+        padding-bottom: 2.5vw;
+    }
+    .cont2 p{
+        font-size: 2.25vw;
+        padding-bottom: 1.5vw;
+        line-height: 2.7vw;
+    }
+    .cont3{
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 5vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 2.75vw;
+        padding-bottom: 2vw;
+    }
+    .cont3 ul > p{
+        font-size: 2.2vw;
+    }
+    /*цена*/
+    .price_info{
+        justify-content: center;
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 300px;
+        gap: 2.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 5vw;
+    }
+    .btn_top1{
+        flex-direction: row;
+        margin: 0.5vw 0;
+        gap: 6vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 2.3vw;
+        padding: 1vw 4.5vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 2.3vw;
+        padding: 1vw 4.5vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 5vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 47px;
+        height: 47px;
+    }
+    .delivery p{
+        font-size: 2.75vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 2.2vw;
+        line-height: 2.7vw;
+        padding: 0 3vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 3.5vw;
+        margin: 10vw 60px 6vw;
+        padding-bottom: 1.4vw;
+    }
+    .paragraph p{
+        margin: 1.2vw 60px 0;
+        font-size: 2.5vw;
+        line-height: 3.5vw;
+    }
+    .container_btn{
+        gap: 4vw;
+        flex-wrap: wrap;
+        margin: 3vw 100px;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 1vw 2.2vw;
+        font-size: 2.55vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 1vw 2.2vw;
+        font-size: 2.55vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 1vw 2.2vw;
+        font-size: 2.55vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 1vw 2.2vw;
+        font-size: 2.55vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 1vw 2.2vw;
+        font-size: 2.55vw;
+        letter-spacing: 2.5px;
+    }
+}
+@media screen and (max-width: 516px) {
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 13vw 50px 10vw;
+    }
+    .open_tovar h1{
+        font-size: 4vw;
+        padding-bottom: 1.2vw;
+        margin: 9vw 0 6vw;
+    }
+    .tovar_product{
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+    }
+    /**/
+    .tovar_img{
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 350px;
+    }
+    .tovar_img img{
+        width: 275px;
+        height: 275px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 400px;
+        gap: 2vw;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 3vw;
+    }
+    .cont1 h4{
+        font-size: 3.4vw;
+        padding-bottom: 2.7vw;
+    }
+    .cont1 p{
+        font-size: 2.45vw;
+        padding-bottom: 2vw;
+        line-height: 3vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 3.4vw;
+        padding-bottom: 2.7vw;
+    }
+    .cont2 p{
+        font-size: 2.45vw;
+        padding-bottom: 2vw;
+        line-height: 3vw;
+    }
+    .cont3{
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 5vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 2.95vw;
+        padding-bottom: 2vw;
+    }
+    .cont3 ul > p{
+        font-size: 2.5vw;
+    }
+    /*цена*/
+    .price_info{
+        justify-content: center;
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 300px;
+        gap: 2.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 5.5vw;
+    }
+    .btn_top1{
+        flex-direction: row;
+        margin: 0.5vw 0;
+        gap: 6vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 2.6vw;
+        padding: 1vw 4.5vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 2.6vw;
+        padding: 1vw 4.5vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 5vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 45px;
+        height: 45px;
+    }
+    .delivery p{
+        font-size: 3vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 2.5vw;
+        line-height: 3vw;
+        padding: 0 3vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 4vw;
+        margin: 12vw 50px 6vw;
+        padding-bottom: 1.5vw;
+    }
+    .paragraph p{
+        margin: 1.2vw 50px 0;
+        font-size: 2.7vw;
+        line-height: 3.7vw;
+    }
+    .container_btn{
+        gap: 5vw;
+        flex-wrap: wrap;
+        margin: 3vw 100px;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 1vw 2.2vw;
+        font-size: 2.8vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 1vw 2.2vw;
+        font-size: 2.8vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 1vw 2.2vw;
+        font-size: 2.8vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 1vw 2.2vw;
+        font-size: 2.8vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 1vw 2.2vw;
+        font-size: 2.8vw;
+        letter-spacing: 2.5px;
+    }
+}
+@media screen and (max-width: 426px){
+    /*Начало блока товар*/
+    .open_tovar{
+        margin: 13vw 50px 10vw;
+    }
+    .open_tovar h1{
+        font-size: 4.5vw;
+        padding-bottom: 1.2vw;
+        margin: 9vw 0 6vw;
+    }
+    .tovar_product{
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+    }
+    /**/
+    .tovar_img{
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 300px;
+    }
+    .tovar_img img{
+        width: 250px;
+        height: 250px;
+        border-radius: 30vw;
+    }
+    /**/
+    .tovar_info{
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 350px;
+        gap: 2vw;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 3vw;
+    }
+    .cont1 h4{
+        font-size: 3.7vw;
+        padding-bottom: 3vw;
+    }
+    .cont1 p{
+        font-size: 3vw;
+        padding-bottom: 2vw;
+        line-height: 3.2vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 2vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 3.7vw;
+        padding-bottom: 3vw;
+    }
+    .cont2 p{
+        font-size: 3vw;
+        padding-bottom: 2vw;
+        line-height: 3.2vw;
+    }
+    .cont3{
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 5vw;
+        padding: 0 3vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 3.2vw;
+        padding-bottom: 2vw;
+    }
+    .cont3 ul > p{
+        font-size: 2.8vw;
+    }
+    /*цена*/
+    .price_info{
+        justify-content: center;
+        width: 100%;
+        margin: 2.5vw 50px 0;
+        height: 300px;
+        gap: 3vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 6.5vw;
+    }
+    .btn_top1{
+        flex-direction: row;
+        margin: 0.5vw 0;
+        gap: 6vw;
+    }
+    .btn_top1_more1{
+        width: auto;
+        height: auto;
+        font-size: 3vw;
+        padding: 1.2vw 4.5vw;
+        letter-spacing: 2.5px;
+    }
+    .btn_top1_more2{
+        width: auto;
+        height: auto;
+        font-size: 3vw;
+        padding: 1.2vw 4.5vw;
+        letter-spacing: 2.5px;
+    }
+    .delivery{
+        gap: 5.5vw;
+        margin-top: 1vw;
+    }
+    .delivery img{
+        width: 45px;
+        height: 45px;
+    }
+    .delivery p{
+        font-size: 3.7vw;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 3vw;
+        line-height: 3.5vw;
+        padding: 0 3vw;
+    }
+    /*описание*/
+    .paragraph h3{
+        font-size: 4.7vw;
+        margin: 12vw 50px 7vw;
+        padding-bottom: 1.5vw;
+    }
+    .paragraph p{
+        margin: 1.4vw 50px 0;
+        font-size: 3.2vw;
+        line-height: 3.7vw;
+    }
+    .container_btn{
+        gap: 5vw;
+        flex-wrap: wrap;
+        margin: 3vw 50px;
+    }
+    /*1*/
+    .btn_contain1_more1{
+        padding: 1.2vw 2.5vw;
+        font-size: 3.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*2*/
+    .btn_contain2_more2{
+        padding: 1.2vw 2.5vw;
+        font-size: 3.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*3*/
+    .btn_contain3_more3{
+        padding: 1.2vw 2.5vw;
+        font-size: 3.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*4*/
+    .btn_contain4_more4{
+        padding: 1.2vw 2.5vw;
+        font-size: 3.5vw;
+        letter-spacing: 2.5px;
+    }
+    /*5*/
+    .btn_contain5_more5{
+        padding: 1.2vw 2.5vw;
+        font-size: 3.5vw;
+        letter-spacing: 2.5px;
+    }
+}
+@media screen and (max-width: 426px){
+    /*Начало блока товар*/
+    .tovar_img img{
+        width: 225px;
+        height: 225px;
+        border-radius: 30vw;
+    }
+}

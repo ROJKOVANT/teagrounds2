@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/* бокавая панель управления*/
+.navigation {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5vw;
+    font-family: "Philosopher", sans-serif;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vw;
+    border-right: 2px solid white;
+    position: fixed;
+    padding-left: 70px;
+    background-color: #212529;
+}
+.navigation li {
+    width: 300px;
+}
+.navigation a {
+    color: white;
+    font-family: "Philosopher";
+}
+.navigation-f1 {
+    margin-top: 3vw;
+}
+.navigation-f2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+    gap: 1.5vw;
+    padding-bottom: 1vw;
+    border-bottom: 2px solid white;
+}
+.navigation-f3 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+    gap: 1.5vw;
+    padding-bottom: 1vw;
+    border-bottom: 2px solid white;
+}
+.navigation-f4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vw;
+    gap: 1.5vw;
+    margin-bottom: 50vw;
+}
+/*начало Задайте нам свой вопрос*/
+.d-f {
+    display: flex;
+    /* margin: 0 100px 0 0; */
+    gap: 7vw;
+    margin-left: 18vw;
+    background-image: url("../img/imgheader1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height:auto;
+}
+.container {
+    display: flex;
+    margin-top: 3.5vw;
+    flex-direction: column;
+    gap: 5vw;
+    margin-left: 7vw;
+    margin-bottom: 5vw;
+}
+    /*поле ссылки*/
+    .point{
+        display: flex;
+        width: 300px;
+        height: 60px;
+        padding-left: 50px;
+        align-items: center;
+        background: rgba(25, 29, 33, 0.9);
+    }
+    .point p{
+        color: white;
+        font-family: 'Comfortaa';
+        font-size: 1.5vw;
+    }
+ /*поле данные*/
+ .info{
+    display: flex;
+    background: rgba(25, 29, 33, 0.9);
+    box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.49);
+    width: 1000px;
+    height: 350px;
+    padding: 25px  50px 0;
+    gap: 2vw;
+    flex-direction: column;
+}
+.info p{
+    color: white;
+    font-family: Arial;
+    font-size: 1vw;
+}
+.block{
+    display: flex;
+    gap: 4.5vw;
+}
+.info-avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    padding-right: 100px;
+    border-right: 2px solid white;
+}
+.elips{
+    width: 150px;
+    height: 150px;
+    background-color: beige;
+    border-radius: 50%;
+}
+.info-avatar p{
+    color: white;
+    font-family: Arial;
+    font-size: 1.2vw;
+}
+.info-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    align-items: flex-start;
+}
+.info-login{
+    display: flex;
+    border-bottom: 1px solid white;
+    gap: 2vw;
+}
+.info-login h4{
+    color: white;
+    font-size: 1.2vw;
+    font-family: Arial;
+}
+.info-login p{
+    color: white;
+    font-size: 1.2vw;
+    font-family: Arial;
+}
+.info-email{
+    display: flex;
+    border-bottom: 1px solid white;
+    gap: 1vw;
+}
+.info-email h4{
+    color: white;
+    font-size: 1.2vw;
+    font-family: Arial;
+}
+.info-email p{
+    color: white;
+    font-size: 1.2vw;
+    font-family: Arial;
+}
+button{
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 200px;
+    height: 40px;
+    font-size: 1vw;
+    font-family: 'Philosopher';
+    letter-spacing: 2.5px;
+    text-align: center;
+}
+button:hover{
+    background: white;
+    color: black;
+    transition: 2s;
+}

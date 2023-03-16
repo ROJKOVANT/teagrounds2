@@ -1,0 +1,855 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #212529;
+}
+header{
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    border-bottom: 3px solid white;
+}
+.navigation{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2vh;
+    font-size: 1.5vw;
+    font-family: 'Philosopher', sans-serif;
+}
+.navigation a{
+    color: white;
+}
+/*Конец шапки сайта*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+.under_header{
+    /* position: relative; */
+    padding-top: 10vh;
+    background-image: url('../img/imgheader1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+.logotip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vw;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Начало блока О НАС*/
+.about{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+.info{
+    display: flex;
+    margin: 0 100px;
+    justify-content: center;
+}
+h3{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2vw;
+    margin: 0 100px;
+    text-align: center;
+    padding-bottom: 2vw;
+    border-bottom: 2px solid white;
+}
+.text_one{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 2.5vw;
+}
+.text_one p{
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.1vw;
+    line-height: 2.5vw;
+}
+.separation{
+    border-right: 2px solid white;
+    margin-left: 90px;
+}
+.text_two{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2.5vw;
+    margin-left: 105px;
+}
+.text_two p{
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.1vw;
+    line-height: 2.5vw;
+}
+.card-btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+.card-btn button{
+    font-size: 1.1vw;
+    font-family: 'Philosopher', sans-serif;
+    border: 1px solid white;
+    color: white;
+    background-color: #212529;
+    padding: 0.5vw 4vw;
+    transition: 2s;
+}
+.card-btn button:hover{
+    background-color: white;
+    color: black;
+}
+/*Конец блока О НАС*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Начало блока каталог*/
+.assortment{
+    margin-top: 7vw;
+    margin-bottom: 5vw;
+}
+h3{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    padding-bottom: 2vw;
+    border-bottom: 2px solid white;
+    margin: 0 100px;
+}
+h4{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    margin: 5vw 0;
+}
+.subparagraph1 img{
+    height: 300px;
+    height: 300px;
+    margin-top: -11vw;
+    margin-left: 85vw;
+}
+.wrapper1{
+    display: grid;
+    gap: 2.5vw;
+    margin: 0 100px;
+    margin-top: -2.5vw;
+    justify-content: space-around;
+}
+.wrapper1 > div{
+    width: 300px;
+    height: 300px;
+}
+.item1{
+    grid-column: 1 / 2;
+}
+.item1 img{
+    width: 100%;
+    height: 250px;
+}
+.item1 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item2{
+    grid-column: 2 / 3;
+}
+.item2 img{
+    width: 100%;
+    height: 250px;
+}
+.item2 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item3{
+    grid-column: 3 / 4;
+}
+.item3 img{
+    width: 100%;
+    height: 250px;
+}
+.item3 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item4{
+    grid-column: 4 / 5;
+}
+.item4 img{
+    width: 100%;
+    height: 250px;
+}
+.item4 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+/*зеленный чай*/
+.subparagraph2 img{
+    height: 250px;
+    height: 250px;
+    margin-top: -12vw;
+    margin-left: auto;
+}
+.wrapper2{
+    display: grid;
+    gap: 2.5vw;
+    margin: 0 100px;
+    margin-top: -1vw;
+    justify-content: space-around;
+}
+.wrapper2 > div{
+    width: 300px;
+    height: 300px;
+}
+.item1{
+    grid-column: 1 / 2;
+}
+.item1 img{
+    width: 100%;
+    height: 250px;
+}
+.item1 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item2{
+    grid-column: 2 / 3;
+}
+.item2 img{
+    width: 100%;
+    height: 250px;
+}
+.item2 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item3{
+    grid-column: 3 / 4;
+}
+.item3 img{
+    width: 100%;
+    height: 250px;
+}
+.item3 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item4{
+    grid-column: 4 / 5;
+}
+.item4 img{
+    width: 100%;
+    height: 250px;
+}
+.item4 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+/*Коллекция смешанного чая*/
+.subparagraph3 img{
+    height: 300px;
+    height: 300px;
+    margin-top: -15.5vw;
+    margin-left: 83.5vw;
+}
+.wrapper3{
+    display: grid;
+    gap: 2.5vw;
+    margin: 0 100px;
+    justify-content: space-around;
+}
+.wrapper3 > div{
+    width: 300px;
+    height: 300px;
+}
+.item1{
+    grid-column: 1 / 2;
+}
+.item1 img{
+    width: 100%;
+    height: 250px;
+}
+.item1 p{
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item2{
+    grid-column: 2 / 3;
+}
+.item2 img{
+    width: 100%;
+    height: 250px;
+}
+.item2 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item3{
+    grid-column: 3 / 4;
+}
+.item3 img{
+    width: 100%;
+    height: 250px;
+}
+.item3 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+.item4{
+    grid-column: 4 / 5;
+}
+.item4 img{
+    width: 100%;
+    height: 250px;
+}
+.item4 p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    text-align: center;
+    margin-top: 0.5vw;
+}
+/*Конструктор*/
+.title1{
+    display: flex;
+    justify-content: flex-start;
+}
+.title1 p{
+font-family: 'Philosopher';
+font-style: normal;
+font-weight: 400;
+font-size: 300px;
+line-height: 85px;
+display: flex;
+align-items: center;
+text-align: center;
+color: rgba(67, 67, 67, 0.25);
+}
+.konstructor_info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191D21;
+    border: 1px solid white;
+    width: 70%;
+    height: 223px;
+    margin: auto;
+    position: relative;
+}
+.konstructor_info img{
+    width: 555px;
+    height: 220px;
+}
+.konstructor_info p{
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Comfortaa';
+    padding-left: 2.5vw;
+}
+.title2{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.title2 p{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 200px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(67, 67, 67, 0.25);
+    flex-direction: column
+}
+/*Конец блока ассортимент*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Начало блока блог*/
+.blog{
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+}
+h3{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    padding-bottom: 2vw;
+    border-bottom: 2px solid white;
+    margin: 0 100px;
+}
+.container{
+    display: grid;
+    gap: 2.5vw;
+    margin: 5vw 100px 0;
+    justify-content: space-around;
+}
+.container > div{
+    background-color: #191D21;
+    border: 1px solid white;
+    width: 302px;
+    height: 300px;
+}
+.item1_new{
+    grid-column: 1 / 2;
+}
+.item1_new img{
+    width: 300px;
+    height: 150px;
+}
+.item1_new a{
+    color: rgba(189, 186, 186, 0.25);
+    font-size: 0.6vw;
+    font-family: 'Comfortaa';
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.item1_new p{
+    color: white;
+    font-size: 0.7vw;
+    font-family: 'Comfortaa';
+    text-align: start;
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.item2_new{
+    grid-column: 2 / 3;
+}
+.item2_new img{
+    width: 300px;
+    height: 150px;
+}
+.item2_new a{
+    color: rgba(189, 186, 186, 0.25);
+    font-size: 0.6vw;
+    font-family: 'Comfortaa';
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.item2_new p{
+    color: white;
+    font-size: 0.7vw;
+    font-family: 'Comfortaa';
+    text-align: start;
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.item3_new{
+    grid-column: 3 / 4;
+}
+.item3_new img{
+    width: 300px;
+    height: 150px;
+}
+.item3_new a{
+    color: rgba(189, 186, 186, 0.25);
+    font-size: 0.6vw;
+    font-family: 'Comfortaa';
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.item3_new p{
+    color: white;
+    font-size: 0.7vw;
+    font-family: 'Comfortaa';
+    text-align: start;
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.item4_new{
+    grid-column: 4 / 5;
+}
+.item4_new img{
+    width: 300px;
+    height: 150px;
+}
+.item4_new a{
+    color: rgba(189, 186, 186, 0.25);
+    font-size: 0.6vw;
+    font-family: 'Comfortaa';
+    margin-top: 0vw;
+    margin-left: 1vw;
+}
+.item4_new p{
+    color: white;
+    font-size: 0.7vw;
+    font-family: 'Comfortaa';
+    text-align: start;
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+.btn_link a{
+    color: white;
+    font-family: 'Comfortaa';
+    text-align: start;
+    font-size: 0.6vw;
+    margin-left: 1vw;
+}
+/*Конец блока блог*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Начало блока отзывы*/
+.reviews{
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+}
+.container2{
+    display: grid;
+    gap: 2.5vw;
+    margin: 5vw 100px 0;
+    justify-content: space-around;
+}
+.container2 > div{
+    background-color: #191D21;
+    border: 1px solid white;
+    width: auto;
+    height: auto;
+}
+.item1_rev{
+    grid-column: 1 / 2;
+}
+.item1_rev h5{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    text-align: start;
+    font-size: 1vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    padding-bottom: 0.2vw;
+}
+.item1_rev p{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 0.8vw;
+    margin: 1vw 2vw;
+    width: auto;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    line-height: 1.1vw;
+}
+.item2_rev{
+    grid-column: 2 / 3;
+}
+.item2_rev h5{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    padding-bottom: 0.2vw;
+}
+.item2_rev p{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 0.8vw;
+    margin: 1vw 2vw;
+    width: auto;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    line-height: 1.1vw;
+}
+.item3_rev{
+    grid-column: 1 / 2;
+}
+.item3_rev h5{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    padding-bottom: 0.2vw;
+}
+.item3_rev p{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 0.8vw;
+    margin: 1vw 2vw;
+    width: auto;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    line-height: 1.1vw;
+}
+.item4_rev{
+    grid-column: 2 / 3;
+}
+.item4_rev h5{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1vw;
+    margin-top: 1vw;
+    margin-left: 2vw;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    padding-bottom: 0.2vw;
+}
+.item4_rev p{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 0.8vw;
+    margin: 1vw 2vw;
+    width: auto;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    line-height: 1.1vw;
+}
+/*Конец блока отзывы*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Начало блока напишите нам*/
+.napishite{
+    margin-top: 10vw;
+    margin-bottom: 5vw;
+}
+.container3{
+    margin: 5vw 100px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+input {
+    display: inline-block;
+    margin: 10px auto;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+}
+textarea {
+    display: inline-block;
+    margin: 10px auto;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 16px;
+}
+.block_info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.text1 h6{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    padding-bottom: 0.2vw;
+}
+.text1 p{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1vw;
+    margin: 1vw 0vw;
+    width: 500px;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    line-height: 1.1vw;
+}
+.text2 h6{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    padding-bottom: 0.2vw;
+}
+.text2 p{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1vw;
+    margin: 1vw 0vw;
+    width: 500px;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    line-height: 1.1vw;
+}
+.text3 h6{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    padding-bottom: 0.2vw;
+}
+.text3 p{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1vw;
+    margin: 1vw 0vw;
+    width: 500px;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    line-height: 1.1vw;
+}
+.text4 h6{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.2vw;
+    letter-spacing: 1px;
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    padding-bottom: 0.2vw;
+}
+.text4 p{
+    color: white;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1vw;
+    margin: 1vw 0vw;
+    width: 500px;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+    line-height: 1.1vw;
+}
+input{
+    background-color: transparent;
+    border: none;
+    border: #ffffff 1px solid;
+    outline: none;
+    width: 20vw;
+    height: 40px;
+    color: white;
+    font-size: 1vw;
+    padding: 5px;
+    padding-left: 1vw;
+    margin-bottom: 1vw;
+    font-family: 'Comfortaa';
+}
+textarea{
+    background-color: transparent;
+    border: none;
+    border: #ffffff 1px solid;
+    outline: none;
+    width: 20vw;
+    height: auto;
+    color: white;
+    font-size: 1vw;
+    padding: 5px;
+    padding-left: 1vw;
+    margin-bottom: 1vw;
+    font-family: 'Comfortaa';
+}
+/*Конец блока напишите нам*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Начало блока Footer*/
+.navigation_footer{
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5vw;
+    font-family: 'Philosopher';
+}
+footer{
+    height: 100%;
+    background-color: #191D21;
+    border-top: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10vw;
+}
+footer .navigation_footer{
+    padding-top: 5vh;
+    width: 100%;
+}
+footer a{
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Philosopher';
+    margin-top: 2.5vh;
+}
+.cop{
+    color: white;
+    font-family: 'Philosopher';
+    font-size: 1.2vw;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+/*Конец блока Footer*/

@@ -1,0 +1,558 @@
+body{
+    /* background-color: #212529; */
+    background-image: url('../img/imgheader1.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container a.navbar {
+    color: white;
+    text-decoration: none;
+    font-family: 'Philosopher';
+    font-size: 3vw;
+    margin-top: 3vw;
+}
+.d-c{
+    display: flex;
+    padding: 3vw 5vw 5vw;
+    margin-top: 4vw;
+    width: auto;
+    height: auto;
+    background: rgba(25, 29, 33, 0.9);
+    box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.49);
+}
+.d-f{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+h1{
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Philosopher';
+    padding-bottom: 50px;
+}
+input{
+    background-color: transparent;
+    border: none;
+    border: #ffffff 1px solid;
+    outline: none;
+    width: auto;
+    height: auto;
+    color: white;
+    font-size: 1vw;
+    padding: 0.5vw 2vw;
+    margin-bottom: 2vw;
+    font-family: 'Comfortaa';
+}
+.card-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-btn button{
+    font-size: 0.9vw;
+    font-family: 'Philosopher', sans-serif;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+    padding: 0.4vw 3vw;
+    transition: 2s;
+}
+.card-btn button:hover{
+    background-color: white;
+    color: black;
+}
+li{
+    list-style: none;
+    margin-top: 1.5vw;
+}
+li a{
+    color: white;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    font-family: 'Philosopher';
+    font-size: 1vw;
+}
+a{
+    text-decoration: none;
+    margin-top: 1.5vw;
+    color: white;
+    font-family: 'Philosopher';
+    font-size: 1vw;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 1.2s;
+}
+.link-remove:hover{
+    color: white;
+}
+.nav-link:hover{
+    color: white;
+}
+/*адаптив*/
+@media screen and (max-width: 1581px){
+    .d-c{
+        margin-top: 4vw;
+    }
+    h1{
+        font-size: 1.7vw;
+    }
+    input{
+        font-size: 1.2vw;
+        margin-bottom: 1.7vw;
+    }
+    .card-btn button{
+        font-size: 1vw;
+    }
+    li a, a{
+        font-size: 1.2vw;
+    }
+}
+@media screen and (max-width: 1441px) {
+    .container a.navbar {
+        font-size: 3vw;
+        margin-top: 4vw;
+    }
+    .d-c{
+        margin-top: 5vw;
+    }
+    h1{
+        font-size: 1.9vw;
+        padding-bottom: 25px;
+    }
+    input{
+        font-size: 1.4vw;
+        margin-bottom: 1.9vw;
+    }
+    .card-btn button{
+        font-size: 1.1vw;
+    }
+    li a, a{
+        font-size: 1.3vw;
+    }
+}
+@media screen and (max-width: 1301px) {
+    .container a.navbar {
+        font-size: 3.2vw;
+        margin-top: 5vw;
+    }
+    .d-c{
+        margin-top: 7vw;
+    }
+    h1{
+        font-size: 2vw;
+        padding-bottom: 25px;
+    }
+    input{
+        font-size: 1.5vw;
+        margin-bottom: 2.1vw;
+    }
+    .card-btn{
+        gap: 1vw;
+    }
+    .card-btn button{
+        font-size: 1.3vw;
+    }
+    li a, a{
+        font-size: 1.4vw;
+    }
+}
+@media screen and (max-width: 1201px) {
+    .container a.navbar {
+        font-size: 3.3vw;
+        margin-top: 5.5vw;
+    }
+    .d-c{
+        margin-top: 7.5vw;
+    }
+    h1{
+        font-size: 2.1vw;
+        padding-bottom: 25px;
+    }
+    input{
+        font-size: 1.6vw;
+        margin-bottom: 2.2vw;
+    }
+    .card-btn{
+        gap: 1vw;
+    }
+    .card-btn button{
+        font-size: 1.5vw;
+    }
+    li a, a{
+        font-size: 1.5vw;
+    }
+}
+@media screen and (max-width: 1141px) {
+    .container a.navbar {
+        font-size: 3.4vw;
+        margin-top: 5.8vw;
+    }
+    .d-c{
+        margin-top: 8vw;
+    }
+    h1{
+        font-size: 2.2vw;
+        padding-bottom: 25px;
+    }
+    input{
+        font-size: 1.7vw;
+        margin-bottom: 2.3vw;
+    }
+    .card-btn{
+        gap: 1vw;
+    }
+    .card-btn button{
+        font-size: 1.6vw;
+    }
+    li a, a{
+        font-size: 1.6vw;
+    }
+}
+@media screen and (max-width: 1101px) {
+    .container a.navbar {
+        font-size: 3.6vw;
+        margin-top: 6.2vw;
+    }
+    .d-c{
+        margin-top: 8.5vw;
+    }
+    h1{
+        font-size: 2.3vw;
+        padding-bottom: 25px;
+    }
+    input{
+        font-size: 1.8vw;
+        margin-bottom: 2.4vw;
+    }
+    .card-btn{
+        gap: 1.2vw;
+    }
+    .card-btn button{
+        font-size: 1.6vw;
+    }
+    li a, a{
+        font-size: 1.7vw;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .container a.navbar {
+        font-size: 3.7vw;
+        margin-top: 6.5vw;
+    }
+    .d-c{
+        margin-top: 8.7vw;
+    }
+    h1{
+        font-size: 2.4vw;
+        padding-bottom: 25px;
+    }
+    input{
+        font-size: 1.9vw;
+        margin-bottom: 2.6vw;
+    }
+    .card-btn{
+        gap: 1.2vw;
+    }
+    .card-btn button{
+        font-size: 1.7vw;
+    }
+    li a, a{
+        font-size: 1.8vw;
+    }
+}
+@media screen and (max-width: 925px) {
+    .container a.navbar {
+        font-size: 3.8vw;
+        margin-top: 6.7vw;
+    }
+    .d-c{
+        margin-top: 8.9vw;
+    }
+    h1{
+        font-size: 2.5vw;
+        padding-bottom: 25px;
+    }
+    input{
+        font-size: 2.1vw;
+        margin-bottom: 2.8vw;
+    }
+    .card-btn{
+        gap: 1.3vw;
+    }
+    .card-btn button{
+        font-size: 1.8vw;
+    }
+    li a, a{
+        font-size: 1.9vw;
+    }
+}
+@media screen and (max-width: 851px) {
+    .container a.navbar {
+        font-size: 4vw;
+        margin-top: 6.9vw;
+    }
+    .d-c{
+        margin-top: 9.1vw;
+    }
+    h1{
+        font-size: 2.6vw;
+        padding-bottom: 25px;
+    }
+    input{
+        font-size: 2.2vw;
+        margin-bottom: 3vw;
+    }
+    .card-btn{
+        gap: 1.3vw;
+    }
+    .card-btn button{
+        font-size: 1.9vw;
+    }
+    li a, a{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width: 801px) {
+    .container a.navbar {
+        font-size: 4.5vw;
+        margin-top: 8vw;
+    }
+    .d-c{
+        margin-top: 10vw;
+    }
+    h1{
+        font-size: 2.7vw;
+        padding-bottom: 30px;
+    }
+    input{
+        font-size: 2.3vw;
+        margin-bottom: 3.5vw;
+    }
+    .card-btn{
+        gap: 1.5vw;
+    }
+    .card-btn button{
+        font-size: 2vw;
+    }
+    li a, a{
+        font-size: 2.2vw;
+    }
+}
+@media screen and (max-width: 769px) {
+    .container a.navbar {
+        font-size: 4.6vw;
+        margin-top: 10vw;
+    }
+    .d-c{
+        margin-top: 12vw;
+    }
+    h1{
+        font-size: 2.9vw;
+        padding-bottom: 30px;
+    }
+    input{
+        font-size: 2.5vw;
+        margin-bottom: 3.7vw;
+    }
+    .card-btn{
+        gap: 1.7vw;
+    }
+    .card-btn button{
+        font-size: 2.1vw;
+    }
+    li a, a{
+        font-size: 2.3vw;
+        color: white;
+    }
+}
+@media screen and (max-width: 701px) {
+    .container a.navbar {
+        font-size: 5vw;
+        margin-top: 12vw;
+    }
+    .d-c{
+        margin-top: 14vw;
+    }
+    h1{
+        font-size: 3.1vw;
+        padding-bottom: 35px;
+    }
+    input{
+        font-size: 2.7vw;
+        margin-bottom: 4vw;
+    }
+    .card-btn{
+        gap: 2vw;
+    }
+    .card-btn button{
+        font-size: 2.2vw;
+    }
+    li a, a{
+        font-size: 2.4vw;
+    }
+}
+@media screen and (max-width: 631px) {
+    .container a.navbar {
+        font-size: 5.2vw;
+        margin-top: 12.8vw;
+    }
+    .d-c{
+        margin-top: 14.8vw;
+    }
+    h1{
+        font-size: 3.3vw;
+        padding-bottom: 35px;
+    }
+    input{
+        font-size: 3vw;
+        margin-bottom: 4.8vw;
+    }
+    .card-btn{
+        gap: 2.2vw;
+    }
+    .card-btn button{
+        font-size: 2.3vw;
+    }
+    li a, a{
+        font-size: 2.6vw;
+    }
+}
+@media screen and (max-width: 571px) {
+    .container a.navbar {
+        font-size: 6vw;
+        margin-top: 13.5vw;
+    }
+    .d-c{
+        margin-top: 15.5vw;
+    }
+    h1{
+        font-size: 4vw;
+        padding-bottom: 40px;
+    }
+    input{
+        font-size: 3.5vw;
+        margin-bottom: 5.5vw;
+    }
+    .card-btn{
+        gap: 2.5vw;
+    }
+    .card-btn button{
+        font-size: 3vw;
+    }
+    li a, a{
+        font-size: 3.2vw;
+    }
+}
+@media screen and (max-width: 471px) {
+    .container a.navbar {
+        font-size: 7vw;
+        margin-top: 14.5vw;
+    }
+    .d-c{
+        margin-top: 16.5vw;
+    }
+    h1{
+        font-size: 4.5vw;
+        padding-bottom: 40px;
+    }
+    input{
+        font-size: 4vw;
+        margin-bottom: 6vw;
+    }
+    .card-btn{
+        gap: 3vw;
+    }
+    .card-btn button{
+        font-size: 3.5vw;
+    }
+    li a, a{
+        font-size: 4vw;
+    }
+}
+@media screen and (max-width: 426px) {
+    .container a.navbar {
+        font-size: 7.5vw;
+        margin-top: 16vw;
+    }
+    .d-c{
+        margin-top: 18vw;
+    }
+    h1{
+        font-size: 5vw;
+        padding-bottom: 40px;
+    }
+    input{
+        font-size: 4.5vw;
+        margin-bottom: 7vw;
+    }
+    .card-btn{
+        gap: 4vw;
+    }
+    .card-btn button{
+        font-size: 4vw;
+    }
+    li a, a{
+        font-size: 4.5vw;
+    }
+}
+@media screen and (max-width: 378px) {
+    .container a.navbar {
+        font-size: 8vw;
+        margin-top: 20vw;
+    }
+    .d-c{
+        margin-top: 25vw;
+    }
+    h1{
+        font-size: 5.5vw;
+        padding-bottom: 40px;
+    }
+    input{
+        font-size: 6vw;
+        margin-bottom: 8vw;
+    }
+    .card-btn{
+        gap: 4.5vw;
+    }
+    .card-btn button{
+        font-size: 4.5vw;
+    }
+    li a, a{
+        font-size: 5vw;
+    }
+}
+@media screen and (max-width: 321px) {
+    .container a.navbar {
+        font-size: 9vw;
+        margin-top: 25vw;
+    }
+    .d-c{
+        margin-top: 30vw;
+    }
+    h1{
+        font-size: 7vw;
+        padding-bottom: 45px;
+    }
+    input{
+        font-size: 6.5vw;
+        margin-bottom: 10vw;
+    }
+    .card-btn{
+        gap: 5vw;
+    }
+    .card-btn button{
+        font-size: 5.4vw;
+    }
+    li a, a{
+        font-size: 5.5vw;
+    }
+}
