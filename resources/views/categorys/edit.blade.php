@@ -43,12 +43,12 @@
             <form action="{{route('category.update', ['id' => $categorys->id])}}" method="POST">
                 @csrf
                 <div>
-                    <label for="name">Введите  название категории</label>
+                    <label for="name" class="label-form">Введите  название категории</label>
                     <br>
-                    <input type="text" name="name" value="{{$categorys->name}}">
+                    <input type="text" name="name" class="input-form" value="{{$categorys->name}}">
                 </div>
                 <br>
-                <button type="submit">Обновить категорию</button>
+                <button type="submit" class="btn_top1">Обновить категорию</button>
             </form>
         </div>
     </div>

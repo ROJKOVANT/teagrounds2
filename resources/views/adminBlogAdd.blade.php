@@ -3,7 +3,7 @@
 @section('content')
 
     <head>
-        <link rel="stylesheet" href="{{ asset("css/adminBlogAdd.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/adminTovarAdd.css") }}">
     </head>
     <div class="navigation">
         <div class="navigation-f1">
@@ -37,49 +37,52 @@
     <div class="d-f">
         <div class="container">
             <div class="point">
-                <p>Добавить Новость</p>
+                <p>Добавить новость</p>
             </div>
-
             <!--Клиенты-->
             <div class="container7">
                 <li>
                     <a href="paragraphs">Список категорий</a>
                 </li>
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="{{route('adminBlogAdd.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div>
-                        <label for="paragraph">Выберите категорию</label><br>
+                        <label for="paragraph" class="label-form">Выберите категорию</label><br>
                         <select name="paragraph_id" id="paragraph">
-{{--                            @foreach($paragraphs as $paragraph)--}}
-{{--                                <option value="{{$paragraph->id}}">{{$paragraph->name}}</option>--}}
-{{--                            @endforeach--}}
+                            @foreach($paragraphs as $paragraph)
+                                <option value="{{$paragraph->id}}">{{$paragraph->name}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <br>
                     <div>
-                        <label for="title">Введите заголовок</label>
+                        <label for="subject" class="label-form">Введите тему</label>
                         <br>
-                        <textarea name="title" placeholder="Введите заголовок" cols="80" rows="15"></textarea>
+                        <textarea name="subject" class="textarea-form" placeholder="Введите тему" cols="40" rows="2.5"></textarea>
+                    </div>
+                    <div>
+                        <label for="title" class="label-form">Введите заголовок</label>
+                        <br>
+                        <textarea name="title" class="textarea-form" placeholder="Введите заголовок" cols="80" rows="15"></textarea>
                     </div>
                     <br>
                     <div>
-                        <label for="content1">Введите первое описание</label>
+                        <label for="content1" class="label-form">Введите первое описание</label>
                         <br>
-                        <textarea name="content1" placeholder="Введите описание" cols="80" rows="15"></textarea>
+                        <textarea name="content1" class="textarea-form" placeholder="Введите описание" cols="80" rows="15"></textarea>
                     </div>
                     <div>
-                        <label for="picture">Загрузите картинку</label>
+                        <label for="picture" class="label-form">Загрузите картинку</label>
                         <br>
-                        <input type="file" name="picture">
+                        <input type="file" name="picture" class="input-file">
                     </div>
                     <div>
-                        <label for="content2">Введите второе описание</label>
+                        <label for="content2" class="label-form">Введите второе описание</label>
                         <br>
-                        <textarea name="content2" placeholder="Введите описание" cols="80" rows="15"></textarea>
+                        <textarea name="content2" class="textarea-form" placeholder="Введите описание" cols="80" rows="15"></textarea>
                     </div>
-
                     <br>
-                    <button type="submit">Загрузить</button>
+                    <button type="submit" class="btn_top1">Загрузить статью</button>
                 </form>
             </div>
         </div>

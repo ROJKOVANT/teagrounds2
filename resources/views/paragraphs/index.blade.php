@@ -37,18 +37,20 @@
     <div class="d-f">
         <div class="container">
             <div class="point">
-                <p>Категории </p>
+                <p>Категории</p>
             </div>
-            <li>
-                <a href="{{ route('paragraph.create') }}">Добавить категорию</a>
-            </li>
             <!--Категории-->
+            <div class="container7">
+                <li>
+                    <a href="{{ route('paragraph.create') }}">Добавить категорию</a>
+                </li>
+            </div>
             <table>
                 <thead>
                 <tr>
-                    <th scope="col"><a href="#" class="sort-by"><h3>Категория</h3></a></th>
-                    <th scope="col"><a href="#" class="sort-by"><h3>Изменить</h3></a></th>
-                    <th scope="col"><a href="#" class="sort-by"><h3>Удалить</h3></a></th>
+                    <th><h3>Категория</h3></th>
+                    <th><h3>Изменить</h3></th>
+                    <th><h3>Удалить</h3></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -65,6 +67,5 @@
                 @endforeach
                 </tbody>
             </table>
-            </div>
         </div>
     </div>

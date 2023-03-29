@@ -13,9 +13,9 @@
     <div class="navigation-f2">
         <li><a href="admin">Клиенты</a></li>
         <li><a href="adminTovarAdd">Добавить товар</a></li>
-        <li><a href="adminTovarDelete">Удалить товар</a></li>
-        <li><a href="">Добавить статью</a></li>
-        <li><a href="adminBlogDelete">Удалить статью</a></li>
+        <li><a href="adminTovar">Товары</a></li>
+        <li><a href="adminBlogAdd">Добавить статью</a></li>
+        <li><a href="adminBlog">Статьи</a></li>
     </div>
 
     <div class="navigation-f4">
@@ -39,7 +39,9 @@
         <div class="point">
             <p>Клиенты</p>
         </div>
-
+    @php
+        $data = \App\Models\User::all();
+    @endphp
 
         @foreach($data as $el)
         <!--Клиенты-->
@@ -48,7 +50,7 @@
             <div class="block">
                 <div class="info-avatar">
                     <div class="elips"></div>
-                    <p>{{$el->name}}</p>
+                    <p>{{$el->fio}}</p>
                 </div>
                 <div class="info-info">
                     <div class="info-login">

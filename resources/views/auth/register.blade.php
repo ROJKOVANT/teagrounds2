@@ -79,6 +79,16 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                            <div class="input_fio">
+                                <input id="fio" type="text" class="form-control @error('fio') is-invalid @enderror" name="fio" value="{{ old('fio') }}" required autocomplete="fio" autofocus placeholder="Введите ФИО">
+
+                                @error('fio')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
                             <div class="input_name">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Введите логин">
 
@@ -90,7 +100,7 @@
                             </div>
 
                             <div class="input_email">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Введите логин">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Введите почту">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -100,7 +110,7 @@
                             </div>
 
                             <div class="input_password">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Введите логин">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Введите пароль">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -110,7 +120,7 @@
                             </div>
 
                             <div class="input_password_confirm">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Введите логин">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Введите пароль">
                             </div>
 
                             <div class="card-btn">

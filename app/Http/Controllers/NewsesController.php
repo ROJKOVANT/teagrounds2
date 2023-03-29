@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Paragraph;
 use App\Models\News;
 use Illuminate\Http\Request;
-
 class NewsesController extends Controller
 {
     /**
@@ -15,7 +14,18 @@ class NewsesController extends Controller
      */
     public function index($id)
     {
-        //
+        $categori = News::all();
+        if ($id === 'all' || $id === ''){
+            return view('blog')->with('newses', News::all());
+        }else{
+            $categori = News::all();
+            foreach ( $categori as $item){
+                if ($item->id == $id){
+                    return view('blog')->with('newses', News::all()->where('paragraph_id', '===', $id));
+                }
+            }
+            return view('blog')->with('newses', News::all());
+        }
     }
 
     /**
@@ -25,7 +35,7 @@ class NewsesController extends Controller
      */
     public function create()
     {
-        //
+        return view('adminBlogAdd')->with('paragraphs', Paragraph::all());
     }
 
     /**
@@ -36,7 +46,30 @@ class NewsesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            "subject" => "required ",
+            "title" => "required ",
+            "content1" => "required",
+            "content2" => "required",
+            "paragraph_id" => "required",
+            "picture" => "required|image",
+        ]);
+
+        $picture = $request->picture;
+        $picture_new_name = time().$picture->getClientOriginalName();
+        $picture->move('uploads/news/', $picture_new_name);
+
+        News::create([
+            "subject" => $request->input('subject'),
+            "title" => $request->input('title'),
+            "content1" => $request->input('content1'),
+            "content2" => $request->input('content2'),
+            "paragraph_id" => $request->input('paragraph_id'),
+            "picture" => 'uploads/news/'.$picture_new_name,
+            "slug" => $request->input('title')//str_slug($request->title)
+        ]);
+
+        return redirect('adminBlog');
     }
 
     /**
@@ -58,7 +91,9 @@ class NewsesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $news = News::find($id);
+
+        return view('news.edit')->with('news', $news)->with('paragraphs', Paragraph::all());
     }
 
     /**
@@ -70,7 +105,32 @@ class NewsesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+//        dd($request->all());
+        $news = News::find($id);
+
+        $this->validate($request,[
+            "subject" => "required ",
+            "title" => "required ",
+            "content1" => "required",
+            "content2" => "required",
+            "paragraph_id" => "required",
+        ]);
+
+        if($request->hasFile('picture')){
+            $picture = $request->picture;
+            $picture_new_name = time().$picture->getClientOriginalName();
+            $picture->move('uploads/news/',$picture_new_name);
+            $news->picture = 'uploads/news/'.$picture_new_name;
+        }
+
+        $news->subject = $request->input('subject');
+        $news->title = $request->input('title');
+        $news->content1 = $request->input('content1');
+        $news->content2 = $request->input('content2');
+        $news->paragraph_id = $request->input('paragraph_id');
+        $news->save();
+
+        return redirect('adminBlog');
     }
 
     /**
@@ -81,6 +141,14 @@ class NewsesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $news = News::find($id);
+        $news->delete();
+
+        return redirect()->back();
+    }
+    /**/
+    public function news($id)
+    {
+        return view('news.index')->with('news', News::find($id));
     }
 }

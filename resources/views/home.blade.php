@@ -43,29 +43,29 @@
         <div class="point">
             <p>Профиль</p>
         </div>
-
+{{--        @php--}}
+{{--            $data = \App\Models\User::all();--}}
+{{--        @endphp--}}
         <div class="info">
             <p>Ваши данные</p>
+{{--            @foreach($users as $el)--}}
             <div class="block">
                 <div class="info-avatar">
                     <div class="elips"></div>
-                    <p>Рожков Антон Александрович</p>
+                    <p>{{Auth::user()->fio}}</p>
                 </div>
                 <div class="info-info">
                     <div class="info-login">
                         <h4>Ваш логин:</h4>
-                        <p>Anton</p>
-                    </div>
-                    <div class="info-password">
-                        <h4>Ваш пароль:</h4>
-                        <p>**********</p>
+                        <p>{{Auth::user()->name}}</p>
                     </div>
                     <div class="info-email">
                         <h4>Ваша почта:</h4>
-                        <p>antonrojkov_04@mail.ru</p>
+                        <p>{{Auth::user()->email}}</p>
                     </div>
                 </div>
             </div>
+{{--            @endforeach--}}
         </div>
 
         <div class="card">

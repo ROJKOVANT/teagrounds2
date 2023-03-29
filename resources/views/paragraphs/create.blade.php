@@ -53,12 +53,11 @@
             <form action="{{route('paragraph.store')}}" method="POST">
                 @csrf
                 <div>
-                    <label for="name">Введите категории</label>
+                    <label for="name" class="label-form">Введите категории</label>
                     <br>
-                    <input type="text" name="name" placeholder="Введите название категории">
+                    <input type="text" name="name" class="input-form" placeholder="Введите название категории">
                 </div>
-                <br>
-                <button type="submit">Создать категорию</button>
+                <button type="submit" class="btn_top1">Создать категорию</button>
             </form>
         </div>
     </div>

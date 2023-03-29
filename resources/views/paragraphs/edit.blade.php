@@ -43,13 +43,13 @@
             <form action="{{route('paragraph.update', ['id' => $paragraphs->id])}}" method="POST">
                 @csrf
                 <div>
-                    <label for="name">Введите  название категории</label>
+                    <label for="name" class="label-form">Измените  название темы</label>
                     <br>
-                    <input type="text" name="name" value="{{$paragraphs->name}}">
+                    <input type="text" name="name" class="input-form" value="{{$paragraphs->name}}">
                 </div>
                 <br>
-                <button type="submit">Обновить категорию</button>
+                <button type="submit" class="btn_top1">Обновить категорию</button>
             </form>
         </div>
     </div>
-    </div>
+

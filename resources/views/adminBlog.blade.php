@@ -39,112 +39,31 @@
         <div class="point">
             <p>Статьи</p>
         </div>
-
-        <!--Клиенты-->
-        <div class="container7">
-            <div class="top1">
-                <div class="global1">
-                    <h4>Карточка статьи</h4>
-                    <img src="{{ asset("img/block4img2.png") }}" alt="">
-                    <h5>Что такое “Bubble tea”</h5>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
+    @php
+        $news = \App\Models\News::all();
+    @endphp
+{{--Товары--}}
+        <div class="container1">
+            @foreach($news as $el)
+            <div class="card">
+                <img src="{{$el->picture}}" alt="">
+                <div class="card-content">
+                    <div class="card-title">
+                        <h4>{{$el->paragraph->name}}</h4>
                     </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Удалить товар</button>
+                    <p class="card-text">{{$el->subject}}</p>
+                    <div class="btn_top1">
+                        <a href="{{route('news.index', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
+                    </div>
+                    <div class="btn_top1">
+                        <a href="{{route('news.edit', ['id'=> $el->id])}}"><button class="btn_top1_more1">Изменить статью</button></a>
+                    </div>
+                    <div class="btn_top1">
+                        <a href="{{route('adminBlog.delete', ['id'=> $el->id])}}"><button class="btn_top1_more1">Удалить статью</button></a>
                     </div>
                 </div>
             </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Карточка статьи</h4>
-                    <img src="{{ asset("img/block4img3.png") }}" alt="">
-                    <h5>Что такое “Bubble tea”</h5>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Удалить товар</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Карточка статьи</h4>
-                    <img src="{{ asset("img/block4img2.png") }}" alt="">
-                    <h5>Что такое “Bubble tea”</h5>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Удалить товар</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Карточка статьи</h4>
-                    <img src="{{ asset("img/block4img3.png") }}" alt="">
-                    <h5>Что такое “Bubble tea”</h5>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Удалить товар</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Карточка статьи</h4>
-                    <img src="{{ asset("img/block4img2.png") }}" alt="">
-                    <h5>Что такое “Bubble tea”</h5>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Удалить товар</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Карточка статьи</h4>
-                    <img src="{{ asset("img/block4img3.png") }}" alt="">
-                    <h5>Что такое “Bubble tea”</h5>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Удалить товар</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Карточка статьи</h4>
-                    <img src="{{ asset("img/block4img2.png") }}" alt="">
-                    <h5>Что такое “Bubble tea”</h5>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Удалить товар</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Карточка статьи</h4>
-                    <img src="{{ asset("img/block4img3.png") }}" alt="">
-                    <h5>Что такое “Bubble tea”</h5>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Удалить статью</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
+</div>

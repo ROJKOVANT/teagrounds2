@@ -35,13 +35,15 @@
 
         <section class="paragraph">
             <h3>Статьи</h3>
-
+            @php
+                $news = \App\Models\Paragraph::all();
+            @endphp
             <div class="container_btn">
-                <button class="btn_top1">Все статьи</button>
-                <button class="btn_top2">Советы покупателям</button>
-                <button class="btn_top3">Важно знать</button>
+                <a class="" href="http://127.0.0.1:8000/blog/"><button class="btn_top1">Все новости</button></a>
+                @foreach($news as $paragraph)
+                    <a class="" href="http://127.0.0.1:8000/blog/{{$paragraph->name}}"><button class="btn_top1">{{$paragraph->name}}</button></a>
+                @endforeach
             </div>
-
             <div class="container">
                 <div class="card">
                     <img src="{{ asset("img/block4img1.png") }}" alt="">

@@ -54,7 +54,7 @@
     gap: 1.5vw;
     margin-bottom: 50vw;
 }
-/*начало Задайте нам свой вопрос*/
+/*начало добавить товар*/
 .d-f {
     display: flex;
     /* margin: 0 100px 0 0; */
@@ -65,6 +65,7 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    /*height:100%;*/
     height:auto;
 }
 .container {
@@ -75,95 +76,103 @@
     margin-left: 7vw;
     margin-bottom: 5vw;
 }
-    /*поле ссылки*/
-    .point{
-        display: flex;
-        width: 300px;
-        height: 60px;
-        padding-left: 50px;
-        align-items: center;
-        background: rgba(25, 29, 33, 0.9);
-    }
-    .point p{
-        color: white;
-        font-family: 'Comfortaa';
-        font-size: 1.5vw;
-    }
- /*поле данные*/
- .info{
+/*поле ссылки*/
+.point{
     display: flex;
+    width: 300px;
+    height: 60px;
+    padding-left: 50px;
+    align-items: center;
     background: rgba(25, 29, 33, 0.9);
-    box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.49);
-    width: 1000px;
-    height: 350px;
-    padding: 25px  50px 0;
-    gap: 2vw;
+}
+.point p{
+    color: white;
+    font-family: 'Comfortaa';
+    font-size: 1.5vw;
+}
+/*--------------*/
+.container7{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 2vw;
+}
+.container7 a{
+    color: white;
+    font-size: 1.2vw;
+    font-family: "Philosopher";
+}
+.container7 a:hover{
+    color: #797979;
+}
+.top1{
+    display: flex;
     flex-direction: column;
 }
-.info p{
+form{
+    margin-top: 0.5vw;
     color: white;
-    font-family: Arial;
     font-size: 1vw;
+    font-family: 'Comfortaa';
 }
-.block{
-    display: flex;
-    gap: 4.5vw;
-}
-.info-avatar{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-    padding-right: 100px;
-    border-right: 2px solid white;
-}
-.elips{
-    width: 150px;
-    height: 150px;
-    background-color: beige;
-    border-radius: 50%;
-}
-.info-avatar p{
-    color: white;
-    font-family: Arial;
-    font-size: 1.2vw;
-}
-.info-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-    align-items: flex-start;
-}
-.info-login{
-    display: flex;
-    border-bottom: 1px solid white;
-    gap: 2vw;
-}
-.info-login h4{
+.label-form{
     color: white;
     font-size: 1.2vw;
-    font-family: Arial;
 }
-.info-login p{
+select{
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+    /*background: none;*/
+    background: #212529;
     color: white;
-    font-size: 1.2vw;
-    font-family: Arial;
+    padding: 0.5vw;
+    border: 1.5px solid white ;
+    font-size: 0.8vw;
 }
-.info-email{
-    display: flex;
-    border-bottom: 1px solid white;
-    gap: 1vw;
-}
-.info-email h4{
+select > option{
+    background: rgba(25, 29, 33, 0.9);
     color: white;
-    font-size: 1.2vw;
-    font-family: Arial;
+    font-size: 0.8vw;
+    padding: 0.5vw;
+    border: 1px solid white ;
 }
-.info-email p{
+.textarea-form{
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+    background: #212529;
     color: white;
-    font-size: 1.2vw;
-    font-family: Arial;
+    font-size: 0.8vw;
+    border: 1.5px solid white;
+    padding: 0.5vw;
+    resize: none;
+}
+.btn_top1{
+    font-size: 0.8vw;
+    font-family: 'Philosopher', sans-serif;
+    border: 1px solid white;
+    color: white;
+    background-color: #212529;
+    padding: 0.4vw 3vw;
+    transition: 2s;
+}
+.btn_top1:hover{
+    background-color: white;
+    color: black;
+}
+.input-file{
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+}
+input::file-selector-button{
+    font-size: 0.8vw;
+    font-family: 'Philosopher', sans-serif;
+    border: 1px solid white;
+    color: white;
+    background-color: #212529;
+    padding: 0.4vw 3vw;
+    transition: 2s;
+}
+input::file-selector-button:hover{
+    background-color: white;
+    color: black;
 }

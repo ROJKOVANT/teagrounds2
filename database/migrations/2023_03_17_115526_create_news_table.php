@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\News;
 
 return new class extends Migration
 {
@@ -15,9 +16,10 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('content1');
-            $table->string('content2');
+            $table->text('subject');
+            $table->text('title');
+            $table->text('content1');
+            $table->text('content2');
             $table->string('paragraph_id');
             $table->string('picture');
             $table->string('slug');
