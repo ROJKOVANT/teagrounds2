@@ -38,6 +38,9 @@ Route::get('/blog', function () {
 Route::get('/OpenNews', function () {
     return view('OpenNews');
 });
+//Route::get('/OpenNews/{id}', [App\Http\Controllers\NewsesController::class, 'new'])->name('OpenNews');/*страница с новостью*/
+Route::get('/OpenNews', [App\Http\Controllers\NewsesController::class, 'random'])->name('OpenNews');/*вывод рандомных новостей*/
+
 
 Route::get('/OpenTovar', function () {
     return view('OpenTovar');
@@ -98,6 +101,7 @@ Route::get('/adminBlog', function () {
     return view('adminBlog');
 });/*все новости*/
 Route::get('/news/index/{id}', [App\Http\Controllers\NewsesController::class, 'news'])->name('news.index');/*страница с новостью*/
+//Route::get('/news/index/{id}', [App\Http\Controllers\NewsesController::class, 'random'])->name('news.index');/*вывод рандомных новостей*/
 Route::get('/news/edit/{id}', [App\Http\Controllers\NewsesController::class, 'edit'])->name('news.edit');/*изменить новость*/
 Route::post('/news/update/{id}', [App\Http\Controllers\NewsesController::class, 'update'])->name('news.update');/*сохранить изменение новости*/
 Route::get('/adminBlog/delete/{id}', [App\Http\Controllers\NewsesController::class, 'destroy'])->name('adminBlog.delete');/*удалить новость*/
@@ -114,3 +118,12 @@ Route::post('/towars/update/{id}', [App\Http\Controllers\TowarsController::class
 Route::get('/adminTovar/delete/{id}', [App\Http\Controllers\TowarsController::class, 'destroy'])->name('adminTovar.delete');/*удалить товар*/
 Route::get('/adminTovarAdd', [App\Http\Controllers\TowarsController::class, 'create'])->name('adminTovarAdd');/*создать товар*/
 Route::post('/adminTovarAdd/store', [App\Http\Controllers\TowarsController::class, 'store'])->name('adminTovarAdd.store');/*занести данные товар*/
+
+
+/*корзина*/
+Route::post('/add_cart/{id}', [App\Http\Controllers\HomeController::class, 'add_cart'])->name('add_cart');/*добавить в корзину*/
+Route::get('/carts', [App\Http\Controllers\HomeController::class, 'carts'])->name('carts.index');/*корзина с товарами*/
+Route::get('/carts/delete{id}', [App\Http\Controllers\HomeController::class, 'cart_destroy'])->name('carts.delete');/*добавить в корзину*/
+
+/*Оформление заказов*/
+Route::get('/cash_order', [App\Http\Controllers\HomeController::class, 'cash_order'])->name('cash_order');/*корзина с товарами*/

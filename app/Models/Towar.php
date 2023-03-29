@@ -19,11 +19,16 @@ class Towar extends Model
         'view',/*вид чая*/
         'taste',/*вкус чая*/
         'price',/*цена чая*/
+        'count',/*цена чая*/
         'category_id',/*категория чая*/
         'slug',
     ];
 
     public function category(){
         return $this->belongsTo('App\Models\Category', 'category_id');
+    }
+
+    public function isAvailable(){
+        return $this->count >0;
     }
 }

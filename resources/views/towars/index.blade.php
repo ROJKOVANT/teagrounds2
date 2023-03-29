@@ -23,6 +23,7 @@
         <li><a href="/shop" class="link-effect">Магазин</a></li>
         <li><a href="/blog" class="link-effect">Блог</a></li>
         <li><a href="" class="link-effect">Конструктор</a></li>
+        <li><a href="/carts" class="link-effect">Корзина</a></li>
         <li class="login"><a href="/register">
                 @auth
                     {{ Auth::user()->name }}
@@ -69,9 +70,26 @@
             <div class="contprice1">
                 <p>{{$towars->price}}₽ / 50гр.</p>
             </div>
+            <div class="contprice2">
+                <p>кол-во / {{$towars->count}}шт.</p>
+            </div>
             <div class="btn_top1">
-                <button class="btn_top1_more1">Добавить</button>
-                <button class="btn_top1_more2">Купить</button>
+                @if($towars->isAvailable())
+                    <form action="{{url('add_cart',$towars->id)}}" method="Post">
+                        @csrf
+                        <div class="btn_top1">
+                            <input type="number" name="quantity" value="1" min="1">
+                        </div>
+                        <div class="btn_top1">
+                            {{--                            <button class="btn_top1_more1"><a href="/OpenTovar">Добавить</a></button>--}}
+                            <input type="submit" value="Добавить">
+                        </div>
+                    </form>
+                @else
+                    <div class="contprice2">
+                        <p>Товар не доступен</p>
+                    </div>
+                @endif
             </div>
             <div class="delivery">
                 <img src="{{ asset("img/truck.png") }}" alt="">

@@ -18,18 +18,19 @@
     <!--блок шапка-->
     <header>
         <ul class="navigation">
-            <li><a href="/" style="font-size:2.5vw;">Tea Grounds</a></li>
-            <li><a href="/about">О нас</a></li>
-            <li><a href="/shop">Магазин</a></li>
-            <li><a href="/blog">Блог</a></li>
-            <li><a href="">Конструктор</a></li>
+            <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
+            <li><a href="/about" class="link-effect">О нас</a></li>
+            <li><a href="/shop" class="link-effect">Магазин</a></li>
+            <li><a href="/blog" class="link-effect">Блог</a></li>
+            <li><a href="" class="link-effect">Конструктор</a></li>
+            <li><a href="/carts" class="link-effect">Корзина</a></li>
             <li class="login"><a href="/register">
                     @auth
-                    {{ Auth::user()->name }}
+                        {{ Auth::user()->name }}
                     @endauth
 
                     @guest
-                    Войти
+                        Войти
                     @endguest
                 </a></li>
         </ul>
@@ -69,70 +70,39 @@
     <!--блок популярные товары-->
     <section class="top_tovar">
         <div class="top_tovar_tea">
-            <h4><span>—</span> Популярные товары <span>—</span></h4>
+            <h4><span>—</span> Новые товары <span>—</span></h4>
             <div class="subparagraph3">
                 <img src="{{ asset("img/svg6.svg") }}" alt="">
             </div>
             <div class="subparagraph4">
                 <img src="{{ asset("img/svg4.svg") }}" alt="">
             </div>
+            @php
+                $towars = \App\Models\Towar::all();
+            @endphp
             <div class="container">
+                @foreach($towars as $towars)
                 <div class="top1">
                     <div class="global1">
-                        <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                        <h5>Английский Садовник</h5>
-                        <p>260 ₽/50гр.</p>
+                        <img src="/{{$towars->picture}}" alt="">
+                        <h5>{{$towars->name}}</h5>
+                        <p>{{$towars->price}} ₽/50гр.</p>
                     </div>
                     <div class="btn_top1">
                         <button class="btn_top1_more1"><a href="/OpenTovar">Подробнее</a></button>
                     </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Добавить</button>
-                        <button class="btn_top3_more3">Купить</button>
-                    </div>
+                    <form action="{{url('add_cart',$towars->id)}}" method="Post">
+                        @csrf
+                        <div class="btn_top1">
+                            <input type="number" name="quantity" value="1" min="1">
+                        </div>
+                        <div class="btn_top1">
+{{--                            <button class="btn_top1_more1"><a href="/OpenTovar">Добавить</a></button>--}}
+                            <input type="submit" value="Добавить">
+                        </div>
+                    </form>
                 </div>
-                <div class="top2">
-                    <div class="global2">
-                        <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                        <h5>Английский Садовник</h5>
-                        <p>260 ₽/50гр.</p>
-                    </div>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Добавить</button>
-                        <button class="btn_top3_more3">Купить</button>
-                    </div>
-                </div>
-                <div class="top3">
-                    <div class="global3">
-                        <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                        <h5>Английский Садовник</h5>
-                        <p>260 ₽/50гр.</p>
-                    </div>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Добавить</button>
-                        <button class="btn_top3_more3">Купить</button>
-                    </div>
-                </div>
-                <div class="top4">
-                    <div class="global4">
-                        <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                        <h5>Английский Садовник</h5>
-                        <p>260 ₽/50гр.</p>
-                    </div>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                    <div class="btn_top2">
-                        <button class="btn_top2_more2">Добавить</button>
-                        <button class="btn_top3_more3">Купить</button>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

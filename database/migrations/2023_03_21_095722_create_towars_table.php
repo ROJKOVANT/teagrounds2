@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('view');
             $table->text('taste');
             $table->string('price');
+            $table->unsignedInteger('count')->default(0);
             $table->string('category_id');
             $table->string('slug');
             $table->timestamps();

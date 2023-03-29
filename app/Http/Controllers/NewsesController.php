@@ -146,9 +146,14 @@ class NewsesController extends Controller
 
         return redirect()->back();
     }
-    /**/
+    /*вывод новости по id*/
     public function news($id)
     {
         return view('news.index')->with('news', News::find($id));
+    }
+    /*вывод 4 рандомных новостей*/
+    public function  random(){
+        $randomNewses = News::get()->random(4);
+        return view('OpenNews', compact('randomNewses'));
     }
 }

@@ -15,6 +15,7 @@
         <li><a href="/shop">Магазин</a></li>
         <li><a href="/blog">Блог</a></li>
         <li><a href="admin">Конструктор</a></li>
+        <li><a href="/carts" class="link-effect">Корзина</a></li>
     </div>
 
     <div class="navigation-f3">

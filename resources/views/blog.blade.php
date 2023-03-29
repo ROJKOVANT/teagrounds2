@@ -21,15 +21,16 @@
                 <li><a href="/shop" class="link-effect">Магазин</a></li>
                 <li><a href="/blog" class="link-effect">Блог</a></li>
                 <li><a href="" class="link-effect">Конструктор</a></li>
+                <li><a href="/carts" class="link-effect">Корзина</a></li>
                 <li class="login"><a href="/register">
-                    @auth
-                        {{ Auth::user()->name }}
-                    @endauth
+                        @auth
+                            {{ Auth::user()->name }}
+                        @endauth
 
-                    @guest
-                        Войти
-                    @endguest
-                </a></li>
+                        @guest
+                            Войти
+                        @endguest
+                    </a></li>
             </ul>
         </header>
 
@@ -39,125 +40,34 @@
                 $news = \App\Models\Paragraph::all();
             @endphp
             <div class="container_btn">
-                <a class="" href="http://127.0.0.1:8000/blog/"><button class="btn_top1">Все новости</button></a>
+                <a class="" href="http://127.0.0.1:8000/blog/"><button class="btn_top1">ВСЕ НОВОСТИ</button></a>
                 @foreach($news as $paragraph)
                     <a class="" href="http://127.0.0.1:8000/blog/{{$paragraph->name}}"><button class="btn_top1">{{$paragraph->name}}</button></a>
                 @endforeach
             </div>
+            @php
+                $news = \App\Models\News::all();
+            @endphp
             <div class="container">
+                @foreach($news as $el)
                 <div class="card">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
+                    <img src="{{$el->picture}}" alt="">
                     <div class="card-content">
                         <div class="card-title">
-                            <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
+                            <h4>{{$el->paragraph->name}}</h4>
                         </div>
-                        <p class="card-text">
-                            Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                        </p>
+                        <p class="card-text">{{$el->title}}</p>
                         <div class="card-btn">
                             <button><a href="/OpenNews">Подробнее</a></button>
                         </div>
+{{--                        <div class="btn_top1">--}}
+{{--                            <a href="{{route('OpenNews', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее</button></a>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
-                <div class="card">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                        </div>
-                        <p class="card-text">
-                            Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                        </p>
-                        <div class="card-btn">
-                            <button>Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                        </div>
-                        <p class="card-text">
-                            Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                        </p>
-                        <div class="card-btn">
-                            <button>Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                        </div>
-                        <p class="card-text">
-                            Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                        </p>
-                        <div class="card-btn">
-                            <button>Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                        </div>
-                        <p class="card-text">
-                            Что такое “Bubble tea”
-                        </p>
-                        <div class="card-btn">
-                            <button>Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                        </div>
-                        <p class="card-text">
-                            Что такое “Bubble tea”
-                        </p>
-                        <div class="card-btn">
-                            <button>Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                        </div>
-                        <p class="card-text">
-                            Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                        </p>
-                        <div class="card-btn">
-                            <button>Подробнее</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
-                            <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                        </div>
-                        <p class="card-text">
-                            Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                        </p>
-                        <div class="card-btn">
-                            <button>Подробнее</button>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
+
 
             <div class="pagination">
                 <a href="#">&laquo;</a>

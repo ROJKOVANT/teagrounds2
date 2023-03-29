@@ -38,15 +38,16 @@
                 <li><a href="/shop">Магазин</a></li>
                 <li><a href="/blog">Блог</a></li>
                 <li><a href="">Конструктор</a></li>
+                <li><a href="/carts" class="link-effect">Корзина</a></li>
                 <li class="login"><a href="/register">
-                    @auth
-                        {{ Auth::user()->name }}
-                    @endauth
+                @auth
+                    {{ Auth::user()->name }}
+                @endauth
 
-                    @guest
-                        Войти
+                @guest
+                    Войти
                     @endguest
-                </a></li>
+                    </a></li>
             </ul>
         </header>
 

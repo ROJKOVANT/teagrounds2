@@ -95,7 +95,12 @@
                     <div>
                         <label for="price">Введите цену чая</label>
                         <br>
-                        <textarea name="price"  class="textarea-form" placeholder="Введите описание" cols="40" rows="2.5"></textarea>
+                        <textarea name="price"  class="textarea-form" placeholder="Введите цену" cols="40" rows="2.5"></textarea>
+                    </div>
+                    <div>
+                        <label for="count">Введите кол-во чая</label>
+                        <br>
+                        <textarea name="count"  class="textarea-form" placeholder="Введите кол-во" cols="40" rows="2.5"></textarea>
                     </div>
                     <button type="submit" class="btn_top1">Загрузить товар</button>
                 </form>

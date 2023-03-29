@@ -173,6 +173,16 @@ header{
     font-size: 2.2vw;
     font-family: 'Philosopher', sans-serif;
 }
+/*contprice2*/
+.contprice2{
+    margin-top: 0.5vw;
+    display: flex;
+}
+.contprice2 p{
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Philosopher', sans-serif;
+}
 .btn_top1{
     display: flex;
     justify-content: center;
@@ -524,6 +534,13 @@ footer a{
     .contprice1 p{
         font-size: 2.2vw;
     }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 1.2vw;
+    }
     .btn_top1{
         margin: 0.5vw 0;
         gap: 1vw;
@@ -727,6 +744,13 @@ footer a{
     .contprice1 p{
         font-size: 2.2vw;
     }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 1.2vw;
+    }
     .btn_top1{
         margin: 0.5vw 0;
         gap: 1vw;
@@ -900,6 +924,13 @@ footer a{
     }
     .contprice1 p{
         font-size: 2.2vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 1.2vw;
     }
     .btn_top1{
         margin: 0.5vw 0;
@@ -1112,6 +1143,13 @@ footer a{
     .contprice1 p{
         font-size: 2.3vw;
     }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 1.3vw;
+    }
     .btn_top1{
         margin: 0.5vw 0;
         gap: 1vw;
@@ -1238,7 +1276,6 @@ footer a{
         margin-bottom: 1.8vw;
         font-size: 1.8vw;
     }
-
     .logo > a {
         font-size: 2.6vw;
     }
@@ -1322,6 +1359,13 @@ footer a{
     }
     .contprice1 p{
         font-size: 2.3vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.7vw;
+    }
+    .contprice2 p{
+        font-size: 1.4vw;
     }
     .btn_top1{
         flex-direction: column;
@@ -1535,6 +1579,13 @@ footer a{
     }
     .contprice1 p{
         font-size: 3.5vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.7vw;
+    }
+    .contprice2 p{
+        font-size: 1.9vw;
     }
     .btn_top1{
         flex-direction: row;
@@ -1752,6 +1803,13 @@ footer a{
     .contprice1 p{
         font-size: 3.5vw;
     }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.7vw;
+    }
+    .contprice2 p{
+        font-size: 1.9vw;
+    }
     .btn_top1{
         flex-direction: row;
         margin: 0.5vw 0;
@@ -1968,6 +2026,13 @@ footer a{
     .contprice1 p{
         font-size: 3.7vw;
     }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.7vw;
+    }
+    .contprice2 p{
+        font-size: 2.2vw;
+    }
     .btn_top1{
         flex-direction: row;
         margin: 0.5vw 0;
@@ -2174,6 +2239,13 @@ footer a{
     .contprice1 p{
         font-size: 4vw;
     }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.7vw;
+    }
+    .contprice2 p{
+        font-size: 2.3vw;
+    }
     .btn_top1{
         flex-direction: row;
         margin: 0.5vw 0;
@@ -2350,6 +2422,13 @@ footer a{
         margin-top: 0.7vw;
     }
     .contprice1 p{
+        font-size: 2.5vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.7vw;
+    }
+    .contprice2 p{
         font-size: 4.2vw;
     }
     .btn_top1{
@@ -2529,6 +2608,13 @@ footer a{
     .contprice1 p{
         font-size: 5vw;
     }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.7vw;
+    }
+    .contprice2 p{
+        font-size: 2.75vw;
+    }
     .btn_top1{
         flex-direction: row;
         margin: 0.5vw 0;
@@ -2706,6 +2792,13 @@ footer a{
     .contprice1 p{
         font-size: 5.5vw;
     }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.7vw;
+    }
+    .contprice2 p{
+        font-size: 3vw;
+    }
     .btn_top1{
         flex-direction: row;
         margin: 0.5vw 0;
@@ -2882,6 +2975,13 @@ footer a{
     }
     .contprice1 p{
         font-size: 6.5vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.7vw;
+    }
+    .contprice1 p{
+        font-size: 3.7vw;
     }
     .btn_top1{
         flex-direction: row;

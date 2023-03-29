@@ -23,14 +23,15 @@
             <li><a href="/shop" class="link-effect">Магазин</a></li>
             <li><a href="/blog" class="link-effect">Блог</a></li>
             <li><a href="" class="link-effect">Конструктор</a></li>
+            <li><a href="/carts" class="link-effect">Корзина</a></li>
             <li class="login"><a href="/register">
-                    @auth
-                        {{ Auth::user()->name }}
-                    @endauth
+            @auth
+                {{ Auth::user()->name }}
+            @endauth
 
-                    @guest
-                        Войти
-                    @endguest
+            @guest
+                Войти
+                @endguest
                 </a></li>
         </ul>
     </header>
@@ -72,6 +73,9 @@
                 <div class=" price_info">
                     <div class="contprice1">
                         <p>260₽ / 50гр.</p>
+                    </div>
+                    <div class="contprice2">
+                        <p>кол-во / 0шт.</p>
                     </div>
                     <div class="btn_top1">
                         <button class="btn_top1_more1">Добавить</button>

@@ -21,15 +21,16 @@
                 <li><a href="/shop" class="link-effect">Магазин</a></li>
                 <li><a href="/blog" class="link-effect">Блог</a></li>
                 <li><a href="" class="link-effect">Конструктор</a></li>
+                <li><a href="/carts" class="link-effect">Корзина</a></li>
                 <li class="login"><a href="/register">
-                    @auth
-                        {{ Auth::user()->name }}
-                    @endauth
+                        @auth
+                            {{ Auth::user()->name }}
+                        @endauth
 
-                    @guest
-                        Войти
-                    @endguest
-                </a></li>
+                        @guest
+                            Войти
+                        @endguest
+                    </a></li>
             </ul>
         </header>
 
@@ -39,7 +40,7 @@
         <!--блок популярные товары-->
         <section class="top_tovar">
             <div class="top_tovar_tea">
-                <h4><span>—</span> Популярные товары <span>—</span></h4>
+                <h4><span>—</span> Новые товары <span>—</span></h4>
                 <div class="subparagraph3">
                     <img src="{{ asset("img/svg6.svg") }}" alt="">
                 </div>

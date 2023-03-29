@@ -23,6 +23,7 @@
         <li><a href="/shop" class="link-effect">Магазин</a></li>
         <li><a href="/blog" class="link-effect">Блог</a></li>
         <li><a href="" class="link-effect">Конструктор</a></li>
+        <li><a href="/carts" class="link-effect">Корзина</a></li>
         <li class="login"><a href="/register">
                 @auth
                     {{ Auth::user()->name }}
@@ -71,62 +72,22 @@
     <section class="news_more">
         <h3>Вам также может понравиться</h3>
         <div class="container">
+            @foreach($randomNewses as $el)
             <div class="card">
-                <img src="{{ asset("img/block4img1.png") }}" alt="">
+                <img src="{{$el->picture}}" alt="">
                 <div class="card-content">
                     <div class="card-title">
-                        <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
+                        <h4>{{$el->paragraph->name}}</h4>
                     </div>
                     <p class="card-text">
-                        Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
+                        {{$el->title}}
                     </p>
                     <div class="card-btn">
                         <button><a href="/OpenNews">Подробнее</a></button>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="{{ asset("img/block4img1.png") }}" alt="">
-                <div class="card-content">
-                    <div class="card-title">
-                        <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                    </div>
-                    <p class="card-text">
-                        Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                    </p>
-                    <div class="card-btn">
-                        <button>Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{{ asset("img/block4img1.png") }}" alt="">
-                <div class="card-content">
-                    <div class="card-title">
-                        <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                    </div>
-                    <p class="card-text">
-                        Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                    </p>
-                    <div class="card-btn">
-                        <button>Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{{ asset("img/block4img1.png") }}" alt="">
-                <div class="card-content">
-                    <div class="card-title">
-                        <h4>СОВЕТЫ ПОКУПАТЕЛЯМ</h4>
-                    </div>
-                    <p class="card-text">
-                        Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»
-                    </p>
-                    <div class="card-btn">
-                        <button>Подробнее</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="btn">
             <a href="/blog">Еще больше новостей</a>

@@ -22,14 +22,15 @@
                 <li><a href="/blog" class="link-effect">Блог</a></li>
                 <li><a href="" class="link-effect">Конструктор</a></li>
                 <li class="login"><a href="/register">
-                    @auth
-                        {{ Auth::user()->name }}
-                    @endauth
+                @auth
+                    <li><a href="" class="link-effect">Корзина</a></li>
+                    {{ Auth::user()->name }}
+                @endauth
 
-                    @guest
-                        Войти
+                @guest
+                    Войти
                     @endguest
-                </a></li>
+                    </a></li>
             </ul>
         </header>
 

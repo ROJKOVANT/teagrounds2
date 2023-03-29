@@ -93,7 +93,12 @@
                     <div>
                         <label for="price">Измените цену чая</label>
                         <br>
-                        <textarea name="price"  class="textarea-form" placeholder="Введите описание" cols="40" rows="2.5">{{$towars->price}}</textarea>
+                        <textarea name="price"  class="textarea-form" placeholder="Введите цену" cols="40" rows="2.5">{{$towars->price}}</textarea>
+                    </div>
+                    <div>
+                        <label for="count">Измените кол-во чая</label>
+                        <br>
+                        <textarea name="count"  class="textarea-form" placeholder="Введите кол-во" cols="40" rows="2.5">{{$towars->count}}</textarea>
                     </div>
                     <button type="submit" class="btn_top1">Обновить товар</button>
                 </form>

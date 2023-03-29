@@ -51,7 +51,7 @@
                     <div class="card-title">
                         <h4>{{$el->paragraph->name}}</h4>
                     </div>
-                    <p class="card-text">{{$el->subject}}</p>
+                    <p class="card-text">{{$el->title}}</p>
                     <div class="btn_top1">
                         <a href="{{route('news.index', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
                     </div>

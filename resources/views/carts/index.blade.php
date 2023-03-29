@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset("css/OpenNews.css") }}">
-    <title>Какой чай самый расслабляющий</title>
+    <link rel="stylesheet" href="{{ asset("css/blog.css") }}">
+    <title>Корзина</title>
 </head>
-
 <body>
 <!--блок шапка-->
 <header>
@@ -35,46 +33,53 @@
             </a></li>
     </ul>
 </header>
+<section class="paragraph">
+    @if(session()->has('message'))
+        <div style="background-color: #7850ba;">
+            <button type="button" data-dismiss="alert" aria-hidden="true">X</button>
+            {{session()->get('message')}}
+        </div>
+    @endif
+    <h3>Корзина</h3>
 
-<!--блок Статья-->
-<section class="news">
-    <div class="news_paragrph">
-        <h3>{{$news->title}}</h3>
+    <table>
+        <tr>
+            <th style="color: white;">Изображение товара</th>
+            <th style="color: white;">Название товара</th>
+            <th style="color: white;">Кол-во товара</th>
+            <th style="color: white;">Цена товара</th>
+            <th style="color: white;">Действие</th>
+        </tr>
+
+        <?php
+        $totalprice = 0;
+        ?>
+
+        @foreach( $cart as $cart)
+        <tr>
+            <th style="color: white;"><img src="/{{$cart->picture}}" style="height: 5vw; width: 5vw;" alt=""></th>
+            <th style="color: white;">{{$cart->towar_name}}</th>
+            <th style="color: white;">{{$cart->quantity}} шт.</th>
+            <th style="color: white;">{{$cart->price}} ₽/50гр.</th>
+            <th style="color: white;">
+                <a onclick=" return confirm('Вы действительно хотите удалить данный товар?')" href="{{route('carts.delete', ['id'=> $cart->id])}}">Удалить</a>
+            </th>
+        </tr>
+            <?php
+            $totalprice = $totalprice + $cart->price;
+            ?>
+        @endforeach
+    </table>
+    <div style="color: white">
+        <h1>Общая стоимость : {{$totalprice}} ₽</h1>
     </div>
-    <div class="news_info1">
-        <img src="/{{$news->picture}}" alt="">
-        <p>{{$news->content1}}</p>
-    </div>
-    <div class="news_info2">
-        <p>{{$news->content2}}</p>
+    <div>
+        <h1 style="color: white; font-size: 1.5vw; padding-bottom: 1vw">Перейти к заказу</h1>
+        <a style="margin-right: 1vw; margin-left: 1vw;" href="/cash_order">Оплата при доставке</a>
+        <a href="">Оплатить картой</a>
     </div>
 </section>
 
-{{--<!--блок другие новости-->--}}
-{{--<section class="news_more">--}}
-{{--    <h3>Вам также может понравиться</h3>--}}
-{{--    <div class="container">--}}
-{{--        @foreach($randomNewses as $el)--}}
-{{--            <div class="card">--}}
-{{--                <img src="{{$el->picture}}" alt="">--}}
-{{--                <div class="card-content">--}}
-{{--                    <div class="card-title">--}}
-{{--                        <h4>{{$el->paragraph->name}}</h4>--}}
-{{--                    </div>--}}
-{{--                    <p class="card-text">--}}
-{{--                        {{$el->title}}--}}
-{{--                    </p>--}}
-{{--                    <div class="card-btn">--}}
-{{--                        <button><a href="/OpenNews">Подробнее</a></button>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        @endforeach--}}
-{{--    </div>--}}
-{{--    <div class="btn">--}}
-{{--        <a href="/blog">Еще больше новостей</a>--}}
-{{--    </div>--}}
-{{--</section>--}}
 <!--блок footer-->
 <footer>
     <ul class="navigation_footer">
