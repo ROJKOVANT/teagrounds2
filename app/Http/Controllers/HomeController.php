@@ -111,7 +111,7 @@ class HomeController extends Controller
             $order->category_id = $data->category_id;
 
             $order->payment_status = 'Оплата при доставке';
-            $order->delivery_status = 'обработка';
+            $order->delivery_status = 'Обработка';
 
             $order->save();
 
@@ -121,4 +121,29 @@ class HomeController extends Controller
         }
         return redirect()->back()->with('message', 'Мы получили ваш заказ. Ожидайте доставки!');
     }
+
+    /*заказы у админа*/
+    public function orders(){
+        $order = Order::all();
+
+        return view('orders.index', compact('order'));
+    }
+
+    public function delivered($id)
+    {
+        $order = Category::find($id);
+        return view('orders.index')->with('order',$order);
+    }
+
+    public function update_delivered(Request $request, $id){
+
+        $order = Order::find($id);
+
+        $order->delivery_status = $request->delivery_status;
+
+        $order->save();
+
+        return redirect()->back();
+    }
 }
+

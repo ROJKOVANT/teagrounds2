@@ -127,3 +127,7 @@ Route::get('/carts/delete{id}', [App\Http\Controllers\HomeController::class, 'ca
 
 /*Оформление заказов*/
 Route::get('/cash_order', [App\Http\Controllers\HomeController::class, 'cash_order'])->name('cash_order');/*корзина с товарами*/
+
+Route::get('/orders', [App\Http\Controllers\HomeController::class, 'orders'])->name('orders.index');/*вывод всех заказов*/
+Route::post('/delivered/{id}', [App\Http\Controllers\HomeController::class, 'delivered'])->name('orders.index');/*вывод всех заказов*/
+Route::post('/delivered/update/{id}', [App\Http\Controllers\HomeController::class, 'update_delivered'])->name('orders.index');/*сохранить изменение товара*/
