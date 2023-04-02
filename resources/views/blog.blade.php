@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -37,38 +40,33 @@
         <section class="paragraph">
             <h3>Статьи</h3>
             @php
-                $news = \App\Models\Paragraph::all();
+                $er = \App\Models\Paragraph::all();
             @endphp
             <div class="container_btn">
                 <a class="" href="http://127.0.0.1:8000/blog/"><button class="btn_top1">ВСЕ НОВОСТИ</button></a>
-                @foreach($news as $paragraph)
-                    <a class="" href="http://127.0.0.1:8000/blog/{{$paragraph->name}}"><button class="btn_top1">{{$paragraph->name}}</button></a>
+                @foreach($er as $paragraph)
+                    <a class="" href="http://127.0.0.1:8000/blog/{{$paragraph->id}}"><button class="btn_top1">{{$paragraph->name}}</button></a>
                 @endforeach
             </div>
-            @php
-                $news = \App\Models\News::all();
-            @endphp
+{{--            @php--}}
+{{--                $news = \App\Models\News::all();--}}
+{{--            @endphp--}}
             <div class="container">
                 @foreach($news as $el)
                 <div class="card">
-                    <img src="{{$el->picture}}" alt="">
+                    <img src="/{{$el->picture}}" alt="">
                     <div class="card-content">
                         <div class="card-title">
                             <h4>{{$el->paragraph->name}}</h4>
                         </div>
                         <p class="card-text">{{$el->title}}</p>
                         <div class="card-btn">
-                            <button><a href="/OpenNews">Подробнее</a></button>
+                            <a href="{{route('OpenNews', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
                         </div>
-{{--                        <div class="btn_top1">--}}
-{{--                            <a href="{{route('OpenNews', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее</button></a>--}}
-{{--                        </div>--}}
                     </div>
                 </div>
                 @endforeach
             </div>
-
-
             <div class="pagination">
                 <a href="#">&laquo;</a>
                 <a class="active" href="#">1</a>
@@ -99,3 +97,4 @@
     </footer>
     </body>
 </html>
+@endsection

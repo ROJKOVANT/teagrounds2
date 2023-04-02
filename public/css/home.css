@@ -194,33 +194,38 @@ p {
     flex-direction: column;
     gap: 2vw;
 }
-.card-info p {
+form{
+    margin-top: 0.5vw;
     color: white;
     font-size: 1vw;
-    font-family: Arial;
+    font-family: 'Comfortaa';
 }
-.kartochka {
-    width: 300px;
-    height: 150px;
-    background-color: beige;
-    border-radius: 7%;
-}
-button {
-    text-decoration: none;
-    background-color: transparent;
+.label-form{
     color: white;
+    font-size: 1.2vw;
+}
+.textarea-form{
+    margin-top: 1vw;
+    margin-bottom: 1.5vw;
+    background: #212529;
+    color: white;
+    font-size: 0.8vw;
+    border: 1.5px solid white;
+    padding: 0.5vw;
+    resize: none;
+}
+.btn_top1{
+    font-size: 0.8vw;
+    font-family: 'Philosopher', sans-serif;
     border: 1px solid white;
-    width: 200px;
-    height: 40px;
-    font-size: 1vw;
-    font-family: "Philosopher";
-    letter-spacing: 2.5px;
-    text-align: center;
-}
-button:hover {
-    background: white;
-    color: black;
+    color: white;
+    background-color: #212529;
+    padding: 0.4vw 3vw;
     transition: 2s;
+}
+.btn_top1:hover{
+    background-color: white;
+    color: black;
 }
 @media screen and (max-width: 1800px) {
     .container {

@@ -12,23 +12,6 @@
         <link rel="stylesheet" href="{{ asset("css/welcome.css") }}">
         <title>Tea Grounds</title>
     </head>
-    <!--<body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-        </div>
-    </body>--> <!--Регистрация-->
     <body>
         <!--блок шапка-->
         <header>
@@ -200,39 +183,26 @@
         <!--блок Блог-->
         <section class="blog">
             <h3>Статьи</h3>
+            @php
+                $randomNewses = App\Models\News::get()->random(4);
+            @endphp
             <div class="container">
-                <div class="item1_new">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <a href="">ВАЖНО ЗНАТЬ</a>
-                    <p>Какой чай самый расслабляющий </p>
-                    <div class="btn_link">
-                        <a href="/about">Подробнее</a>
+                @foreach($randomNewses as $el)
+                    <div class="card">
+                        <img src="{{$el->picture}}" alt="">
+                        <div class="card-content">
+                            <div class="card-title">
+                                <p>{{$el->paragraph->name}}</p>
+                            </div>
+                            <p class="card-text">
+                                {{$el->title}}
+                            </p>
+                            <div class="card-btn">
+                                <button><a href="/OpenNews">Подробнее</a></button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="item2_new">
-                    <img src="{{ asset("img/block4img2.png") }}" alt="">
-                    <a href="">СОВЕТЫ ПОКУПАТЕЛЯМ</a>
-                    <p>Что такое шириковый чай “Bubble tea” </p>
-                    <div class="btn_link">
-                        <a href="/about">Подробнее</a>
-                    </div>
-                </div>
-                <div class="item3_new">
-                    <img src="{{ asset("img/block4img3.png") }}" alt="">
-                    <a href="">СОВЕТЫ ПОКУПАТЕЛЯМ</a>
-                    <p>Какая рольза от зеленного чая</p>
-                    <div class="btn_link">
-                        <a href="/about">Подробнее</a>
-                    </div>
-                </div>
-                <div class="item4_new">
-                    <img src="{{ asset("img/block4img1.png") }}" alt="">
-                    <a href="">ВАЖНО ЗНАТЬ</a>
-                    <p>Какой чай самый расслабляющий </p>
-                    <div class="btn_link">
-                        <a href="/about">Подробнее</a>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="card-btn">
                 <button>Подробнее</button>
@@ -243,30 +213,12 @@
         <section class="reviews">
             <h3>Отзывы</h3>
             <div class="container2">
+                @foreach($randomReviews as $it)
                 <div class="item1_rev">
-                    <h5>Дмитрий Мазаев</h5>
-                    <p>Я простой русский рабочий Дмитрий город москва люблю пить чай по старой русской традиции заварить
-                    самовар любить ватрушки и бублик leaftea мой любимый магазин
-                    </p>
+                    <h5>{{$it->fio}}</h5>
+                    <p>{{$it->site_review}}</p>
                 </div>
-                <div class="item2_rev">
-                    <h5>Дмитрий Мазаев</h5>
-                    <p>Я простой русский рабочий Дмитрий город москва люблю пить чай по старой русской традиции заварить
-                    самовар любить ватрушки и бублик leaftea мой любимый магазин
-                    </p>
-                </div>
-                <div class="item3_rev">
-                    <h5>Дмитрий Мазаев</h5>
-                    <p>Я простой русский рабочий Дмитрий город москва люблю пить чай по старой русской традиции заварить
-                    самовар любить ватрушки и бублик leaftea мой любимый магазин
-                    </p>
-                </div>
-                <div class="item4_rev">
-                    <h5>Дмитрий Мазаев</h5>
-                    <p>Я простой русский рабочий Дмитрий город москва люблю пить чай по старой русской традиции заварить
-                    самовар любить ватрушки и бублик leaftea мой любимый магазин
-                    </p>
-                </div>
+                @endforeach
             </div>
         </section>
 
@@ -294,18 +246,17 @@
                         <p>ruteagrounds@gmail.com</p>
                     </div>
                 </div>
-                <form name="form" method="post">
+                <form name="{{route('welcome')}}" method="Post">
+                    @csrf
                     <input name="name" type="text" placeholder="Введите имя">
                     <br>
-                    <input name="email" type="text" placeholder="Введите телефон">
+                    <input name="email" type="text" placeholder="Введите почту">
                     <br>
                     <input size="30" name="header" type="text" placeholder="Введите название темы" />
                     <br>
-                    <textarea cols="32" name="message" rows="5" placeholder=" Введите сообщение"></textarea>
+                    <textarea name="message" placeholder="Введите сообщение" cols="40" rows="15"></textarea>
                     <br>
-                    <button type="submit" class="">
-                        {{ __('Отправить') }}
-                    </button>
+                    <button type="submit" class="btn_top1">Отправить</button>
                 </form>
             </div>
         </section>

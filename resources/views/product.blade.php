@@ -44,94 +44,24 @@
         <div class="point">
             <p>Заказы</p>
         </div>
-        <div class="container7">
-            <div class="top1">
-                <div class="global1">
-                    <h4>Ожидаемый товар</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>1820 ₽/350гр.</p>
+{{--        @php--}}
+{{--            $order = \App\Models\Order::all();--}}
+{{--        @endphp--}}
+        {{--Товары--}}
+        <div class="container1">
+            @foreach($order as $el)
+                <div class="card">
+                    <h4 class="card-title">Товар {{$el->delivery_status}}</h4>
+                    <img src="/{{$el->picture}}" alt="">
+                    <p class="card-text">{{$el->towar_name}}</p>
+                    <p class="card-text">{{$el->price}} ₽/50гр.</p>
+                    <p class="card-text">{{$el->payment_status}}</p>
                     <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
+                        <a href="{{route('products.more', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
                     </div>
                 </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Ожидаемый товар</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Ожидаемый товар</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>1820 ₽/350гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Ожидаемый товар</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Ожидаемый товар</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>1820 ₽/350гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Ожидаемый товар</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Ожидаемый товар</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>1820 ₽/350гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Ожидаемый товар</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
+</div>
+

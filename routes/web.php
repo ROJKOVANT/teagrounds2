@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/', [App\Http\Controllers\NewsesController::class, 'randomnews'])->name('welcome');/*вывод рандомных новостей*/
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,24 +33,22 @@ Route::get('/catalog', function () {
     return view('catalog');
 });
 
-Route::get('/blog', function () {
-    return view('blog');
-});
-
-Route::get('/OpenNews', function () {
-    return view('OpenNews');
-});
-//Route::get('/OpenNews/{id}', [App\Http\Controllers\NewsesController::class, 'new'])->name('OpenNews');/*страница с новостью*/
-Route::get('/OpenNews', [App\Http\Controllers\NewsesController::class, 'random'])->name('OpenNews');/*вывод рандомных новостей*/
+//Route::get('/blog', function () {
+//    return view('blog');
+//});
+Route::get('/blog', [App\Http\Controllers\NewsesController::class, 'all'])->name('blog');/*новости по категории*/
+Route::get('/blog/{id}', [App\Http\Controllers\NewsesController::class, 'index'])->name('blog');/*новости по категории*/
 
 
-Route::get('/OpenTovar', function () {
-    return view('OpenTovar');
-});
+Route::get('/OpenNews/{id}', [App\Http\Controllers\NewsesController::class, 'new'])->name('OpenNews');/*страница с новостью*/
 
-Route::get('/product', function () {
-    return view('product');
-});
+Route::get('/OpenTovar/{id}', [App\Http\Controllers\TowarsController::class, 'towar'])->name('OpenTovar');/*страница с новостью*/
+
+//Route::get('/product', function () {
+//    return view('product');
+//});
+
+
 Route::get('/history', function () {
     return view('history');
 });
@@ -58,6 +58,12 @@ Route::get('/help', function () {
 Route::get('/shop', function () {
     return view('shop');
 });
+
+//Route::get('/helpReview', function () {
+//    return view('helpReview');
+//});
+Route::get('/helpReview', [App\Http\Controllers\HelpReviewController::class, 'index'])->name('helpReview');/*вывод всех запросов о помощи*/
+
 /*роутеры для админки*/
 Route::get('/admin', function () {
     return view('admin');
@@ -99,7 +105,10 @@ Route::post('/category/update/{id}', [App\Http\Controllers\CategorysController::
 /*Новости*/
 Route::get('/adminBlog', function () {
     return view('adminBlog');
-});/*все новости*/
+});
+
+/*все новости*/
+//Route::get('/blog', [App\Http\Controllers\NewsesController::class, 'index'])->name('blog');/*новости по категории*/
 Route::get('/news/index/{id}', [App\Http\Controllers\NewsesController::class, 'news'])->name('news.index');/*страница с новостью*/
 //Route::get('/news/index/{id}', [App\Http\Controllers\NewsesController::class, 'random'])->name('news.index');/*вывод рандомных новостей*/
 Route::get('/news/edit/{id}', [App\Http\Controllers\NewsesController::class, 'edit'])->name('news.edit');/*изменить новость*/
@@ -123,11 +132,20 @@ Route::post('/adminTovarAdd/store', [App\Http\Controllers\TowarsController::clas
 /*корзина*/
 Route::post('/add_cart/{id}', [App\Http\Controllers\HomeController::class, 'add_cart'])->name('add_cart');/*добавить в корзину*/
 Route::get('/carts', [App\Http\Controllers\HomeController::class, 'carts'])->name('carts.index');/*корзина с товарами*/
-Route::get('/carts/delete{id}', [App\Http\Controllers\HomeController::class, 'cart_destroy'])->name('carts.delete');/*добавить в корзину*/
+Route::get('/carts/delete{id}', [App\Http\Controllers\HomeController::class, 'cart_destroy'])->name('carts.delete');/*удалить товар из корзины*/
+Route::get('/cash_order', [App\Http\Controllers\HomeController::class, 'cash_order'])->name('cash_order');/*оформление заказа оплата наличными*/
 
-/*Оформление заказов*/
-Route::get('/cash_order', [App\Http\Controllers\HomeController::class, 'cash_order'])->name('cash_order');/*корзина с товарами*/
-
-Route::get('/orders', [App\Http\Controllers\HomeController::class, 'orders'])->name('orders.index');/*вывод всех заказов*/
+/*заказы*/
+Route::get('/orders', [App\Http\Controllers\HomeController::class, 'ordersAdmin'])->name('orders.index');/*вывод всех заказов*/
 Route::post('/delivered/{id}', [App\Http\Controllers\HomeController::class, 'delivered'])->name('orders.index');/*вывод всех заказов*/
 Route::post('/delivered/update/{id}', [App\Http\Controllers\HomeController::class, 'update_delivered'])->name('orders.index');/*сохранить изменение товара*/
+Route::get('/product', [App\Http\Controllers\HomeController::class, 'ordersUser'])->name('product');/*вывод всех заказов у пользователя*/
+Route::get('/products/more/{id}', [App\Http\Controllers\HomeController::class, 'productMore'])->name('products.more');/*вывод всех заказов у пользователя*/
+
+
+/*отзыв на сайт*/
+Route::post('/home', [App\Http\Controllers\SiteReviewController::class, 'store'])->name('home');/*добавить отзыв*/
+Route::get('/', [App\Http\Controllers\SiteReviewController::class, 'randomreviews'])->name('welcome');/*вывести рандомные отзывы на сайте*/
+
+/*сообщение для помощи*/
+Route::post('/', [App\Http\Controllers\HelpReviewController::class, 'store'])->name('welcome');/*добавить сообщение о помощи*/

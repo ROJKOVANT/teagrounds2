@@ -20,6 +20,7 @@
 
         <div class="navigation-f4">
             <li><a href="/orders">Заказы</a></li>
+            <li><a href="/helpReview">Запросы</a></li>
             <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="/home" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }}</a>
             </li>

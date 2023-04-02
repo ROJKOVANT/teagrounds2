@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset("css/OpenNews.css") }}">
-    <title>Какой чай самый расслабляющий</title>
+    <title>{{$news->subject}}</title>
 </head>
 
 <body>
@@ -35,46 +35,34 @@
             </a></li>
     </ul>
 </header>
-
     <!--блок Статья-->
     <section class="news">
         <div class="news_paragrph">
-            <h3>Чай с шариками — пенистый чайный напиток, в который обычно добавлены «жемчужины»</h3>
+            <h3>{{$news->title}}</h3>
         </div>
         <div class="news_info1">
-            <img src="{{ asset("img/news1.png") }}" alt="">
+            <img src="/{{$news->picture}}" alt="">
             <p>
-                Пенный чай вначале появился на Тайване в начале 1980-х годов. Считается,
-                что начало положила Лин Сюхуэ́й в кафе «Чуншуйта́н» города Тайчжун,
-                когда она добавила местный десерт, фэнъюа́нь , в холодный чай,
-                на котором до того кафе специализировалось. По другим сведениям
-                старейший известный пенный чай состоял из смеси горячего чёрного чая,
-                маленьких шариков тапиоки, сгущённого молока и сиропа или мёда.
-                Появившиеся впоследствии варианты обычно используют холодный чай,
-                а также зелёный чай или чай с жасмином вместо чёрного.
-                Большие шарики тапиоки быстро вытеснили маленькие.
-                Появились добавки груши и сливы, затем других фруктов,
-                пока в некоторых вариантах чай не был полностью заменён на фрукты.
+               {{$news->content1}}
             </p>
         </div>
         <div class="news_info2">
             <p>
-                В конце XX века появились кафе, целиком посвящённые жемчужному чаю,
-                подобно фруктовым барам 1990-х годов.
-                Некоторые кафе закрывают стакан полусферическим куполом из пластика;
-                другие запечатывают стакан целлофаном с помощью специальной машины.
-                Для питья используются широкие соломинки, через которые могут пройти шарики.
+                {{$news->content2}}
             </p>
         </div>
     </section>
 
     <!--блок другие новости-->
     <section class="news_more">
+                @php
+                    $randomNewses = App\Models\News::get()->random(4);
+                @endphp
         <h3>Вам также может понравиться</h3>
         <div class="container">
             @foreach($randomNewses as $el)
             <div class="card">
-                <img src="{{$el->picture}}" alt="">
+                <img src="/{{$el->picture}}" alt="">
                 <div class="card-content">
                     <div class="card-title">
                         <h4>{{$el->paragraph->name}}</h4>
@@ -83,7 +71,7 @@
                         {{$el->title}}
                     </p>
                     <div class="card-btn">
-                        <button><a href="/OpenNews">Подробнее</a></button>
+                        <a href="{{route('OpenNews', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
                     </div>
                 </div>
             </div>

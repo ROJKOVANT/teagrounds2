@@ -12,20 +12,17 @@ class NewsesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function all(){
+
+        return view('blog')->with('news', News::all());
+    }
+    public function index($paragraphsId = 0)
     {
-        $categori = News::all();
-        if ($id === 'all' || $id === ''){
-            return view('blog')->with('newses', News::all());
-        }else{
-            $categori = News::all();
-            foreach ( $categori as $item){
-                if ($item->id == $id){
-                    return view('blog')->with('newses', News::all()->where('paragraph_id', '===', $id));
-                }
-            }
-            return view('blog')->with('newses', News::all());
-        }
+    $news = News::all();
+    if($paragraphsId){
+        $news -> where('paragraph_id',$paragraphsId);
+    }
+        return view('blog')->with('news', News::all()->where('paragraph_id', '===', $paragraphsId));
     }
 
     /**
@@ -146,14 +143,23 @@ class NewsesController extends Controller
 
         return redirect()->back();
     }
-    /*вывод новости по id*/
+    /*вывод подробнее новости по id*/
     public function news($id)
     {
         return view('news.index')->with('news', News::find($id));
+    }
+    public function new($id)
+    {
+        return view('OpenNews')->with('news', News::find($id));
     }
     /*вывод 4 рандомных новостей*/
     public function  random(){
         $randomNewses = News::get()->random(4);
         return view('OpenNews', compact('randomNewses'));
+    }
+    /*вывод 4 рандомных новостей*/
+    public function  randomnews(){
+        $randomNewses = News::get()->random(4);
+        return view('welcome', compact('randomNewses'));
     }
 }

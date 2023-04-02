@@ -49,7 +49,6 @@
 {{--        @endphp--}}
         <div class="info">
             <p>Ваши данные</p>
-{{--            @foreach($users as $el)--}}
             <div class="block">
                 <div class="info-avatar">
                     <div class="elips"></div>
@@ -66,21 +65,20 @@
                     </div>
                 </div>
             </div>
-{{--            @endforeach--}}
         </div>
 
         <div class="card">
-            <p>Карта лояльности</p>
+            <p>Оставьте отзыв на сайте</p>
             <div class="card-info">
-                <p>Всем новым клиентам мы дарим нашу карту лояльности . Благодаря ей вы сможете повышать свою скидку на товары а при первой покупке мы подарим вам подарок !</p>
-                <div class="kartochka"></div>
-                <div class="btn">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('Офоримть карту') }}
-                    </button>
-                </div>
+                <form action="{{route('home')}}" method="POST">
+                    @csrf
+                    <div>
+                        <textarea name="site_review" class="textarea-form" placeholder="Напишите отзыв" cols="60" rows="10"></textarea>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn_top1">Загрузить статью</button>
+                </form>
             </div>
-
         </div>
     </div>
 </div>

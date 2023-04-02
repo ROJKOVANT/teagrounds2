@@ -78,30 +78,25 @@
                 <img src="{{ asset("img/svg4.svg") }}" alt="">
             </div>
             @php
-                $towars = \App\Models\Towar::all();
+                $towarsRandom = \App\Models\Towar::get()->random(4);
             @endphp
-            <div class="container">
-                @foreach($towars as $towars)
-                <div class="top1">
-                    <div class="global1">
-                        <img src="/{{$towars->picture}}" alt="">
-                        <h5>{{$towars->name}}</h5>
-                        <p>{{$towars->price}} ₽/50гр.</p>
-                    </div>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1"><a href="/OpenTovar">Подробнее</a></button>
-                    </div>
-                    <form action="{{url('add_cart',$towars->id)}}" method="Post">
-                        @csrf
-                        <div class="btn_top1">
-                            <input type="number" name="quantity" value="1" min="1">
+            <div class="container1">
+                @foreach($towarsRandom as $towars)
+                    <div class="top1">
+                        <div class="global1">
+                            <img src="/{{$towars->picture}}" alt="">
+                            <h5>{{$towars->name}}</h5>
+                            <p>{{$towars->price}} ₽/50гр.</p>
                         </div>
                         <div class="btn_top1">
-{{--                            <button class="btn_top1_more1"><a href="/OpenTovar">Добавить</a></button>--}}
-                            <input type="submit" value="Добавить">
+                            <a href="{{route('OpenTovar', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
+                            <form action="{{url('add_cart',$towars->id)}}" method="Post">
+                                @csrf
+                                    <input type="number" name="quantity" value="1" min="1">
+                                    <button type="submit" class="btn_top1_more1">Добавить</button>
+                            </form>
                         </div>
-                    </form>
-                </div>
+                    </div>
                 @endforeach
             </div>
         </div>
@@ -163,190 +158,42 @@
             <div class="btn2">
                 <button class="btn_more2">Сбросить</button>
             </div>
-            <div class="teg">
-                <p>Tea Grounds</p>
-            </div>
+{{--            <div class="teg">--}}
+{{--                <p>Tea Grounds</p>--}}
+{{--            </div>--}}
         </div>
         <div class="separation"></div>
+        @php
+            $towars = \App\Models\Towar::all();
+        @endphp
         <div class="container7">
-            <div class="top1">
-                <div class="global1">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
+            @foreach($towars as $towars)
+                <div class="top1">
+                    <div class="global1">
+                        <img src="/{{$towars->picture}}" alt="">
+                        <h5>{{$towars->name}}</h5>
+                        <p>{{$towars->price}} ₽/50гр.</p>
+                    </div>
+                    <div class="btn_top1">
+                        <a href="{{route('OpenTovar', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
+                        <form action="{{url('add_cart',$towars->id)}}" method="Post">
+                            @csrf
+                            <input type="number" name="quantity" value="1" min="1">
+                            <button type="submit" class="btn_top1_more1">Добавить</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top2">
-                <div class="global2">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top3">
-                <div class="global3">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top4">
-                <div class="global4">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top5">
-                <div class="global5">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top6">
-                <div class="global6">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top7">
-                <div class="global7">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top8">
-                <div class="global8">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top9">
-                <div class="global9">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top10">
-                <div class="global10">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top11">
-                <div class="global11">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="top12">
-                <div class="global12">
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                </div>
-                <div class="btn_top1">
-                    <button class="btn_top1_more1">Подробнее</button>
-                </div>
-                <div class="btn_top2">
-                    <button class="btn_top2_more2">Добавить</button>
-                    <button class="btn_top3_more3">Купить</button>
-                </div>
-            </div>
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a class="active" href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">&raquo;</a>
-            </div>
+            @endforeach
+{{--            <div class="pagination">--}}
+{{--                <a href="#">&laquo;</a>--}}
+{{--                <a class="active" href="#">1</a>--}}
+{{--                <a href="#">2</a>--}}
+{{--                <a href="#">3</a>--}}
+{{--                <a href="#">4</a>--}}
+{{--                <a href="#">5</a>--}}
+{{--                <a href="#">6</a>--}}
+{{--                <a href="#">&raquo;</a>--}}
+{{--            </div>--}}
         </div>
     </section>
 

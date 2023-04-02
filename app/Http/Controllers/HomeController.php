@@ -43,7 +43,7 @@ class HomeController extends Controller
             $user = Auth::user();
             $towar = Towar::find($id);
 
-            $cart = new cart;
+            $cart = new Cart;
 
             $cart->fio = $user->fio;
             $cart->email = $user->email;
@@ -111,7 +111,7 @@ class HomeController extends Controller
             $order->category_id = $data->category_id;
 
             $order->payment_status = 'Оплата при доставке';
-            $order->delivery_status = 'Обработка';
+            $order->delivery_status = 'в обработке';
 
             $order->save();
 
@@ -123,7 +123,7 @@ class HomeController extends Controller
     }
 
     /*заказы у админа*/
-    public function orders(){
+    public function ordersAdmin(){
         $order = Order::all();
 
         return view('orders.index', compact('order'));
@@ -144,6 +144,17 @@ class HomeController extends Controller
         $order->save();
 
         return redirect()->back();
+    }
+    /*заказы у пользователя*/
+    public function ordersUser(){
+        $user = Auth::user();
+        $userid = $user->id;
+        $order = Order::where('user_id','=',$userid)->get();
+        return view('product', compact('order'));
+    }
+    /*productMore*/
+    public function productMore($id){
+        return view('products.more')->with('orders', Order::find($id));
     }
 }
 

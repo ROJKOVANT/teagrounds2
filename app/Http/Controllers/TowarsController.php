@@ -19,13 +19,13 @@ class TowarsController extends Controller
         if ($id === 'all' || $id === ''){
             return view('shop')->with('towars', Towar::all());
         }else{
-            $categori = News::all();
+            $categori = Towar::all();
             foreach ( $categori as $item){
                 if ($item->id == $id){
                     return view('shop')->with('towars', Towar::all()->where('category_id', '===', $id));
                 }
             }
-            return view('shop')->with('towars', Towar::all());
+            return view('shop')->VV('towars', Towar::all());
         }
     }
 
@@ -169,5 +169,10 @@ class TowarsController extends Controller
     public function towars($id)
     {
         return view('towars.index')->with('towars', Towar::find($id));
+    }
+    /*открытая страница товара*/
+    public function towar($id)
+    {
+        return view('OpenTovar')->with('towars', Towar::find($id));
     }
 }

@@ -441,105 +441,61 @@ h3{
     border-bottom: 2px solid white;
     margin: 0 100px;
 }
-.container{
+.container {
     display: grid;
-    gap: 2.5vw;
-    margin: 5vw 100px 0;
-    justify-content: space-around;
+    height: auto;
+    grid-template-columns: repeat(auto-fill, 15vw);
+    justify-content: center;
+    gap:  5.2vw  5.2vw;
+    margin: 5vw 100px 5vw 100px;
 }
-.container > div{
-    background-color: #191D21;
+.card{
+    width: auto;
+    height: auto;
+    background-color: #212529;
     border: 1px solid white;
-    width: 302px;
-    height: 300px;
 }
-.item1_new{
-    grid-column: 1 / 2;
+.card img{
+    width: 14.9vw;
+    height: 7.9vw;
 }
-.item1_new img{
-    width: 300px;
-    height: 150px;
-}
-.item1_new a{
-    color: rgba(189, 186, 186, 0.25);
-    font-size: 0.6vw;
-    font-family: 'Comfortaa';
-    margin-top: 1vw;
-    margin-left: 1vw;
-}
-.item1_new p{
-    color: white;
+.card-title{
+    padding: 1vw 1vw 0;
     font-size: 0.7vw;
-    font-family: 'Comfortaa';
-    text-align: start;
-    margin-top: 1vw;
-    margin-left: 1vw;
-}
-.item2_new{
-    grid-column: 2 / 3;
-}
-.item2_new img{
-    width: 300px;
-    height: 150px;
-}
-.item2_new a{
-    color: rgba(189, 186, 186, 0.25);
-    font-size: 0.6vw;
-    font-family: 'Comfortaa';
-    margin-top: 1vw;
-    margin-left: 1vw;
-}
-.item2_new p{
     color: white;
-    font-size: 0.7vw;
     font-family: 'Comfortaa';
-    text-align: start;
-    margin-top: 1vw;
-    margin-left: 1vw;
 }
-.item3_new{
-    grid-column: 3 / 4;
-}
-.item3_new img{
-    width: 300px;
-    height: 150px;
-}
-.item3_new a{
-    color: rgba(189, 186, 186, 0.25);
-    font-size: 0.6vw;
+.card-text{
+    font-size: 0.8vw;
+    padding: 1vw 1vw 0;
+    color: rgba(255, 255, 255, 0.7);
     font-family: 'Comfortaa';
-    margin-top: 1vw;
-    margin-left: 1vw;
 }
-.item3_new p{
+.card-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vw;
+}
+.card-btn button{
+    font-size: 1vw;
+    font-family: 'Philosopher', sans-serif;
+    border: 1px solid white;
     color: white;
-    font-size: 0.7vw;
-    font-family: 'Comfortaa';
-    text-align: start;
-    margin-top: 1vw;
-    margin-left: 1vw;
+    background-color: #212529;
+    padding: 0.3vw 4vw;
+    transition: 2s;
 }
-.item4_new{
-    grid-column: 4 / 5;
+.card-btn button:hover{
+    background-color: white;
+    color: black;
 }
-.item4_new img{
-    width: 300px;
-    height: 150px;
-}
-.item4_new a{
-    color: rgba(189, 186, 186, 0.25);
-    font-size: 0.6vw;
-    font-family: 'Comfortaa';
-    margin-top: 0vw;
-    margin-left: 1vw;
-}
-.item4_new p{
+.card-btn button > a{
     color: white;
-    font-size: 0.7vw;
-    font-family: 'Comfortaa';
-    text-align: start;
-    margin-top: 1vw;
-    margin-left: 1vw;
+    font-size: 1vw;
+    transition: 2s;
+}
+.card-btn button:hover > a{
+    color: black;
 }
 .btn_link a{
     color: white;
@@ -786,7 +742,7 @@ input{
     width: 20vw;
     height: 40px;
     color: white;
-    font-size: 1vw;
+    font-size: 0.8vw;
     padding: 5px;
     padding-left: 1vw;
     margin-bottom: 1vw;
@@ -800,11 +756,24 @@ textarea{
     width: 20vw;
     height: auto;
     color: white;
-    font-size: 1vw;
+    font-size: 0.8vw;
     padding: 5px;
     padding-left: 1vw;
     margin-bottom: 1vw;
     font-family: 'Comfortaa';
+}
+.btn_top1{
+    font-size: 0.8vw;
+    font-family: 'Philosopher', sans-serif;
+    border: 1px solid white;
+    color: white;
+    background-color: #212529;
+    padding: 0.4vw 3vw;
+    transition: 2s;
+}
+.btn_top1:hover{
+    background-color: white;
+    color: black;
 }
 /*Конец блока напишите нам*/
 

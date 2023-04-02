@@ -57,7 +57,7 @@
 /*начало Задайте нам свой вопрос*/
 .d-f {
     display: flex;
-    /* margin: 0 100px 0 0; */
+    flex-direction: column;
     gap: 7vw;
     margin-left: 18vw;
     background-image: url("../img/imgheader1.png");
@@ -72,64 +72,54 @@
     flex-direction: column;
     gap: 5vw;
     margin-left: 7vw;
-    margin-bottom: 14vw;
-    height: auto;
+    margin-bottom: 10.8vw;
 }
-    /*поле ссылки*/
-    .point{
-        display: flex;
-        width: 300px;
-        height: 60px;
-        padding-left: 50px;
-        align-items: center;
-        background: rgba(25, 29, 33, 0.9);
-    }
-    .point p{
-        color: white;
-        font-family: 'Comfortaa';
-        font-size: 1.5vw;
-    }
+/*поле ссылки*/
+.point{
+    display: flex;
+    width: 300px;
+    height: 60px;
+    padding-left: 50px;
+    align-items: center;
+    background: rgba(25, 29, 33, 0.9);
+}
+.point p{
+    color: white;
+    font-family: 'Comfortaa';
+    font-size: 1.5vw;
+}
 /*--------------*/
-.container7{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 3vw;
-    row-gap: 5vw;
+/*заказы*/
+.container1 {
+    display: grid;
     height: auto;
+    grid-template-columns: repeat(auto-fill, 15vw);
+    justify-content: start;
+    gap:  5.2vw  3vw;
 }
-.top1{
-    display: flex;
-    flex-direction: column;
-}
-/*товар 1*/
-.global1{
+.card{
     display: flex;
     background-color: #191D21;
-    width: 275px;
-    height: 450px;
-    border: 1px solid white;
+    width: auto;
+    height: auto;
+    border: 2px solid white;
     justify-content: center;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 1vw;
+    gap: 1.5vw;
 }
-.global1 img{
-    width: 175px;
-    height: 175px;
-}
-.global1 h4{
+.card-title{
+    margin-top: 1vw;
     color: white;
     font-size: 1.2vw;
     font-family: 'Philosopher';
 }
-.global1 h5{
-    color: white;
-    font-size: 1.1vw;
-    font-family: 'Philosopher';
+.card img{
+    width: 175px;
+    height: 175px;
 }
-.global1 p{
+.card-text{
     color: white;
     font-size: 1.3vw;
     font-family: 'Philosopher';
@@ -137,23 +127,26 @@
 .btn_top1{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: 0.5vw 0;
+    gap: 1vw;
 }
 .btn_top1_more1{
     text-decoration: none;
     background-color: transparent;
     color: white;
     border: 1px solid white;
-    width: 200px;
+    width: 250px;
+    margin-bottom: 0.5vw;
     height: 35px;
-    font-size: 1.1vw;
+    font-size: 0.9vw;
     font-family: 'Philosopher';
     letter-spacing: 2.5px;
 }
 .btn_top1_more1:hover{
-background: white;
-color: black;
-transition: 2s;
+    background: white;
+    color: black;
+    transition: 2s;
 }
 
 /*АДАПТИВ*/

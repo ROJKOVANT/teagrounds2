@@ -272,6 +272,11 @@ header{
         gap: 6vw;
         margin: 3vw 0;
     }
+    form{
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+    }
     /*1*/
     .btn_contain1{
         display: flex;
@@ -295,6 +300,16 @@ header{
     background: white;
     color: black;
     }
+input{
+    text-decoration: none;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid white;
+    width: 100px;
+    height: 33px;
+    color: white;
+    font-size: 0.9vw;
+}
     /*2*/
     .btn_contain2{
         display: flex;

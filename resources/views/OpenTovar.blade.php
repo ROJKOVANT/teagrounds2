@@ -37,49 +37,48 @@
     </header>
 
     <section class="open_tovar">
-        <h1>Манговый сок чай</h1>
+        <h1>{{$towars->name}}</h1>
             <div class="tovar_product">
                 <div class="tovar_img">
-                    <img src="{{ asset("img/mango.jpg") }}" alt="">
+                    <img src="/{{$towars->picture}}" alt="">
                 </div>
                 <div class=" tovar_info">
                     <div class="cont1">
-                        <h4>Манговый сок чай</h4>
-                        <p>Чарующий аромат манго в сочетании с терпкостью насыщенного
-                            Ассама создают великолепную чайную композицию.
-                        </p>
+                        <h4>{{$towars->name}}</h4>
+                        <p>{{$towars->title}}</p>
                     </div>
                     <div class="cont2">
                         <h4>Состав</h4>
-                        <p>Чарующий аромат манго в сочетании с терпкостью насыщенного
-                            Ассама создают великолепную чайную композицию.
-                        </p>
+                        <p>{{$towars->compound}}</p>
                     </div>
                     <div class="cont3">
                         <ul class="link1">
                             <h4>Страна / Регион</h4>
-                            <p>Россия</p>
+                            <p>{{$towars->country}}</p>
                         </ul>
                         <ul class="link1">
                             <h4>Вид </h4>
-                            <p>Черный чай с добавками</p>
+                            <p>{{$towars->view}}</p>
                         </ul>
                         <ul class="link1">
                             <h4>Вкус</h4>
-                            <p>Цветочный, Ягодный</p>
+                            <p>{{$towars->text}}</p>
                         </ul>
                     </div>
                 </div>
                 <div class=" price_info">
                     <div class="contprice1">
-                        <p>260₽ / 50гр.</p>
+                        <p>{{$towars->price}} ₽ / 50гр.</p>
                     </div>
                     <div class="contprice2">
-                        <p>кол-во / 0шт.</p>
+                        <p>кол-во / {{$towars->count}}шт.</p>
                     </div>
                     <div class="btn_top1">
-                        <button class="btn_top1_more1">Добавить</button>
-                        <button class="btn_top1_more2">Купить</button>
+                        <form action="{{url('add_cart',$towars->id)}}" method="Post">
+                            @csrf
+                            <input type="number" name="quantity" value="1" min="1">
+                            <button type="submit" class="btn_top1_more1">Добавить</button>
+                        </form>
                     </div>
                     <div class="delivery">
                         <img src="{{ asset("img/truck.png") }}" alt="">

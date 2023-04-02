@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset("css/OpenNews.css") }}">
-    <title>Какой чай самый расслабляющий</title>
+    <link rel="stylesheet" href="{{ asset("css/helpReview.css") }}">
+    <title>Корзина</title>
 </head>
 
 <body>
@@ -35,21 +35,38 @@
             </a></li>
     </ul>
 </header>
+<section class="paragraph">
+    @if(session()->has('message'))
+        <div>
+            <button type="button" data-dismiss="alert" aria-hidden="true">X</button>
+            {{session()->get('message')}}
+        </div>
+    @endif
+    <h3>Сообщения</h3>
 
-<!--блок Статья-->
-<section class="news">
-    <div class="news_paragrph">
-        <h3>{{$news->title}}</h3>
-    </div>
-    <div class="news_info1">
-        <img src="/{{$news->picture}}" alt="">
-        <p>{{$news->content1}}</p>
-    </div>
-    <div class="news_info2">
-        <p>{{$news->content2}}</p>
-    </div>
+    <table class="table-block">
+        <tr class="table-title">
+            <th>Имя</th>
+            <th>Почта</th>
+            <th>Название темы</th>
+            <th>Сообщение</th>
+            <th>Действие</th>
+        </tr>
+        @foreach($help_reviews as $el)
+            <tr class="table-content">
+                <th>{{$el->name}}</th>
+                <th>{{$el->email}}</th>
+                <th>{{$el->header}}</th>
+                <th>{{$el->message}} шт.</th>
+                <th>
+                    <a href="#">Ответить</a>
+                </th>
+            </tr>
+        @endforeach
+    </table>
 </section>
 
+<!--блок footer-->
 <footer>
     <ul class="navigation_footer">
         <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
@@ -57,13 +74,15 @@
         <li><a href="/shop" class="link-effect">Магазин</a></li>
         <li><a href="/blog" class="link-effect">Блог</a></li>
         <li><a href="" class="link-effect">Конструктор</a></li>
+        <li><a href="/carts" class="link-effect">Корзина</a></li>
     </ul>
     <div class="conf">
-        <a href="">Политика конфидециальности</a>
+        <a href="" class="link-effect">Политика конфидециальности</a>
     </div>
     <div class="cop">
-        <p>Tea Grounds  ©  2022 Все права защищены</p>
+        <p>Tea Grounds © 2022 Все права защищены</p>
     </div>
 </footer>
 </body>
+
 </html>

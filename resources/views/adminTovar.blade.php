@@ -20,6 +20,7 @@
 
     <div class="navigation-f4">
         <li><a href="/orders">Заказы</a></li>
+        <li><a href="/helpReview">Запросы</a></li>
         <li><a id="navbarDropdown" class="nav-link dropdown-toggle" href="/home" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                 {{ Auth::user()->name }}</a>
         </li>
@@ -42,22 +43,17 @@
         <div class="point">
             <p>Товары</p>
         </div>
-
         <!--Товары-->
-        <div class="container7">
+        <div class="container1">
             @foreach($towars as $towars)
             <div class="top1">
-                <div class="global1">
-                    <h4>Карточка товара</h4>
+                <div class="card">
+                    <h4 class="card-title">Карточка товара</h4>
                     <img src="/{{$towars->picture}}" alt="">
-                    <h5>{{$towars->name}}</h5>
+                    <h4 class="card-title">{{$towars->name}}</h4>
                     <div class="btn_top1">
                         <a href="{{route('towars.index', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
-                    </div>
-                    <div class="btn_top1">
                         <a href="{{route('towars.edit', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Изменить товар</button></a>
-                    </div>
-                    <div class="btn_top1">
                         <a href="{{route('adminTovar.delete', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Удалить товар</button></a>
                     </div>
                 </div>

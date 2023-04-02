@@ -67,12 +67,7 @@
             <th>{{$el->payment_status}}</th>
             <th>{{$el->delivery_status}}</th>
             <th>
-{{--                @if($el->delivery_status=="Пришел")--}}
-{{--                    <p>Пришел</p>--}}
-{{--                @else--}}
-{{--                    <a href="{{route('orders.index', ['id'=> $el->id])}}">Изменить статус</a>--}}
-{{--                @endif--}}
-                @if($el->delivery_status=="Пришел")
+                @if($el->delivery_status=="пришел")
                     <p style="color: green">Пришел</p>
                 @else
                     <form action="{{route('orders.index', ['id' => $el->id])}}" method="POST">
