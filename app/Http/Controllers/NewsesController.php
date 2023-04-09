@@ -2,27 +2,47 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\NewsResource;
 use App\Models\Paragraph;
 use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 class NewsesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
-    public function all(){
-
-        return view('blog')->with('news', News::all());
+    //Вывод всех статей по новизне
+    public function all()
+    {
+        $news = NewsResource::collection(News::all());
+        // DB::table('news')->orderBy('created_at', 'DESC')->get()
+        return view('blog')->with('news', $news);
     }
+    //Вывод статей по новизне с определенной категорией
     public function index($paragraphsId = 0)
     {
-    $news = News::all();
-    if($paragraphsId){
-        $news -> where('paragraph_id',$paragraphsId);
-    }
-        return view('blog')->with('news', News::all()->where('paragraph_id', '===', $paragraphsId));
+        $news = News::all();
+        if ($paragraphsId) {
+            $news->where('paragraph_id', $paragraphsId);
+        }
+        return view('blog')
+            ->with('news', NewsResource::collection(News::all()->where('paragraph_id', $paragraphsId)));
+        //DB::table('news')->orderBy('created_at', 'DESC')
+        //                ->get()->where('paragraph_id', '===', $paragraphsId)
+//        if($paragraphsId === 0){
+//            return redirect()->back();
+//        }
+//        $news = News::all();
+//        if ($paragraphsId) {
+//            $news->where('paragraph_id', $paragraphsId);
+//        }
+//        return view('blog')
+//            ->with('news', News::all()->where('paragraph_id', $paragraphsId))
+//            ->with('news',Paragraph::find($paragraphsId));
     }
 
     /**
@@ -43,7 +63,7 @@ class NewsesController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             "subject" => "required ",
             "title" => "required ",
             "content1" => "required",
@@ -53,7 +73,7 @@ class NewsesController extends Controller
         ]);
 
         $picture = $request->picture;
-        $picture_new_name = time().$picture->getClientOriginalName();
+        $picture_new_name = time() . $picture->getClientOriginalName();
         $picture->move('uploads/news/', $picture_new_name);
 
         News::create([
@@ -62,8 +82,8 @@ class NewsesController extends Controller
             "content1" => $request->input('content1'),
             "content2" => $request->input('content2'),
             "paragraph_id" => $request->input('paragraph_id'),
-            "picture" => 'uploads/news/'.$picture_new_name,
-            "slug" => $request->input('title')//str_slug($request->title)
+            "picture" => 'uploads/news/' . $picture_new_name,
+            "slug" => $request->input('title') //str_slug($request->title)
         ]);
 
         return redirect('adminBlog');
@@ -102,10 +122,10 @@ class NewsesController extends Controller
      */
     public function update(Request $request, $id)
     {
-//        dd($request->all());
+        //        dd($request->all());
         $news = News::find($id);
 
-        $this->validate($request,[
+        $this->validate($request, [
             "subject" => "required ",
             "title" => "required ",
             "content1" => "required",
@@ -113,11 +133,11 @@ class NewsesController extends Controller
             "paragraph_id" => "required",
         ]);
 
-        if($request->hasFile('picture')){
+        if ($request->hasFile('picture')) {
             $picture = $request->picture;
-            $picture_new_name = time().$picture->getClientOriginalName();
-            $picture->move('uploads/news/',$picture_new_name);
-            $news->picture = 'uploads/news/'.$picture_new_name;
+            $picture_new_name = time() . $picture->getClientOriginalName();
+            $picture->move('uploads/news/', $picture_new_name);
+            $news->picture = 'uploads/news/' . $picture_new_name;
         }
 
         $news->subject = $request->input('subject');
@@ -153,12 +173,14 @@ class NewsesController extends Controller
         return view('OpenNews')->with('news', News::find($id));
     }
     /*вывод 4 рандомных новостей*/
-    public function  random(){
+    public function  random()
+    {
         $randomNewses = News::get()->random(4);
         return view('OpenNews', compact('randomNewses'));
     }
     /*вывод 4 рандомных новостей*/
-    public function  randomnews(){
+    public function  randomnews()
+    {
         $randomNewses = News::get()->random(4);
         return view('welcome', compact('randomNewses'));
     }

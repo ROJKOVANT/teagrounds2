@@ -31,14 +31,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-       if(Auth::user()->admin===1){
-           return view('admin');
-       }
+        if (Auth::user()->admin === 1) {
+            return view('admin');
+        }
         return view('home');
     }
-/*карзина*/
-    public function add_cart(Request $request, $id){
-        if (Auth::id()){
+    /*карзина*/
+    public function add_cart(Request $request, $id)
+    {
+        if (Auth::id()) {
 
             $user = Auth::user();
             $towar = Towar::find($id);
@@ -50,6 +51,7 @@ class HomeController extends Controller
             $cart->user_id = $user->id;
             $cart->towar_name = $towar->name;
             $cart->price = $towar->price * $request->quantity;
+//            $cart->price = $towar->price * $request->quantity;
             $cart->picture = $towar->picture;
             $cart->category_id = $towar->id;
             $cart->quantity = $request->quantity;
@@ -57,22 +59,21 @@ class HomeController extends Controller
             $cart->save();
 
             return redirect()->back();
-        }
-        else{
+        } else {
             return redirect('login');
         }
     }
 
-    public function carts(){
+    public function carts()
+    {
 
-        if( Auth::id()){
+        if (Auth::id()) {
             $id = Auth::user()->id;
 
-            $cart = Cart::where('user_id','=',$id)->get();
+            $cart = Cart::where('user_id', '=', $id)->get();
 
             return view('carts.index', compact('cart'));
-        }
-        else{
+        } else {
             return redirect('login');
         }
     }
@@ -90,20 +91,20 @@ class HomeController extends Controller
         return redirect()->back();
     }
     /*заказы*/
-    public function cash_order(){
-
+    public function cash_order(Request $request)
+    {
         $user = Auth::user();
 
         $userid = $user->id;
-        $data = Cart::where('user_id','=',$userid)->get();
+        $data = Cart::where('user_id', '=', $userid)->get();
 
-        foreach ($data as $data){
+        foreach ($data as $data) {
             $order = new order;
 
             $order->fio = $data->fio;
             $order->email = $data->email;
             $order->user_id = $data->user_id;
-
+            $order->address = $request->input('address');
             $order->towar_name = $data->towar_name;
             $order->quantity = $data->quantity;
             $order->price = $data->price;
@@ -119,11 +120,13 @@ class HomeController extends Controller
             $cart = Cart::find($cart_id);
             $cart->delete();
         }
-        return redirect()->back()->with('message', 'Мы получили ваш заказ. Ожидайте доставки!');
+//        ->with('message', 'Мы получили ваш заказ. Ожидайте доставки!');
+        return redirect()->back();
     }
 
     /*заказы у админа*/
-    public function ordersAdmin(){
+    public function ordersAdmin()
+    {
         $order = Order::all();
 
         return view('orders.index', compact('order'));
@@ -132,10 +135,11 @@ class HomeController extends Controller
     public function delivered($id)
     {
         $order = Category::find($id);
-        return view('orders.index')->with('order',$order);
+        return view('orders.index')->with('order', $order);
     }
 
-    public function update_delivered(Request $request, $id){
+    public function update_delivered(Request $request, $id)
+    {
 
         $order = Order::find($id);
 
@@ -146,15 +150,34 @@ class HomeController extends Controller
         return redirect()->back();
     }
     /*заказы у пользователя*/
-    public function ordersUser(){
+    public function ordersUser()
+    {
         $user = Auth::user();
         $userid = $user->id;
-        $order = Order::where('user_id','=',$userid)->get();
+        $order = Order::where('user_id', '=', $userid)->where('delivery_status', '!=', 'получен')->get();
         return view('product', compact('order'));
     }
-    /*productMore*/
-    public function productMore($id){
+    /*пользователь изменит статус товара на получен*/
+    public function setStatus($id)
+    {
+        $order = Order::find($id);
+        $order->update([
+            'delivery_status' => 'получен'
+        ]);
+
+        return redirect()->back();
+    }
+    /*вывод заказа со статусом получен в истории заказов*/
+    public function producthistory()
+    {
+        $user = Auth::user();
+        $userid = $user->id;
+        $order = Order::where('user_id', '=', $userid)->where('delivery_status', '=', 'получен')->get();
+        return view('product', compact('order'));
+    }
+    /*информация о заказе*/
+    public function productMore($id)
+    {
         return view('products.more')->with('orders', Order::find($id));
     }
 }
-

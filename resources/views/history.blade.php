@@ -1,13 +1,9 @@
-@extends('layouts.app')
-
-@section('content')
-
 <head>
     <link rel="stylesheet" href="{{ asset("css/history.css") }}">
 </head>
 <div class="navigation">
     <div class="navigation-f1">
-        <li><a href="/" style="font-size:2.5vw;">Tea Grounds</a></li>
+        <li class="log"><a href="/">Tea Grounds</a></li>
     </div>
 
     <div class="navigation-f2">
@@ -42,96 +38,25 @@
 <div class="d-f">
     <div class="container">
         <div class="point">
-            <p>История заказов</p>
+            <p>Заказы</p>
         </div>
-        <div class="container7">
-            <div class="top1">
-                <div class="global1">
-                    <h4>Товар доставлен</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>1820 ₽/350гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
+        {{-- @php--}}
+        {{-- $order = \App\Models\Order::all();--}}
+        {{-- @endphp--}}
+        {{--Товары--}}
+        <div class="container1">
+            @foreach($order as $el)
+            <div class="card">
+                <h4 class="card-title">Товар {{$el->delivery_status}}</h4>
+                <img src="/{{$el->picture}}" alt="">
+                <p class="card-text">{{$el->towar_name}}</p>
+                <p class="card-text">{{$el->price}} ₽/50гр.</p>
+                <p class="card-text">{{$el->payment_status}}</p>
+                <div class="btn_top1">
+                    <a href="{{route('products.more', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
                 </div>
             </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Товар отменен</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Товар доставлен</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>1820 ₽/350гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Товар отменен</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Товар доставлен</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>1820 ₽/350гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Товар отменен</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global1">
-                    <h4>Товар доставлен</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>1820 ₽/350гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
-            <div class="top1">
-                <div class="global2">
-                    <h4>Товар отменен</h4>
-                    <img src="{{ asset("img/angliiskiisadovnik1.png") }}" alt="">
-                    <h5>Английский Садовник</h5>
-                    <p>260 ₽/50гр.</p>
-                    <div class="btn_top1">
-                        <button class="btn_top1_more1">Подробнее</button>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
+</div>

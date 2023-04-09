@@ -5,6 +5,7 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+
 /* бокавая панель управления*/
 .navigation {
     display: flex;
@@ -21,16 +22,20 @@
     padding-left: 70px;
     background-color: #212529;
 }
+
 .navigation li {
     width: 300px;
 }
+
 .navigation a {
     color: white;
     font-family: "Philosopher";
 }
+
 .navigation-f1 {
     margin-top: 3vw;
 }
+
 .navigation-f2 {
     display: flex;
     flex-direction: column;
@@ -39,6 +44,7 @@
     padding-bottom: 1vw;
     border-bottom: 2px solid white;
 }
+
 .navigation-f3 {
     display: flex;
     flex-direction: column;
@@ -47,6 +53,7 @@
     padding-bottom: 1vw;
     border-bottom: 2px solid white;
 }
+
 .navigation-f4 {
     display: flex;
     flex-direction: column;
@@ -54,6 +61,7 @@
     gap: 1.5vw;
     margin-bottom: 50vw;
 }
+
 /*начало добавить товар*/
 .d-f {
     display: flex;
@@ -66,8 +74,9 @@
     background-attachment: fixed;
     background-position: center;
     /*height:100%;*/
-    height:auto;
+    height: auto;
 }
+
 .container {
     display: flex;
     margin-top: 3.5vw;
@@ -76,8 +85,9 @@
     margin-left: 7vw;
     margin-bottom: 5vw;
 }
+
 /*поле ссылки*/
-.point{
+.point {
     display: flex;
     width: 300px;
     height: 60px;
@@ -85,31 +95,37 @@
     align-items: center;
     background: rgba(25, 29, 33, 0.9);
 }
-.point p{
+
+.point p {
     color: white;
     font-family: 'Comfortaa';
     font-size: 1.5vw;
 }
+
 /*--------------*/
-.container7{
+.container7 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     row-gap: 2vw;
 }
-.container7 a{
+
+.container7 a {
     color: white;
     font-size: 1.2vw;
     font-family: "Philosopher";
 }
-.container7 a:hover{
+
+.container7 a:hover {
     color: #797979;
 }
+
 .table-block {
     color: white;
     background-color: #212529;
-    margin: 2vw 0 15.15vw;
+    margin: 2vw 0 16.8vw;
 }
+
 th {
     padding: 1.2vw 1.2vw;
     border: 1px solid white;
@@ -130,4 +146,3 @@ th {
     color: white;
     font-size: 1vw;
 }
-

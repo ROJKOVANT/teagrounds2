@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('fio')->nullable();
             $table->string('email')->nullable();
+            $table->string('address')->default('ул.Полесская, 12');
             $table->string('towar_name')->nullable();
             $table->string('price')->nullable();
             $table->string('quantity')->nullable();

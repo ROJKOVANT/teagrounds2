@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\FilterRequest;
 use App\Models\Category;
 use App\Models\Towar;
+use Illuminate\Http\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class TowarsController extends Controller
 {
@@ -13,22 +17,25 @@ class TowarsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
-    {
-        $categori = Towar::all();
-        if ($id === 'all' || $id === ''){
-            return view('shop')->with('towars', Towar::all());
-        }else{
-            $categori = Towar::all();
-            foreach ( $categori as $item){
-                if ($item->id == $id){
-                    return view('shop')->with('towars', Towar::all()->where('category_id', '===', $id));
-                }
-            }
-            return view('shop')->VV('towars', Towar::all());
-        }
-    }
 
+    public function all()
+    {
+        return view('shop')->with('towars', DB::table('towars')->orderBy('created_at', 'DESC')->take(4)->get());
+    }
+    /*вывод статьей по категории в каталоге*/
+    public function index($categoriesId = 0)
+    {
+        if($categoriesId === 0){
+            return redirect()->back();
+        }
+        $towars = Towar::all();
+        if ($categoriesId) {
+            $towars->where('category_id', $categoriesId);
+        }
+        return view('catalog')
+            ->with('towars', Towar::all()->where('category_id', $categoriesId))
+            ->with('category',Category::find($categoriesId));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -47,7 +54,7 @@ class TowarsController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             "name" => "required ",
             "picture" => "required|image",
             "title" => "required ",
@@ -61,9 +68,10 @@ class TowarsController extends Controller
 
         ]);
 
+//        $picture = new File(__DIR__ . '\..\..\\public\\img\\towars\\');
         $picture = $request->picture;
-        $picture_new_name = time().$picture->getClientOriginalName();
-        $picture->move('uploads/towar/', $picture_new_name);
+        $path = Storage::disk('public')->put('/towars', $picture);
+
 
         Towar::create([
             "name" => $request->input('name'),
@@ -75,8 +83,8 @@ class TowarsController extends Controller
             "price" => $request->input('price'),
             "count" => $request->input('count'),
             "category_id" => $request->input('category_id'),
-            "picture" => 'uploads/towar/'.$picture_new_name,
-            "slug" => $request->input('title')//str_slug($request->title)
+            "picture" => '/storage/'.$path,
+            "slug" => $request->input('title') //str_slug($request->title)
         ]);
 
         return redirect('adminTovar');
@@ -117,9 +125,9 @@ class TowarsController extends Controller
     {
         $tovar = Towar::find($id);
 
-        $this->validate($request,[
+        $this->validate($request, [
             "name" => "required ",
-//            "picture" => "required|image",
+            //            "picture" => "required|image",
             "title" => "required ",
             "compound" => "required",
             "country" => "required",
@@ -130,11 +138,11 @@ class TowarsController extends Controller
             "category_id" => "required",
         ]);
 
-        if($request->hasFile('picture')){
+        if ($request->hasFile('picture')) {
             $picture = $request->picture;
-            $picture_new_name = time().$picture->getClientOriginalName();
-            $picture->move('uploads/towar/',$picture_new_name);
-            $tovar->picture = 'uploads/towar/'.$picture_new_name;
+            $picture_new_name = time() . $picture->getClientOriginalName();
+            $picture->move('uploads/towar/', $picture_new_name);
+            $tovar->picture = 'uploads/towar/' . $picture_new_name;
         }
 
         $tovar->name = $request->input('name');
@@ -145,7 +153,7 @@ class TowarsController extends Controller
         $tovar->taste = $request->input('taste');
         $tovar->price = $request->input('price');
         $tovar->count = $request->input('count');
-//        $tovar->picture = 'uploads/towar/'.$picture_new_name;
+        //        $tovar->picture = 'uploads/towar/'.$picture_new_name;
         $tovar->category_id = $request->input('category_id');
         $tovar->save();
 
@@ -174,5 +182,14 @@ class TowarsController extends Controller
     public function towar($id)
     {
         return view('OpenTovar')->with('towars', Towar::find($id));
+    }
+    public function categories($id)
+    {
+        return view('catalog')->with('categories', Category::find($id));
+    }
+    /*вывод товаров у админа*/
+    public function allAdminTowars()
+    {
+        return view('adminTovar')->with('towars', DB::table('towars')->orderBy('created_at', 'DESC')->get());
     }
 }

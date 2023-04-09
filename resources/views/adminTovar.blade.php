@@ -35,9 +35,6 @@
         </li>
     </div>
 </div>
-@php
-    $towars = \App\Models\Towar::all();
-@endphp
 <div class="d-f">
     <div class="container">
         <div class="point">
@@ -49,7 +46,7 @@
             <div class="top1">
                 <div class="card">
                     <h4 class="card-title">Карточка товара</h4>
-                    <img src="/{{$towars->picture}}" alt="">
+                    <img src="{{$towars->picture}}" alt="">
                     <h4 class="card-title">{{$towars->name}}</h4>
                     <div class="btn_top1">
                         <a href="{{route('towars.index', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>

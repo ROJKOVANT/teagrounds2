@@ -73,8 +73,10 @@ header {
 }
 
 .table-block {
+    display: flex;
     color: white;
     margin: 5vw 5.5vw 4vw;
+    justify-content: center;
 }
 
 th {

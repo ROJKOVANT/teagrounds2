@@ -1,7 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
-
 <head>
     <link rel="stylesheet" href="{{ asset("css/product.css") }}">
 </head>
@@ -44,24 +40,29 @@
         <div class="point">
             <p>Заказы</p>
         </div>
-{{--        @php--}}
-{{--            $order = \App\Models\Order::all();--}}
-{{--        @endphp--}}
-        {{--Товары--}}
         <div class="container1">
             @foreach($order as $el)
-                <div class="card">
-                    <h4 class="card-title">Товар {{$el->delivery_status}}</h4>
-                    <img src="/{{$el->picture}}" alt="">
-                    <p class="card-text">{{$el->towar_name}}</p>
-                    <p class="card-text">{{$el->price}} ₽/50гр.</p>
-                    <p class="card-text">{{$el->payment_status}}</p>
-                    <div class="btn_top1">
-                        <a href="{{route('products.more', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
-                    </div>
+            <div class="card">
+                <h4 class="card-title">Товар {{$el->delivery_status}}</h4>
+                <img src="{{$el->picture}}" alt="">
+                <p class="card-text">{{$el->towar_name}}</p>
+                <p class="card-text">{{$el->price}} ₽/50гр.</p>
+                <p class="card-text">{{$el->payment_status}}</p>
+                @if($el->delivery_status=="пришел")
+                <div class="btn_top1">
+                    <form class="btn_top1" action="{{route('statusEnd', ['id'=> $el->id])}}" method="POST">
+                        @csrf
+                        @method('PATCH')
+                        <button type="submit" class="btn_top1_more1">Получен</button>
+                    </form>
+                    <a href="{{route('products.more', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
                 </div>
+                @else
+                <a href="{{route('products.more', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
+                @endif
+            </div>
             @endforeach
         </div>
     </div>
 </div>
-
+</div>

@@ -80,6 +80,7 @@ header{
 }
 .tovar_img img{
     border-radius: 25vw;
+    width: 25vw;
 }
 /**/
 .tovar_info{

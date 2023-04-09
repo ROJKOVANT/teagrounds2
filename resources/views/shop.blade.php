@@ -26,11 +26,11 @@
             <li><a href="/carts" class="link-effect">Корзина</a></li>
             <li class="login"><a href="/register">
                     @auth
-                        {{ Auth::user()->name }}
+                    {{ Auth::user()->name }}
                     @endauth
 
                     @guest
-                        Войти
+                    Войти
                     @endguest
                 </a></li>
         </ul>
@@ -46,28 +46,21 @@
             <div class="subparagraph2">
                 <img src="{{ asset("img/svg1.svg") }}" alt="">
             </div>
+            @php
+            $er = \App\Models\Category::all();
+            @endphp
             <div class="wrapper1">
+                @foreach($er as $category)
                 <div class="item1">
-                    <a href="/catalog"><img src="{{ asset("img/block2img1.png") }}" alt=""></a>
-                    <p>Черный чай</p>
+                    <a href="http://127.0.0.1:8000/catalog/{{$category->id}}"><img src="{{ asset("img/block2img1.png") }}" alt=""></a>
+                    <p>{{$category -> name}}</p>
                 </div>
-                <div class="item2">
-                    <img src="{{ asset("img/block2img1.png") }}" alt="">
-                    <p>Зеленный чай</p>
-                </div>
-                <div class="item3">
-                    <img src="{{ asset("img/block2img1.png") }}" alt="">
-                    <p>Смешанный чай</p>
-                </div>
-                <div class="item4">
-                    <img src="{{ asset("img/block2img1.png") }}" alt="">
-                    <p>Bubble tea</p>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
 
-    <!--блок популярные товары-->
+    <!--блок Новые товары-->
     <section class="top_tovar">
         <div class="top_tovar_tea">
             <h4><span>—</span> Новые товары <span>—</span></h4>
@@ -77,100 +70,11 @@
             <div class="subparagraph4">
                 <img src="{{ asset("img/svg4.svg") }}" alt="">
             </div>
-            @php
-                $towarsRandom = \App\Models\Towar::get()->random(4);
-            @endphp
             <div class="container1">
-                @foreach($towarsRandom as $towars)
-                    <div class="top1">
-                        <div class="global1">
-                            <img src="/{{$towars->picture}}" alt="">
-                            <h5>{{$towars->name}}</h5>
-                            <p>{{$towars->price}} ₽/50гр.</p>
-                        </div>
-                        <div class="btn_top1">
-                            <a href="{{route('OpenTovar', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
-                            <form action="{{url('add_cart',$towars->id)}}" method="Post">
-                                @csrf
-                                    <input type="number" name="quantity" value="1" min="1">
-                                    <button type="submit" class="btn_top1_more1">Добавить</button>
-                            </form>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <!--блок товары-->
-    <section class="tovar">
-        <div class="container6">
-            <div class="filtr">
-                <h6>Фильтры</h6>
-            </div>
-            <div class="country">
-                <h6>Страна</h6>
-                <form class="country_form">
-                    <label>
-                        <input type="checkbox" name="languages" value="HTML">
-                        Китай
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox" name="languages" value="CSS">
-                        Индия
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox" name="languages" value="JS">
-                        Япония
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox" name="languages" value="JS">
-                        Россия
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox" name="languages" value="JS">
-                        Кения
-                    </label>
-                </form>
-            </div>
-            <div class="price">
-                <h6>Цена</h6>
-                <form class="price_form">
-                    <label>
-                        <input type="checkbox" name="languages" value="HTML">
-                        Дорогой чай
-                    </label>
-                    <br>
-                    <label>
-                        <input type="checkbox" name="languages" value="CSS">
-                        Дешевый чай
-                    </label>
-                    <br>
-                </form>
-            </div>
-            <div class="btn1">
-                <button class="btn_more1">Применить</button>
-            </div>
-            <div class="btn2">
-                <button class="btn_more2">Сбросить</button>
-            </div>
-{{--            <div class="teg">--}}
-{{--                <p>Tea Grounds</p>--}}
-{{--            </div>--}}
-        </div>
-        <div class="separation"></div>
-        @php
-            $towars = \App\Models\Towar::all();
-        @endphp
-        <div class="container7">
-            @foreach($towars as $towars)
+                @foreach($towars as $towars)
                 <div class="top1">
                     <div class="global1">
-                        <img src="/{{$towars->picture}}" alt="">
+                        <img src="{{$towars->picture}}" alt="">
                         <h5>{{$towars->name}}</h5>
                         <p>{{$towars->price}} ₽/50гр.</p>
                     </div>
@@ -183,17 +87,104 @@
                         </form>
                     </div>
                 </div>
-            @endforeach
-{{--            <div class="pagination">--}}
-{{--                <a href="#">&laquo;</a>--}}
-{{--                <a class="active" href="#">1</a>--}}
-{{--                <a href="#">2</a>--}}
-{{--                <a href="#">3</a>--}}
-{{--                <a href="#">4</a>--}}
-{{--                <a href="#">5</a>--}}
-{{--                <a href="#">6</a>--}}
-{{--                <a href="#">&raquo;</a>--}}
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!--блок товары-->
+    <section class="tovar">
+{{--        <div class="container6">--}}
+{{--            <div class="filtr">--}}
+{{--                <h6>Фильтры</h6>--}}
 {{--            </div>--}}
+{{--            <div class="country">--}}
+{{--                <h6>Страна</h6>--}}
+{{--                <form class="country_form">--}}
+{{--                    <label>--}}
+{{--                        <input type="checkbox" name="languages" value="HTML">--}}
+{{--                        Китай--}}
+{{--                    </label>--}}
+{{--                    <br>--}}
+{{--                    <label>--}}
+{{--                        <input type="checkbox" name="languages" value="CSS">--}}
+{{--                        Индия--}}
+{{--                    </label>--}}
+{{--                    <br>--}}
+{{--                    <label>--}}
+{{--                        <input type="checkbox" name="languages" value="JS">--}}
+{{--                        Япония--}}
+{{--                    </label>--}}
+{{--                    <br>--}}
+{{--                    <label>--}}
+{{--                        <input type="checkbox" name="languages" value="JS">--}}
+{{--                        Россия--}}
+{{--                    </label>--}}
+{{--                    <br>--}}
+{{--                    <label>--}}
+{{--                        <input type="checkbox" name="languages" value="JS">--}}
+{{--                        Кения--}}
+{{--                    </label>--}}
+{{--                </form>--}}
+{{--            </div>--}}
+{{--            <div class="price">--}}
+{{--                <h6>Цена</h6>--}}
+{{--                <form class="price_form">--}}
+{{--                    <label>--}}
+{{--                        <input type="checkbox" name="languages" value="HTML">--}}
+{{--                        Дорогой чай--}}
+{{--                    </label>--}}
+{{--                    <br>--}}
+{{--                    <label>--}}
+{{--                        <input type="checkbox" name="languages" value="CSS">--}}
+{{--                        Дешевый чай--}}
+{{--                    </label>--}}
+{{--                    <br>--}}
+{{--                </form>--}}
+{{--            </div>--}}
+{{--            <div class="btn1">--}}
+{{--                <button class="btn_more1">Применить</button>--}}
+{{--            </div>--}}
+{{--            <div class="btn2">--}}
+{{--                <button class="btn_more2">Сбросить</button>--}}
+{{--            </div>--}}
+{{--            --}}{{-- <div class="teg">--}}
+{{--            --}}{{-- <p>Tea Grounds</p>--}}
+{{--            --}}{{-- </div>--}}
+{{--        </div>--}}
+{{--        <div class="separation"></div>--}}
+        <h4><span>—</span> Все товары <span>—</span></h4>
+        <div class="container7">
+            @php
+            $er = \App\Models\Towar::orderBy('created_at', 'DESC')->get();
+            @endphp
+            @foreach($er as $towars)
+            <div class="top1">
+                <div class="global1">
+                    <img src="{{$towars->picture}}" alt="">
+                    <h5>{{$towars->name}}</h5>
+                    <p>{{$towars->price}} ₽/50гр.</p>
+                </div>
+                <div class="btn_top1">
+                    <a href="{{route('OpenTovar', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
+                    <form action="{{url('add_cart',$towars->id)}}" method="Post">
+                        @csrf
+                        <input type="number" name="quantity" value="1" min="1">
+                        <button type="submit" class="btn_top1_more1">Добавить</button>
+                    </form>
+                </div>
+            </div>
+            @endforeach
+            {{-- <div class="pagination">--}}
+            {{-- <a href="#">&laquo;</a>--}}
+            {{-- <a class="active" href="#">1</a>--}}
+            {{-- <a href="#">2</a>--}}
+            {{-- <a href="#">3</a>--}}
+            {{-- <a href="#">4</a>--}}
+            {{-- <a href="#">5</a>--}}
+            {{-- <a href="#">6</a>--}}
+            {{-- <a href="#">&raquo;</a>--}}
+            {{-- </div>--}}
         </div>
     </section>
 

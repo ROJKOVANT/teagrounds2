@@ -136,6 +136,34 @@ input {
     font-size: 1.2vw;
     font-family: 'Philosopher';
 }
+form{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+}
+.btn_top1 {
+    display: flex;
+    justify-content: center;
+    margin: 0.5vw 0;
+}
+
+.btn_top1_more1 {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 35px;
+    font-size: 1.1vw;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2.5px;
+}
+
+.btn_top1_more1:hover {
+    background: white;
+    color: black;
+    transition: 2s;
+}
 
 /*Конец  блока корзина*/
 

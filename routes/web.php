@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,6 +33,10 @@ Route::get('/about', function () {
 Route::get('/catalog', function () {
     return view('catalog');
 });
+Route::get('/catalog/{id}', [App\Http\Controllers\TowarsController::class, 'index'])->name('catalog');/*товары по категории*/
+//Route::get('/catalog/{id}', [App\Http\Controllers\TowarsController::class, 'categories'])->name('catalog');/*товары по категории*/
+
+//Route::get('/catalog/{id}', [\App\Http\Controllers\TowarsController::class, 'filter'])->name('catalog');
 
 //Route::get('/blog', function () {
 //    return view('blog');
@@ -49,15 +54,26 @@ Route::get('/OpenTovar/{id}', [App\Http\Controllers\TowarsController::class, 'to
 //});
 
 
-Route::get('/history', function () {
-    return view('history');
-});
+//Route::get('/history', function () {
+//   return view('history');
+//});
+Route::get('/history', [App\Http\Controllers\HomeController::class, 'producthistory'])->name('history');/*вывод заказов в истории которые пришли*/
+
+
+//----------------
+// Статус на получен
+Route::patch('/product/status/{id}', [HomeController::class, 'setStatus'])->name('statusEnd');
+
+//------------------
+
 Route::get('/help', function () {
     return view('help');
 });
 Route::get('/shop', function () {
     return view('shop');
 });
+//Route::get('/shop', [App\Http\Controllers\TowarsController::class, 'fourNewTovarAll'])->name('shop'); //вывод 4ех товара по новизне
+Route::get('/shop', [App\Http\Controllers\TowarsController::class, 'all'])->name('shop'); //вывод всех товаров по новизне
 
 //Route::get('/helpReview', function () {
 //    return view('helpReview');
@@ -76,15 +92,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/admin', function (){
+Route::get('/admin', function () {
     return view('admin');
-
-
 })->middleware('admin');
 
 /*клиенты*/
-Route::get('/admin',[App\Http\Controllers\InfoUserController::class, 'allInfo'])->name('admin');/*вывод клиентов*/
-Route::get('/admin/{id}/delete',[App\Http\Controllers\InfoUserController::class, 'deleteInfo'])->name('admin.deleteInfo');/*удаление клиентов*/
+Route::get('/admin', [App\Http\Controllers\InfoUserController::class, 'allInfo'])->name('admin');/*вывод клиентов*/
+Route::get('/admin/{id}/delete', [App\Http\Controllers\InfoUserController::class, 'deleteInfo'])->name('admin.deleteInfo');/*удаление клиентов*/
 
 /*Категории статьи*/
 Route::get('/paragraphs', [App\Http\Controllers\ParagraphsController::class, 'index'])->name('paragraphs');/*страница с категориями*/
@@ -117,10 +131,10 @@ Route::get('/adminBlog/delete/{id}', [App\Http\Controllers\NewsesController::cla
 Route::get('/adminBlogAdd', [App\Http\Controllers\NewsesController::class, 'create'])->name('adminBlogAdd');/*создать новость*/
 Route::post('/adminBlogAdd/store', [App\Http\Controllers\NewsesController::class, 'store'])->name('adminBlogAdd.store');/*занести данные новости*/
 
-/*товары*/
-Route::get('/adminTovar', function () {
-    return view('adminTovar');
-});/*все товары*/
+/*товары у админа*/
+Route::get('/adminTovar', [App\Http\Controllers\TowarsController::class, 'allAdminTowars'])->name('adminTovar'); //вывод всех товаров по новизне у админа
+
+
 Route::get('/towars/index/{id}', [App\Http\Controllers\TowarsController::class, 'towars'])->name('towars.index');/*страница с товаром*/
 Route::get('/towars/edit/{id}', [App\Http\Controllers\TowarsController::class, 'edit'])->name('towars.edit');/*изменить товар*/
 Route::post('/towars/update/{id}', [App\Http\Controllers\TowarsController::class, 'update'])->name('towars.update');/*сохранить изменение товара*/

@@ -59,7 +59,7 @@
 
             @foreach( $cart as $cart)
             <tr class="table-content">
-                <th><img src="/{{$cart->picture}}" style="height: 5vw; width: 5vw;" alt=""></th>
+                <th><img src="{{$cart->picture}}" style="height: 5vw; width: 5vw;" alt=""></th>
                 <th>{{$cart->towar_name}}</th>
                 <th>{{$cart->quantity}} шт.</th>
                 <th>{{$cart->price}} ₽/50гр.</th>
@@ -80,15 +80,21 @@
             <div class="itog">
                 <h2>Общая стоимость : {{$totalprice}} ₽</h2>
             </div>
+             @php
+                 $carts = \App\Models\Cart::all();
+             @endphp
             <div class="address">
-                <form action="" method="">
+                <form action="{{route('cash_order')}}" method="P0ST">
                     @csrf
-                    <input type="text" placeholder="Выберите адрес доставки">
+                    @foreach($carts as $el)
+                        @method('patch')
+                    <input type="text" name="address" value="{{$el->address}}" size="25">
+                    @endforeach
+                    <div class="buy">
+                        <button type="submit" class="btn_top1_more1" onclick="return confirm('Подтвердите свой заказ и мы получилим его.Ожидайте доставки!')">Оплата наличными</button>
+{{--                        <a href="" class="link-effect">Оплата картой</a>--}}
+                    </div>
                 </form>
-            </div>
-            <div class="buy">
-                <a href="/cash_order" class="link-effect">Оплата наличными</a>
-                <a href="" class="link-effect">Оплата картой</a>
             </div>
         </div>
     </section>
