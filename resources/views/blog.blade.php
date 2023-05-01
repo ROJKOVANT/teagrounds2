@@ -25,7 +25,7 @@
             <li><a href="/about" class="link-effect">О нас</a></li>
             <li><a href="/shop" class="link-effect">Магазин</a></li>
             <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="" class="link-effect">Конструктор</a></li>
+            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
             <li><a href="/carts" class="link-effect">Корзина</a></li>
             <li class="login"><a href="/register">
                     @auth
@@ -79,6 +79,7 @@
             <a href="#">6</a>
             <a href="#">&raquo;</a>
         </div>
+        <a href="#" class="go-top"><img src="img/upbtn.png" alt=""></a>
     </section>
 
     <!--блок footer-->
@@ -88,7 +89,7 @@
             <li><a href="/about" class="link-effect">О нас</a></li>
             <li><a href="/shop" class="link-effect">Магазин</a></li>
             <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="" class="link-effect">Конструктор</a></li>
+            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
         </ul>
         <div class="conf">
             <a href="">Политика конфидециальности</a>
@@ -97,7 +98,8 @@
             <p>Tea Grounds © 2022 Все права защищены</p>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/buttonUp.js"></script>
 </body>
-
 </html>
 @endsection

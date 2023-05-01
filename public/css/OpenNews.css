@@ -72,12 +72,12 @@ header{
     align-items: center;
 }
 .news_info1 img{
-    width: 40vw;
+    width: auto;
     height: 25vw;
 }
 .news_info1 p{
     color: white;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     font-family: 'Philosopher', sans-serif;
     width: auto;
     height: auto;
@@ -91,7 +91,7 @@ header{
 }
 .news_info2 p{
     color: white;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     font-family: 'Philosopher', sans-serif;
     width: auto;
     height: auto;
@@ -302,27 +302,6 @@ footer a{
         gap:  5.2vw  5.2vw;
         margin: 2vw 100px 5vw 100px;
     }
-    .card img{
-        width: 17.1vw;
-    }
-    .card-title{
-        padding: 1vw 1vw 0;
-        font-size: 0.8vw;
-    }
-    .card-text{
-        font-size: 0.9vw;
-        padding: 1vw 1vw 2vw;
-    }
-    .card-btn{
-        margin-bottom: 1.5vw;
-    }
-    .card-btn button{
-        font-size: 1.1vw;
-        padding: 0.3vw 4vw;
-    }
-    .card-btn button > a{
-        font-size: 1.1vw;
-    }
     /*Начало блока Footer*/
     .navigation_footer{
         display: flex;
@@ -364,14 +343,31 @@ footer a{
 }
 @media screen and (max-width: 1441px){
     /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 17.2vw);
+        gap:  5.2vw  5.2vw;
+        margin: 2vw 100px 5vw 100px;
+    }
+    .card img{
+        width: 17vw;
+        height: 9vw;
+    }
+    .card-title{
+        padding: 1vw 1vw 0;
+        font-size: 0.85vw;
+    }
+    .card-text{
+        font-size: 1vw;
+        padding: 1vw 1vw 2vw;
+    }
     .card-btn{
         margin-bottom: 1.5vw;
     }
-    .card-btn button {
-        padding: 0.3vw 4vw;
-        font-size: 1.2vw;
+    .card-btn button{
+        font-size: 1.3vw;
+        padding: 0.4vw 4vw;
     }
-    .card-btn button > a {
+    .card-btn button > a{
         font-size: 1.2vw;
     }
 }
@@ -391,7 +387,7 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 1.8vw;
+        font-size: 2vw;
         margin:  5.5vw 100px 4vw;
         padding-bottom: 1vw;
     }
@@ -401,11 +397,11 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 40vw;
+        width: auto;
         height: 25vw;
     }
     .news_info1 p{
-        font-size: 1.35vw;
+        font-size: 1.65vw;
         line-height: 2.5vw;
     }
     /**/
@@ -413,32 +409,33 @@ footer a{
         margin: 2.5vw 100px 1vw;
     }
     .news_info2 p{
-        font-size: 1.35vw;
+        font-size: 1.65vw;
         line-height: 2.5vw;
     }
     /*статьи*/
     .container {
         grid-template-columns: repeat(auto-fill, 17.2vw);
         gap:  5.2vw  5.2vw;
-        margin: 0 100px 5vw 100px;
+        margin: 2vw 100px 5vw 100px;
     }
     .card img{
-        width: 17.1vw;
+        width: 17vw;
+        height: 9vw;
     }
     .card-title{
         padding: 1vw 1vw 0;
-        font-size: 0.8vw;
+        font-size: 0.85vw;
     }
     .card-text{
-        font-size: 0.9vw;
+        font-size: 1vw;
         padding: 1vw 1vw 2vw;
     }
     .card-btn{
         margin-bottom: 1.5vw;
     }
     .card-btn button{
-        font-size: 1.2vw;
-        padding: 0.3vw 4vw;
+        font-size: 1.3vw;
+        padding: 0.4vw 4vw;
     }
     .card-btn button > a{
         font-size: 1.2vw;
@@ -503,7 +500,7 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 1.8vw;
+        font-size: 2vw;
         margin:  5.5vw 100px 4vw;
         padding-bottom: 1vw;
     }
@@ -513,11 +510,11 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 40vw;
+        width: auto;
         height: 25vw;
     }
     .news_info1 p{
-        font-size: 1.35vw;
+        font-size: 1.65vw;
         line-height: 2.5vw;
     }
     /**/
@@ -525,17 +522,17 @@ footer a{
         margin: 2.5vw 100px 1vw;
     }
     .news_info2 p{
-        font-size: 1.35vw;
+        font-size: 1.65vw;
         line-height: 2.5vw;
     }
-    /*статьи*/
     .container {
         grid-template-columns: repeat(auto-fill, 20vw);
         gap:  6vw  7vw;
         margin: 2vw 100px 5vw 100px;
     }
     .card img{
-        width: 19.9vw;
+        width: auto;
+        height: 11.1vw;
     }
     .card-title{
         padding: 1.5vw 1.2vw 0;
@@ -550,7 +547,7 @@ footer a{
     }
     .card-btn button{
         font-size: 1.3vw;
-        padding: 0.3vw 4vw;
+        padding: 0.4vw 4vw;
     }
     .card-btn button > a{
         font-size: 1.3vw;
@@ -609,7 +606,7 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 1.8vw;
+        font-size: 2vw;
         margin:  5.5vw 100px 4vw;
         padding-bottom: 1vw;
     }
@@ -619,11 +616,11 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 40vw;
+        width: auto;
         height: 25vw;
     }
     .news_info1 p{
-        font-size: 1.35vw;
+        font-size: 1.75vw;
         line-height: 2.5vw;
     }
     /**/
@@ -631,7 +628,7 @@ footer a{
         margin: 2.5vw 100px 1vw;
     }
     .news_info2 p{
-        font-size: 1.35vw;
+        font-size: 1.75vw;
         line-height: 2.5vw;
     }
     /*статьи*/
@@ -641,21 +638,22 @@ footer a{
         margin: 2vw 100px 5vw 100px;
     }
     .card img{
-        width: 19.9vw;
+        width: auto;
+        height: 11.1vw;
     }
     .card-title{
         padding: 1.5vw 1.2vw 0;
-        font-size: 0.95vw;
+        font-size: 1vw;
     }
     .card-text{
-        font-size: 1.125vw;
+        font-size: 1.2vw;
         padding: 1.5vw 1.2vw 2.5vw;
     }
     .card-btn{
         margin-bottom: 1.5vw;
     }
     .card-btn button{
-        font-size: 1.35vw;
+        font-size: 1.4vw;
         padding: 0.4vw 4vw;
     }
     .card-btn button > a{
@@ -715,7 +713,7 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 1.9vw;
+        font-size: 2.1vw;
         margin:  7vw 100px 4vw;
         padding-bottom: 1vw;
     }
@@ -725,11 +723,11 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 40vw;
-        height: 30vw;
+        width: auto;
+        height: 25vw;
     }
     .news_info1 p{
-        font-size: 1.55vw;
+        font-size: 1.85vw;
         line-height: 2.5vw;
     }
     /**/
@@ -737,12 +735,12 @@ footer a{
         margin: 2.5vw 100px 1vw;
     }
     .news_info2 p{
-        font-size: 1.55vw;
+        font-size: 1.85vw;
         line-height: 2.5vw;
     }
     /*статьи*/
     .news_more h3{
-        font-size: 2.3vw;
+        font-size: 2.1vw;
         margin: 100px;
         padding-bottom: 2vw;
     }
@@ -752,22 +750,23 @@ footer a{
         margin: 2vw 100px 7.5vw 100px;
     }
     .card img{
-        width: 21.8vw;
+        width: auto;
+        height: 12.2vw;
     }
     .card-title{
         padding: 1.5vw 1.2vw 0;
-        font-size: 1vw;
+        font-size: 1.05vw;
     }
     .card-text{
-        font-size: 1.2vw;
+        font-size: 1.25vw;
         padding: 1.5vw 1.2vw 2.5vw;
     }
     .card-btn{
         margin-bottom: 1.5vw;
     }
     .card-btn button{
-        font-size: 1.45vw;
-        padding: 0.45vw 4vw;
+        font-size: 1.5vw;
+        padding: 0.5vw 4vw;
     }
     .card-btn button > a{
         font-size: 1.35vw;
@@ -825,7 +824,7 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 2vw;
+        font-size: 2.2vw;
         margin:  7vw 90px 4vw;
         padding-bottom: 1vw;
     }
@@ -836,11 +835,12 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 50vw;
+        width: auto;
         height: 35vw;
     }
     .news_info1 p{
-        font-size: 1.65vw;
+        text-align: center;
+        font-size: 1.95vw;
         line-height: 2.5vw;
     }
     /**/
@@ -848,7 +848,8 @@ footer a{
         margin: 2.5vw 100px 1vw;
     }
     .news_info2 p{
-        font-size: 1.65vw;
+        text-align: center;
+        font-size: 1.95vw;
         line-height: 2.5vw;
     }
     /*статьи*/
@@ -863,7 +864,8 @@ footer a{
         margin: 2vw 100px 7.5vw 100px;
     }
     .card img{
-        width: 23.8vw;
+        width: auto;
+        height: 13.25vw;
     }
     .card-title{
         padding: 1.5vw 1.2vw 0;
@@ -877,8 +879,8 @@ footer a{
         margin-bottom: 1.5vw;
     }
     .card-btn button{
-        font-size: 1.55vw;
-        padding: 0.45vw 4vw;
+        font-size: 1.65vw;
+        padding: 0.55vw 4vw;
     }
     .card-btn button > a{
         font-size: 1.55vw;
@@ -936,7 +938,7 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 2vw;
+        font-size: 2.3vw;
         margin:  7vw 90px 4vw;
         padding-bottom: 1vw;
     }
@@ -946,11 +948,11 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 50vw;
+        width: auto;
         height: 35vw;
     }
     .news_info1 p{
-        font-size: 1.85vw;
+        font-size: 2.1vw;
         line-height: 2.5vw;
     }
     /**/
@@ -958,12 +960,12 @@ footer a{
         margin: 2.5vw 100px 1vw;
     }
     .news_info2 p{
-        font-size: 1.85vw;
+        font-size: 2.1vw;
         line-height: 2.5vw;
     }
     /*статьи*/
     .news_more h3{
-        font-size: 2.3vw;
+        font-size: 2.4vw;
         margin: 100px;
         padding-bottom: 2vw;
     }
@@ -973,22 +975,23 @@ footer a{
         margin: 2vw 100px 7.5vw 100px;
     }
     .card img{
-        width: 25.8vw;
+        width: auto;
+        height: 14.35vw;
     }
     .card-title{
         padding: 1.5vw 1.2vw 0;
-        font-size: 1.1vw;
+        font-size: 1.2vw;
     }
     .card-text{
-        font-size: 1.5vw;
+        font-size: 1.55vw;
         padding: 1.5vw 1.2vw 2.5vw;
     }
     .card-btn{
         margin-bottom: 1.5vw;
     }
     .card-btn button{
-        font-size: 1.75vw;
-        padding: 0.55vw 4vw;
+        font-size: 1.8vw;
+        padding: 0.6vw 4vw;
     }
     .card-btn button > a{
         font-size: 1.55vw;
@@ -1048,7 +1051,7 @@ footer a{
     .news_paragrph h3{
         font-size: 2.4vw;
         margin:  7vw 90px 4vw;
-        padding-bottom: 1vw;
+        padding-bottom: 2vw;
     }
     /**/
     .news_info1{
@@ -1056,11 +1059,11 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 50vw;
+        width: auto;
         height: 35vw;
     }
     .news_info1 p{
-        font-size: 2vw;
+        font-size: 2.25vw;
         line-height: 2.7vw;
     }
     /**/
@@ -1068,12 +1071,12 @@ footer a{
         margin: 2.5vw 100px 1vw;
     }
     .news_info2 p{
-        font-size: 2vw;
+        font-size: 2.25vw;
         line-height: 2.7vw;
     }
     /*статьи*/
     .news_more h3{
-        font-size: 2.4vw;
+        font-size: 2.6vw;
         margin: 75px 100px;
         padding-bottom: 2vw;
     }
@@ -1147,9 +1150,9 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 2.5vw;
+        font-size: 2.6vw;
         margin:  7vw 75px 4vw;
-        padding-bottom: 1vw;
+        padding-bottom: 2vw;
     }
     /**/
     .news_info1{
@@ -1157,11 +1160,11 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 57vw;
-        height: 40vw;
+        width: auto;
+        height: 35vw;
     }
     .news_info1 p{
-        font-size: 2.3vw;
+        font-size: 2.55vw;
         line-height: 2.85vw;
     }
     /**/
@@ -1169,7 +1172,7 @@ footer a{
         margin: 2.5vw 75px 1vw;
     }
     .news_info2 p{
-        font-size: 2.3vw;
+        font-size: 2.55vw;
         line-height: 2.85vw;
     }
     /*статьи*/
@@ -1184,22 +1187,23 @@ footer a{
         margin: 2vw 100px 7.5vw 100px;
     }
     .card img{
-        width: 27.8vw;
+        width: auto;
+        height: 15.5vw;
     }
     .card-title{
         padding: 2.2vw 1.2vw 0;
-        font-size: 1.25vw;
+        font-size: 1.45vw;
     }
     .card-text{
-        font-size: 1.6vw;
+        font-size: 1.8vw;
         padding: 2.2vw 1.2vw 3.5vw;
     }
     .card-btn{
         margin-bottom: 2.5vw;
     }
     .card-btn button{
-        font-size: 1.95vw;
-        padding: 0.65vw 4vw;
+        font-size: 2.1vw;
+        padding: 0.7vw 4vw;
     }
     .card-btn button > a{
         font-size: 1.95vw;
@@ -1208,8 +1212,8 @@ footer a{
         margin: 6vw 0;
     }
     .btn a {
-        padding: 0.7vw 3.5vw;
-        font-size: 2vw;
+        padding: 0.9vw 3.5vw;
+        font-size: 2.2vw;
     }
 }
 @media screen and (max-width: 701px) {
@@ -1219,9 +1223,9 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 2.8vw;
+        font-size: 2.9vw;
         margin:  7vw 75px 5vw;
-        padding-bottom: 1.2vw;
+        padding-bottom: 2vw;
     }
     /**/
     .news_info1{
@@ -1229,11 +1233,11 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 60vw;
-        height: 42vw;
+        width: auto;
+        height: 35vw;
     }
     .news_info1 p{
-        font-size: 2.6vw;
+        font-size: 2.75vw;
         line-height: 2.95vw;
     }
     /**/
@@ -1241,12 +1245,12 @@ footer a{
         margin: 2.5vw 75px 1vw;
     }
     .news_info2 p{
-        font-size: 2.6vw;
+        font-size: 2.75vw;
         line-height: 2.95vw;
     }
     /*статьи*/
     .news_more h3{
-        font-size: 2.9vw;
+        font-size: 3.1vw;
         margin: 75px 100px;
         padding-bottom: 2vw;
     }
@@ -1256,21 +1260,22 @@ footer a{
         margin: 2vw 100px 12.5vw 100px;
     }
     .card img{
-        width: 28.8vw;
+        width: auto;
+        height: 16vw;
     }
     .card-title{
         padding: 2.2vw 1.2vw 0;
-        font-size: 1.35vw;
+        font-size: 1.5vw;
     }
     .card-text{
-        font-size: 1.7vw;
+        font-size: 1.9vw;
         padding: 2.2vw 1.2vw 3.5vw;
     }
     .card-btn{
         margin-bottom: 2.5vw;
     }
     .card-btn button{
-        font-size: 2vw;
+        font-size: 2.2vw;
         padding: 0.65vw 4vw;
     }
     .card-btn button > a{
@@ -1280,8 +1285,8 @@ footer a{
         margin: 6vw 0;
     }
     .btn a {
-        padding: 0.7vw 3.5vw;
-        font-size: 2.2vw;
+        padding: 1vw 3.5vw;
+        font-size: 2.3vw;
     }
 }
 @media screen and (max-width: 589px){
@@ -1291,9 +1296,10 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 3vw;
+        font-size: 3.35vw;
         margin:  7vw 50px 5vw;
-        padding-bottom: 1.2vw;
+        padding-bottom: 2vw;
+        line-height: 4vw;
     }
     /**/
     .news_info1{
@@ -1301,49 +1307,50 @@ footer a{
         gap: 5vw;
     }
     .news_info1 img{
-        width: 60vw;
-        height: 42vw;
+        width: auto;
+        height: 35vw;
     }
     .news_info1 p{
-        font-size: 2.8vw;
-        line-height: 3.2vw;
+        font-size: 3.2vw;
+        line-height: 4vw;
     }
     /**/
     .news_info2{
         margin: 2.5vw 50px 1vw;
     }
     .news_info2 p{
-        font-size: 2.8vw;
-        line-height: 3.2vw;
+        font-size: 3.2vw;
+        line-height: 4vw;
     }
     /*статьи*/
     .news_more h3{
-        font-size: 3.1vw;
+        font-size: 3.65vw;
         margin: 75px 50px;
         padding-bottom: 2vw;
     }
     .container {
-        grid-template-columns: repeat(auto-fill, 40vw);
-        gap:  8vw  8vw;
-        margin: 2vw 50px 12.5vw 50px;
-    }
+         grid-template-columns: repeat(auto-fill, 40vw);
+         gap:  8vw  8vw;
+         margin: 2vw 100px 12.5vw 100px;
+     }
     .card img{
-        width: 39.8vw;
+        width: auto;
+        height: 22.2vw;
     }
     .card-title{
         padding: 2.2vw 2vw 0;
-        font-size: 1.8vw;
+        font-size: 1.9vw;
     }
     .card-text{
-        font-size: 2.2vw;
+        font-size: 2.4vw;
         padding: 2.2vw 2vw 5vw;
     }
     .card-btn{
         margin-bottom: 4vw;
     }
     .card-btn button{
-        font-size: 2.5vw;
-        padding: 0.75vw 4vw;
+        font-size: 2.7vw;
+        padding: 0.85vw 4vw;
     }
     .card-btn button > a{
         font-size: 2.5vw;
@@ -1352,8 +1359,83 @@ footer a{
         margin: 6vw 0;
     }
     .btn a {
-        padding: 1vw 3.5vw;
-        font-size: 2.5vw;
+        padding: 1.45vw 3.5vw;
+        font-size: 2.65vw;
+    }
+}
+@media screen and (max-width: 471px){
+    /*Начало блока статья*/
+    .news{
+        margin-top: 7vw;
+    }
+    /**/
+    .news_paragrph h3{
+        font-size: 4.2vw;
+        margin:  7vw 50px 5vw;
+        padding-bottom: 2.5vw;
+        line-height: 5vw;
+        text-align: center;
+    }
+    /**/
+    .news_info1{
+        margin: 0 50px 2.5vw;
+        gap: 5vw;
+    }
+    .news_info1 img{
+        width: auto;
+        height: 40vw;
+    }
+    .news_info1 p{
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+    /**/
+    .news_info2{
+        margin: 2.5vw 50px 1vw;
+    }
+    .news_info2 p{
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+    /*статьи*/
+    .news_more h3{
+        font-size: 4.5vw;
+        margin: 75px 50px;
+        padding-bottom: 2.5vw;
+    }
+    .container {
+        grid-template-columns: repeat(auto-fill, 55vw);
+        gap: 8vw 8vw;
+        margin: 2vw 100px 12.5vw;
+    }
+    .card img{
+        width: auto;
+        height: 30.55vw;
+    }
+    .card-title{
+        padding: 2.5vw 2.5vw 0;
+        font-size: 2.4vw;
+    }
+    .card-text{
+        font-size: 2.9vw;
+        padding: 2.2vw 2vw 5vw;
+    }
+    .card-btn{
+        margin-bottom: 4vw;
+    }
+    .card-btn button{
+        font-size: 3.5vw;
+        padding: 0.85vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 3.5vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 1.55vw 3.5vw;
+        font-size: 3.5vw;
     }
 }
 @media screen and (max-width: 426px){
@@ -1363,9 +1445,9 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 4.2vw;
+        font-size: 4.65vw;
         margin:  15vw 30px 6vw;
-        padding-bottom: 1.2vw;
+        padding-bottom: 2.5vw;
     }
     /**/
     .news_info1{
@@ -1373,59 +1455,60 @@ footer a{
         gap: 8vw;
     }
     .news_info1 img{
-        width: 70vw;
-        height: 50vw;
+        width: auto;
+        height: 45vw;
     }
     .news_info1 p{
-        font-size: 3.7vw;
-        line-height: 4vw;
+        font-size: 4.3vw;
+        line-height: 5vw;
     }
     /**/
     .news_info2{
         margin: 6vw 30px 1vw;
     }
     .news_info2 p{
-        font-size: 3.7vw;
-        line-height: 4vw;
+        font-size: 4.3vw;
+        line-height: 5vw;
     }
     /*статьи*/
     .news_more h3{
-        font-size: 4.2vw;
+        font-size: 4.8vw;
         margin: 60px 50px;
         padding-bottom: 2vw;
     }
     .container {
-        grid-template-columns: repeat(auto-fill, 50vw);
-        gap:  8vw  8vw;
-        margin: 2vw 30px 12.5vw 30px;
+        grid-template-columns: repeat(auto-fill, 55vw);
+        gap: 8vw 8vw;
+        margin: 2vw 100px 12.5vw;
     }
     .card img{
-        width: 49.8vw;
+        width: auto;
+        height: 30.5vw;
     }
     .card-title{
-        font-size: 2vw;
+        font-size: 2.5vw;
         padding: 3vw 2vw 0;
     }
     .card-text{
-        font-size: 2.8vw;
+        font-size: 3.2vw;
         padding: 5vw 2vw 8vw;
     }
     .card-btn{
-        margin-bottom: 4.5vw;
+        margin-bottom: 5.5vw;
     }
     .card-btn button{
-        font-size: 3.2vw;
-        padding: 1vw 6vw;
+        font-size: 4vw;
+        padding: 1.3vw 6vw;
     }
     .card-btn button > a{
-        font-size: 3.2vw;
+        font-size: 4vw;
     }
     .btn{
         margin: 6vw 0;
     }
     .btn a {
-        padding: 1.5vw 3.5vw;
-        font-size: 3.2vw;
+        padding: 1.55vw 3.5vw;
+        font-size: 4vw;
     }
 }
 @media screen and (max-width: 376px) {
@@ -1435,9 +1518,9 @@ footer a{
     }
     /**/
     .news_paragrph h3{
-        font-size: 5vw;
+        font-size: 5.4vw;
         margin:  15vw 50px 6vw;
-        padding-bottom: 1.2vw;
+        padding-bottom: 2.5vw;
     }
     /**/
     .news_info1{
@@ -1445,58 +1528,59 @@ footer a{
         gap: 8vw;
     }
     .news_info1 img{
-        width: 70vw;
-        height: 50vw;
+        width: auto;
+        height: 42vw;
     }
     .news_info1 p{
-        font-size: 4.5vw;
-        line-height: 5vw;
+        font-size: 4.85vw;
+        line-height: 5.5vw;
     }
     /**/
     .news_info2{
         margin: 6vw 50px 1vw;
     }
     .news_info2 p{
-        font-size: 4.5vw;
-        line-height: 5vw;
+        font-size: 4.85vw;
+        line-height: 5.5vw;
     }
     /*статьи*/
     .news_more h3{
-        font-size: 5vw;
+        font-size: 5.4vw;
         margin: 60px 50px;
-        padding-bottom: 2vw;
+        padding-bottom: 2.5vw;
     }
     .container {
-        grid-template-columns: repeat(auto-fill, 59vw);
-        gap:  15vw  8vw;
-        margin: 2vw 100px 20vw 100px;
+        grid-template-columns: repeat(auto-fill, 60vw);
+        gap: 8vw 8vw;
+        margin: 2vw 50px 12.5vw;
     }
     .card img{
-        width: 58.8vw;
+        width: auto;
+        height: 33.2vw;
     }
     .card-title{
-        font-size: 2.5vw;
+        font-size: 3vw;
         padding: 5vw 2vw 0;
     }
     .card-text{
-        font-size: 3.5vw;
+        font-size: 4vw;
         padding: 7vw 2vw 10vw;
     }
     .card-btn{
         margin-bottom: 4.5vw;
     }
     .card-btn button{
-        font-size: 3.7vw;
+        font-size: 4.3vw;
         padding: 1.5vw 6vw;
     }
     .card-btn button > a{
-        font-size: 3.7vw;
+        font-size: 4.3vw;
     }
     .btn{
         margin: 6vw 0;
     }
     .btn a {
         padding: 2vw 3.5vw;
-        font-size: 4vw;
+        font-size: 4.3vw;
     }
 }

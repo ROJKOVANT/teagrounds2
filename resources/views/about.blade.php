@@ -22,7 +22,7 @@
             <li><a href="/about" class="link-effect">О нас</a></li>
             <li><a href="/shop" class="link-effect">Магазин</a></li>
             <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="" class="link-effect">Конструктор</a></li>
+            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
             <li><a href="/carts" class="link-effect">Корзина</a></li>
             <li class="login"><a href="/register">
                     @auth
@@ -108,6 +108,7 @@
             <img class="up-img" src="{{ asset("img/svg3.svg") }}" alt="">
             <img src="{{ asset("img/svg4.svg") }}" alt="">
         </div>
+        <a href="#" class="go-top"><img src="img/upbtn.png" alt=""></a>
     </section>
 
     <!--блок footer-->
@@ -124,6 +125,7 @@
             <p>Tea Grounds © 2022 Все права защищены</p>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/buttonUp.js"></script>
 </body>
-
 </html>

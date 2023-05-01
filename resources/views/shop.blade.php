@@ -22,7 +22,7 @@
             <li><a href="/about" class="link-effect">О нас</a></li>
             <li><a href="/shop" class="link-effect">Магазин</a></li>
             <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="" class="link-effect">Конструктор</a></li>
+            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
             <li><a href="/carts" class="link-effect">Корзина</a></li>
             <li class="login"><a href="/register">
                     @auth
@@ -186,22 +186,24 @@
             {{-- <a href="#">&raquo;</a>--}}
             {{-- </div>--}}
         </div>
+        <a href="#" class="go-top"><img src="img/upbtn.png" alt=""></a>
     </section>
 
     <!--блок footer-->
     <footer>
         <ul class="navigation_footer">
-            <li><a href="{{ url('/') }}" style="font-size:2.5vw;">Tea Grounds</a></li>
-            <li><a href="{{ url('/about') }}">О нас</a></li>
-            <li><a href="{{ url('/shop') }}">Магазин</a></li>
-            <li><a href="{{ url('/blog') }}">Блог</a></li>
-            <li><a href="">Конструктор</a></li>
+            <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
+            <li><a href="/about" class="link-effect">О нас</a></li>
+            <li><a href="/shop" class="link-effect">Магазин</a></li>
+            <li><a href="/blog" class="link-effect">Блог</a></li>
+            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
         </ul>
         <a href="" style="font-size:1.2vw; color: rgba(255, 255, 255, 0.2);">Политика конфидециальности</a>
         <div class="cop">
             <p>Tea Grounds © 2022 Все права защищены</p>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/buttonUp.js"></script>
 </body>
-
 </html>

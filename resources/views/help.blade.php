@@ -14,7 +14,7 @@
         <li><a href="/about">О нас</a></li>
         <li><a href="/shop">Магазин</a></li>
         <li><a href="/blog">Блог</a></li>
-        <li><a href="">Конструктор</a></li>
+        <li><a href="/constructor">Конструктор</a></li>
         <li><a href="/carts" class="link-effect">Корзина</a></li>
     </div>
 

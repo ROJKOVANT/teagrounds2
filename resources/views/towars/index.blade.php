@@ -22,7 +22,7 @@
             <li><a href="/about" class="link-effect">О нас</a></li>
             <li><a href="/shop" class="link-effect">Магазин</a></li>
             <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="" class="link-effect">Конструктор</a></li>
+            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
             <li><a href="/carts" class="link-effect">Корзина</a></li>
             <li class="login"><a href="/register">
                     @auth
@@ -135,7 +135,7 @@
             <li><a href="/about" class="link-effect">О нас</a></li>
             <li><a href="/shop" class="link-effect">Магазин</a></li>
             <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="" class="link-effect">Конструктор</a></li>
+            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
         </ul>
         <div class="conf">
             <a href="">Политика конфидециальности</a>

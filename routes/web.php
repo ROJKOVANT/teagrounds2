@@ -72,6 +72,9 @@ Route::get('/help', function () {
 Route::get('/shop', function () {
     return view('shop');
 });
+Route::get('/constructor', function () {
+    return view('constructor');
+});
 //Route::get('/shop', [App\Http\Controllers\TowarsController::class, 'fourNewTovarAll'])->name('shop'); //вывод 4ех товара по новизне
 Route::get('/shop', [App\Http\Controllers\TowarsController::class, 'all'])->name('shop'); //вывод всех товаров по новизне
 

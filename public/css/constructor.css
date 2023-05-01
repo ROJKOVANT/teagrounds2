@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #212529;
+}
+/*Начало шапки сайта*/
+header{
+    top: 0;
+    width: 100%;
+    background-color: #212529;
+    border-bottom: 2px solid white;
+    position: fixed;
+}
+/**/
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher', sans-serif;
+}
+.logo{
+    font-size: 1.8vw;
+}
+.navigation a{
+    color: white;
+}
+/*подчеркивание у ссылок*/
+.link-effect::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+.link-effect:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+/*Конец шапки сайта*/
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+.paragraph{
+    margin-top: 10vw;
+    width: 100%;
+    height: auto;
+}
+/*Блок экран приведствия*/
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    padding-bottom: 5vw;
+    border-bottom: 2px solid white;
+}
+.container1 img{
+    width: auto;
+    height: auto;
+}
+.block1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+.block1 h3{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.2vw;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    border-top: 1.75px solid white;
+    padding-top: 2vw;
+    border-bottom: 1.75px solid white;
+    padding-bottom: 2vw;
+}
+.block1 p{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 50px;
+    color: white;
+}
+.card-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vw;
+}
+.card-btn button{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2vw;
+    color: white;
+    border: 1px solid white;
+    background-color: #212529;
+    padding: 0.4vw 4vw;
+    transition: 2s;
+}
+.card-btn button:hover{
+    background-color: white;
+    color: black;
+}
+.card-btn button > a{
+    color: white;
+    font-size: 1vw;
+    transition: 2s;
+}
+.card-btn button:hover > a{
+    color: black;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*Блок информация*/
+.container2{
+    margin-top: 5vw;
+    width: 100%;
+    height:auto;
+}
+.container2 h3{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    line-height: 50px;
+    color: white;
+    margin: 0 100px 2vw;
+    text-align: center;
+    padding-bottom: 1.5vw;
+    border-bottom: 2px solid white;
+}
+.box-1{
+    display: flex;
+    margin: 0vw 100px;
+    justify-content: space-evenly;
+    /* gap: 15vw; */
+    align-items: center;
+}
+.box-1 img{
+     width: auto;
+     height: 15vw;
+}
+.box-2{
+    display: flex;
+    margin: 0vw 100px;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    /* gap: 15vw; */
+    align-items: center;
+}
+.box-2 img{
+    width: auto;
+    height: 15vw;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.info h4{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2vw;
+    margin-left: 2vw;
+    margin-bottom: -0.35vw;
+    color: white;
+}
+.info p{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3vw;
+    line-height: 40px;
+    color: white;
+    border: 1px solid white;
+    padding: 0.7vw 2vw;
+}
+/*кнопка на вверх*/
+.go-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+.go-top img{
+    width: auto;
+    height: 2.5vw;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*Начало блока Footer*/
+.navigation_footer{
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5vw;
+    font-family: 'Philosopher';
+}
+footer{
+    height: 100%;
+    background-color: #191D21;
+    border-top: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6vw;
+}
+footer .navigation_footer{
+    padding-top: 5vh;
+    width: 100%;
+}
+.logo > a{
+    font-size: 1.8vw;
+}
+.conf{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.conf > a{
+    font-size:1.2vw;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Philosopher';
+}
+footer a{
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Philosopher';
+    margin-top: 2.5vh;
+}
+.cop{
+    color: white;
+    font-family: 'Philosopher';
+    font-size: 1.4vw;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+/*Конец блока Footer*/
