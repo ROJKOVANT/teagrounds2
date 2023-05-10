@@ -5,7 +5,6 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
 /* бокавая панель управления*/
 .navigation {
     display: flex;
@@ -65,7 +64,7 @@
 /*понель данных*/
 .d-f {
     display: flex;
-    /* margin: 0 100px 0 0; */
+    height: 100vh;
     gap: 7vw;
     margin-left: 18vw;
     background-image: url('../img/imgheader1.png');
@@ -73,7 +72,6 @@
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    height: auto;
 }
 
 .container {

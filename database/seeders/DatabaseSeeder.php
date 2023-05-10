@@ -32,7 +32,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             ParagraphSeeder::class,
             TowarsSeeder::class,
-            NewsSeeder::class
+            NewsSeeder::class,
+//            ReviewsSeeder::class
         ]);
     }
 }

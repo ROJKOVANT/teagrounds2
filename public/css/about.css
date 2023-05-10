@@ -12,22 +12,35 @@ body{
 header{
     top: 0;
     width: 100%;
-    background-color: #212529;
+    background-color: #191D21;
     border-bottom: 2px solid white;
     position: fixed;
 }
+/**/
+.navbar{
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
 .navigation{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
     color: white;
     font-size: 1.3vw;
     font-family: 'Philosopher', sans-serif;
+    justify-content: space-between;
+    gap: 8vw;
 }
 .logo{
     font-size: 1.8vw;
+}
+.navbar a {
+    color: white;
 }
 .navigation a{
     color: white;
@@ -45,6 +58,20 @@ header{
     width: 100%;
     transition: width 0.3s;
 }
+/*бургер меню*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+}
 /*Конец шапки сайта*/
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -57,15 +84,15 @@ header{
     display: flex;
 }
 .title1 p{
-font-family: 'Philosopher';
-font-style: normal;
-font-weight: 400;
-font-size: 10vw;
-line-height: 40px;
-display: flex;
-align-items: center;
-text-align: center;
-color: rgba(67, 67, 67, 0.25);
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10vw;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(66 69 73 / 56%);
 }
 .info{
     display: flex;
@@ -73,8 +100,11 @@ color: rgba(67, 67, 67, 0.25);
     justify-content: center;
 }
 h3{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 50px;
     color: white;
-    font-family: 'Philosopher', sans-serif;
     font-size: 2vw;
     margin: 0 100px;
     text-align: center;
@@ -91,10 +121,12 @@ h3{
     column-gap: 2.5vw;
 }
 .text_one p{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
     color: white;
-    font-family: 'Comfortaa', cursive;
     font-size: 1.1vw;
-    line-height: 2.5vw;
 }
 .separation{
     border-right: 2px solid white;
@@ -104,17 +136,19 @@ h3{
     margin-top: 5vw;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     column-gap: 2.5vw;
     margin-left: 105px;
 }
 .text_two p{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
     color: white;
-    font-family: 'Comfortaa', cursive;
     font-size: 1.1vw;
-    line-height: 2.5vw;
 }
 .title2{
     display: flex;
@@ -122,7 +156,7 @@ h3{
     justify-content: space-between;
 }
 .title2 img{
-    margin-top: -6vw;
+    margin-top: -4vw;
 }
 .title2 p{
     font-family: 'Philosopher';
@@ -133,7 +167,7 @@ h3{
     display: flex;
     align-items: center;
     text-align: center;
-    color: rgba(67, 67, 67, 0.25);
+    color: rgb(66 69 73 / 56%);
     flex-direction: column
 }
 /*Конец блока О НАС*/
@@ -143,16 +177,18 @@ h3{
 /*Начало блока Как найти нас*/
 .text_three{
     display: flex;
-    margin-top: 5vw;
-    margin-bottom: 7vw;
+    margin: 5vw 100px 7vw;
     justify-content: center;
     flex-direction: column;
     row-gap: 2vw;
 }
 .text_three p{
-    color: white;
-    font-size: 1.3vw;
     font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 40px;
+    color: white;
+    font-size: 1.2vw;
     text-align: center;
 }
 .text_three img{
@@ -167,9 +203,12 @@ h3{
 
 /*Начало блока КАК НАС НАЙТИ*/
 .info_where_we{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 40px;
     color: white;
-    font-size: 1.5vw;
-    font-family: 'Comfortaa', cursive;
+    font-size: 1.4vw;
     display: flex;
     flex-wrap: wrap;
     margin: 5vw 100px 0;
@@ -187,7 +226,7 @@ h3{
     margin: 0;
 }
 .up-img{
-    margin-top: -10vw;
+    margin-top: -9vw;
 }
 /*Конец блока КАК НАС НАЙТИ*/
 
@@ -207,19 +246,8 @@ h3{
     height: 2.5vw;
 }
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
-/*Начало блока Footer*/
 
-footer{
-    height: 100%;
-    position: relative;
-    background-color: #191D21;
-    border-top: 2px solid white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -0.9vw;
-    z-index: 7;
-}
+/*Начало блока Footer*/
 .navigation_footer{
     display: flex;
     color: white;
@@ -229,12 +257,29 @@ footer{
     font-size: 1.5vw;
     font-family: 'Philosopher';
 }
+footer{
+    height: 100%;
+    background-color: #191D21;
+    border-top: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 footer .navigation_footer{
     padding-top: 5vh;
     width: 100%;
 }
-.logo{
+.logo > a{
     font-size: 1.8vw;
+}
+.conf{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.conf > a{
+    font-size:1.2vw;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Philosopher';
 }
 footer a{
     color: white;
@@ -245,14 +290,1609 @@ footer a{
 .cop{
     color: white;
     font-family: 'Philosopher';
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     width: 100%;
-    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 /*Конец блока Footer*/
+
+/*---------------------------------------*/
+
+/*верстка адаптива*/
+
+@media screen and (max-width: 1581px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+        font-size: 1.5vw;
+    }
+    .logo{
+        font-size: 2vw;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 2.5vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.3vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 2.5vw;
+        margin-left: 50px;
+        flex-direction: column;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.3vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+     }
+    .title2 img {
+        margin-top: -8vw;
+        width: auto;
+        height: 20vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 100px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 1.2vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 20vw;
+    }
+    /*как нас найти*/
+    /*--------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .logo > a{
+        font-size: 2vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.3vw;
+    }
+    footer a{
+        font-size: 1.5vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.4vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1441px){
+    /**/
+    .title1 {
+        display: flex;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 2.7vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.45vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.45vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -8vw;
+        width: auto;
+        height: 20vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 100px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 1.4vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 20vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 1.5vw;
+        margin: 5vw 100px 0;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    .up-img{
+        margin-top: -9vw;
+    }
+    /*--------------------*/
+}
+@media screen and (max-width: 1301px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+        gap: 6vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 10vw;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 2.9vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.55vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.55vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -8vw;
+        width: auto;
+        height: 20vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 100px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 1.55vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 20vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 1.5vw;
+        margin: 5vw 100px 0;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 37vw;
+        height: 27vw;
+    }
+    .up-img{
+        margin-top: -9vw;
+    }
+    .up-img2{
+        margin-top: 5vw;
+    }
+    /*--------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.4vw;
+    }
+    footer a{
+        font-size: 1.6vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.5vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1282px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.5vw;
+    }
+    footer a{
+        font-size: 1.7vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.6vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1141px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.8vw;
+        margin-bottom: 1.8vw;
+        font-size: 1.8vw;
+        gap: 5vw;
+    }
+    .logo > a{
+        font-size: 2.6vw;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 11vw;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 3.2vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.75vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.75vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -5vw;
+        width: auto;
+        height: 22vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 100px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 1.75vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 20vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 1.75vw;
+        margin: 5vw 100px 0;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 38vw;
+        height: 30vw;
+    }
+    .up-img{
+        margin-top: -6vw;
+        width: auto;
+        height: 27vw;
+    }
+    .up-img2{
+        margin-top: 7vw;
+        width: auto;
+        height: 13.5vw;
+    }
+    /*--------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 3.5vw;
+    }
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.55vw;
+    }
+    footer a{
+        font-size: 1.8vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.7vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1041px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.9vw;
+        margin-bottom: 1.9vw;
+        font-size: 2vw;
+    }
+    .logo > a{
+        font-size: 2.7vw;
+    }
+    /*шапка*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.75vw;
+    }
+    footer a{
+        font-size: 1.9vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.85vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1000px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.1vw;
+        gap: 4vw;
+    }
+    .logo > a{
+        font-size: 2.8vw;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 11vw;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 3.55vw;
+        margin: 0 75px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.95vw;
+    }
+    .text_one img{
+        width: auto;
+        height: 35vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.95vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 35vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -5vw;
+        width: auto;
+        height: 25vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 100px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 1.95vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 22vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 1.95vw;
+        margin: 5vw 100px 0;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 35vw;
+        height: 35vw;
+    }
+    .up-img{
+        margin-top: -6vw;
+        width: auto;
+        height: 29vw;
+    }
+    .up-img2{
+        margin-top: 7vw;
+        width: auto;
+        height: 16vw;
+    }
+    /*--------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 4vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.85vw;
+    }
+    footer a{
+        font-size: 2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.95vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 901px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.3vw;
+        gap: 3vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 11vw;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 3.65vw;
+        margin: 0 75px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 2.1vw;
+    }
+    .text_one img{
+        width: auto;
+        height: 35vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 30px;
+        font-size: 2.1vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 35vw;
+    }
+    .title2 {
+        margin-left: 1.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -5vw;
+        width: auto;
+        height: 25vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 100px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 2.1vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 24vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 2.1vw;
+        margin: 5vw 75px 0;
+        text-align: center;
+        gap: 6vw;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 50vw;
+        height: 35vw;
+    }
+    .up-img{
+        margin-top: -12vw;
+        margin-left: 1vw;
+        width: auto;
+        height: 35vw;
+    }
+    .up-img2{
+        margin-top: 7vw;
+        width: auto;
+        height: 16vw;
+    }
+    /*--------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 3.7vh;
+        margin-bottom: 3.7vh;
+    }
+    .conf > a{
+        font-size: 2vw;
+    }
+    footer a{
+        font-size: 2.2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 841px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 2.1vw;
+        margin-bottom: 2.1vw;
+        font-size: 2.4vw;
+        gap: 2.5vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 3vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.15vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.15vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 769px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navbar{
+        margin: 2vw 0;
+        justify-content: space-around;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 250px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 3vw;
+        flex-direction: column;
+        /*background-color: #191D21;*/
+        background-color: #191d21ed;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+        transition: 2s;
+        margin: 0;
+        padding: 6vw 0;
+    }
+    .navigation li{
+        font-size: 2.7vw;
+    }
+    .navigation.active{
+        left: 0;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 15vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 4vw;
+        margin: 0 50px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 50px;
+    }
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 2.4vw;
+    }
+    .text_one img{
+        width: auto;
+        height: 35vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 30px;
+        font-size: 2.4vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 35vw;
+    }
+    .title2 {
+        margin-left: -1vw;
+    }
+    .title2 img {
+        margin-top: -5vw;
+        width: auto;
+        height: 25vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 50px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 2.4vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 27vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 2.4vw;
+        margin: 5vw 50px 0;
+        text-align: center;
+        gap: 6vw;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 60vw;
+        height: 35vw;
+    }
+    .up-img{
+        margin-top: -12vw;
+        margin-left: 1vw;
+        width: auto;
+        height: 35vw;
+    }
+    .up-img2{
+        margin-top: 7vw;
+        width: auto;
+        height: 16vw;
+    }
+    /*--------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.35vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 701px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navigation li{
+        font-size: 3vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 15vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 4.5vw;
+        margin: 0 50px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 50px;
+    }
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 2.7vw;
+    }
+    .text_one img{
+        width: auto;
+        height: 35vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 30px;
+        font-size: 2.7vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 35vw;
+    }
+    .title2 {
+        margin-left: -1vw;
+    }
+    .title2 img {
+        margin-top: -1vw;
+        width: auto;
+        height: 30vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 50px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 2.7vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 30vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 2.7vw;
+        margin: 5vw 50px 0;
+        text-align: center;
+        gap: 6vw;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 65vw;
+        height: 40vw;
+    }
+    .up-img{
+        margin-top: 1vw;
+        margin-left: 1vw;
+        width: auto;
+        height: 35vw;
+    }
+    .up-img2{
+        margin-top: 19vw;
+        width: auto;
+        height: 16vw;
+    }
+    /*--------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.55vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 589px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4.7vw;
+    }
+    .navbar{
+        margin: 3vw 0;
+    }
+    .navigation{
+        padding: 8vw 0;
+        gap: 4.5vw;
+    }
+    .navigation li{
+        font-size: 3.7vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 18vw;
+    }
+    .title1 p {
+        font-size: 12vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 4.5vw;
+        margin: 0 50px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 50px;
+        gap: 3vw;
+        flex-direction: column;
+    }
+    .text_one {
+        margin-top: 5vw;
+        gap: 3vw;
+        width: 100%;
+        flex-direction: row;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 3vw;
+        text-align: left;
+    }
+    .text_one img{
+        width: auto;
+        height: 40vw;
+    }
+    .text_two {margin: 0;
+        gap: 3vw;
+        width: 100%;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+    }
+    .text_two p{
+        text-align: left;
+        line-height: 30px;
+        font-size: 3vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 40vw;
+    }
+    .title2{
+        margin-top: 2vw;
+    }
+    .title2 img {
+        width: auto;
+        height: 40vw;
+    }
+    .title2 p {
+        font-size: 10vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 50px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 3vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 30vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 3vw;
+        margin: 5vw 50px 0;
+        text-align: center;
+        gap: 6vw;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 65vw;
+        height: 40vw;
+    }
+    .up-img{
+        margin-top: 1vw;
+        margin-left: 1vw;
+        width: auto;
+        height: 35vw;
+    }
+    .up-img2{
+        margin-top: 19vw;
+        width: auto;
+        height: 16vw;
+    }
+    /*--------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 471px){
+    /*шапка*/
+    .logo > a{
+        font-size: 5.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 125px;
+    }
+    .navigation{
+        padding: 9.5vw 0;
+        gap: 5.5vw;
+    }
+    .navigation li{
+        font-size: 4.2vw;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 22vw;
+    }
+    .title1 p {
+        font-size: 14vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 5.5vw;
+        margin: 0 50px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 50px;
+        gap: 5vw;
+        flex-direction: column;
+    }
+    .text_one {
+        margin-top: 8vw;
+        gap: 5vw;
+        width: 100%;
+        flex-direction: column;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 3.7vw;
+        text-align: center;
+    }
+    .text_one img{
+        width: auto;
+        height: 60vw;
+    }
+    .text_two {
+        margin: 0;
+        gap: 5vw;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .text_two p{
+        text-align: center;
+        line-height: 30px;
+        font-size: 3.7vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 60vw;
+    }
+    .title2{
+        margin-top: 2vw;
+    }
+    .title2 img {
+        width: auto;
+        height: 42vw;
+    }
+    .title2 p {
+        font-size: 11vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 50px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        margin-top: 5vw;
+        line-height: 40px;
+        font-size: 3.7vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 40vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 3.7vw;
+        margin: 5vw 50px 0;
+        text-align: center;
+        gap: 6vw;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 70vw;
+        height: 50vw;
+    }
+    .up-img{
+        margin-top: 1vw;
+        margin-left: 1vw;
+        width: auto;
+        height: 40vw;
+    }
+    .up-img2{
+        margin-top: 21vw;
+        width: auto;
+        height: 20vw;
+    }
+    /*--------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 6.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3.9vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 426px){
+    /*шапка*/
+    .logo > a{
+        font-size: 6.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 100px;
+    }
+    .navigation{
+        padding: 10.5vw 0;
+        gap: 6.5vw;
+    }
+    .navigation li{
+        font-size: 5vw;
+    }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 7.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 1.5vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.2vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 376px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 7.5vw;
+    }
+    .navbar{
+        margin: 5vw 0;
+    }
+    .hamburger{
+        padding-left: 50px;
+    }
+    .navigation{
+        padding: 12.5vw 0;
+        gap: 8.5vw;
+    }
+    .navigation li{
+        font-size: 6vw;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 26vw;
+    }
+    .title1 p {
+        font-size: 14vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 7vw;
+        margin: 0 25px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 25px;
+        gap: 5vw;
+        flex-direction: column;
+    }
+    .text_one {
+        margin-top: 8vw;
+        gap: 5vw;
+        width: 100%;
+        flex-direction: column;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 4.5vw;
+        text-align: center;
+    }
+    .text_one img{
+        width: auto;
+        height: 60vw;
+    }
+    .text_two {
+        margin: 0;
+        gap: 5vw;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .text_two p{
+        text-align: center;
+        line-height: 30px;
+        font-size: 4.5vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 60vw;
+    }
+    .title2{
+        margin-top: 2vw;
+    }
+    .title2 img {
+        width: auto;
+        height: 45vw;
+    }
+    .title2 p {
+        font-size: 11vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 25px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        text-align: center;
+        margin-top: 5vw;
+        line-height: 40px;
+        font-size: 4.5vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 50vw;
+    }
+    /*как нас найти*/
+    .info_where_we{
+        line-height: 40px;
+        font-size: 4.3vw;
+        margin: 7vw 25px 0;
+        text-align: center;
+        gap: 8vw;
+    }
+    .info_where_we div p{
+        margin-top: 2vw;
+    }
+    .info_where_img{
+        margin: 0;
+    }
+    iframe{
+        width: 75vw;
+        height: 55vw;
+    }
+    .up-img{
+        margin-top: 1vw;
+        margin-left: 1vw;
+        width: auto;
+        height: 55vw;
+    }
+    .up-img2{
+        margin-top: 35vw;
+        width: auto;
+        height: 22vw;
+    }
+    /*--------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 8vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+    }
+    .conf{
+        margin-top: 1vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.65vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}

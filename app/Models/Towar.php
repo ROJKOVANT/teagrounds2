@@ -18,6 +18,7 @@ class Towar extends Model
         'country',/*страна чая*/
         'view',/*вид чая*/
         'taste',/*вкус чая*/
+        'description',/*описание чая*/
         'price',/*цена чая*/
         'count',/*цена чая*/
         'category_id',/*категория чая*/

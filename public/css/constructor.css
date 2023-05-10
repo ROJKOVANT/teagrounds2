@@ -12,23 +12,35 @@ body{
 header{
     top: 0;
     width: 100%;
-    background-color: #212529;
+    background-color: #191D21;
     border-bottom: 2px solid white;
     position: fixed;
 }
 /**/
+.navbar{
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
 .navigation{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
     color: white;
     font-size: 1.3vw;
     font-family: 'Philosopher', sans-serif;
+    justify-content: space-between;
+    gap: 8vw;
 }
 .logo{
     font-size: 1.8vw;
+}
+.navbar a {
+    color: white;
 }
 .navigation a{
     color: white;
@@ -46,9 +58,23 @@ header{
     width: 100%;
     transition: width 0.3s;
 }
+/*бургер меню*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+}
 /*Конец шапки сайта*/
 
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .paragraph{
     margin-top: 10vw;
@@ -189,6 +215,7 @@ header{
     border: 1px solid white;
     padding: 0.7vw 2vw;
 }
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
 /*кнопка на вверх*/
 .go-top {
     position: fixed;
@@ -204,6 +231,7 @@ header{
     height: 2.5vw;
 }
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
+
 /*Начало блока Footer*/
 .navigation_footer{
     display: flex;
@@ -258,3 +286,1422 @@ footer a{
     padding-bottom: 3vh;
 }
 /*Конец блока Footer*/
+
+/*---------------------------------------*/
+/*верстка адаптива*/
+
+@media screen and (max-width: 1581px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+        font-size: 1.5vw;
+    }
+    .logo{
+        font-size: 2vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .logo > a{
+        font-size: 2vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.3vw;
+    }
+    footer a{
+        font-size: 1.5vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.4vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1441px){
+    /*Блок экран приведствия*/
+    .container1{
+        gap: 8vw;
+        padding-bottom: 5vw;
+    }
+    .container1 img{
+        width: auto;
+        height: 28vw;
+    }
+    .block1{
+        gap: 1vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 2.7vw;
+        line-height: 50px;
+        padding-top: 1.7vw;
+        padding-bottom: 1.7vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 1.4vw;
+        line-height: 50px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 1.3vw;
+        padding: 0.4vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 5vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 2vw;
+        line-height: 50px;
+        margin: 0 100px 2vw;
+        padding-bottom: 1.5vw;
+    }
+    .box-1{
+        margin: 0vw 100px;
+    }
+    .box-1 img{
+        width: auto;
+        height: 15vw;
+    }
+    .box-2{
+        margin: 0vw 100px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 15vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 2vw;
+        margin-left: 2vw;
+        margin-bottom: -0.35vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 1.3vw;
+        line-height: 40px;
+        padding: 0.7vw 2vw;
+    }
+}
+@media screen and (max-width: 1301px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+        gap: 6vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        gap: 8vw;
+        padding-bottom: 5vw;
+        padding-top: 2vw;
+    }
+    .container1 img{
+        width: auto;
+        height: 26vw;
+    }
+    .block1{
+        gap: 1vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 2.5vw;
+        line-height: 40px;
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 1.6vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 1.5vw;
+        padding: 0.4vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 6vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 2.4vw;
+        line-height: 40px;
+        margin: 0 100px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 0vw 100px;
+    }
+    .box-1 img{
+        width: auto;
+        height: 18vw;
+    }
+    .box-2{
+        margin: 0vw 100px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 18vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 2.2vw;
+        margin-left: 2vw;
+        margin-bottom: -0.35vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 1.5vw;
+        line-height: 30px;
+        padding: 1vw 2vw;
+    }
+    /*----------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.4vw;
+    }
+    footer a{
+        font-size: 1.6vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.5vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1282px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.5vw;
+    }
+    footer a{
+        font-size: 1.7vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.6vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1141px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.8vw;
+        margin-bottom: 1.8vw;
+        font-size: 1.8vw;
+        gap: 5vw;
+    }
+    .logo > a{
+        font-size: 2.6vw;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        gap: 6vw;
+        padding-bottom: 5vw;
+        padding-top: 2vw;
+    }
+    .container1 img{
+        width: auto;
+        height: 27vw;
+    }
+    .block1{
+        gap: 1vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 2.5vw;
+        line-height: 40px;
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 1.75vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 1.65vw;
+        padding: 0.5vw 4vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 7vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 2.6vw;
+        line-height: 40px;
+        margin: 0 100px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 0vw 100px;
+    }
+    .box-1 img{
+        width: auto;
+        height: 20vw;
+    }
+    .box-2{
+        margin: 0vw 100px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 20vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 2.3vw;
+        margin-left: 2vw;
+        margin-bottom: -0.35vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 1.65vw;
+        line-height: 30px;
+        padding: 1.1vw 2vw;
+    }
+    /*----------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 3.5vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.55vw;
+    }
+    footer a{
+        font-size: 1.8vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.7vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1041px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.9vw;
+        margin-bottom: 1.9vw;
+        font-size: 2vw;
+    }
+    .logo > a{
+        font-size: 2.7vw;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        gap: 6vw;
+        padding-bottom: 6vw;
+        padding-top: 3.5vw;
+    }
+    .container1 img{
+        width: auto;
+        height: 27vw;
+    }
+    .block1{
+        gap: 1vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 2.5vw;
+        line-height: 40px;
+        padding: 1.5vw 2.5vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 1.85vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 1.75vw;
+        padding: 0.5vw 4vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 8vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 2.7vw;
+        line-height: 40px;
+        margin: 0 100px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 0vw 100px;
+    }
+    .box-1 img{
+        width: auto;
+        height: 21vw;
+    }
+    .box-2{
+        margin: 0vw 100px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 21vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 2.5vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 1.85vw;
+        line-height: 30px;
+        padding: 1.3vw 2vw;
+    }
+    /*----------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.75vw;
+    }
+    footer a{
+        font-size: 1.9vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.85vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1000px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.1vw;
+        gap: 4vw;
+    }
+    .logo > a{
+        font-size: 2.8vw;
+    }
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 4vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.85vw;
+    }
+    footer a{
+        font-size: 2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.95vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 901px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.3vw;
+        gap: 3vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        gap: 5vw;
+        padding-bottom: 6vw;
+        padding-top: 5vw;
+    }
+    .container1 img{
+        width: auto;
+        height: 28vw;
+    }
+    .block1{
+        gap: 1vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 2.85vw;
+        line-height: 35px;
+        padding: 1.5vw 2.5vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 1.95vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 1.85vw;
+        padding: 0.5vw 4vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 8vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 2.9vw;
+        line-height: 40px;
+        margin: 0 100px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 0vw 100px;
+    }
+    .box-1 img{
+        width: auto;
+        height: 23vw;
+    }
+    .box-2{
+        margin: 0vw 100px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 23vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 2.7vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 2vw;
+        line-height: 27px;
+        padding: 1.4vw 2vw;
+    }
+    /*----------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3.7vh;
+        margin-bottom: 3.7vh;
+    }
+    .conf > a{
+        font-size: 2vw;
+    }
+    footer a{
+        font-size: 2.2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 841px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 2.1vw;
+        margin-bottom: 2.1vw;
+        font-size: 2.4vw;
+        gap: 2.5vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        gap: 5vw;
+        padding-bottom: 6vw;
+        padding-top: 5vw;
+    }
+    .container1 img{
+        width: auto;
+        height: 28vw;
+    }
+    .block1{
+        gap: 1vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 2.85vw;
+        line-height: 35px;
+        padding: 1.5vw 2.5vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 1.95vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 1.85vw;
+        padding: 0.5vw 4vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 8vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 2.9vw;
+        line-height: 40px;
+        margin: 0 100px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 0vw 75px;
+    }
+    .box-1 img{
+        width: auto;
+        height: 23vw;
+    }
+    .box-2{
+        margin: 0vw 75px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 23vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 2.7vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 2vw;
+        line-height: 27px;
+        padding: 1.4vw 2vw;
+    }
+    /*----------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.15vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.15vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 769px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navbar{
+        margin: 2vw 0;
+        justify-content: space-around;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 250px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 3vw;
+        flex-direction: column;
+        /*background-color: #191D21;*/
+        background-color: #191d21ed;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+        transition: 2s;
+        margin: 0;
+        padding: 6vw 0;
+    }
+    .navigation li{
+        font-size: 2.7vw;
+    }
+    .navigation.active{
+        left: 0;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        gap: 5vw;
+        padding-bottom: 6vw;
+        padding-top: 5vw;
+    }
+    .container1 img{
+        width: auto;
+        height: 28vw;
+    }
+    .block1{
+        gap: 1vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 2.95vw;
+        line-height: 30px;
+        padding: 1.5vw 3vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 2.2vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 2.2vw;
+        padding: 0.6vw 4vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 8vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 3.2vw;
+        line-height: 40px;
+        margin: 0 75px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 0vw 60px;
+    }
+    .box-1 img {
+        width: auto;
+        height: 24vw;
+    }
+    .box-2{
+        margin: 0vw 60px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 24vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 2.9vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 2.2vw;
+        line-height: 25px;
+        padding: 1.4vw 2vw;
+    }
+    /*----------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.35vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 701px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navigation li{
+        font-size: 3vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*шапка*/
+
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.55vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 651px) {
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        padding-bottom: 6vw;
+        padding-top: 5vw;
+    }
+    .container1 img{
+        display: none;
+    }
+    .block1{
+        gap: 1vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 3.8vw;
+        line-height: 32px;
+        padding: 1.5vw 5vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 2.9vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 2.7vw;
+        padding: 0.6vw 5vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 8vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 3.8vw;
+        line-height: 40px;
+        margin: 0 50px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 0vw 50px;
+    }
+    .box-1 img {
+        width: auto;
+        height: 25vw;
+    }
+    .box-2{
+        margin: 0vw 50px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 25vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 3.4vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 2.8vw;
+        line-height: 25px;
+        padding: 1.4vw 2vw;
+    }
+    /*----------------*/
+}
+@media screen and (max-width: 589px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4.5vw;
+    }
+    .navbar{
+        margin: 3vw 0;
+    }
+    .navigation{
+        padding: 8vw 0;
+        gap: 4.5vw;
+    }
+    .navigation li{
+        font-size: 3.7vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        padding-bottom: 7vw;
+        padding-top: 10vw;
+    }
+    .container1 img{
+        display: none;
+    }
+    .block1{
+        gap: 2vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 4.2vw;
+        line-height: 32px;
+        padding: 1.5vw 5.5vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 3.1vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 3vw;
+        padding: 0.7vw 5vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 10vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 4.1vw;
+        line-height: 40px;
+        margin: 0 50px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 0vw 25px;
+    }
+    .box-1 img {
+        width: auto;
+        height: 25vw;
+    }
+    .box-2{
+        margin: 0vw 25px;
+    }
+    .box-2 img{
+        width: auto;
+        height: 26vw;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 3.6vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 3vw;
+        line-height: 26px;
+        padding: 1.4vw 2vw;
+    }
+    /*----------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 471px){
+    /*шапка*/
+    .logo > a{
+        font-size: 5.2vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 125px;
+    }
+    .navigation{
+        padding: 9.5vw 0;
+        gap: 5.5vw;
+    }
+    .navigation li{
+        font-size: 4.2vw;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        padding-bottom: 10vw;
+        padding-top: 15vw;
+    }
+    .container1 img{
+        display: none;
+    }
+    .block1{
+        gap: 2vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 5.2vw;
+        line-height: 32px;
+        padding: 1.5vw 6vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 3.8vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 3.7vw;
+        padding: 0.85vw 6vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 12vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 4.8vw;
+        line-height: 40px;
+        margin: 0 50px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 7vw 25px;
+    }
+    .box-1 img {
+       display: none;
+    }
+    .box-2{
+        margin: 7vw 25px;
+    }
+    .box-2 img{
+        display: none;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 4.2vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 3.7vw;
+        line-height: 26px;
+        padding: 1.4vw 2vw;
+    }
+    /*----------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 6.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3.9vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 426px){
+    /*шапка*/
+    .logo > a{
+        font-size: 6vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 100px;
+    }
+    .navigation{
+        padding: 10.5vw 0;
+        gap: 6.5vw;
+    }
+    .navigation li{
+        font-size: 5vw;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        padding-bottom: 12vw;
+        padding-top: 18vw;
+    }
+    .block1{
+        gap: 2vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 6vw;
+        line-height: 35px;
+        padding: 1.5vw 6vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 4.3vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 4.3vw;
+        padding: 1vw 8vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 14vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 5.3vw;
+        line-height: 40px;
+        margin: 0 50px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 9vw 25px;
+    }
+    .box-2{
+        margin: 9vw 25px;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 5vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 4.5vw;
+        line-height: 26px;
+        padding: 1.8vw 3vw;
+    }
+    /*----------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 7.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1.5vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.2vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 376px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 7vw;
+    }
+    .navbar{
+        margin: 5vw 0;
+    }
+    .hamburger{
+        padding-left: 50px;
+    }
+    .navigation{
+        padding: 12.5vw 0;
+        gap: 8.5vw;
+    }
+    .navigation li{
+        font-size: 6vw;
+    }
+    /*--------*/
+    /*Блок экран приведствия*/
+    .container1{
+        padding-bottom: 14vw;
+        padding-top: 20vw;
+    }
+    .block1{
+        gap: 2.5vw;
+    }
+    .block1 h3{
+        font-weight: 400;
+        font-size: 7vw;
+        line-height: 35px;
+        padding: 1.5vw 6vw;
+    }
+    .block1 p{
+        font-weight: 400;
+        font-size: 4.8vw;
+        line-height: 40px;
+    }
+    .card-btn{
+        margin-bottom: 1vw;
+    }
+    .card-btn button{
+        font-weight: 400;
+        font-size: 4.8vw;
+        padding: 1.2vw 8vw;
+    }
+    /*----------------*/
+    /*Блок информация*/
+    .container2{
+        margin-top: 16vw;
+    }
+    .container2 h3{
+        font-weight: 400;
+        font-size: 5.9vw;
+        line-height: 40px;
+        margin: 0 25px 2vw;
+        padding-bottom: 1vw;
+    }
+    .box-1{
+        margin: 10vw 25px;
+    }
+    .box-2{
+        margin: 10vw 25px;
+    }
+    .info h4{
+        font-weight: 400;
+        font-size: 5.5vw;
+        margin-left: 2vw;
+        margin-bottom: -0.25vw;
+    }
+    .info p{
+        font-weight: 400;
+        font-size: 4.8vw;
+        line-height: 26px;
+        padding: 1.8vw 3vw;
+    }
+    /*----------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 8vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.65vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}

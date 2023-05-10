@@ -88,10 +88,16 @@
                         <br>
                         <textarea name="view"  class="textarea-form" placeholder="Введите описание" cols="40" rows="2.5"></textarea>
                     </div>
+
                     <div>
                         <label for="taste">Введите вкус чая</label>
                         <br>
                         <textarea name="taste"  class="textarea-form" placeholder="Введите описание" cols="40" rows="2.5"></textarea>
+                    </div>
+                    <div>
+                        <label for=" description">Введите описание чая</label>
+                        <br>
+                        <textarea name=" description"  class="textarea-form" placeholder="Введите описание" cols="40" rows="15"></textarea>
                     </div>
                     <div>
                         <label for="price">Введите цену чая</label>

@@ -18,12 +18,23 @@
 <!--блок шапка-->
 <header>
     <ul class="navigation">
+        @php
+            use Illuminate\Support\Facades\Auth;
+            use App\Models\Cart;
+
+            $count_cart = Cart::where('user_id', Auth::user()->id)->get();
+            $count = 0;
+            for ($i=0; $i < count($count_cart); $i++)
+            {
+                $count +=$count_cart[$i]['quantity'];
+            }
+        @endphp
         <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
         <li><a href="/about" class="link-effect">О нас</a></li>
         <li><a href="/shop" class="link-effect">Магазин</a></li>
         <li><a href="/blog" class="link-effect">Блог</a></li>
         <li><a href="/constructor" class="link-effect">Конструктор</a></li>
-        <li><a href="/carts" class="link-effect">Корзина</a></li>
+        <li><a href="/carts" class="link-effect">Корзина{{$count}}</a></li>
         <li class="login"><a href="/register">
                 @auth
                     {{ Auth::user()->name }}

@@ -12,22 +12,35 @@ body{
 header{
     top: 0;
     width: 100%;
-    background-color: #212529;
+    background-color: #191D21;
     border-bottom: 2px solid white;
     position: fixed;
 }
+/**/
+.navbar{
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
 .navigation{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
     color: white;
     font-size: 1.3vw;
     font-family: 'Philosopher', sans-serif;
+    justify-content: space-between;
+    gap: 8vw;
 }
 .logo{
     font-size: 1.8vw;
+}
+.navbar a {
+    color: white;
 }
 .navigation a{
     color: white;
@@ -44,6 +57,20 @@ header{
 .link-effect:hover::after{
     width: 100%;
     transition: width 0.3s;
+}
+/*бургер меню*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
 }
 /*Конец шапки сайта*/
 
@@ -130,8 +157,8 @@ header{
     border: 1px solid white;
 }
 .card img{
-    width: 14.9vw;
-    height: 7.9vw;
+    width: auto;
+    height: 8.3vw;
 }
 .card-title{
     padding: 1vw 1vw 0;
@@ -197,17 +224,23 @@ header{
 /*Конец блока другие новости*/
 
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*кнопка на вверх*/
+.go-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+.go-top img{
+    width: auto;
+    height: 2.5vw;
+}
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
 
 /*Начало блока Footer*/
-.navigation_footer{
-    display: flex;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 1.5vw;
-    font-family: 'Philosopher';
-}
 footer{
     height: 100%;
     background-color: #191D21;
@@ -216,10 +249,6 @@ footer{
     flex-direction: column;
     align-items: center;
     margin-top: 6vw;
-}
-footer .navigation_footer{
-    padding-top: 5vh;
-    width: 100%;
 }
 .logo > a{
     font-size: 1.8vw;
@@ -303,22 +332,9 @@ footer a{
         margin: 2vw 100px 5vw 100px;
     }
     /*Начало блока Footer*/
-    .navigation_footer{
-        display: flex;
-        color: white;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 1.5vw;
-        font-family: 'Philosopher';
-    }
     footer{
         height: 100%;
         margin-top: 6vw;
-    }
-    footer .navigation_footer{
-        padding-top: 5vh;
-        width: 100%;
     }
     .logo > a{
         font-size: 2vw;
@@ -377,6 +393,7 @@ footer a{
         margin-top: 1.7vw;
         margin-bottom: 1.7vw;
         font-size: 1.7vw;
+        gap: 6vw;
     }
     .logo > a{
         font-size: 2.5vw;
@@ -449,22 +466,9 @@ footer a{
         letter-spacing: 2.5px;
     }
     /*Начало блока Footer*/
-    .navigation_footer{
-        display: flex;
-        color: white;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 1.7vw;
-        font-family: 'Philosopher';
-    }
     footer{
         height: 100%;
         margin-top: 6vw;
-    }
-    footer .navigation_footer{
-        padding-top: 5vh;
-        width: 100%;
     }
     .conf{
         margin-top: 4vh;
@@ -561,16 +565,9 @@ footer a{
         letter-spacing: 2.5px;
     }
     /*Начало блока Footer*/
-    .navigation_footer{
-        font-size: 1.7vw;
-    }
     footer{
         height: 100%;
         margin-top: 6vw;
-    }
-    footer .navigation_footer{
-        padding-top: 5vh;
-        width: 100%;
     }
     .conf{
         margin-top: 4vh;
@@ -592,12 +589,13 @@ footer a{
 }
 @media screen and (max-width: 1141px) {
     /*шапка*/
-    .navigation {
+    .navigation{
         margin-top: 1.8vw;
         margin-bottom: 1.8vw;
         font-size: 1.8vw;
+        gap: 5vw;
     }
-    .logo > a {
+    .logo > a{
         font-size: 2.6vw;
     }
     /*Начало блока статья*/
@@ -667,17 +665,14 @@ footer a{
         font-size: 1.4vw;
         letter-spacing: 2.5px;
     }
-    /*Начало блока Footer*/
-    .navigation_footer{
-        font-size: 1.7vw;
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 3.5vw;
     }
     footer{
         height: 100%;
         margin-top: 6vw;
-    }
-    footer .navigation_footer{
-        padding-top: 5vh;
-        width: 100%;
     }
     .conf{
         margin-top: 4.5vh;
@@ -699,12 +694,12 @@ footer a{
 }
 @media screen and (max-width: 1041px) {
     /*шапка*/
-    .navigation {
+    .navigation{
         margin-top: 1.9vw;
         margin-bottom: 1.9vw;
-        font-size: 1.9vw;
+        font-size: 2vw;
     }
-    .logo > a {
+    .logo > a{
         font-size: 2.7vw;
     }
     /*Начало блока статья*/
@@ -778,31 +773,23 @@ footer a{
         padding: 0.7vw 3.5vw;
         font-size: 1.5vw;
     }
-    /*Начало блока Footer*/
-    .navigation_footer{
-        font-size: 1.7vw;
-    }
     footer{
         height: 100%;
         margin-top: 7.5vw;
     }
-    footer .navigation_footer{
-        padding-top: 5vh;
-        width: 100%;
-    }
     .conf{
-        margin-top: 4.5vh;
-        margin-bottom: 4.5vh;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
     }
     .conf > a{
-        font-size:1.65vw;
+        font-size:1.75vw;
     }
     footer a{
         font-size: 1.9vw;
         margin-top: 2.5vh;
     }
     .cop{
-        font-size: 1.8vw;
+        font-size: 1.85vw;
         width: 100%;
         padding-top: 4vh;
         padding-bottom: 4vh;
@@ -810,12 +797,13 @@ footer a{
 }
 @media screen and (max-width: 1000px) {
     /*шапка*/
-    .navigation {
+    .navigation{
         margin-top: 2vw;
         margin-bottom: 2vw;
-        font-size: 2vw;
+        font-size: 2.1vw;
+        gap: 4vw;
     }
-    .logo > a {
+    .logo > a{
         font-size: 2.8vw;
     }
     /*Начало блока статья*/
@@ -892,31 +880,29 @@ footer a{
         padding: 0.7vw 3.5vw;
         font-size: 1.6vw;
     }
-    /*Начало блока Footer*/
-    .navigation_footer{
-        font-size: 1.7vw;
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 4vw;
     }
+    /*Начало блока Footer*/
     footer{
         height: 100%;
         margin-top: 7.5vw;
     }
-    footer .navigation_footer{
-        padding-top: 5vh;
-        width: 100%;
-    }
     .conf{
-        margin-top: 4.5vh;
-        margin-bottom: 4.5vh;
+        margin-top: 4vh;
+        margin-bottom: 4vh;
     }
     .conf > a{
-        font-size:1.8vw;
+        font-size:1.85vw;
     }
     footer a{
         font-size: 2vw;
         margin-top: 2.5vh;
     }
     .cop{
-        font-size: 1.9vw;
+        font-size: 1.95vw;
         width: 100%;
         padding-top: 4vh;
         padding-bottom: 4vh;
@@ -924,12 +910,13 @@ footer a{
 }
 @media screen and (max-width: 901px) {
     /*шапка*/
-    .navigation {
+    .navigation{
         margin-top: 2vw;
         margin-bottom: 2vw;
-        font-size: 2.2vw;
+        font-size: 2.3vw;
+        gap: 3vw;
     }
-    .logo > a {
+    .logo > a{
         font-size: 3vw;
     }
     /*Начало блока статья*/
@@ -1004,30 +991,23 @@ footer a{
         font-size: 1.8vw;
     }
     /*Начало блока Footer*/
-    .navigation_footer{
-        font-size: 1.7vw;
-    }
     footer{
         height: 100%;
         margin-top: 7.5vw;
     }
-    footer .navigation_footer{
-        padding-top: 5vh;
-        width: 100%;
-    }
     .conf{
-        margin-top: 4vh;
-        margin-bottom: 4vh;
+        margin-top: 3.7vh;
+        margin-bottom: 3.7vh;
     }
     .conf > a{
-        font-size:1.95vw;
+        font-size: 2vw;
     }
     footer a{
         font-size: 2.2vw;
         margin-top: 2.5vh;
     }
     .cop{
-        font-size: 2vw;
+        font-size: 2.2vw;
         width: 100%;
         padding-top: 3.5vh;
         padding-bottom: 3.5vh;
@@ -1035,12 +1015,13 @@ footer a{
 }
 @media screen and (max-width: 841px) {
     /*шапка*/
-    .navigation {
+    .navigation{
         margin-top: 2.1vw;
         margin-bottom: 2.1vw;
-        font-size: 2.3vw;
+        font-size: 2.4vw;
+        gap: 2.5vw;
     }
-    .logo > a {
+    .logo > a{
         font-size: 3vw;
     }
     /*Начало блока статья*/
@@ -1114,26 +1095,19 @@ footer a{
         font-size: 1.9vw;
     }
     /*Начало блока Footer*/
-    .navigation_footer{
-        font-size: 1.7vw;
-    }
     footer{
         height: 100%;
         margin-top: 7.5vw;
     }
-    footer .navigation_footer{
-        padding-top: 5vh;
-        width: 100%;
-    }
     .conf{
-        margin-top: 4vh;
-        margin-bottom: 4vh;
+        margin-top: 3vh;
+        margin-bottom: 3.2vh;
     }
     .conf > a{
-        font-size:2.1vw;
+        font-size:2.15vw;
     }
     footer a{
-        font-size: 2.3vw;
+        font-size: 2.4vw;
         margin-top: 2.5vh;
     }
     .cop{
@@ -1144,6 +1118,48 @@ footer a{
     }
 }
 @media screen and (max-width: 769px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navbar{
+        margin: 2vw 0;
+        justify-content: space-around;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 250px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 3vw;
+        flex-direction: column;
+        /*background-color: #191D21;*/
+        background-color: #191d21ed;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+        transition: 2s;
+        margin: 0;
+        padding: 6vw 0;
+    }
+    .navigation li{
+        font-size: 2.7vw;
+    }
+    .navigation.active{
+        left: 0;
+    }
     /*Начало блока статья*/
     .news{
         margin-top: 7vw;
@@ -1215,8 +1231,40 @@ footer a{
         padding: 0.9vw 3.5vw;
         font-size: 2.2vw;
     }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.35vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
 }
 @media screen and (max-width: 701px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 4.5vw;
+    }
+    .navigation li{
+        font-size: 3vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
     /*Начало блока статья*/
     .news{
         margin-top: 7vw;
@@ -1288,8 +1336,42 @@ footer a{
         padding: 1vw 3.5vw;
         font-size: 2.3vw;
     }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.55vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
 }
 @media screen and (max-width: 589px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4.7vw;
+    }
+    .navbar{
+        margin: 3vw 0;
+    }
     /*Начало блока статья*/
     .news{
         margin-top: 7vw;
@@ -1362,8 +1444,52 @@ footer a{
         padding: 1.45vw 3.5vw;
         font-size: 2.65vw;
     }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
 }
 @media screen and (max-width: 471px){
+    /*шапка*/
+    .logo > a{
+        font-size: 5.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 125px;
+    }
+    .navigation{
+        padding: 9.5vw 0;
+        gap: 5.5vw;
+    }
+    .navigation li{
+        font-size: 4.2vw;
+    }
     /*Начало блока статья*/
     .news{
         margin-top: 7vw;
@@ -1437,8 +1563,52 @@ footer a{
         padding: 1.55vw 3.5vw;
         font-size: 3.5vw;
     }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 6.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3.9vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
 }
 @media screen and (max-width: 426px){
+    /*шапка*/
+    .logo > a{
+        font-size: 6.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 100px;
+    }
+    .navigation{
+        padding: 10.5vw 0;
+        gap: 6.5vw;
+    }
+    .navigation li{
+        font-size: 5vw;
+    }
     /*Начало блока статья*/
     .news{
         margin-top: 7vw;
@@ -1510,8 +1680,52 @@ footer a{
         padding: 1.55vw 3.5vw;
         font-size: 4vw;
     }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 7.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1.5vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.2vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
 }
 @media screen and (max-width: 376px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 7.5vw;
+    }
+    .navbar{
+        margin: 5vw 0;
+    }
+    .hamburger{
+        padding-left: 50px;
+    }
+    .navigation{
+        padding: 12.5vw 0;
+        gap: 8.5vw;
+    }
+    .navigation li{
+        font-size: 6vw;
+    }
     /*Начало блока статья*/
     .news{
         margin-top: 7vw;
@@ -1582,5 +1796,32 @@ footer a{
     .btn a {
         padding: 2vw 3.5vw;
         font-size: 4.3vw;
+    }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 8vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.65vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
     }
 }

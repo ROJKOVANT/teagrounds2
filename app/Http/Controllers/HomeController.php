@@ -51,7 +51,6 @@ class HomeController extends Controller
             $cart->user_id = $user->id;
             $cart->towar_name = $towar->name;
             $cart->price = $towar->price * $request->quantity;
-//            $cart->price = $towar->price * $request->quantity;
             $cart->picture = $towar->picture;
             $cart->category_id = $towar->id;
             $cart->quantity = $request->quantity;

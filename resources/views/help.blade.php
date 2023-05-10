@@ -6,16 +6,26 @@
     <link rel="stylesheet" href="{{ asset("css/help.css") }}">
 </head>
 <div class="navigation">
+    @php
+        use Illuminate\Support\Facades\Auth;
+        use App\Models\Cart;
+
+        $count_cart = Cart::where('user_id', Auth::user()->id)->get();
+        $count = 0;
+        for ($i=0; $i < count($count_cart); $i++)
+        {
+            $count +=$count_cart[$i]['quantity'];
+        }
+    @endphp
     <div class="navigation-f1">
         <li class="log"><a href="/">Tea Grounds</a></li>
     </div>
-
     <div class="navigation-f2">
         <li><a href="/about">О нас</a></li>
         <li><a href="/shop">Магазин</a></li>
         <li><a href="/blog">Блог</a></li>
         <li><a href="/constructor">Конструктор</a></li>
-        <li><a href="/carts" class="link-effect">Корзина</a></li>
+        <li><a href="/carts" class="link-effect">Корзина{{$count}}</a></li>
     </div>
 
     <div class="navigation-f3">

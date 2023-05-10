@@ -151,6 +151,10 @@ Route::post('/add_cart/{id}', [App\Http\Controllers\HomeController::class, 'add_
 Route::get('/carts', [App\Http\Controllers\HomeController::class, 'carts'])->name('carts.index');/*корзина с товарами*/
 Route::get('/carts/delete{id}', [App\Http\Controllers\HomeController::class, 'cart_destroy'])->name('carts.delete');/*удалить товар из корзины*/
 Route::get('/cash_order', [App\Http\Controllers\HomeController::class, 'cash_order'])->name('cash_order');/*оформление заказа оплата наличными*/
+Route::get('/cardOnline', function () {
+    return view('cardOnline');
+});
+
 
 /*заказы*/
 Route::get('/orders', [App\Http\Controllers\HomeController::class, 'ordersAdmin'])->name('orders.index');/*вывод всех заказов*/

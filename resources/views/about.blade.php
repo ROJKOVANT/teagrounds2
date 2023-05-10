@@ -16,24 +16,32 @@
 
 <body>
     <!--блок шапка-->
+    <!--блок шапка-->
     <header>
-        <ul class="navigation">
+        <nav class="navbar">
             <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
-            <li><a href="/about" class="link-effect">О нас</a></li>
-            <li><a href="/shop" class="link-effect">Магазин</a></li>
-            <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
-            <li><a href="/carts" class="link-effect">Корзина</a></li>
-            <li class="login"><a href="/register">
-                    @auth
-                    {{ Auth::user()->name }}
-                    @endauth
+            <ul class="navigation">
+                <li><a href="/about" class="link-effect">О нас</a></li>
+                <li><a href="/shop" class="link-effect">Магазин</a></li>
+                <li><a href="/blog" class="link-effect">Блог</a></li>
+                <li><a href="/constructor" class="link-effect">Конструктор</a></li>
+                <li><a href="/carts" class="link-effect">Корзина</a></li>
+                <li><a href="/register" class="link-effect">
+                        @auth
+                            {{ Auth::user()->name }}
+                        @endauth
 
-                    @guest
-                    Войти
-                    @endguest
-                </a></li>
-        </ul>
+                        @guest
+                            Войти
+                        @endguest
+                    </a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </header>
 
     <!--блок О нас-->
@@ -45,23 +53,23 @@
         <div class="info">
             <div class="text_one">
                 <p>
-                    Tea Grounds — был основан<br>
-                    на стремлении установить<br>
-                    стандарт качества и <br>
-                    расширить представление<br>
-                    о чае и его богатых,<br>
-                    вдохновляющих традициях. <br>
+                    Tea Grounds — был основан
+                    на стремлении установить
+                    стандарт качества и
+                    расширить представление
+                    о чае и его богатых,
+                    вдохновляющих традициях.
                 </p>
                 <img src="{{ asset("img/block1img1.png") }}" alt="">
             </div>
             <div class="separation"></div>
             <div class="text_two">
                 <p>
-                    20 лет мы занимаемся чаем.<br>
-                    Из самых популярных <br>
-                    запросов мы составили <br>
-                    тематические подборки. <br>
-                    Ищите и находите нужный <br>
+                    20 лет мы занимаемся чаем.
+                    Из самых популярных
+                    запросов мы составили
+                    тематические подборки.
+                    Ищите и находите нужный
                     чай для разных ситуаций.
                 </p>
                 <img src="{{ asset("img/block1img2.png") }}" alt="">
@@ -78,13 +86,13 @@
         <h3>Почему именно мы</h3>
         <div class="text_three">
             <p>
-                Все знают, что чай - это не только самый популярный напиток в мире, но <br>
-                и неизменный спутник здорового образа жизни миллионов людей. Выбор <br>
-                надежного спутника (пусть даже это будет пакетик чая) - это задача не <br>
-                из легких. Мы рекомендуем Вам обратиться к нашим продавцам- <br>
-                консультантам и они помогут Вам подобрать именно тот сорт чая, <br>
-                который подходит только для Вас и отвечает Вашему изысканному вкусу. <br>
-                Мы предлагаем чай и растительные ингредиенты, импортированные <br>
+                Все знают, что чай - это не только самый популярный напиток в мире, но
+                и неизменный спутник здорового образа жизни миллионов людей. Выбор
+                надежного спутника (пусть даже это будет пакетик чая) - это задача не
+                из легких. Мы рекомендуем Вам обратиться к нашим продавцам-
+                консультантам и они помогут Вам подобрать именно тот сорт чая,
+                который подходит только для Вас и отвечает Вашему изысканному вкусу.
+                Мы предлагаем чай и растительные ингредиенты, импортированные
                 непосредственно из садов по всему миру.
             </p>
             <img src="{{ asset("img/svg2.svg") }}" alt="">
@@ -106,26 +114,41 @@
         </div>
         <div class="info_where_img">
             <img class="up-img" src="{{ asset("img/svg3.svg") }}" alt="">
-            <img src="{{ asset("img/svg4.svg") }}" alt="">
+            <img class="up-img2" src="{{ asset("img/svg4.svg") }}" alt="">
         </div>
         <a href="#" class="go-top"><img src="img/upbtn.png" alt=""></a>
     </section>
 
     <!--блок footer-->
     <footer>
-        <ul class="navigation_footer">
+        <nav class="navbar">
             <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
-            <li><a href="/about" class="link-effect">О нас</a></li>
-            <li><a href="/shop" class="link-effect">Магазин</a></li>
-            <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="" class="link-effect">Конструктор</a></li>
-        </ul>
-        <a href="" style="font-size:1.2vw; color: rgba(255, 255, 255, 0.2);">Политика конфидециальности</a>
+            <ul class="navigation">
+                <li><a href="/about" class="link-effect">О нас</a></li>
+                <li><a href="/shop" class="link-effect">Магазин</a></li>
+                <li><a href="/blog" class="link-effect">Блог</a></li>
+                <li><a href="/constructor" class="link-effect">Конструктор</a></li>
+                <li><a href="/carts" class="link-effect">Корзина</a></li>
+                <li><a href="/register" class="link-effect">
+                        @auth
+                            {{ Auth::user()->name }}
+                        @endauth
+
+                        @guest
+                            Войти
+                        @endguest
+                    </a></li>
+            </ul>
+        </nav>
+        <div class="conf">
+            <a href="">Политика конфидециальности</a>
+        </div>
         <div class="cop">
             <p>Tea Grounds © 2022 Все права защищены</p>
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="js/buttonUp.js"></script>
+    <script src="js/burgerMenu.js"></script>
 </body>
 </html>

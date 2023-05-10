@@ -62,6 +62,7 @@ class TowarsController extends Controller
             "country" => "required",
             "view" => "required",
             "taste" => "required",
+            "description" => "required",
             "price" => "required",
             "count" => "required",
             "category_id" => "required",
@@ -80,6 +81,7 @@ class TowarsController extends Controller
             "country" => $request->input('country'),
             "view" => $request->input('view'),
             "taste" => $request->input('taste'),
+            "description" => $request->input('description'),
             "price" => $request->input('price'),
             "count" => $request->input('count'),
             "category_id" => $request->input('category_id'),
@@ -133,6 +135,7 @@ class TowarsController extends Controller
             "country" => "required",
             "view" => "required",
             "taste" => "required",
+            "description" => "required",
             "price" => "required",
             "count" => "required",
             "category_id" => "required",
@@ -151,6 +154,7 @@ class TowarsController extends Controller
         $tovar->country = $request->input('country');
         $tovar->view = $request->input('view');
         $tovar->taste = $request->input('taste');
+        $tovar->description = $request->input('description');
         $tovar->price = $request->input('price');
         $tovar->count = $request->input('count');
         //        $tovar->picture = 'uploads/towar/'.$picture_new_name;

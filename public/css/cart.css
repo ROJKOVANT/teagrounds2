@@ -5,11 +5,9 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
 body {
     background-color: #212529;
 }
-
 /*Начало шапки сайта*/
 header {
     top: 0;
@@ -158,13 +156,26 @@ form{
     font-family: 'Philosopher', sans-serif;
     letter-spacing: 2.5px;
 }
+.btn_top1_more1 a{
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    width: 250px;
+    height: 35px;
+    font-size: 1.1vw;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2.5px;
+}
 
 .btn_top1_more1:hover {
     background: white;
     color: black;
     transition: 2s;
 }
-
+.btn_top1_more1 a:hover {
+    color: black;
+    transition: 2s;
+}
 /*Конец  блока корзина*/
 
 /*--------------------------------------------------------------------------------------------------------------------------------------*/

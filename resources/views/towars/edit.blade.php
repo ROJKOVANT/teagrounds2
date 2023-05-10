@@ -92,6 +92,11 @@
                         <textarea name="taste"  class="textarea-form" placeholder="Введите описание" cols="40" rows="2.5">{{$towars->taste}}</textarea>
                     </div>
                     <div>
+                        <label for=" description">Измените описание чая</label>
+                        <br>
+                        <textarea name=" description"  class="textarea-form" placeholder="Введите описание" cols="40" rows="15"></textarea>
+                    </div>
+                    <div>
                         <label for="price">Измените цену чая</label>
                         <br>
                         <textarea name="price"  class="textarea-form" placeholder="Введите цену" cols="40" rows="2.5">{{$towars->price}}</textarea>

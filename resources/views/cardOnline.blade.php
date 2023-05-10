@@ -10,8 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset("css/OpenNews.css") }}">
-    <title>{{$news->subject}}</title>
+    <link rel="stylesheet" href="{{ asset("css/cardOnline.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/blog.css") }}">
+    <title>Корзина</title>
 </head>
 
 <body>
@@ -55,85 +56,63 @@
     </div>
 </header>
 
-<!--блок Статья-->
-<section class="news">
-    <div class="news_paragrph">
-        <h3>{{$news->title}}</h3>
-    </div>
-    <div class="news_info1">
-        <img src="{{$news->picture}}" alt="">
-        <p>
-            {{$news->content1}}
-        </p>
-    </div>
-    <div class="news_info2">
-        <p>
-            {{$news->content2}}
-        </p>
-    </div>
-</section>
-
-<!--блок другие новости-->
-<section class="news_more">
-    @php
-        $randomNewses = App\Models\News::get()->random(4);
-    @endphp
-    <h3>Вам также может понравиться</h3>
-    <div class="container">
-        @foreach($randomNewses as $el)
-            <div class="card">
-                <img src="{{$el->picture}}" alt="">
-                <div class="card-content">
-                    <div class="card-title">
-                        <h4>{{$el->paragraph->name}}</h4>
-                    </div>
-                    <p class="card-text">
-                        {{$el->subject}}
-                    </p>
-                    <div class="card-btn">
-                        <a href="{{route('OpenNews', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
+<section class="paragraph">
+    @if(session()->has('message'))
+        <div>
+            <button type="button" data-dismiss="alert" aria-hidden="true">X</button>
+            {{session()->get('message')}}
+        </div>
+    @endif
+    <h3>Оплата картой</h3>
+        <div class="container">
+            <h1>Donate to Our Cause</h1>
+            <p>Your contribution will help us make a difference!</p>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="johndoe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="number" id="amount" name="amount" placeholder="25.00" min="1" step="0.01">
                     </div>
                 </div>
-            </div>
-        @endforeach
-    </div>
-
-    <div class="btn">
-        <a href="/blog">Еще больше новостей</a>
-    </div>
-    <a href="#" class="go-top"><img src="{{asset('img/upbtn.png')}}" alt=""></a>
+                <div class="form-group">
+                    <label for="card-element">Credit or debit card</label>
+                    <div id="card-element"></div>
+                    <div id="card-errors" role="alert"></div>
+                </div>
+                <div class="form-group">
+                    <button id="submit" class="btn">Donate</button>
+                </div>
+            </form>
+        </div>
 </section>
 
 <!--блок footer-->
 <footer>
-    <nav class="navbar">
+    <ul class="navigation_footer">
         <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
-        <ul class="navigation">
-            <li><a href="/about" class="link-effect">О нас</a></li>
-            <li><a href="/shop" class="link-effect">Магазин</a></li>
-            <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
-            <li><a href="/carts" class="link-effect">Корзина</a></li>
-            <li><a href="/register" class="link-effect">
-                    @auth
-                        {{ Auth::user()->name }}
-                    @endauth
-
-                    @guest
-                        Войти
-                    @endguest
-                </a></li>
-        </ul>
-    </nav>
+        <li><a href="/about" class="link-effect">О нас</a></li>
+        <li><a href="/shop" class="link-effect">Магазин</a></li>
+        <li><a href="/blog" class="link-effect">Блог</a></li>
+        <li><a href="/constructor" class="link-effect">Конструктор</a></li>
+    </ul>
     <div class="conf">
-        <a href="">Политика конфидециальности</a>
+        <a href="" class="link-effect">Политика конфидециальности</a>
     </div>
     <div class="cop">
         <p>Tea Grounds © 2022 Все права защищены</p>
     </div>
 </footer>
+<script src="https://js.stripe.com/v3/"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="{{asset('js/buttonUp.js')}}"></script>
-<script src="{{asset('js/burgerMenu.js')}}"></script>
+<script src="js/cardOnline.js"></script>
 </body>
 </html>

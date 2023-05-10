@@ -8,6 +8,7 @@ use App\Models\Towar;
 
 class Category extends Model
 {
+
     use HasFactory;
 
     public function Towars(){

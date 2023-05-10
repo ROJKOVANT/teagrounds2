@@ -11,29 +11,73 @@ body {
 }
 
 /*Начало шапки сайта*/
-header {
-    height: 10vh;
+header{
+    top: 0;
     width: 100%;
-    border-bottom: 3px solid white;
+    background-color: #191D21;
+    border-bottom: 2px solid white;
+    position: fixed;
 }
-
-.navigation {
+/**/
+.navbar{
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
     display: flex;
-    color: white;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-top: 2vh;
-    font-size: 1.5vw;
-    font-family: 'Philosopher', sans-serif;
+    gap: 10vw;
 }
-
-.navigation a {
+.navigation{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher', sans-serif;
+    justify-content: space-between;
+    gap: 8vw;
+}
+.logo{
+    font-size: 1.8vw;
+}
+.navbar a {
     color: white;
 }
-
+.navigation a{
+    color: white;
+}
+/*подчеркивание у ссылок*/
+.link-effect::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+.link-effect:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+/*бургер меню*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+}
 /*Конец шапки сайта*/
 
-/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
 
 /*Начало блока каталог*/
 .katalog {

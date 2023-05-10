@@ -11,30 +11,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset("css/cart.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/blog.css") }}">
     <title>Корзина</title>
 </head>
 
 <body>
-    <!--блок шапка-->
-    <header>
+<!--блок шапка-->
+<header>
+    @php
+        use Illuminate\Support\Facades\Auth;
+        use App\Models\Cart;
+
+        $count_cart = Cart::where('user_id', Auth::user()->id)->get();
+        $count = 0;
+        for ($i=0; $i < count($count_cart); $i++)
+        {
+            $count +=$count_cart[$i]['quantity'];
+        }
+    @endphp
+    <div class="navbar">
+        <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
         <ul class="navigation">
-            <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
-            <li><a href="/about" class="link-effect">О нас</a></li>
-            <li><a href="/shop" class="link-effect">Магазин</a></li>
-            <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
-            <li><a href="/carts" class="link-effect">Корзина</a></li>
-            <li class="login"><a href="/register">
+            <li class="nav-item"><a href="/about" class="link-effect">О нас</a></li>
+            <li class="nav-item"><a href="/shop" class="link-effect">Магазин</a></li>
+            <li class="nav-item"><a href="/blog" class="link-effect">Блог</a></li>
+            <li class="nav-item"><a href="/constructor" class="link-effect">Конструктор</a></li>
+            <li class="nav-item"><a href="/carts" class="link-effect">Корзина{{$count}}</a></li>
+            <li class="nav-item"><a href="/register">
                     @auth
-                    {{ Auth::user()->name }}
+                        {{ Auth::user()->name }}
                     @endauth
 
                     @guest
-                    Войти
+                        Войти
                     @endguest
-                </a></li>
+                </a>
+            </li>
         </ul>
-    </header>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</header>
+
     <section class="paragraph">
         @if(session()->has('message'))
         <div>
@@ -67,7 +88,6 @@
                     <a onclick=" return confirm('Вы действительно хотите удалить данный товар?')" href="{{route('carts.delete', ['id'=> $cart->id])}}">X</a>
                 </th>
             </tr>
-
             <?php
             $totalprice = $totalprice + $cart->price;
             ?>
@@ -78,21 +98,20 @@
         </div>
         <div class="data">
             <div class="itog">
-                <h2>Общая стоимость : {{$totalprice}} ₽</h2>
+                <h2>Итого : {{$totalprice}} ₽</h2>
             </div>
-             @php
-                 $carts = \App\Models\Cart::all();
-             @endphp
+
             <div class="address">
                 <form action="{{route('cash_order')}}" method="P0ST">
                     @csrf
-                    @foreach($carts as $el)
-                        @method('patch')
-                    <input type="text" name="address" value="{{$el->address}}" size="25">
-                    @endforeach
+                    @method('patch')
+                    <input type="text" name="address" value="ул.Полесская, 12" size="25">
                     <div class="buy">
-                        <button type="submit" class="btn_top1_more1" onclick="return confirm('Подтвердите свой заказ и мы получилим его.Ожидайте доставки!')">Оплата наличными</button>
-{{--                        <a href="" class="link-effect">Оплата картой</a>--}}
+                        <button type="submit" class="btn_top1_more1"
+                                onclick="return confirm('Подтвердите свой заказ и мы получилим его.Ожидайте доставки!')">
+                                Оплата наличными
+                        </button>
+                        <button type="submit" class="btn_top1_more1"><a href="/cardOnline">Оплата картой</a></button>
                     </div>
                 </form>
             </div>
@@ -116,5 +135,4 @@
         </div>
     </footer>
 </body>
-
 </html>

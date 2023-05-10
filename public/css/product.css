@@ -5,7 +5,13 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-
+body{
+    background-image: url("../img/imgheader1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
 /* бокавая панель управления*/
 .navigation {
     display: flex;
@@ -68,11 +74,12 @@
     flex-direction: column;
     gap: 7vw;
     margin-left: 18vw;
-    background-image: url("../img/imgheader1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    /*background-image: url("../img/imgheader1.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+    height: auto;
 }
 
 .container {

@@ -24,6 +24,7 @@ return new class extends Migration
             $table->text('country');
             $table->text('view');
             $table->text('taste');
+            $table->text('description');
             $table->string('price');
             $table->unsignedInteger('count')->default(0);
             $table->string('category_id');
