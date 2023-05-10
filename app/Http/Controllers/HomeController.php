@@ -103,6 +103,7 @@ class HomeController extends Controller
             $order->fio = $data->fio;
             $order->email = $data->email;
             $order->user_id = $data->user_id;
+            $order->devil = $request->input('devil');
             $order->address = $request->input('address');
             $order->towar_name = $data->towar_name;
             $order->quantity = $data->quantity;
@@ -110,7 +111,7 @@ class HomeController extends Controller
             $order->picture = $data->picture;
             $order->category_id = $data->category_id;
 
-            $order->payment_status = 'Оплата при доставке';
+            $order->payment_status = 'Оплата наличными';
             $order->delivery_status = 'в обработке';
 
             $order->save();
@@ -119,7 +120,6 @@ class HomeController extends Controller
             $cart = Cart::find($cart_id);
             $cart->delete();
         }
-//        ->with('message', 'Мы получили ваш заказ. Ожидайте доставки!');
         return redirect()->back();
     }
 

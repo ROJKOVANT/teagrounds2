@@ -21,12 +21,13 @@
     @php
         use Illuminate\Support\Facades\Auth;
         use App\Models\Cart;
-
-        $count_cart = Cart::where('user_id', Auth::user()->id)->get();
-        $count = 0;
-        for ($i=0; $i < count($count_cart); $i++)
-        {
-            $count +=$count_cart[$i]['quantity'];
+        if(Auth::user()){
+            $count_cart = Cart::where('user_id', Auth::user()->id)->get();
+            $count = 0;
+            for ($i=0; $i < count($count_cart); $i++)
+            {
+                $count +=$count_cart[$i]['quantity'];
+            }
         }
     @endphp
     <div class="navbar">
@@ -36,7 +37,16 @@
             <li class="nav-item"><a href="/shop" class="link-effect">Магазин</a></li>
             <li class="nav-item"><a href="/blog" class="link-effect">Блог</a></li>
             <li class="nav-item"><a href="/constructor" class="link-effect">Конструктор</a></li>
-            <li class="nav-item"><a href="/carts" class="link-effect">Корзина{{$count}}</a></li>
+            <li class="nav-item"><a href="/carts" class="link-effect">
+                    @auth
+                        Корзина {{$count}}
+                    @endauth
+
+                    @guest
+                        Корзина
+                    @endguest
+                </a>
+            </li>
             <li class="nav-item"><a href="/register">
                     @auth
                         {{ Auth::user()->name }}
@@ -98,20 +108,39 @@
         </div>
         <div class="data">
             <div class="itog">
-                <h2>Итого : {{$totalprice}} ₽</h2>
+                <h2>Итоговая сумма заказа : {{$totalprice}} ₽</h2>
             </div>
-
             <div class="address">
                 <form action="{{route('cash_order')}}" method="P0ST">
                     @csrf
                     @method('patch')
-                    <input type="text" name="address" value="ул.Полесская, 12" size="25">
+                    <div>
+                        <label for="devil">Выберите тип доставки товара</label>
+                        <input type="text" name="devil" list="devils" />
+                        <datalist id="devils">
+                            <option value="забрать из магазина" />
+                            <option value="доставка на дом" />
+                        </datalist>
+                    </div>
+{{--                    <div>--}}
+{{--                        <label for="devil">Выберите тип доставки товара</label>--}}
+{{--                        <input type="text" name="address" value="ул.Полесская, 12" size="25">--}}
+{{--                    </div>--}}
+                    <div>
+                        <label for="address">Выберите адресс доставки </label>
+                        <input type="text" name="address" list="address"/>
+                        <select id="address">
+                            <option value="ул.Полесская, 12">забрать из магазина</option>
+                            <option value="Введите адресс">доставка на дом</option>
+                        </select>
+                    </div>
+
                     <div class="buy">
                         <button type="submit" class="btn_top1_more1"
                                 onclick="return confirm('Подтвердите свой заказ и мы получилим его.Ожидайте доставки!')">
                                 Оплата наличными
                         </button>
-                        <button type="submit" class="btn_top1_more1"><a href="/cardOnline">Оплата картой</a></button>
+                        <a href="/cardOnline">Оплата картой</a>
                     </div>
                 </form>
             </div>
@@ -134,5 +163,10 @@
             <p>Tea Grounds © 2022 Все права защищены</p>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="{{asset('js/devil.js')}}"></script>
+    <script src="{{asset('js/adress.js')}}"></script>
+    <script src="{{asset('js/burgerMenu.js')}}"></script>
 </body>
 </html>

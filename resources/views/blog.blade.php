@@ -23,12 +23,13 @@
     @php
         use Illuminate\Support\Facades\Auth;
         use App\Models\Cart;
-
-        $count_cart = Cart::where('user_id', Auth::user()->id)->get();
-        $count = 0;
-        for ($i=0; $i < count($count_cart); $i++)
-        {
-            $count +=$count_cart[$i]['quantity'];
+        if(Auth::user()){
+            $count_cart = Cart::where('user_id', Auth::user()->id)->get();
+            $count = 0;
+            for ($i=0; $i < count($count_cart); $i++)
+            {
+                $count +=$count_cart[$i]['quantity'];
+            }
         }
     @endphp
     <div class="navbar">
@@ -38,7 +39,16 @@
             <li class="nav-item"><a href="/shop" class="link-effect">Магазин</a></li>
             <li class="nav-item"><a href="/blog" class="link-effect">Блог</a></li>
             <li class="nav-item"><a href="/constructor" class="link-effect">Конструктор</a></li>
-            <li class="nav-item"><a href="/carts" class="link-effect">Корзинаp{{$count}}</a></li>
+            <li class="nav-item"><a href="/carts" class="link-effect">
+                    @auth
+                        Корзина {{$count}}
+                    @endauth
+
+                    @guest
+                        Корзина
+                    @endguest
+                </a>
+            </li>
             <li class="nav-item"><a href="/register">
                     @auth
                         {{ Auth::user()->name }}
@@ -57,7 +67,6 @@
         </div>
     </div>
 </header>
-
     <section class="paragraph">
         <h3>Статьи</h3>
         @php

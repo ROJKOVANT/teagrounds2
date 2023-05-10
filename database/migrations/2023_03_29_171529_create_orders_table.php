@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('fio')->nullable();
             $table->string('email')->nullable();
             $table->string('user_id')->nullable();
+            $table->string('devil')->nullable();
             $table->string('address')->nullable();
             $table->string('towar_name')->nullable();
             $table->string('quantity')->nullable();

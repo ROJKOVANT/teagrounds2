@@ -21,12 +21,13 @@
     @php
         use Illuminate\Support\Facades\Auth;
         use App\Models\Cart;
-
-        $count_cart = Cart::where('user_id', Auth::user()->id)->get();
-        $count = 0;
-        for ($i=0; $i < count($count_cart); $i++)
-        {
-            $count +=$count_cart[$i]['quantity'];
+        if(Auth::user()){
+            $count_cart = Cart::where('user_id', Auth::user()->id)->get();
+            $count = 0;
+            for ($i=0; $i < count($count_cart); $i++)
+            {
+                $count +=$count_cart[$i]['quantity'];
+            }
         }
     @endphp
     <div class="navbar">
@@ -36,7 +37,16 @@
             <li class="nav-item"><a href="/shop" class="link-effect">Магазин</a></li>
             <li class="nav-item"><a href="/blog" class="link-effect">Блог</a></li>
             <li class="nav-item"><a href="/constructor" class="link-effect">Конструктор</a></li>
-            <li class="nav-item"><a href="/carts" class="link-effect">Корзина{{$count}}</a></li>
+            <li class="nav-item"><a href="/carts" class="link-effect">
+                    @auth
+                        Корзина {{$count}}
+                    @endauth
+
+                    @guest
+                        Корзина
+                    @endguest
+                </a>
+            </li>
             <li class="nav-item"><a href="/register">
                     @auth
                         {{ Auth::user()->name }}
@@ -73,10 +83,6 @@
                     <input type="text" id="name" name="name" placeholder="John Doe">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="johndoe@example.com">
-                </div>
-                <div class="form-group">
                     <label for="amount">Amount</label>
                     <div class="input-group">
                         <span class="input-group-addon">$</span>
@@ -88,9 +94,10 @@
                     <div id="card-element"></div>
                     <div id="card-errors" role="alert"></div>
                 </div>
-                <div class="form-group">
-                    <button id="submit" class="btn">Donate</button>
-                </div>
+                <button type="submit" class="btn_top1_more1"
+                        onclick="return confirm('Подтвердите свой заказ и мы получилим его.Ожидайте доставки!')">
+                    Оплатить
+                </button>
             </form>
         </div>
 </section>
@@ -111,8 +118,6 @@
         <p>Tea Grounds © 2022 Все права защищены</p>
     </div>
 </footer>
-<script src="https://js.stripe.com/v3/"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="js/cardOnline.js"></script>
 </body>
 </html>

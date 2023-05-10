@@ -102,19 +102,17 @@ th {
     font-size: 1.2vw;
     font-family: 'Philosopher';
 }
-
 .data {
     margin: 3vw 17vw 7vw;
     display: flex;
     gap: 5vw;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
-
 .itog {
     color: white;
     font-size: 0.9vw;
 }
-
 input {
     font-family: 'Philosopher', sans-serif;
     border: 1px solid white;
@@ -123,12 +121,10 @@ input {
     padding: 0.5vw 1vw;
     font-size: 1vw;
 }
-
 .buy {
     display: flex;
     gap: 2.5vw;
 }
-
 .buy a {
     color: white;
     font-size: 1.2vw;
@@ -136,7 +132,7 @@ input {
 }
 form{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5vw;
 }
 .btn_top1 {

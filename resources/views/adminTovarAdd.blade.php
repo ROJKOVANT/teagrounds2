@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <head>
         <link rel="stylesheet" href="{{ asset("css/adminBlogAdd.css") }}">
     </head>

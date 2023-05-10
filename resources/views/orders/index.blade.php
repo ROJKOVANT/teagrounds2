@@ -18,17 +18,6 @@
 <!--блок шапка-->
 <!--блок шапка-->
 <header>
-    @php
-        use Illuminate\Support\Facades\Auth;
-        use App\Models\Cart;
-
-        $count_cart = Cart::where('user_id', Auth::user()->id)->get();
-        $count = 0;
-        for ($i=0; $i < count($count_cart); $i++)
-        {
-            $count +=$count_cart[$i]['quantity'];
-        }
-    @endphp
     <div class="navbar">
         <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
         <ul class="navigation">
@@ -36,7 +25,7 @@
             <li class="nav-item"><a href="/shop" class="link-effect">Магазин</a></li>
             <li class="nav-item"><a href="/blog" class="link-effect">Блог</a></li>
             <li class="nav-item"><a href="/constructor" class="link-effect">Конструктор</a></li>
-            <li class="nav-item"><a href="/carts" class="link-effect">Корзина{{$count}}</a></li>
+            <li class="nav-item"><a href="/carts" class="link-effect">Корзина</a></li>
             <li class="nav-item"><a href="/register">
                     @auth
                         {{ Auth::user()->name }}
@@ -69,6 +58,7 @@
             <tr class="table-title">
                 <th>ФИО</th>
                 <th>Почта</th>
+                <th>Тип доставки</th>
                 <th>Адрес</th>
                 <th>Изображение товара</th>
                 <th>Название товара</th>
@@ -82,6 +72,7 @@
             <tr class="table-content">
                 <th>{{$el->fio}}</th>
                 <th>{{$el->email}}</th>
+                <th>{{$el->devil}}</th>
                 <th>{{$el->address}}</th>
                 <th><img src="{{$el->picture}}" style="height: 5vw; width: 5vw;" alt=""></th>
                 <th>{{$el->towar_name}}</th>
@@ -99,7 +90,14 @@
                     <form action="{{route('orders.index', ['id' => $el->id])}}" method="POST">
                         @csrf
                         <div>
-                            <input type="text" name="delivery_status" class="input-form" value="{{$el->delivery_status}}">
+                            <input type="text" name="delivery_status" list="delivery_statuses" class="input-form" value="{{$el->delivery_status}}">
+                            <datalist id="delivery_statuses">
+                                <option value="в обработке"/>
+                                <option value="в магазине"/>
+                                <option value="передан курьеру"/>
+                                <option value="в пути"/>
+                                <option value="пришел"/>
+                            </datalist>
                         </div>
                         <br>
                         <button type="submit" class="btn_top1">Обновить статус</button>
