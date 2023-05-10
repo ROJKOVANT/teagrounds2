@@ -74,8 +74,7 @@ header{
 }
 /*Конец шапки сайта*/
 
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
+/*--------------------------------*/
 .open_tovar{
    display: flex;
    margin: 7vw 100px 7vw;
@@ -253,23 +252,19 @@ header{
     background: white;
     color: black;
 }
-.btn_top1_more2{
+input {
     text-decoration: none;
+    text-align: center;
     background-color: transparent;
-    color: white;
     border: 1px solid white;
-    width: auto;
-    height: auto;
+    color: white;
     font-size: 0.9vw;
-    padding: 0.3vw 1vw;
+    width: 5vw;
+    height: 1.7vw;
     font-family: 'Philosopher';
     font-weight: normal;
     letter-spacing: 2.5px;
     transition: 2s;
-}
-.btn_top1_more2:hover{
-    background: white;
-    color: black;
 }
 .info_price{
     display: flex;
@@ -445,3 +440,1993 @@ footer a{
 /*---------------------------------------*/
 
 /*верстка адаптива*/
+@media screen and (max-width: 1581px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+        font-size: 1.5vw;
+    }
+    .logo{
+        font-size: 2vw;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 7vw 100px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 2.7vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 850px;
+        height: 650px;
+        border: 1px solid white;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 25vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 500px;
+        height: 650px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 1.6vw;
+    }
+    .cont1 p{
+        font-size: 1vw;
+        font-weight: 100;
+        padding-bottom: 0.5vw;
+    }
+    /*cont2*/
+    .cont2{
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.6vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 1vw;
+        padding-bottom: 0.5vw;
+    }
+    .cont3{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.3vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 1vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 650px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 2.3vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 1.3vw;
+        line-height: 50px;
+    }
+    .btn_top1{
+        margin: 0.5vw 0;
+        gap: 1vw;
+    }
+    .btn_top1_more1{
+        font-size: 1vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 1vw;
+        width: 5vw;
+        height: 1.75vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1vw;
+        line-height: 25px;
+        font-weight: 100;
+    }
+    /*описание*/
+    .paragraph{
+        margin: 0 100px;}
+    .panel-title {
+        font-size: 1.9vw;
+    }
+    .panel-content h4{
+        font-size: 1.6vw;
+        font-weight: 400;
+        line-height: 50px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 1.2vw;
+        font-weight: 100;
+        line-height: 50px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .logo > a{
+        font-size: 2vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.3vw;
+    }
+    footer a{
+        font-size: 1.5vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.4vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1441px){
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 7vw 100px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 2.8vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 750px;
+        height: 550px;
+        border: 1px solid white;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 25vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 450px;
+        height: 550px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 1.7vw;
+    }
+    .cont1 p{
+        font-size: 1.1vw;
+        font-weight: 100;
+        padding-bottom: 0.5vw;
+    }
+    /*cont2*/
+    .cont2{
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.7vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 1.1vw;
+        padding-bottom: 0.5vw;
+    }
+    .cont3{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.4vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 1.1vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 550px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 2.7vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 1.5vw;
+        line-height: 50px;
+    }
+    .btn_top1{
+        margin: 0.5vw 0;
+        gap: 1vw;
+    }
+    .btn_top1_more1{
+        font-size: 1.3vw;
+        padding: 0.3vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 1.3vw;
+        width: 5vw;
+        height: 2.2vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.1vw;
+        line-height: 25px;
+        font-weight: 100;
+    }
+    /*описание*/
+    .paragraph{
+        margin: 0 100px;
+    }
+    .panel-title {
+        font-size: 2vw;
+    }
+    .panel-content h4{
+        font-size: 1.7vw;
+        font-weight: 400;
+        line-height: 50px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 1.3vw;
+        font-weight: 100;
+        line-height: 50px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+}
+@media screen and (max-width: 1301px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+        gap: 6vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 7vw 100px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 2.9vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 700px;
+        height: 550px;
+        border: 1px solid white;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 25vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 450px;
+        height: 550px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1.5vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 1.85vw;
+    }
+    .cont1 p{
+        font-size: 1.25vw;
+        font-weight: 100;
+        padding-bottom: 0.7vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 1.85vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 1.25vw;
+        padding-bottom: 0.7vw;
+    }
+    .cont3{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.55vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 1.2vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 550px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 2.7vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 1.6vw;
+        line-height: 50px;
+    }
+    .btn_top1{
+        margin: 0.5vw 0;
+        gap: 1vw;
+    }
+    .btn_top1_more1{
+        font-size: 1.35vw;
+        padding: 0.6vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 1.35vw;
+        width: 5vw;
+        height: 2.9vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.25vw;
+        line-height: 25px;
+        font-weight: 100;
+    }
+    /*описание*/
+    .paragraph{
+        margin: 0 100px;
+    }
+    .panel-title {
+        font-size: 2.1vw;
+    }
+    .panel-content h4{
+        font-size: 1.8vw;
+        font-weight: 400;
+        line-height: 50px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 1.4vw;
+        font-weight: 100;
+        line-height: 50px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.4vw;
+    }
+    footer a{
+        font-size: 1.6vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.5vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1282px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.5vw;
+    }
+    footer a{
+        font-size: 1.7vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.6vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1141px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.8vw;
+        margin-bottom: 1.8vw;
+        font-size: 1.8vw;
+        gap: 5vw;
+    }
+    .logo > a{
+        font-size: 2.6vw;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 7vw 100px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 3vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 550px;
+        height: 525px;
+        border: 1px solid white;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 25vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 450px;
+        height: 525px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1.5vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 2vw;
+    }
+    .cont1 p{
+        font-size: 1.35vw;
+        font-weight: 100;
+        padding-bottom: 0.7vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 2vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 1.35vw;
+        padding-bottom: 0.7vw;
+    }
+    .cont3{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 1.7vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 1.3vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 525px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 2.9vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 1.7vw;
+        line-height: 50px;
+    }
+    .btn_top1{
+        margin: 0.5vw 0;
+        gap: 1vw;
+    }
+    .btn_top1_more1{
+        font-size: 1.35vw;
+        padding: 0.6vw 1vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 1.35vw;
+        width: 5vw;
+        height: 2.9vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.4vw;
+        line-height: 25px;
+        font-weight: 100;
+    }
+    /*описание*/
+    .paragraph{
+        margin: 0 100px;
+    }
+    .panel-title {
+        font-size: 2.3vw;
+    }
+    .panel-content h4{
+        font-size: 1.9vw;
+        font-weight: 400;
+        line-height: 50px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 1.5vw;
+        font-weight: 100;
+        line-height: 50px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 3.5vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.55vw;
+    }
+    footer a{
+        font-size: 1.8vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.7vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1041px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.9vw;
+        margin-bottom: 1.9vw;
+        font-size: 2vw;
+    }
+    .logo > a{
+        font-size: 2.7vw;
+    }
+    /*шапка*/
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: 550px;
+        height: 475px;
+        border: 1px solid white;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: 450px;
+        height: 475px;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: 350px;
+        height: 475px;
+        gap: 0.5vw;
+        padding: 2vw 1.2vw;
+    }
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.75vw;
+    }
+    footer a{
+        font-size: 1.9vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.85vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1000px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.1vw;
+        gap: 4vw;
+    }
+    .logo > a{
+        font-size: 2.8vw;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 7vw 100px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 3vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+        flex-direction: column;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        border: 1px solid white;
+        padding: 30px 50px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 30vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        padding: 30px 50px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1.5vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 2.5vw;
+    }
+    .cont1 p{
+        font-size: 1.7vw;
+        font-weight: 100;
+        padding-bottom: 1vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 2.5vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 1.7vw;
+        padding-bottom: 1vw;
+    }
+    .cont3{
+        /*gap: 2vw;*/
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .cont3 ul > h4{
+        font-size: 2vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 1.5vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        gap: 0.5vw;
+        padding: 30px 50px;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 3.7vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 2vw;
+        line-height: 50px;
+    }
+    form{
+        display: flex;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        font-size: 1.7vw;
+        padding: 0.8vw 2vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 1.8vw;
+        width: 12vw;
+        height: 3.8vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 1.7vw;
+        line-height: 25px;
+        font-weight: 100;
+        text-align: center;
+    }
+    /*описание*/
+    .paragraph{
+        margin: 0 100px;
+    }
+    .panel-title {
+        font-size: 2.7vw;
+    }
+    .panel-content{
+        margin: 0;
+    }
+    .panel-content h4{
+        font-size: 2.2vw;
+        font-weight: 400;
+        line-height: 50px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 1.7vw;
+        font-weight: 100;
+        line-height: 50px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 4vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.85vw;
+    }
+    footer a{
+        font-size: 2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.95vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 901px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.3vw;
+        gap: 3vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3.7vh;
+        margin-bottom: 3.7vh;
+    }
+    .conf > a{
+        font-size: 2vw;
+    }
+    footer a{
+        font-size: 2.2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 841px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 2.1vw;
+        margin-bottom: 2.1vw;
+        font-size: 2.4vw;
+        gap: 2.5vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 7vw 100px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 4vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+        flex-direction: column;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        border: 1px solid white;
+        padding: 30px 50px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 35vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        padding: 30px 50px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1.5vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 2.7vw;
+    }
+    .cont1 p{
+        font-size: 2vw;
+        font-weight: 100;
+        padding-bottom: 1vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 2.7vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 2vw;
+        padding-bottom: 1vw;
+    }
+    .cont3{
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        row-gap: 4vw;
+        column-gap: 5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 2.5vw;
+        margin-bottom: 1vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 1.8vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        gap: 0.5vw;
+        padding: 30px 50px;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 4vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 2.5vw;
+        line-height: 50px;
+    }
+    form{
+        display: flex;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        font-size: 2vw;
+        padding: 0.8vw 2vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 2vw;
+        width: 12vw;
+        height: 3.8vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 2vw;
+        line-height: 25px;
+        font-weight: 100;
+        text-align: center;
+    }
+    /*описание*/
+    .paragraph{
+        margin: 0 100px;
+    }
+    .panel-title {
+        font-size: 3vw;
+    }
+    .panel-content h4{
+        font-size: 2.5vw;
+        font-weight: 400;
+        line-height: 50px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 2vw;
+        font-weight: 100;
+        line-height: 50px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.15vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.15vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 769px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navbar{
+        margin: 2vw 0;
+        justify-content: space-around;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 250px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 3vw;
+        flex-direction: column;
+        /*background-color: #191D21;*/
+        background-color: #191d21ed;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+        transition: 2s;
+        margin: 0;
+        padding: 6vw 0;
+    }
+    .navigation li{
+        font-size: 2.7vw;
+    }
+    .navigation.active{
+        left: 0;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.35vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 701px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navigation li{
+        font-size: 3vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 7vw 75px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 4.5vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+        flex-direction: column;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        border: 1px solid white;
+        padding: 30px 50px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 40vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        padding: 30px 50px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1.5vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 3.2vw;
+    }
+    .cont1 p{
+        font-size: 2.3vw;
+        font-weight: 100;
+        padding-bottom: 1.5vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+    }
+    .cont2 h4{
+        font-size: 3.2vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 2.3vw;
+        padding-bottom: 1.5vw;
+    }
+    .cont3{
+        padding: 0 1vw;
+        margin-top: 2.5vw;
+        row-gap: 4vw;
+        column-gap: 5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 2.8vw;
+        margin-bottom: 1.5vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 2.2vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        width: auto;
+        height: auto;
+        gap: 0.5vw;
+        padding: 30px 50px;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 4.5vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 2.8vw;
+        line-height: 50px;
+    }
+    form{
+        display: flex;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        font-size: 2.5vw;
+        padding: 1vw 3vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 2.5vw;
+        width: 15vw;
+        height: 5.1vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 2.2vw;
+        line-height: 25px;
+        font-weight: 100;
+        text-align: center;
+    }
+    /*описание*/
+    .paragraph{
+        margin: 0 75px;
+    }
+    .panel-title {
+        font-size: 3.5vw;
+    }
+    .panel-content h4{
+        font-size: 3vw;
+        font-weight: 400;
+        line-height: 50px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 2.5vw;
+        font-weight: 100;
+        line-height: 50px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.55vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 589px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4.7vw;
+    }
+    .navbar{
+        margin: 3vw 0;
+    }
+    .navigation{
+        padding: 8vw 0;
+        gap: 4.5vw;
+    }
+    .navigation li{
+        font-size: 3.7vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 15vw 50px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 5.5vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        padding: 30px 30px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 45vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        padding: 30px 30px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1.5vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 3.9vw;
+    }
+    .cont1 p{
+        font-size: 2.7vw;
+        font-weight: 100;
+        padding-bottom: 2vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 3.5vw;
+    }
+    .cont2 h4{
+        font-size: 3.9vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 2.7vw;
+        padding-bottom: 2vw;
+    }
+    .cont3{
+        padding: 0 1vw;
+        margin-top: 3.5vw;
+        row-gap: 4vw;
+        column-gap: 5vw;
+    }
+    .cont3 ul > h4{
+        font-size: 3.2vw;
+        margin-bottom: 2vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 2.7vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        gap: 1vw;
+        padding: 30px 30px;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 5vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 3.2vw;
+        line-height: 50px;
+    }
+    form{
+        display: flex;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        font-size: 2.7vw;
+        padding: 1vw 3vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 2.7vw;
+        width: 15vw;
+        height: 5.1vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 2.5vw;
+        line-height: 25px;
+        font-weight: 100;
+        text-align: center;
+    }
+    /*описание*/
+    .paragraph{
+        margin: 0 50px;
+    }
+    .panel-title {
+        font-size: 4vw;
+    }
+    .panel-content h4{
+        font-size: 3.5vw;
+        font-weight: 400;
+        line-height: 50px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 2.7vw;
+        font-weight: 100;
+        line-height: 50px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 471px){
+    /*шапка*/
+    .logo > a{
+        font-size: 5.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 125px;
+    }
+    .navigation{
+        padding: 9.5vw 0;
+        gap: 5.5vw;
+    }
+    .navigation li{
+        font-size: 4.2vw;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 17vw 30px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 6.5vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 2vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 2.5vw;
+        padding: 30px 20px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 40vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        padding: 30px 20px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1.5vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 4.7vw;
+    }
+    .cont1 p{
+        font-weight: 100;
+        font-size: 3.3vw;
+        padding-bottom: 3vw;
+        padding-top: 2.7vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 3.5vw;
+    }
+    .cont2 h4{
+        font-size: 4.7vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 3.3vw;
+        padding-bottom: 3vw;
+        padding-top: 2.7vw;
+    }
+    .cont3{
+        padding: 0 1vw;
+        margin-top: 3.5vw;
+        row-gap: 6vw;
+        column-gap: 7vw;
+    }
+    .cont3 ul > h4{
+        font-size: 4.3vw;
+        margin-bottom: 2vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 3.2vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        gap: 1vw;
+        padding: 30px 30px;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 6vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 4vw;
+        line-height: 50px;
+    }
+    form{
+        display: flex;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        font-size: 3.5vw;
+        padding: 1vw 3vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 3.5vw;
+        width: 15vw;
+        height: 6.3vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 3vw;
+        line-height: 25px;
+        font-weight: 100;
+        text-align: center;
+    }
+    /*описание*/
+    .faq-question{
+        padding: 20px 0 10px;
+    }
+    .paragraph{
+        margin: 0 30px;
+    }
+    .panel-title {
+        font-size: 5vw;
+    }
+    .panel-content h4{
+        font-size: 4vw;
+        font-weight: 400;
+        line-height: 35px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 3.2vw;
+        font-weight: 100;
+        line-height: 35px;
+        padding-top: 1vw;
+    }
+    /*---------------------------------------*/
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 6.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3.9vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 426px){
+    /*шапка*/
+    .logo > a{
+        font-size: 6.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 100px;
+    }
+    .navigation{
+        padding: 10.5vw 0;
+        gap: 6.5vw;
+    }
+    .navigation li{
+        font-size: 5vw;
+    }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 7.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1.5vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.2vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 376px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 7.5vw;
+    }
+    .navbar{
+        margin: 5vw 0;
+    }
+    .hamburger{
+        padding-left: 50px;
+    }
+    .navigation{
+        padding: 12.5vw 0;
+        gap: 8.5vw;
+    }
+    .navigation li{
+        font-size: 6vw;
+    }
+    /*--------------------------------*/
+    .open_tovar{
+        margin: 20vw 30px 7vw;
+    }
+    .open_tovar h1{
+        line-height: 50px;
+        font-size: 7.5vw;
+        padding-bottom: 0.5vw;
+        margin: 5vw 0 0.5vw;
+    }
+    .tovar_product{
+        gap: 5vw;
+    }
+    /**/
+    .tovar_img{
+        margin-top: 4vw;
+        padding: 30px 20px;
+    }
+    .tovar_img img{
+        border-radius: 25vw;
+        width: 50vw;
+    }
+    /**/
+    .tovar_info{
+        margin-top: 2.5vw;
+        padding: 30px 20px;
+    }
+    /*cont1*/
+    .cont1{
+        gap: 1.5vw;
+        padding: 0 1vw;
+    }
+    .cont1 h4{
+        font-size: 5.8vw;
+    }
+    .cont1 p{
+        font-weight: 100;
+        font-size: 4vw;
+        padding-bottom: 4vw;
+        padding-top: 3.5vw;
+    }
+    /*cont2*/
+    .cont2{
+        gap: 1.5vw;
+        padding: 0 1vw;
+        margin-top: 4vw;
+    }
+    .cont2 h4{
+        font-size: 5.8vw;
+    }
+    .cont2 p{
+        font-weight: 100;
+        font-size: 4vw;
+        padding-bottom: 4vw;
+        padding-top: 3.5vw;
+    }
+    .cont3{
+        padding: 0 1vw;
+        margin-top: 4vw;
+        row-gap: 8vw;
+        column-gap: 10vw;
+    }
+    .cont3 ul > h4{
+        font-size: 5vw;
+        margin-bottom: 3vw;
+    }
+    .cont3 ul > p{
+        font-weight: 100;
+        font-size: 4vw;
+    }
+    /**/
+    .price_info{
+        margin-top: 2.5vw;
+        gap: 1vw;
+        padding: 30px 30px;
+    }
+    /*contprice1*/
+    .contprice1{
+        margin-top: 0.5vw;
+    }
+    .contprice1 p{
+        font-size: 8.5vw;
+    }
+    /*contprice2*/
+    .contprice2{
+        margin-top: 0.5vw;
+    }
+    .contprice2 p{
+        font-size: 5.2vw;
+        line-height: 50px;
+    }
+    form{
+        display: flex;
+        gap: 5vw;
+    }
+    .btn_top1_more1{
+        font-size: 4.5vw;
+        padding: 1.5vw 3vw;
+        letter-spacing: 2.5px;
+    }
+    input {
+        font-size: 4.5vw;
+        width: 20vw;
+        height: 8.5vw;
+        letter-spacing: 2.5px;
+    }
+    .info_price{
+        margin-top: 2vw;
+    }
+    .info_price p{
+        font-size: 4vw;
+        line-height: 25px;
+        font-weight: 100;
+        text-align: center;
+    }
+    /*описание*/
+    .faq-question{
+        padding: 20px 0 10px;
+    }
+    .paragraph{
+        margin: 0 30px;
+    }
+    .panel-title {
+        font-size: 6.5vw;
+    }
+    .panel-content h4{
+        font-size: 5vw;
+        font-weight: 400;
+        line-height: 35px;
+        padding-top: 2vw;
+    }
+    .panel-content p{
+        font-size: 4vw;
+        font-weight: 100;
+        line-height: 35px;
+        padding-top: 7vw;
+    }
+    /*---------------------------------------*/
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 8vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.65vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
