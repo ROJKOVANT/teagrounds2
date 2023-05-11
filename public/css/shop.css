@@ -1,15 +1,13 @@
-* {
+*{
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
 }
-
-body {
+body{
     background-color: #212529;
 }
-
 /*Начало шапки сайта*/
 header{
     top: 0;
@@ -75,55 +73,38 @@ header{
     background-color: white;
 }
 /*Конец шапки сайта*/
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
-
+/*--------------------------*/
 /*Начало блока каталог*/
-.katalog {
-    margin-top: 0vw;
-    margin-bottom: 5vw;
-    border-bottom: 2px solid white;
+.about{
+    margin-top: 8.5vw;
 }
-
-h4 {
+h3{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
     color: white;
-    font-family: 'Philosopher', sans-serif;
     text-align: center;
     font-size: 2vw;
-    margin: 5vw 0;
+    margin: 8.5vw 0;
 }
-
-/*черный чай*/
-.subparagraph1 img {
-    height: 250px;
-    height: 250px;
-    margin-top: -12vw;
-    margin-left: 85vw;
+.title1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -10vw;
 }
-
-.subparagraph2 img {
-    height: 270px;
-    height: 270px;
-    margin-top: -16vw;
-    margin-left: auto;
+.title1 img{
+    width: auto;
+    height: 15vw;
+    margin-top: -4vw;
 }
-
 .wrapper1 {
     display: flex;
     gap: 2.5vw;
-    margin: 0 100px;
-    margin-top: -2.5vw;
-    justify-content: space-around;
-    margin-bottom: 8vw;
+    margin: -3vw 100px 10vw;
     justify-content: space-evenly
 }
-
-.wrapper1>div {
-    width: 250px;
-    height: 250px;
-}
-
 .item1 {
     display: flex;
     width: 250px;
@@ -134,12 +115,10 @@ h4 {
     align-items: center;
     gap: 1vw;
 }
-
 .item1 img {
     width: 100%;
     height: 250px;
 }
-
 .item1 p {
     color: white;
     font-size: 1.2vw;
@@ -147,586 +126,36 @@ h4 {
     text-align: center;
     margin-top: 0.5vw;
 }
-
-/*Конец блока каталог*/
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
+/*---------------------------------------------*/
 /*Начало блока популярные товары*/
-.container {
-    margin: -2.5vw 100px 0;
+.new{
+    margin-top: 2vw;
+}
+.title2{
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -15vw;
 }
-
-.subparagraph3 img {
-    height: 250px;
-    height: 250px;
-    margin-top: -12vw;
-    margin-left: 86.2vw;
+.img1{
+    width: auto;
+    height: 10vw;
 }
-
-.subparagraph4 img {
-    height: 200px;
-    height: 200px;
-    margin-top: -25vw;
-    margin-left: auto;
+.img2{
+    width: auto;
+    height: 13vw;
+    margin-top: -2vw;
 }
-
+.wrapper2 {
+    display: flex;
+    gap: 2.5vw;
+    margin: 0vw 100px 10vw;
+    justify-content: space-evenly
+}
 .top1 {
     display: flex;
     flex-direction: column;
 }
-
-/*товар 1*/
-.global1 {
-    display: flex;
-    background-color: #191D21;
-    width: 250px;
-    height: 300px;
-    border: 2px solid white;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1vw;
-}
-
-.global1 img {
-    width: 175px;
-    height: 175px;
-}
-
-.global1 h5 {
-    color: white;
-    font-size: 1.1vw;
-    font-family: 'Philosopher';
-}
-
-.global1 p {
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-}
-
-.btn_top1 {
-    display: flex;
-    justify-content: center;
-    margin: 0.5vw 0;
-}
-
-.btn_top1_more1 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 35px;
-    font-size: 1.1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top1_more1:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn_top2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn_top2_more2 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 125px;
-    height: 35px;
-    font-size: 1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top2_more2:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn_top3_more3 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 35px;
-    font-size: 1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top3_more3:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-/*товар 2*/
-.global2 {
-    display: flex;
-    background-color: #191D21;
-    width: 250px;
-    height: 300px;
-    border: 2px solid white;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1vw;
-}
-
-.global2 img {
-    width: 175px;
-    height: 175px;
-}
-
-.global2 h5 {
-    color: white;
-    font-size: 1.1vw;
-    font-family: 'Philosopher';
-}
-
-.global2 p {
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-}
-
-.btn_top1 {
-    display: flex;
-    justify-content: center;
-    margin: 0.5vw 0;
-}
-
-.btn_top1_more1 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 35px;
-    font-size: 1.1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top1_more1:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn_top2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn_top2_more2 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 125px;
-    height: 35px;
-    font-size: 1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top2_more2:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn_top3_more3 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 35px;
-    font-size: 1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top3_more3:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-/*товар 3*/
-.global3 {
-    display: flex;
-    background-color: #191D21;
-    width: 250px;
-    height: 300px;
-    border: 2px solid white;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1vw;
-}
-
-.global3 img {
-    width: 175px;
-    height: 175px;
-}
-
-.global3 h5 {
-    color: white;
-    font-size: 1.1vw;
-    font-family: 'Philosopher';
-}
-
-.global3 p {
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-}
-
-.btn_top1 {
-    display: flex;
-    justify-content: center;
-    margin: 0.5vw 0;
-}
-
-.btn_top1_more1 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 35px;
-    font-size: 1.1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top1_more1:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn_top2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn_top2_more2 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 125px;
-    height: 35px;
-    font-size: 1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top2_more2:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn_top3_more3 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 35px;
-    font-size: 1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top3_more3:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-/*товар 4*/
-.global4 {
-    display: flex;
-    background-color: #191D21;
-    width: 250px;
-    height: 300px;
-    border: 2px solid white;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1vw;
-}
-
-.global4 img {
-    width: 175px;
-    height: 175px;
-}
-
-.global4 h5 {
-    color: white;
-    font-size: 1.1vw;
-    font-family: 'Philosopher';
-}
-
-.global4 p {
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-}
-
-.btn_top1 {
-    display: flex;
-    justify-content: center;
-    margin: 0.5vw 0;
-}
-
-.btn_top1_more1 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    height: 35px;
-    font-size: 1.1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top1_more1:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn_top2 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn_top2_more2 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 125px;
-    height: 35px;
-    font-size: 1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top2_more2:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn_top3_more3 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 100px;
-    height: 35px;
-    font-size: 1vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_top3_more3:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-/*Конец блока популярные товары*/
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
-/*Начало блока товары*/
-.tovar {
-    margin: 5vw 0 0;
-    display: flex;
-    border-top: 2px solid white;
-    flex-direction: column;
-}
-
-/**/
-.filtr {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.filtr h6 {
-    margin: 5vw 2.5vw 0;
-    color: white;
-    font-size: 1.5vw;
-    font-family: 'Philosopher', sans-serif;
-}
-
-/**/
-.country {
-    display: flex;
-    flex-direction: column;
-}
-
-.country h6 {
-    margin: 2vw 2.5vw 0;
-    color: white;
-    font-size: 1.5vw;
-    font-family: 'Philosopher', sans-serif;
-}
-
-.country_form {
-    display: flex;
-    flex-direction: column;
-    margin: 1vw 2.5vw 0;
-}
-
-.country_form label {
-    color: white;
-    font-size: 1.2vw;
-    font-family: 'Philosopher', sans-serif;
-}
-
-.country_form input {
-    width: 0.8vw;
-    height: 0.8vw;
-}
-
-/**/
-.price {
-    display: flex;
-    flex-direction: column;
-}
-
-.price h6 {
-    margin: 2vw 2.5vw 0;
-    color: white;
-    font-size: 1.5vw;
-    font-family: 'Philosopher', sans-serif;
-}
-
-.price_form {
-    display: flex;
-    flex-direction: column;
-    margin: 1vw 2.5vw 0;
-}
-
-.price_form label {
-    color: white;
-    font-size: 1.2vw;
-    font-family: 'Philosopher', sans-serif;
-}
-
-.price_form input {
-    width: 0.8vw;
-    height: 0.8vw;
-}
-
-.btn1 {
-    display: flex;
-    justify-content: center;
-    margin: 2vw 2.5vw 0;
-}
-
-.btn_more1 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 155px;
-    height: 35px;
-    font-size: 1.2vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_more1:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.btn2 {
-    display: flex;
-    justify-content: center;
-    margin: 1vw 2.5vw 0;
-}
-
-.btn_more2 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 155px;
-    height: 35px;
-    font-size: 1.2vw;
-    font-family: 'Philosopher', sans-serif;
-    letter-spacing: 2.5px;
-}
-
-.btn_more2:hover {
-    background: white;
-    color: black;
-    transition: 2s;
-}
-
-.teg {
-    display: flex;
-}
-
-.teg p {
-    font-size: 5vw;
-    font-family: 'Philosopher', sans-serif;
-    transform: rotate(90deg);
-}
-
-.separation {
-    border-right: 2px solid white;
-    margin-left: 70px;
-}
-
-/*новые товары*/
-/*заказы*/
-.container1 {
-    display: grid;
-    height: auto;
-    margin: -2.5vw 200px 0;
-    grid-template-columns: repeat(auto-fill, 15vw);
-    justify-content: center;
-    gap: 5.2vw 3vw;
-}
-
-.top1 {
-    display: flex;
-    flex-direction: column;
-}
-
 .global1 {
     display: flex;
     background-color: #191D21;
@@ -739,53 +168,51 @@ h4 {
     align-items: center;
     gap: 1.5vw;
 }
-
 .global1 img {
     width: 175px;
     height: 175px;
     border-radius: 50%;
 }
-
 .global1 h5 {
     color: white;
     font-size: 1.1vw;
     font-family: 'Philosopher';
+    font-style: normal;
 }
-
 .global1 p {
     color: white;
     font-size: 1.3vw;
     font-family: 'Philosopher';
+    font-style: normal;
 }
-
 .btn_top1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 0.5vw 0;
 }
-
 .btn_top1_more1 {
+    font-family: 'Philosopher';
+    font-style: normal;
     text-decoration: none;
     background-color: transparent;
+    color: white;
     border: 1px solid white;
     width: 250px;
-    margin-bottom: 0.5vw;
     height: 35px;
-    font-size: 0.9vw;
+    font-size: 1.1vw;
     letter-spacing: 2.5px;
+    margin-bottom: 0.5vw;
 }
-
 .btn_top1_more1 :hover {
     background: white;
     color: black;
     transition: 2s;
 }
-
 form {
     display: flex;
     flex-direction: column;
 }
-
 input {
     text-decoration: none;
     text-align: center;
@@ -797,65 +224,186 @@ input {
     color: white;
     font-size: 0.9vw;
 }
-
-/* товары*/
+/*---------------------------------------------*/
+/*!*Начало блока товары*!*/
+.towar{
+    margin-top: 2vw;
+}
 .container7 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4vw;
-    margin: 0vw 7.5vw 10vw;
+    margin: -2vw 7.5vw 10vw;
 }
+/*.tovar {*/
+/*    margin: 5vw 0 0;*/
+/*    display: flex;*/
+/*    border-top: 2px solid white;*/
+/*    flex-direction: column;*/
+/*}*/
+/*!**!*/
+/*.filtr {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
 
-.top1 {
-    display: flex;
-    flex-direction: column;
-}
+/*}*/
+/*.filtr h6 {*/
+/*    margin: 5vw 2.5vw 0;*/
+/*    color: white;*/
+/*    font-size: 1.5vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*}*/
+/*!**!*/
+/*.country {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*.country h6 {*/
+/*    margin: 2vw 2.5vw 0;*/
+/*    color: white;*/
+/*    font-size: 1.5vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*}*/
+/*.country_form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin: 1vw 2.5vw 0;*/
+/*}*/
+/*.country_form label {*/
+/*    color: white;*/
+/*    font-size: 1.2vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*}*/
+/*.country_form input {*/
+/*    width: 0.8vw;*/
+/*    height: 0.8vw;*/
+/*}*/
+/*!**!*/
+/*.price {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+/*.price h6 {*/
+/*    margin: 2vw 2.5vw 0;*/
+/*    color: white;*/
+/*    font-size: 1.5vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*}*/
+/*.price_form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    margin: 1vw 2.5vw 0;*/
+/*}*/
+/*.price_form label {*/
+/*    color: white;*/
+/*    font-size: 1.2vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*}*/
+/*.price_form input {*/
+/*    width: 0.8vw;*/
+/*    height: 0.8vw;*/
+/*}*/
+/*.btn1 {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    margin: 2vw 2.5vw 0;*/
+/*}*/
+/*.btn_more1 {*/
+/*    text-decoration: none;*/
+/*    background-color: transparent;*/
+/*    color: white;*/
+/*    border: 1px solid white;*/
+/*    width: 155px;*/
+/*    height: 35px;*/
+/*    font-size: 1.2vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*    letter-spacing: 2.5px;*/
+/*}*/
+/*.btn_more1:hover {*/
+/*    background: white;*/
+/*    color: black;*/
+/*    transition: 2s;*/
+/*}*/
+/*.btn2 {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    margin: 1vw 2.5vw 0;*/
+/*}*/
+/*.btn_more2 {*/
+/*    text-decoration: none;*/
+/*    background-color: transparent;*/
+/*    color: white;*/
+/*    border: 1px solid white;*/
+/*    width: 155px;*/
+/*    height: 35px;*/
+/*    font-size: 1.2vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*    letter-spacing: 2.5px;*/
+/*}*/
+/*.btn_more2:hover {*/
+/*    background: white;*/
+/*    color: black;*/
+/*    transition: 2s;*/
+/*}*/
+/*.teg {*/
+/*    display: flex;*/
+/*}*/
+/*.teg p {*/
+/*    font-size: 5vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*    transform: rotate(90deg);*/
+/*}*/
+/*.separation {*/
+/*    border-right: 2px solid white;*/
+/*    margin-left: 70px;*/
+/*}*/
+/*!*новые товары*!*/
+/*заказы*/
+/* товары*/
+/*-----------------------------*/
+/*!*плагинация*!*/
+/*.pagination {*/
+/*    display: flex;*/
+/*}*/
 
-/*плагинация*/
-.pagination {
-    display: flex;
-}
+/*.pagination a {*/
+/*    border: 2px solid white;*/
+/*    color: white;*/
+/*    float: left;*/
+/*    padding: 8px 16px;*/
+/*    text-decoration: none;*/
+/*    transition: background-color 2s;*/
+/*}*/
 
-.pagination a {
-    border: 2px solid white;
-    color: white;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color 2s;
-}
+/*.pagination a.active {*/
+/*    background-color: rgb(255, 255, 255);*/
+/*    color: black;*/
+/*}*/
 
-.pagination a.active {
-    background-color: rgb(255, 255, 255);
-    color: black;
-}
+/*.pagination a:hover:not(.active) {*/
+/*    background-color: rgb(255, 255, 255);*/
+/*    color: black;*/
+/*}*/
 
-.pagination a:hover:not(.active) {
-    background-color: rgb(255, 255, 255);
-    color: black;
-}
+/*.teg {*/
+/*    flex-direction: column;*/
+/*    position: absolute;*/
+/*    width: auto;*/
+/*    margin-top: 12vw;*/
+/*    margin-left: -16vw;*/
+/*}*/
 
-.teg {
-    flex-direction: column;
-    position: absolute;
-    width: auto;
-    margin-top: 12vw;
-    margin-left: -16vw;
-}
+/*.teg p {*/
+/*    color: rgba(255, 255, 255, 0.2);*/
+/*    font-size: 8vw;*/
+/*    font-family: 'Philosopher', sans-serif;*/
+/*    transform: rotate(-90deg);*/
+/*    margin-top: 10vw;*/
 
-.teg p {
-    color: rgba(255, 255, 255, 0.2);
-    font-size: 8vw;
-    font-family: 'Philosopher', sans-serif;
-    transform: rotate(-90deg);
-    margin-top: 10vw;
-
-}
-
-/*Конец блока Товары*/
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*}*/
+/*!*Конец блока Товары*!*/
+/*-----------------------------*/
 /*кнопка на вверх*/
 .go-top {
     position: fixed;
@@ -870,9 +418,9 @@ input {
     width: auto;
     height: 2.5vw;
 }
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------*/
 /*Начало блока Footer*/
-.navigation_footer {
+.navigation_footer{
     display: flex;
     color: white;
     display: flex;
@@ -881,8 +429,7 @@ input {
     font-size: 1.5vw;
     font-family: 'Philosopher';
 }
-
-footer {
+footer{
     height: 100%;
     background-color: #191D21;
     border-top: 2px solid white;
@@ -890,946 +437,1699 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-
-footer .navigation_footer {
+footer .navigation_footer{
     padding-top: 5vh;
     width: 100%;
 }
-
-footer a {
+.logo > a{
+    font-size: 1.8vw;
+}
+.conf{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.conf > a{
+    font-size:1.2vw;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Philosopher';
+}
+footer a{
     color: white;
     font-size: 1.5vw;
     font-family: 'Philosopher';
     margin-top: 2.5vh;
 }
-
-.cop {
+.cop{
     color: white;
     font-family: 'Philosopher';
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     width: 100%;
-    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
-
 /*Конец блока Footer*/
+/*---------------------------------------*/
+/*верстка адаптива*/
 
-/*АДАПТИВ НОУТБУК*/
-@media screen and (max-width: 1790px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
+@media screen and (max-width: 1581px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+        font-size: 1.5vw;
+    }
+    .logo{
+        font-size: 2vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 8.5vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 2.3vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
         margin-top: -12vw;
-        margin-left: 86vw;
     }
-}
-
-@media screen and (max-width: 1732px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 85.5vw;
+    .title1 img{
+        width: auto;
+        height: 16vw;
+        margin-top: -4vw;
     }
-}
-
-@media screen and (max-width: 1700px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 85vw;
-    }
-}
-
-@media screen and (max-width: 1650px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 84.8vw;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 84.5vw;
-    }
-}
-
-@media screen and (max-width: 1570px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 84vw;
-    }
-}
-
-@media screen and (max-width: 1520px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 83.7vw;
-    }
-}
-
-@media screen and (max-width: 1470px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 83vw;
-    }
-}
-
-@media screen and (max-width: 1440px) {
-    header {
-        height: 7vh;
-        width: 100%;
-        border-bottom: 2px solid white;
-    }
-
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 82.5vw;
-    }
-
     .wrapper1 {
-        display: grid;
         gap: 2.5vw;
-        margin: 0 100px;
-        margin-top: -5vw;
-        justify-content: space-around;
-        margin-bottom: 8vw;
+        margin: -6vw 100px 5vw;
     }
-
-    .subparagraph1 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 85vw;
-    }
-
-    .subparagraph2 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -19vw;
-        margin-left: auto;
-    }
-
-    .item1 p {
-        color: white;
-        font-size: 1.5vw;
-        font-family: 'Philosopher';
-        text-align: center;
-        margin-top: 0.5vw;
-    }
-
-    .item2 p {
-        color: white;
-        font-size: 1.5vw;
-        font-family: 'Philosopher';
-        text-align: center;
-        margin-top: 0.5vw;
-    }
-
-    .item3 p {
-        color: white;
-        font-size: 1.5vw;
-        font-family: 'Philosopher';
-        text-align: center;
-        margin-top: 0.5vw;
-    }
-
-    .item4 p {
-        color: white;
-        font-size: 1.5vw;
-        font-family: 'Philosopher';
-        text-align: center;
-        margin-top: 0.5vw;
-    }
-
-    .subparagraph4 img {
-        height: 175px;
-        height: 175px;
-        position: absolute;
-        margin-top: -15vw;
-        margin-left: auto;
-    }
-
-    /*товар 1*/
-    .global1 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
+    .item1 {
+        width: 250px;
+        height: 300px;
         gap: 1vw;
     }
-
+    .item1 img {
+        width: auto;
+        height: 15vw;
+    }
+    .item1 p {
+        font-size: 1.5vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
+        margin-top: -15vw;
+    }
+    .img1{
+        width: auto;
+        height: 10vw;
+    }
+    .img2{
+        width: auto;
+        height: 13vw;
+        margin-top: -2vw;
+    }
+    .wrapper2 {
+        gap: 2.5vw;
+        margin: 0vw 100px 10vw;
+    }
+    .global1 {
+        width: 250px;
+        height: 320px;
+        gap: 1.5vw;
+    }
     .global1 img {
-        width: 155px;
-        height: 155px;
+        width: auto;
+        height: 10vw;
+        border-radius: 50%;
     }
-
     .global1 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
+        font-size: 1.4vw;
     }
-
     .global1 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
+        font-size: 1.4vw;
     }
-
     .btn_top1 {
-        display: flex;
-        justify-content: center;
         margin: 0.5vw 0;
     }
-
     .btn_top1_more1 {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: 225px;
+        width: 250px;
         height: 35px;
         font-size: 1.2vw;
-        font-family: 'Philosopher', sans-serif;
         letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
     }
-
-    .btn_top1_more1:hover {
-        background: white;
-        color: black;
-        transition: 2s;
-    }
-
-    .btn_top2 {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .btn_top2_more2 {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: 115px;
+    input {
+        width: 250px;
+        margin-bottom: 0.5vw;
         height: 35px;
-        font-size: 1.2vw;
-        font-family: 'Philosopher', sans-serif;
-        letter-spacing: 2.5px;
+        font-size: 0.9vw;
     }
-
-    .btn_top2_more2:hover {
-        background: white;
-        color: black;
-        transition: 2s;
-    }
-
-    .btn_top3_more3 {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: 100px;
-        height: 35px;
-        font-size: 1.2vw;
-        font-family: 'Philosopher', sans-serif;
-        letter-spacing: 2.5px;
-    }
-
-    .btn_top3_more3:hover {
-        background: white;
-        color: black;
-        transition: 2s;
-    }
-
-    /*товар 2*/
-    .global2 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global2 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global2 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global2 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 3*/
-    .global3 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global3 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global3 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global3 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 4*/
-    .global4 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global4 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global4 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global4 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 5*/
-    .global5 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global5 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global5 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global5 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 6*/
-    .global6 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global6 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global6 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global6 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 7*/
-    .global7 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global7 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global7 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global7 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 8*/
-    .global8 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global8 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global8 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global8 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 9*/
-    .global9 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global9 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global9 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global9 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 10*/
-    .global10 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global10 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global10 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global10 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 11*/
-    .global11 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global11 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global11 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global11 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /*товар 12*/
-    .global12 {
-        display: flex;
-        background-color: #191D21;
-        width: 225px;
-        height: 255px;
-        border: 2px solid white;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        gap: 1vw;
-    }
-
-    .global12 img {
-        width: 155px;
-        height: 155px;
-    }
-
-    .global12 h5 {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    .global12 p {
-        color: white;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-    }
-
-    /**/
-    .filtr h6 {
-        margin: 5vw 2.5vw 0;
-        color: white;
-        font-size: 1.8vw;
-        font-family: 'Philosopher', sans-serif;
-    }
-
-    /**/
-    .country h6 {
-        margin: 2vw 2.5vw 0;
-        color: white;
-        font-size: 1.8vw;
-        font-family: 'Philosopher', sans-serif;
-    }
-
-    .country_form label {
-        color: white;
-        font-size: 1.5vw;
-        font-family: 'Philosopher', sans-serif;
-    }
-
-    .country_form input {
-        width: 1vw;
-        height: 1vw;
-    }
-
-    /**/
-    .price h6 {
-        margin: 2vw 2.5vw 0;
-        color: white;
-        font-size: 1.8vw;
-        font-family: 'Philosopher', sans-serif;
-    }
-
-    .price_form label {
-        color: white;
-        font-size: 1.5vw;
-        font-family: 'Philosopher', sans-serif;
-    }
-
-    .price_form input {
-        width: 1vw;
-        height: 1vw;
-    }
-
-    .teg {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        width: auto;
-        margin-top: 20vw;
-        margin-left: -19vw;
-    }
-
-    .teg p {
-        font-size: 10vw;
-        font-family: 'Philosopher', sans-serif;
-        transform: rotate(-90deg);
-    }
-
-    .separation {
-        border-right: 2px solid white;
-        margin-left: 70px;
-    }
-
-    /*Начало блока Footer*/
-    .navigation_footer {
-        display: flex;
-        color: white;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 4vw;
-        font-family: 'Philosopher';
-    }
-
-    footer {
-        height: 100%;
-        background-color: #191D21;
-        border-top: 2px solid white;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10vw;
-    }
-
-    footer .navigation_footer {
-        padding-top: 5vh;
-        width: 100%;
-    }
-
-    footer a {
-        color: white;
-        font-size: 2vw;
-        font-family: 'Philosopher';
-        margin-top: 2.5vh;
-    }
-
-    .cop {
-        color: white;
-        font-family: 'Philosopher';
-        font-size: 1.5vw;
-        border-top: 2px solid rgba(255, 255, 255, 0.2);
-        width: 100%;
-        margin-top: 5vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 2vh;
-        padding-bottom: 2vh;
-    }
-
-    /*Конец блока Footer*/
-}
-
-@media screen and (max-width: 1400px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 82vw;
-    }
-
-    .subparagraph1 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 83vw;
-    }
-}
-
-@media screen and (max-width: 1350px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 81vw;
-    }
-
-    .item1 img {
-        width: 90%;
-        height: 225px;
-    }
-
-    .item2 img {
-        width: 90%;
-        height: 225px;
-    }
-
-    .item3 img {
-        width: 90%;
-        height: 225px;
-    }
-
-    .item4 img {
-        width: 90%;
-        height: 225px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 80vw;
-    }
-
-    .subparagraph1 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 82vw;
-    }
-
-    .item1 img {
-        width: 80%;
-        height: 200px;
-    }
-
-    .item2 img {
-        width: 80%;
-        height: 200px;
-    }
-
-    .item3 img {
-        width: 80%;
-        height: 200px;
-    }
-
-    .item4 img {
-        width: 80%;
-        height: 200px;
-    }
-
-    .subparagraph2 img {
-        height: 225px;
-        height: 225px;
-        margin-top: -19vw;
-        position: absolute;
-        margin-left: auto;
-        z-index: -1;
-    }
-
-    .subparagraph4 img {
-        height: 165px;
-        height: 165px;
-        position: absolute;
-        margin-top: -17vw;
-        margin-left: auto;
-    }
-
-    .subparagraph3 img {
-        height: 225px;
-        height: 225px;
-        margin-top: -12vw;
-        margin-left: 82vw;
-    }
-}
-
-@media screen and (max-width: 1290px) {
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
     .container7 {
         gap: 4vw;
+        margin: -2vw 7.5vw 5vw;
+        justify-content: space-between;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .logo > a{
+        font-size: 2vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.3vw;
+    }
+    footer a{
+        font-size: 1.5vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.4vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
     }
 }
-
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1441px){
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 8.5vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 2.4vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
+        margin-top: -12vw;
+    }
+    .title1 img{
+        width: auto;
+        height: 16vw;
+        margin-top: -4vw;
+    }
+    .wrapper1 {
+        gap: 2.5vw;
+        margin: -6vw 100px 5vw;
+    }
+    .item1 {
+        width: 250px;
+        height: 300px;
+        gap: 1vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 15vw;
+    }
+    .item1 p {
+        font-size: 1.5vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
+        margin-top: -15vw;
+    }
+    .img1{
+        width: auto;
+        height: 12vw;
+    }
+    .img2{
+        width: auto;
+        height: 15vw;
+        margin-top: -2vw;
+    }
+    .wrapper2 {
+        gap: 2.5vw;
+        margin: 0vw 100px 10vw;
+    }
+    .global1 {
+        width: 250px;
+        height: 320px;
+        gap: 1.5vw;
+    }
+    .global1 img {
+        width: auto;
+        height: 10vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 1.5vw;
+    }
+    .global1 p {
+        font-size: 1.5vw;
+    }
+    .btn_top1 {
+        margin: 0.5vw 0;
+    }
+    .btn_top1_more1 {
+        width: 250px;
+        height: 35px;
+        font-size: 1.35vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    input {
+        width: 250px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 0.9vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
     .container7 {
+        gap: 4vw;
+        margin: -2vw 7.5vw 5vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+}
+@media screen and (max-width: 1301px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+        gap: 6vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 11vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 2.5vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
+        margin-top: -14vw;
+    }
+    .title1 img{
+        width: auto;
+        height: 17vw;
+        margin-top: -4vw;
+    }
+    .wrapper1 {
+        gap: 2.5vw;
+        margin: -6vw 100px 5vw;
+    }
+    .item1 {
+        width: 250px;
+        height: 300px;
+        gap: 1vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 15vw;
+    }
+    .item1 p {
+        font-size: 1.6vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
+        margin-top: -16vw;
+    }
+    .img1{
+        width: auto;
+        height: 12vw;
+    }
+    .img2{
+        width: auto;
+        height: 16vw;
+        margin-top: -4vw;
+    }
+    .wrapper2 {
+        gap: 3vw;
+        margin: 0vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 250px;
+        height: 320px;
+        gap: 1.5vw;
+    }
+    .global1 img {
+        width: auto;
+        height: 12vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 1.6vw;
+    }
+    .global1 p {
+        font-size: 1.6vw;
+    }
+    .btn_top1 {
+        margin: 0.5vw 0;
+    }
+    .btn_top1_more1 {
+        width: 250px;
+        height: 35px;
+        font-size: 1.5vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    input {
+        width: 250px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 1.2vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
+    .container7 {
+        gap: 4vw;
+        margin: -2vw 7.5vw 5vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.4vw;
+    }
+    footer a{
+        font-size: 1.6vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.5vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1282px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.5vw;
+    }
+    footer a{
+        font-size: 1.7vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.6vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1141px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.8vw;
+        margin-bottom: 1.8vw;
+        font-size: 1.8vw;
+        gap: 5vw;
+    }
+    .logo > a{
+        font-size: 2.6vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 11vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 2.7vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
+        margin-top: -14vw;
+    }
+    .title1 img{
+        width: auto;
+        height: 19vw;
+        margin-top: -4vw;
+    }
+    .wrapper1 {
+        gap: 2.5vw;
+        margin: -6vw 100px 5vw;
+    }
+    .item1 {
+        width: 200px;
+        height: 300px;
+        gap: 1vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 16vw;
+    }
+    .item1 p {
+        font-size: 1.8vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
+        margin-top: -16vw;
+    }
+    .img1{
+        width: auto;
+        height: 14vw;
+    }
+    .img2{
+        width: auto;
+        height: 18vw;
+        margin-top: -4vw;
+    }
+    .wrapper2 {
+        gap: 3vw;
+        margin: 0vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 225px;
+        height: 300px;
+        gap: 1.5vw;
+        border: 1px solid white;
+    }
+    .global1 img {
+        width: auto;
+        height: 14vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 1.8vw;
+    }
+    .global1 p {
+        font-size: 1.8vw;
+    }
+    .btn_top1 {
+        margin: 0.5vw 0;
+    }
+    .btn_top1_more1 {
+        width: 225px;
+        height: 35px;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    input {
+        width: 225px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 1.3vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
+    .container7 {
+        gap: 4vw;
+        margin: -4vw 7.5vw 5vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 3.5vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.55vw;
+    }
+    footer a{
+        font-size: 1.8vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.7vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1041px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.9vw;
+        margin-bottom: 1.9vw;
+        font-size: 2vw;
+    }
+    .logo > a{
+        font-size: 2.7vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 13vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 2.9vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
+        margin-top: -16vw;
+    }
+    .title1 img{
+        width: auto;
+        height: 21vw;
+        margin-top: -4vw;
+    }
+    .wrapper1 {
+        gap: 2.5vw;
+        margin: -6vw 100px 5vw;
+    }
+    .item1 {
+        width: 200px;
+        height: 300px;
+        gap: 1vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 19vw;
+    }
+    .item1 p {
+        font-size: 1.9vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
+        margin-top: -18vw;
+    }
+    .img1{
+        width: auto;
+        height: 15vw;
+    }
+    .img2{
+        width: auto;
+        height: 20vw;
+        margin-top: -4vw;
+    }
+    .wrapper2 {
+        gap: 3vw;
+        margin: 0vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 225px;
+        height: 300px;
+        gap: 1.5vw;
+        border: 1px solid white;
+    }
+    .global1 img {
+        width: auto;
+        height: 15vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 2.1vw;
+        font-weight: normal;
+    }
+    .global1 p {
+        font-size: 2vw;
+    }
+    .btn_top1 {
+        margin: 0.5vw 0;
+    }
+    .btn_top1_more1 {
+        width: 225px;
+        height: 35px;
+        font-size: 1.7vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    input {
+        width: 225px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 1.5vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
+    .container7 {
+        gap: 4vw;
+        margin: -4vw 7.5vw 5vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.75vw;
+    }
+    footer a{
+        font-size: 1.9vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.85vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1000px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.1vw;
+        gap: 4vw;
+    }
+    .logo > a{
+        font-size: 2.8vw;
+    }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 4vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.85vw;
+    }
+    footer a{
+        font-size: 2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.95vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 901px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.3vw;
         gap: 3vw;
     }
-
-    .subparagraph2 img {
-        height: 225px;
-        height: 225px;
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 13vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 3.2vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
+        margin-top: -16vw;
+    }
+    .title1 img{
+        width: auto;
+        height: 23vw;
+        margin-top: -4vw;
+    }
+    .wrapper1 {
+        gap: 2.5vw;
+        margin: -6vw 100px 5vw;
+    }
+    .item1 {
+        width: 200px;
+        height: 300px;
+        gap: 1vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 22vw;
+    }
+    .item1 p {
+        font-size: 2.1vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
         margin-top: -20vw;
-        position: absolute;
-        margin-left: auto;
-        z-index: -1;
     }
-}
-
-@media screen and (max-width: 1230px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 79.5vw;
+    .img1{
+        width: auto;
+        height: 17vw;
     }
-
-    .subparagraph1 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 81vw;
+    .img2{
+        width: auto;
+        height: 23vw;
+        margin-top: -4vw;
     }
-}
-
-@media screen and (max-width: 1219px) {
+    .wrapper2 {
+        gap: 5vw;
+        margin: 0vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 215px;
+        height: 300px;
+        gap: 1.5vw;
+        border: 1px solid white;
+    }
+    .global1 img {
+        width: auto;
+        height: 17vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 2.5vw;
+        font-weight: normal;
+    }
+    .global1 p {
+        font-size: 2.2vw;
+    }
+    .btn_top1 {
+        margin: 0.5vw 0;
+    }
+    .btn_top1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 1.9vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    input {
+        width: 215px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 1.7vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
     .container7 {
+        gap: 5vw;
+        margin: -4vw 7.5vw 7vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3.7vh;
+        margin-bottom: 3.7vh;
+    }
+    .conf > a{
+        font-size: 2vw;
+    }
+    footer a{
+        font-size: 2.2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 841px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 2.1vw;
+        margin-bottom: 2.1vw;
+        font-size: 2.4vw;
+        gap: 2.5vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.15vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.15vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 769px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navbar{
+        margin: 2vw 0;
+        justify-content: space-around;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 250px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 3vw;
+        flex-direction: column;
+        /*background-color: #191D21;*/
+        background-color: #191d21ed;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+        transition: 2s;
+        margin: 0;
+        padding: 6vw 0;
+    }
+    .navigation li{
+        font-size: 2.7vw;
+    }
+    .navigation.active{
+        left: 0;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 16vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 3.7vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
+        margin-top: -18vw;
+    }
+    .title1 img{
+        width: auto;
+        height: 25vw;
+        margin-top: -4vw;
+    }
+    .wrapper1 {
+        gap: 5vw;
+        margin: -6vw 100px 5vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item1 {
+        width: auto;
+        height: 300px;
         gap: 2vw;
     }
-
-    .subparagraph4 img {
-        height: 165px;
-        height: 165px;
-        position: absolute;
-        margin-top: -19vw;
-        margin-left: auto;
-    }
-
-    .wrapper1 {
-        display: grid;
-        gap: 2.5vw;
-        margin: 0 100px;
-        margin-top: -5vw;
-        justify-content: space-between;
-        margin-bottom: 8vw;
-    }
-
-    .item1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
     .item1 img {
-        width: 70%;
-        height: 175px;
+        width: auto;
+        height: 27vw;
     }
-
-    .item2 img {
-        width: 70%;
-        height: 175px;
+    .item1 p {
+        font-size: 2.5vw;
+        margin-top: 0.5vw;
     }
-
-    .item3 img {
-        width: 70%;
-        height: 175px;
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
     }
-
-    .item4 img {
-        width: 70%;
-        height: 175px;
+    .title2{
+        margin-top: -22vw;
+    }
+    .img1{
+        width: auto;
+        height: 17vw;
+    }
+    .img2{
+        width: auto;
+        height: 23vw;
+        margin-top: -4vw;
+    }
+    .wrapper2 {
+        gap: 5vw;
+        margin: 7vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 215px;
+        height: 300px;
+        gap: 3vw;
+        border: 1px solid white;
+    }
+    .global1 img {
+        width: auto;
+        height: 19vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 3vw;
+        font-weight: normal;
+    }
+    .global1 p {
+        font-size: 2.5vw;
+    }
+    .btn_top1 {
+        margin: 0.7vw 0;
+    }
+    .btn_top1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 2.2vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    input {
+        width: 215px;
+        height: 35px;
+        font-size: 1.9vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
+    .container7 {
+        gap: 5vw;
+        margin: -4vw 7.5vw 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.35vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
     }
 }
-
-@media screen and (max-width:1190px) {
-    .subparagraph3 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 79vw;
+@media screen and (max-width: 701px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
     }
-
-    .subparagraph1 img {
-        height: 250px;
-        height: 250px;
-        margin-top: -12vw;
-        margin-left: 80.5vw;
+    .navigation li{
+        font-size: 3vw;
     }
-
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 18vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 4vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
+        margin-top: -21vw;
+    }
+    .title1 img{
+        width: auto;
+        height: 27vw;
+        margin-top: -4vw;
+    }
+    .wrapper1 {
+        gap: 5vw;
+        margin: -6vw 100px 5vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item1 {
+        width: auto;
+        height: auto;
+        gap: 2vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 27vw;
+    }
+    .item1 p {
+        font-size: 3vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
+        margin-top: -22vw;
+    }
+    .img1{
+        width: auto;
+        height: 17vw;
+    }
+    .img2{
+        width: auto;
+        height: 23vw;
+        margin-top: -6vw;
+    }
+    .wrapper2 {
+        gap: 5vw;
+        margin: 7vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 215px;
+        height: 300px;
+        gap: 3vw;
+        border: 1px solid white;
+    }
+    .global1 img {
+        width: auto;
+        height: 21vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 3.3vw;
+        font-weight: normal;
+    }
+    .global1 p {
+        font-size: 2.75vw;
+    }
+    .btn_top1 {
+        margin: 0.7vw 0;
+    }
+    .btn_top1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 2.4vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    input {
+        width: 215px;
+        height: 35px;
+        font-size: 2.1vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
     .container7 {
-        gap: 1vw;
+        gap: 5vw;
+        margin: -3vw 7.5vw 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.55vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 589px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4.7vw;
+    }
+    .navbar{
+        margin: 3vw 0;
+    }
+    .navigation{
+        padding: 8vw 0;
+        gap: 4.5vw;
+    }
+    .navigation li{
+        font-size: 3.7vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 21vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 4.5vw;
+        margin: 9.5vw 0;
+    }
+    .title1{
+        margin-top: -22.5vw;
+    }
+    .title1 img{
+        width: auto;
+        height: 28vw;
+        margin-top: -4vw;
+    }
+    .wrapper1 {
+        gap: 7vw;
+        margin: -6vw 75px 5vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item1 {
+        width: auto;
+        height: auto;
+        gap: 3vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 29vw;
+    }
+    .item1 p {
+        font-size: 3.4vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
+        margin-top: -22vw;
+    }
+    .img1{
+        width: auto;
+        height: 18vw;
+    }
+    .img2{
+        width: auto;
+        height: 27vw;
+        margin-top: -7vw;
+    }
+    .wrapper2 {
+        gap: 5vw;
+        margin: 7vw 75px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 215px;
+        height: 280px;
+        gap: 3vw;
+        border: 1px solid white;
+    }
+    .global1 img {
+        width: auto;
+        height: 23vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 3.7vw;
+        font-weight: normal;
+    }
+    .global1 p {
+        font-size: 3.2vw;
+    }
+    .btn_top1 {
+        margin: 0.7vw 0;
+    }
+    .btn_top1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 2.7vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    input {
+        width: 215px;
+        height: 35px;
+        font-size: 2.3vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
+    .container7 {
+        gap: 5vw;
+        margin: -3vw 7.5vw 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 471px){
+    /*шапка*/
+    .logo > a{
+        font-size: 5.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 125px;
+    }
+    .navigation{
+        padding: 9.5vw 0;
+        gap: 5.5vw;
+    }
+    .navigation li{
+        font-size: 4.2vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 23vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 5.7vw;
+        margin: 9.5vw 0;
+    }
+    .title1 img{
+        display: none;
+    }
+    .wrapper1 {
+        gap: 7vw;
+        margin: 20vw 75px 5vw;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item1 {
+        width: auto;
+        height: auto;
+        gap: 3vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 40vw;
+    }
+    .item1 p {
+        font-size: 4.5vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .title2{
+        display: none;
+    }
+    .wrapper2 {
+        gap: 5vw;
+        margin: 7vw 75px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 250px;
+        height: 300px;
+        gap: 7vw;
+        border: 1px solid white;
+    }
+    .global1 img {
+        width: auto;
+        height: 30vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 5vw;
+        font-weight: normal;
+    }
+    .global1 p {
+        font-size: 4.5vw;
+    }
+    .btn_top1 {
+        margin: 0.7vw 0;
+    }
+    .btn_top1_more1 {
+        width: 250px;
+        height: 35px;
+        font-size: 3.5vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+    }
+    input {
+        width: 250px;
+        height: 35px;
+        font-size: 3.5vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
+    .container7 {
+        gap: 5vw;
+        margin: -3vw 7.5vw 15vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 6.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3.9vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 426px){
+    /*шапка*/
+    .logo > a{
+        font-size: 6.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 100px;
+    }
+    .navigation{
+        padding: 10.5vw 0;
+        gap: 6.5vw;
+    }
+    .navigation li{
+        font-size: 5vw;
+    }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 7.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1.5vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.2vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 376px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 7.5vw;
+    }
+    .navbar{
+        margin: 5vw 0;
+    }
+    .hamburger{
+        padding-left: 50px;
+    }
+    .navigation{
+        padding: 12.5vw 0;
+        gap: 8.5vw;
+    }
+    .navigation li{
+        font-size: 6vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока каталог*/
+    .about{
+        margin-top: 30vw;
+    }
+    h3{
+        font-weight: 400;
+        line-height: 50px;
+        font-size: 7.5vw;
+        margin: 9.5vw 0;
+    }
+    .wrapper1 {
+        gap: 13vw;
+        margin: 25vw 75px 5vw;
+    }
+    .item1 {
+        gap: 3vw;
+    }
+    .item1 img {
+        width: auto;
+        height: 50vw;
+    }
+    .item1 p {
+        font-size: 5.5vw;
+        margin-top: 0.5vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 20vw;
+    }
+    .title2{
+        display: none;
+    }
+    .wrapper2 {
+        gap: 15vw;
+        margin: 7vw 75px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .global1 {
+        width: 215px;
+        height: 315px;
+        gap: 7vw;
+        border: 1px solid white;
+    }
+    .global1 img {
+        width: auto;
+        height: 45vw;
+        border-radius: 50%;
+    }
+    .global1 h5 {
+        font-size: 6.5vw;
+        font-weight: normal;
+    }
+    .global1 p {
+        font-size: 5vw;
+    }
+    .btn_top1 {
+        margin: 0.7vw 0;
+    }
+    .btn_top1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 4.5vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 2.5vw;
+        margin-top: 2.5vw;
+    }
+    input {
+        width: 215px;
+        height: 35px;
+        font-size: 4.5vw;
+    }
+    /*---------------------------------------------*/
+    /*!*Начало блока товары*!*/
+    .container7 {
+        gap: 5vw;
+        margin: -3vw 7.5vw 15vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*---------------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 8vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.65vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
     }
 }

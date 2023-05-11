@@ -67,6 +67,7 @@
         </div>
     </div>
 </header>
+
     <section class="paragraph">
         <h3>Статьи</h3>
         @php

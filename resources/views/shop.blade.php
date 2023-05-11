@@ -64,65 +64,55 @@
         </div>
     </div>
 </header>
+<!--блок каталог-->
+<section class="about">
+    <h3><span>—</span> Каталог <span>—</span></h3>
+    <div class="title1">
+        <img src="{{ asset("img/svg1.svg") }}" alt="">
+        <img src="{{ asset("img/svg5.svg") }}" alt="">
+    </div>
+    @php
+        $er = \App\Models\Category::all();
+    @endphp
+    <div class="wrapper1">
+        @foreach($er as $category)
+            <div class="item1">
+                <a href="http://127.0.0.1:8000/catalog/{{$category->id}}"><img src="{{ asset("img/block2img1.png") }}" alt=""></a>
+                <p>{{$category -> name}}</p>
+            </div>
+        @endforeach
+    </div>
+</section>
+<!--блок Новые товары-->
 
-    <!--блок каталог-->
-    <section class="katalog">
-        <div class="katalog_tea">
-            <h4><span>—</span> Каталог <span>—</span></h4>
-            <div class="subparagraph1">
-                <img src="{{ asset("img/svg5.svg") }}" alt="">
-            </div>
-            <div class="subparagraph2">
-                <img src="{{ asset("img/svg1.svg") }}" alt="">
-            </div>
-            @php
-            $er = \App\Models\Category::all();
-            @endphp
-            <div class="wrapper1">
-                @foreach($er as $category)
-                <div class="item1">
-                    <a href="http://127.0.0.1:8000/catalog/{{$category->id}}"><img src="{{ asset("img/block2img1.png") }}" alt=""></a>
-                    <p>{{$category -> name}}</p>
+<!--блок каталог-->
+<section class="new">
+    <h3><span>—</span> Новые товары <span>—</span></h3>
+    <div class="title2">
+        <img class="img1" src="{{ asset("img/svg4.svg") }}" alt="">
+        <img class="img2" src="{{ asset("img/svg6.svg") }}" alt="">
+    </div>
+    <div class="wrapper2">
+        @foreach($towars as $towars)
+            <div class="top1">
+                <div class="global1">
+                    <img src="{{$towars->picture}}" alt="">
+                    <h5>{{$towars->name}}</h5>
+                    <p>{{$towars->price}} ₽/50гр.</p>
                 </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <!--блок Новые товары-->
-    <section class="top_tovar">
-        <div class="top_tovar_tea">
-            <h4><span>—</span> Новые товары <span>—</span></h4>
-            <div class="subparagraph3">
-                <img src="{{ asset("img/svg6.svg") }}" alt="">
-            </div>
-            <div class="subparagraph4">
-                <img src="{{ asset("img/svg4.svg") }}" alt="">
-            </div>
-            <div class="container1">
-                @foreach($towars as $towars)
-                <div class="top1">
-                    <div class="global1">
-                        <img src="{{$towars->picture}}" alt="">
-                        <h5>{{$towars->name}}</h5>
-                        <p>{{$towars->price}} ₽/50гр.</p>
-                    </div>
-                    <div class="btn_top1">
-                        <a href="{{route('OpenTovar', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
-                        <form action="{{url('add_cart',$towars->id)}}" method="Post">
-                            @csrf
-                            <input type="number" name="quantity" value="1" min="1">
-                            <button type="submit" class="btn_top1_more1">Добавить</button>
-                        </form>
-                    </div>
+                <div class="btn_top1">
+                    <a href="{{route('OpenTovar', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
+                    <form action="{{url('add_cart',$towars->id)}}" method="Post">
+                        @csrf
+                        <input type="number" name="quantity" value="1" min="1">
+                        <button type="submit" class="btn_top1_more1">Добавить</button>
+                    </form>
                 </div>
-                @endforeach
             </div>
-        </div>
-    </section>
-
-    <!--блок товары-->
-    <section class="tovar">
+        @endforeach
+    </div>
+</section>
+<!--блок товары-->
 {{--        <div class="container6">--}}
 {{--            <div class="filtr">--}}
 {{--                <h6>Фильтры</h6>--}}
@@ -182,28 +172,38 @@
 {{--            --}}{{-- </div>--}}
 {{--        </div>--}}
 {{--        <div class="separation"></div>--}}
-        <h4><span>—</span> Все товары <span>—</span></h4>
+<section class="towar">
+    <h3><span>—</span> Все товары <span>—</span></h3>
+    <div class="title1">
+        <img src="{{ asset("img/svg1.svg") }}" alt="">
+        <img src="{{ asset("img/svg5.svg") }}" alt="">
+    </div>
+    <div class="wrapper3">
         <div class="container7">
             @php
-            $er = \App\Models\Towar::orderBy('created_at', 'DESC')->get();
+                $er = \App\Models\Towar::orderBy('created_at', 'DESC')->get();
             @endphp
             @foreach($er as $towars)
-            <div class="top1">
-                <div class="global1">
-                    <img src="{{$towars->picture}}" alt="">
-                    <h5>{{$towars->name}}</h5>
-                    <p>{{$towars->price}} ₽/50гр.</p>
+                <div class="top1">
+                    <div class="global1">
+                        <img src="{{$towars->picture}}" alt="">
+                        <h5>{{$towars->name}}</h5>
+                        <p>{{$towars->price}} ₽/50гр.</p>
+                    </div>
+                    <div class="btn_top1">
+                        <a href="{{route('OpenTovar', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
+                        <form action="{{url('add_cart',$towars->id)}}" method="Post">
+                            @csrf
+                            <input type="number" name="quantity" value="1" min="1">
+                            <button type="submit" class="btn_top1_more1">Добавить</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="btn_top1">
-                    <a href="{{route('OpenTovar', ['id'=> $towars->id])}}"><button class="btn_top1_more1">Подробнее</button></a>
-                    <form action="{{url('add_cart',$towars->id)}}" method="Post">
-                        @csrf
-                        <input type="number" name="quantity" value="1" min="1">
-                        <button type="submit" class="btn_top1_more1">Добавить</button>
-                    </form>
-                </div>
-            </div>
             @endforeach
+        </div>
+    </div>
+    <a href="#" class="go-top"><img src="img/upbtn.png" alt=""></a>
+</section>
             {{-- <div class="pagination">--}}
             {{-- <a href="#">&laquo;</a>--}}
             {{-- <a class="active" href="#">1</a>--}}
@@ -214,25 +214,36 @@
             {{-- <a href="#">6</a>--}}
             {{-- <a href="#">&raquo;</a>--}}
             {{-- </div>--}}
-        </div>
-        <a href="#" class="go-top"><img src="img/upbtn.png" alt=""></a>
-    </section>
-
-    <!--блок footer-->
-    <footer>
-        <ul class="navigation_footer">
-            <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
+<!--блок footer-->
+<footer>
+    <nav class="navbar">
+        <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
+        <ul class="navigation">
             <li><a href="/about" class="link-effect">О нас</a></li>
             <li><a href="/shop" class="link-effect">Магазин</a></li>
             <li><a href="/blog" class="link-effect">Блог</a></li>
             <li><a href="/constructor" class="link-effect">Конструктор</a></li>
+            <li><a href="/carts" class="link-effect">Корзина</a></li>
+            <li><a href="/register" class="link-effect">
+                    @auth
+                        {{ Auth::user()->name }}
+                    @endauth
+
+                    @guest
+                        Войти
+                    @endguest
+                </a></li>
         </ul>
-        <a href="" style="font-size:1.2vw; color: rgba(255, 255, 255, 0.2);">Политика конфидециальности</a>
-        <div class="cop">
-            <p>Tea Grounds © 2022 Все права защищены</p>
-        </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="js/buttonUp.js"></script>
+    </nav>
+    <div class="conf">
+        <a href="">Политика конфидециальности</a>
+    </div>
+    <div class="cop">
+        <p>Tea Grounds © 2022 Все права защищены</p>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="js/buttonUp.js"></script>
+<script src="js/burgerMenu.js"></script>
 </body>
 </html>

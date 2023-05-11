@@ -49,7 +49,7 @@
 <div class="d-f">
     <div class="container">
         <div class="point">
-            <p>Заказы</p>
+            <p>История заказов</p>
         </div>
         {{-- @php--}}
         {{-- $order = \App\Models\Order::all();--}}

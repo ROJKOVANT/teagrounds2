@@ -15,34 +15,55 @@
 </head>
 
 <body>
-    <!--блок шапка-->
-    <!--блок шапка-->
-    <header>
-        <nav class="navbar">
-            <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
-            <ul class="navigation">
-                <li><a href="/about" class="link-effect">О нас</a></li>
-                <li><a href="/shop" class="link-effect">Магазин</a></li>
-                <li><a href="/blog" class="link-effect">Блог</a></li>
-                <li><a href="/constructor" class="link-effect">Конструктор</a></li>
-                <li><a href="/carts" class="link-effect">Корзина</a></li>
-                <li><a href="/register" class="link-effect">
-                        @auth
-                            {{ Auth::user()->name }}
-                        @endauth
+<!--блок шапка-->
+<header>
+    @php
+        use Illuminate\Support\Facades\Auth;
+        use App\Models\Cart;
+        if(Auth::user()){
+            $count_cart = Cart::where('user_id', Auth::user()->id)->get();
+            $count = 0;
+            for ($i=0; $i < count($count_cart); $i++)
+            {
+                $count +=$count_cart[$i]['quantity'];
+            }
+        }
+    @endphp
+    <div class="navbar">
+        <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
+        <ul class="navigation">
+            <li class="nav-item"><a href="/about" class="link-effect">О нас</a></li>
+            <li class="nav-item"><a href="/shop" class="link-effect">Магазин</a></li>
+            <li class="nav-item"><a href="/blog" class="link-effect">Блог</a></li>
+            <li class="nav-item"><a href="/constructor" class="link-effect">Конструктор</a></li>
+            <li class="nav-item"><a href="/carts" class="link-effect">
+                    @auth
+                        Корзина{{$count}}
+                    @endauth
 
-                        @guest
-                            Войти
-                        @endguest
-                    </a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
+                    @guest
+                        Корзина
+                    @endguest
+                </a>
+            </li>
+            <li class="nav-item"><a href="/register">
+                    @auth
+                        {{ Auth::user()->name }}
+                    @endauth
+
+                    @guest
+                        Войти
+                    @endguest
+                </a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</header>
 
     <!--блок О нас-->
     <section class="about">
