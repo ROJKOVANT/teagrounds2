@@ -8,28 +8,72 @@
 body{
     background-color: #212529;
 }
+/*Начало шапки сайта*/
 header{
-    height: 10vh;
+    top: 0;
     width: 100%;
+    background-image: none;
+    border-bottom: 2px solid white;
     position: absolute;
-    border-bottom: 3px solid white;
+}
+/**/
+.navbar{
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
 }
 .navigation{
     display: flex;
-    color: white;
-    justify-content: space-around;
     align-items: center;
-    margin-top: 2vh;
-    font-size: 1.5vw;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    color: white;
+    font-size: 1.3vw;
     font-family: 'Philosopher', sans-serif;
+    justify-content: space-between;
+    gap: 8vw;
+}
+.logo{
+    font-size: 1.8vw;
+}
+.navbar a {
+    color: white;
 }
 .navigation a{
     color: white;
 }
+/*подчеркивание у ссылок*/
+.link-effect::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+}
+.link-effect:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+/*бургер меню*/
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: white;
+}
 /*Конец шапки сайта*/
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
+/*---------------------------------------*/
 .under_header{
     /* position: relative; */
     padding-top: 10vh;
@@ -46,13 +90,24 @@ header{
     align-items: center;
     margin-top: 15vw;
 }
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
+/*----------------------------------------------*/
 /*Начало блока О НАС*/
 .about{
-    margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin-top: 8.5vw;
+}
+.title1{
+    display: flex;
+}
+.title1 p{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10vw;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgb(66 69 73 / 56%);
 }
 .info{
     display: flex;
@@ -60,8 +115,11 @@ header{
     justify-content: center;
 }
 h3{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 50px;
     color: white;
-    font-family: 'Philosopher', sans-serif;
     font-size: 2vw;
     margin: 0 100px;
     text-align: center;
@@ -70,7 +128,6 @@ h3{
 }
 .text_one{
     margin-top: 5vw;
-    margin-bottom: 5vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,367 +136,143 @@ h3{
     column-gap: 2.5vw;
 }
 .text_one p{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
     color: white;
-    font-family: 'Comfortaa', cursive;
     font-size: 1.1vw;
-    line-height: 2.5vw;
 }
 .separation{
     border-right: 2px solid white;
-    margin-left: 90px;
+    margin-left: 60px;
 }
 .text_two{
     margin-top: 5vw;
-    margin-bottom: 5vw;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     column-gap: 2.5vw;
     margin-left: 105px;
 }
 .text_two p{
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1.1vw;
-    line-height: 2.5vw;
-}
-.card-btn{
-    display: flex;
-    justify-content: center;
-    margin-top: 3vw;
-    margin-bottom: 1vw;
-}
-.card-btn button{
-    font-size: 1.1vw;
-    font-family: 'Philosopher', sans-serif;
-    border: 1px solid white;
-    color: white;
-    background-color: #212529;
-    padding: 0.5vw 4vw;
-    transition: 2s;
-}
-.card-btn button:hover{
-    background-color: white;
-    color: black;
-}
-/*Конец блока О НАС*/
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
-/*Начало блока каталог*/
-.assortment{
-    margin-top: 7vw;
-    margin-bottom: 5vw;
-}
-h3{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 2vw;
-    text-align: center;
-    padding-bottom: 2vw;
-    border-bottom: 2px solid white;
-    margin: 0 100px;
-}
-h4{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    text-align: center;
-    font-size: 1.5vw;
-    margin: 5vw 0;
-}
-.subparagraph1 img{
-    height: 300px;
-    height: 300px;
-    margin-top: -11vw;
-    margin-left: 85vw;
-}
-.wrapper1{
-    display: grid;
-    gap: 2.5vw;
-    margin: 0 100px;
-    margin-top: -2.5vw;
-    justify-content: space-around;
-}
-.wrapper1 > div{
-    width: 300px;
-    height: 300px;
-}
-.item1{
-    grid-column: 1 / 2;
-}
-.item1 img{
-    width: 100%;
-    height: 250px;
-}
-.item1 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item2{
-    grid-column: 2 / 3;
-}
-.item2 img{
-    width: 100%;
-    height: 250px;
-}
-.item2 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item3{
-    grid-column: 3 / 4;
-}
-.item3 img{
-    width: 100%;
-    height: 250px;
-}
-.item3 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item4{
-    grid-column: 4 / 5;
-}
-.item4 img{
-    width: 100%;
-    height: 250px;
-}
-.item4 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-/*зеленный чай*/
-.subparagraph2 img{
-    height: 250px;
-    height: 250px;
-    margin-top: -12vw;
-    margin-left: auto;
-}
-.wrapper2{
-    display: grid;
-    gap: 2.5vw;
-    margin: 0 100px;
-    margin-top: -1vw;
-    justify-content: space-around;
-}
-.wrapper2 > div{
-    width: 300px;
-    height: 300px;
-}
-.item1{
-    grid-column: 1 / 2;
-}
-.item1 img{
-    width: 100%;
-    height: 250px;
-}
-.item1 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item2{
-    grid-column: 2 / 3;
-}
-.item2 img{
-    width: 100%;
-    height: 250px;
-}
-.item2 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item3{
-    grid-column: 3 / 4;
-}
-.item3 img{
-    width: 100%;
-    height: 250px;
-}
-.item3 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item4{
-    grid-column: 4 / 5;
-}
-.item4 img{
-    width: 100%;
-    height: 250px;
-}
-.item4 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-/*Коллекция смешанного чая*/
-.subparagraph3 img{
-    height: 300px;
-    height: 300px;
-    margin-top: -15.5vw;
-    margin-left: 83.5vw;
-}
-.wrapper3{
-    display: grid;
-    gap: 2.5vw;
-    margin: 0 100px;
-    justify-content: space-around;
-}
-.wrapper3 > div{
-    width: 300px;
-    height: 300px;
-}
-.item1{
-    grid-column: 1 / 2;
-}
-.item1 img{
-    width: 100%;
-    height: 250px;
-}
-.item1 p{
-    color: white;
-    font-size: 1.2vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item2{
-    grid-column: 2 / 3;
-}
-.item2 img{
-    width: 100%;
-    height: 250px;
-}
-.item2 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item3{
-    grid-column: 3 / 4;
-}
-.item3 img{
-    width: 100%;
-    height: 250px;
-}
-.item3 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-.item4{
-    grid-column: 4 / 5;
-}
-.item4 img{
-    width: 100%;
-    height: 250px;
-}
-.item4 p{
-    color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
-    text-align: center;
-    margin-top: 0.5vw;
-}
-/*Конструктор*/
-.title1{
-    display: flex;
-    justify-content: flex-start;
-}
-.title1 p{
-font-family: 'Philosopher';
-font-style: normal;
-font-weight: 400;
-font-size: 300px;
-line-height: 85px;
-display: flex;
-align-items: center;
-text-align: center;
-color: rgba(67, 67, 67, 0.25);
-}
-.konstructor_info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #191D21;
-    border: 1px solid white;
-    width: 70%;
-    height: 223px;
-    margin: auto;
-    position: relative;
-}
-.konstructor_info img{
-    width: 555px;
-    height: 220px;
-}
-.konstructor_info p{
-    color: white;
-    font-size: 1.3vw;
     font-family: 'Comfortaa';
-    padding-left: 2.5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    color: white;
+    font-size: 1.1vw;
 }
 .title2{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+.title2 img{
+    margin-top: -4vw;
 }
 .title2 p{
     font-family: 'Philosopher';
     font-style: normal;
     font-weight: 400;
-    font-size: 200px;
-    line-height: 35px;
+    font-size: 7vw;
+    line-height: 200px;
     display: flex;
     align-items: center;
     text-align: center;
-    color: rgba(67, 67, 67, 0.25);
+    color: rgb(66 69 73 / 56%);
     flex-direction: column
 }
-/*Конец блока ассортимент*/
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
-/*Начало блока блог*/
-.blog{
-    margin-top: 10vw;
-    margin-bottom: 5vw;
+/*Конец блока О НАС*/
+/*-----------------------------------*/
+/*Начало блока популярные товары*/
+.new{
+    margin-top: 2vw;
 }
-h3{
+.wrappe2 {
+    display: flex;
+    gap: 2.5vw;
+    margin: 5vw 100px 10vw;
+    justify-content: space-evenly
+}
+.to1 {
+    display: flex;
+    flex-direction: column;
+}
+.globa1 {
+    display: flex;
+    background-color: #191D21;
+    width: 250px;
+    height: 320px;
+    border: 2px solid white;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1.5vw;
+}
+.globa1 img {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+}
+.globa1 h5 {
     color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 2vw;
+    font-size: 1.1vw;
+    font-family: 'Philosopher';
+    font-style: normal;
+}
+.globa1 p {
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Philosopher';
+    font-style: normal;
+}
+.btn_to1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0.5vw 0;
+}
+.btn_to1_more1 {
+    font-family: 'Philosopher';
+    font-style: normal;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 35px;
+    font-size: 1.1vw;
+    letter-spacing: 2.5px;
+    margin-bottom: 0.5vw;
+}
+.btn_to1_more1 :hover {
+    background: white;
+    color: black;
+    transition: 2s;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.in1 {
+    text-decoration: none;
     text-align: center;
-    padding-bottom: 2vw;
-    border-bottom: 2px solid white;
-    margin: 0 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    width: 250px;
+    margin-bottom: 0.5vw;
+    height: 35px;
+    color: white;
+    font-size: 0.9vw;
+}
+/*----------------------------*/
+/*Новости*/
+.news_more{
+    margin-top: 5vw;
 }
 .container {
     display: grid;
@@ -447,7 +280,7 @@ h3{
     grid-template-columns: repeat(auto-fill, 15vw);
     justify-content: center;
     gap:  5.2vw  5.2vw;
-    margin: 5vw 100px 5vw 100px;
+    margin: 2vw 100px 5vw 100px;
 }
 .card{
     width: auto;
@@ -456,8 +289,8 @@ h3{
     border: 1px solid white;
 }
 .card img{
-    width: 14.9vw;
-    height: 7.9vw;
+    width: auto;
+    height: 8.3vw;
 }
 .card-title{
     padding: 1vw 1vw 0;
@@ -467,7 +300,7 @@ h3{
 }
 .card-text{
     font-size: 0.8vw;
-    padding: 1vw 1vw 0;
+    padding: 1vw 1vw 2vw;
     color: rgba(255, 255, 255, 0.7);
     font-family: 'Comfortaa';
 }
@@ -497,138 +330,85 @@ h3{
 .card-btn button:hover > a{
     color: black;
 }
-.btn_link a{
-    color: white;
-    font-family: 'Comfortaa';
-    text-align: start;
-    font-size: 0.6vw;
-    margin-left: 1vw;
+.btn{
+    display: flex;
+    justify-content: center;
+    margin: 5vw 0;
 }
-/*Конец блока блог*/
-
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
+.btn a{
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 0.5vw 3.5vw;
+    font-size: 1.2vw;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2.5px;
+    text-align: center;
+    transition: 2s;
+}
+.btn a:hover{
+    background-color: white;
+    color: black;
+}
+/*Конец блока другие новости*/
+/*----------------------------------------*/
 /*Начало блока отзывы*/
 .reviews{
-    margin-top: 10vw;
-    margin-bottom: 5vw;
+    margin-top: 5vw;
+}
+h3{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 50px;
+    color: white;
+    font-size: 2vw;
+    margin: 0 100px;
+    text-align: center;
+    padding-bottom: 2vw;
+    border-bottom: 2px solid white;
 }
 .container2{
-    display: grid;
-    gap: 2.5vw;
-    margin: 5vw 100px 0;
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5vw;
+    margin: 5vw 100px;
 }
-.container2 > div{
-    background-color: #191D21;
+.rev{
+    display: flex;
+    flex-direction: column;
+    background-color: #191d21;
+    width: 500px;
     border: 1px solid white;
-    width: auto;
-    height: auto;
+    padding: 15px 30px;
+    gap: 1vw;
 }
-.item1_rev{
-    grid-column: 1 / 2;
-}
-.item1_rev h5{
+.rev h5{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
     color: white;
-    font-family: 'Philosopher', sans-serif;
-    text-align: start;
-    font-size: 1vw;
-    margin-top: 1vw;
-    margin-left: 2vw;
-    letter-spacing: 1px;
-    border-bottom: 2px solid white;
-    display: inline-flex;
-    padding-bottom: 0.2vw;
+    font-size: 1.2vw;
+    padding-bottom: 0.5vw;
+    border-bottom: 1px solid white;
 }
-.item1_rev p{
+.rev p{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
     color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 0.8vw;
-    margin: 1vw 2vw;
-    width: auto;
-    word-wrap: break-word;
-    letter-spacing: 1px;
-    line-height: 1.1vw;
-}
-.item2_rev{
-    grid-column: 2 / 3;
-}
-.item2_rev h5{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1vw;
-    margin-top: 1vw;
-    margin-left: 2vw;
-    letter-spacing: 1px;
-    border-bottom: 2px solid white;
-    display: inline-flex;
-    padding-bottom: 0.2vw;
-}
-.item2_rev p{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 0.8vw;
-    margin: 1vw 2vw;
-    width: auto;
-    word-wrap: break-word;
-    letter-spacing: 1px;
-    line-height: 1.1vw;
-}
-.item3_rev{
-    grid-column: 1 / 2;
-}
-.item3_rev h5{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1vw;
-    margin-top: 1vw;
-    margin-left: 2vw;
-    letter-spacing: 1px;
-    border-bottom: 2px solid white;
-    display: inline-flex;
-    padding-bottom: 0.2vw;
-}
-.item3_rev p{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 0.8vw;
-    margin: 1vw 2vw;
-    width: auto;
-    word-wrap: break-word;
-    letter-spacing: 1px;
-    line-height: 1.1vw;
-}
-.item4_rev{
-    grid-column: 2 / 3;
-}
-.item4_rev h5{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1vw;
-    margin-top: 1vw;
-    margin-left: 2vw;
-    letter-spacing: 1px;
-    border-bottom: 2px solid white;
-    display: inline-flex;
-    padding-bottom: 0.2vw;
-}
-.item4_rev p{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 0.8vw;
-    margin: 1vw 2vw;
-    width: auto;
-    word-wrap: break-word;
-    letter-spacing: 1px;
-    line-height: 1.1vw;
+    font-size: 0.9vw;
 }
 /*Конец блока отзывы*/
 
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
-
+/*-----------------------------------*/
 /*Начало блока напишите нам*/
 .napishite{
-    margin-top: 10vw;
+    margin-top: 7vw;
     margin-bottom: 5vw;
 }
 .container3{
@@ -658,76 +438,22 @@ textarea {
     flex-direction: column;
     align-items: flex-start;
 }
-.text1 h6{
+.text h6{
     color: white;
     font-family: 'Philosopher', sans-serif;
+    font-weight: normal;
     font-size: 1.2vw;
     letter-spacing: 1px;
     border-bottom: 2px solid white;
     display: inline-flex;
     padding-bottom: 0.2vw;
 }
-.text1 p{
+.text p{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
     color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1vw;
-    margin: 1vw 0vw;
-    width: 500px;
-    word-wrap: break-word;
-    letter-spacing: 1px;
-    line-height: 1.1vw;
-}
-.text2 h6{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1.2vw;
-    letter-spacing: 1px;
-    border-bottom: 2px solid white;
-    display: inline-flex;
-    padding-bottom: 0.2vw;
-}
-.text2 p{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1vw;
-    margin: 1vw 0vw;
-    width: 500px;
-    word-wrap: break-word;
-    letter-spacing: 1px;
-    line-height: 1.1vw;
-}
-.text3 h6{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1.2vw;
-    letter-spacing: 1px;
-    border-bottom: 2px solid white;
-    display: inline-flex;
-    padding-bottom: 0.2vw;
-}
-.text3 p{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1vw;
-    margin: 1vw 0vw;
-    width: 500px;
-    word-wrap: break-word;
-    letter-spacing: 1px;
-    line-height: 1.1vw;
-}
-.text4 h6{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1.2vw;
-    letter-spacing: 1px;
-    border-bottom: 2px solid white;
-    display: inline-flex;
-    padding-bottom: 0.2vw;
-}
-.text4 p{
-    color: white;
-    font-family: 'Philosopher', sans-serif;
-    font-size: 1vw;
+    font-size: 0.9vw;
     margin: 1vw 0vw;
     width: 500px;
     word-wrap: break-word;
@@ -777,7 +503,22 @@ textarea{
 }
 /*Конец блока напишите нам*/
 
-/*--------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------*/
+/*кнопка на вверх*/
+.go-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+.go-top img{
+    width: auto;
+    height: 2.5vw;
+}
+/*--------------------------------------*/
 
 /*Начало блока Footer*/
 .navigation_footer{
@@ -796,11 +537,23 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10vw;
+    margin-top: 6vw;
 }
 footer .navigation_footer{
     padding-top: 5vh;
     width: 100%;
+}
+.logo > a{
+    font-size: 1.8vw;
+}
+.conf{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.conf > a{
+    font-size:1.2vw;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Philosopher';
 }
 footer a{
     color: white;
@@ -811,14 +564,3002 @@ footer a{
 .cop{
     color: white;
     font-family: 'Philosopher';
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     width: 100%;
-    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 /*Конец блока Footer*/
+
+/*---------------------------------------*/
+/*верстка адаптива*/
+@media screen and (max-width: 1581px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+        font-size: 1.5vw;
+    }
+    .logo{
+        font-size: 2vw;
+    }
+    /**/
+    .title1 {
+        display: flex;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 2.5vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    /*-----------*/
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.3vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 2.5vw;
+        margin-left: 50px;
+        flex-direction: column;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.3vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -8vw;
+        width: auto;
+        height: 20vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 100px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 1.2vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 20vw;
+    }
+    /*--------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .wrappe2 {
+        gap: 2.5vw;
+        margin: 5vw 100px 10vw;
+    }
+    .globa1 {
+        width: 250px;
+        height: 320px;
+        gap: 1.5vw;
+    }
+    .globa1 img {
+        width: auto;
+        height: 10vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 1.4vw;
+    }
+    .globa1 p {
+        font-size: 1.4vw;
+    }
+    .btn_to1 {
+        margin: 0.5vw 0;
+    }
+    .btn_to1_more1 {
+        width: 250px;
+        height: 35px;
+        font-size: 1.2vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    .in1 {
+        width: 250px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 0.9vw;
+    }
+    /*-----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 5vw;
+    }
+    h3{
+        line-height: 50px;
+        font-size: 2vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 5vw 100px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 500px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 1.2vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 0.9vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 7vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 5vw 100px 0;
+    }
+    .text h6{
+        font-size: 1.45vw;
+        padding-bottom: 0.2vw;
+    }
+    .text p{
+        font-size: 1.1vw;
+        margin: 1vw 0vw;
+        width: 500px;
+    }
+    input{
+        width: 20vw;
+        height: 40px;
+        font-size: 1vw;
+        padding: 5px;
+        padding-left: 1vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 20vw;
+        font-size: 1vw;
+        padding: 5px;
+        padding-left: 1vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        font-size: 1vw;
+        padding: 0.4vw 3vw;
+    }
+    /*-------------------------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .logo > a{
+        font-size: 2vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.3vw;
+    }
+    footer a{
+        font-size: 1.5vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.4vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1441px){
+    /*о нас*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 2.7vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.45vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.45vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -8vw;
+        width: auto;
+        height: 20vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .wrappe2 {
+        gap: 2.5vw;
+        margin: 0vw 100px 10vw;
+    }
+    .to1{
+        margin-top: 5vw;
+    }
+    .globa1 {
+        width: 250px;
+        height: 320px;
+        gap: 1.5vw;
+    }
+    .globa1 img {
+        width: auto;
+        height: 10vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 1.5vw;
+    }
+    .globa1 p {
+        font-size: 1.5vw;
+    }
+    .btn_to1 {
+        margin: 0.5vw 0;
+    }
+    .btn_to1_more1 {
+        width: 250px;
+        height: 35px;
+        font-size: 1.35vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    .in1 {
+        width: 250px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 0.9vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 17.2vw);
+        gap:  5.2vw  5.2vw;
+        margin: 2vw 100px 5vw 100px;
+    }
+    .card img{
+        width: 17vw;
+        height: 9vw;
+    }
+    .card-title{
+        padding: 1vw 1vw 0;
+        font-size: 0.85vw;
+    }
+    .card-text{
+        font-size: 1vw;
+        padding: 1vw 1vw 2vw;
+    }
+    .card-btn{
+        margin-bottom: 1.5vw;
+    }
+    .card-btn button{
+        font-size: 1.3vw;
+        padding: 0.4vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1.2vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 5vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 5vw 100px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 500px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 1.4vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 1.1vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 7vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 5vw 100px 0;
+    }
+    .text h6{
+        font-size: 1.55vw;
+        padding-bottom: 0.5vw;
+    }
+    .text p{
+        font-size: 1.2vw;
+        margin: 1.5vw 0vw;
+        width: 500px;
+        line-height: 25px;
+    }
+    input{
+        width: 20vw;
+        height: 40px;
+        font-size: 1.1vw;
+        padding: 5px;
+        padding-left: 1vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 20vw;
+        font-size: 1.1vw;
+        padding: 5px;
+        padding-left: 1vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        font-size: 1.3vw;
+        padding: 0.4vw 3vw;
+    }
+    /*-------------------------------------*/
+}
+@media screen and (max-width: 1301px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+        gap: 6vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*---------------------------------------*/
+    .under_header{
+        /* position: relative; */
+        padding-top: 10vh;
+        height: 100vh;
+        width: 100%;
+    }
+    .logotip{
+        margin-top: 20vw;
+    }
+    .logotip img{
+        width: auto;
+        height: 15vw;
+    }
+    /*----------------------------------------------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 10vw;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 2.9vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.55vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.55vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -8vw;
+        width: auto;
+        height: 20vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 100px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 1.55vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 20vw;
+    }
+    /*----------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .to1{
+        margin-top: 7vw;
+    }
+    .wrappe2 {
+        gap: 3vw;
+        margin: 0vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 250px;
+        height: 320px;
+        gap: 1.5vw;
+    }
+    .globa1 img {
+        width: auto;
+        height: 12vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 1.6vw;
+    }
+    .globa1 p {
+        font-size: 1.6vw;
+    }
+    .btn_to1 {
+        margin: 0.5vw 0;
+    }
+    .btn_to1_more1 {
+        width: 250px;
+        height: 35px;
+        font-size: 1.5vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    .in1 {
+        width: 250px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 1.2vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 17.2vw);
+        gap:  5.2vw  5.2vw;
+        margin: 2vw 100px 5vw 100px;
+    }
+    .card img{
+        width: 17vw;
+        height: 9vw;
+    }
+    .card-title{
+        padding: 1vw 1vw 0;
+        font-size: 0.85vw;
+    }
+    .card-text{
+        font-size: 1vw;
+        padding: 1vw 1vw 2vw;
+    }
+    .card-btn{
+        margin-bottom: 1.5vw;
+    }
+    .card-btn button{
+        font-size: 1.3vw;
+        padding: 0.4vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1.2vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a{
+        padding: 0.6vw 3.5vw;
+        font-size: 1.3vw;
+        letter-spacing: 2.5px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 7vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 7vw 100px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 500px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 1.5vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 1.2vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 7vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 5vw 100px 0;
+    }
+    .text h6{
+        font-size: 1.65vw;
+        padding-bottom: 0.5vw;
+    }
+    .text p{
+        font-size: 1.3vw;
+        margin: 1.5vw 0vw;
+        width: 500px;
+        line-height: 25px;
+    }
+    input{
+        width: 30vw;
+        height: 40px;
+        font-size: 1.2vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 30vw;
+        font-size: 1.2vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        font-size: 1.4vw;
+        padding: 0.4vw 3vw;
+    }
+    /*-------------------------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.4vw;
+    }
+    footer a{
+        font-size: 1.6vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.5vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1282px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.7vw;
+        margin-bottom: 1.7vw;
+        font-size: 1.7vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.5vw;
+    }
+    footer a{
+        font-size: 1.7vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.6vw;
+        width: 100%;
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+@media screen and (max-width: 1141px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.8vw;
+        margin-bottom: 1.8vw;
+        font-size: 1.8vw;
+        gap: 5vw;
+    }
+    .logo > a{
+        font-size: 2.6vw;
+    }
+    /*---------------------------------------*/
+    .under_header{
+        /* position: relative; */
+        padding-top: 10vh;
+        height: 100vh;
+        width: 100%;
+    }
+    .logotip{
+        margin-top: 22vw;
+    }
+    .logotip img{
+        width: auto;
+        height: 13vw;
+    }
+    /*----------------------------------------------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 11vw;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 3.2vw;
+        margin: 0 100px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.75vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.75vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -5vw;
+        width: auto;
+        height: 22vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*----------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .to1{
+        margin-top: 5vw;
+    }
+    .wrappe2 {
+        gap: 3vw;
+        margin: 0vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 225px;
+        height: 300px;
+        gap: 1.5vw;
+        border: 1px solid white;
+    }
+    .globa1 img {
+        width: auto;
+        height: 14vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 1.8vw;
+    }
+    .globa1 p {
+        font-size: 1.8vw;
+    }
+    .btn_to1 {
+        margin: 0.5vw 0;
+    }
+    .btn_to1_more1 {
+        width: 225px;
+        height: 35px;
+        font-size: 1.6vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    .in1 {
+        width: 225px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 1.3vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 20vw);
+        gap:  6vw  7vw;
+        margin: 2vw 100px 5vw 100px;
+    }
+    .card img{
+        width: auto;
+        height: 11.1vw;
+    }
+    .card-title{
+        padding: 1.5vw 1.2vw 0;
+        font-size: 1vw;
+    }
+    .card-text{
+        font-size: 1.2vw;
+        padding: 1.5vw 1.2vw 2.5vw;
+    }
+    .card-btn{
+        margin-bottom: 1.5vw;
+    }
+    .card-btn button{
+        font-size: 1.4vw;
+        padding: 0.4vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1.35vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a{
+        padding: 0.7vw 3.5vw;
+        font-size: 1.4vw;
+        letter-spacing: 2.5px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 7vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 100px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 500px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 1.7vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 1.4vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 7vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 5vw 100px 0;
+    }
+    .text h6{
+        font-size: 1.8vw;
+        padding-bottom: 0.5vw;
+    }
+    .text p{
+        font-size: 1.4vw;
+        margin: 2vw 0vw;
+        width: 500px;
+        line-height: 25px;
+    }
+    input{
+        width: 30vw;
+        height: 40px;
+        font-size: 1.3vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 30vw;
+        font-size: 1.3vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        font-size: 1.6vw;
+        padding: 0.4vw 3vw;
+    }
+    /*-------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 3.5vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 10vw;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.55vw;
+    }
+    footer a{
+        font-size: 1.8vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.7vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1041px){
+    /*шапка*/
+    .navigation{
+        margin-top: 1.9vw;
+        margin-bottom: 1.9vw;
+        font-size: 2vw;
+    }
+    .logo > a{
+        font-size: 2.7vw;
+    }
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .to1{
+        margin-top: 7vw;
+    }
+    .wrapper2 {
+        gap: 3vw;
+        margin: 0vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 225px;
+        height: 300px;
+        gap: 1.5vw;
+        border: 1px solid white;
+    }
+    .globa1 img {
+        width: auto;
+        height: 15vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 2.1vw;
+        font-weight: normal;
+    }
+    .globa1 p {
+        font-size: 2vw;
+    }
+    .btn_to1 {
+        margin: 0.5vw 0;
+    }
+    .btn_to1_more1 {
+        width: 225px;
+        height: 35px;
+        font-size: 1.7vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    .in1 {
+        width: 225px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 1.5vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 22vw);
+        gap:  6vw  7vw;
+        margin: 2vw 100px 7.5vw 100px;
+    }
+    .card img{
+        width: auto;
+        height: 12.2vw;
+    }
+    .card-title{
+        padding: 1.5vw 1.2vw 0;
+        font-size: 1.05vw;
+    }
+    .card-text{
+        font-size: 1.25vw;
+        padding: 1.5vw 1.2vw 2.5vw;
+    }
+    .card-btn{
+        margin-bottom: 1.5vw;
+    }
+    .card-btn button{
+        font-size: 1.5vw;
+        padding: 0.5vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1.35vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 0.7vw 3.5vw;
+        font-size: 1.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.75vw;
+    }
+    footer a{
+        font-size: 1.9vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.85vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 1000px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.1vw;
+        gap: 4vw;
+    }
+    .logo > a{
+        font-size: 2.8vw;
+    }
+    /*-----------------------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 11vw;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 3.55vw;
+        margin: 0 75px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 40px;
+        font-size: 1.95vw;
+    }
+    .text_one img{
+        width: auto;
+        height: 35vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 40px;
+        font-size: 1.95vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 35vw;
+    }
+    .title2 {
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -5vw;
+        width: auto;
+        height: 25vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*-----------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 24vw);
+        gap:  6vw  7vw;
+        margin: 7vw 100px 7.5vw 100px;
+    }
+    .card img{
+        width: auto;
+        height: 13.25vw;
+    }
+    .card-title{
+        padding: 1.5vw 1.2vw 0;
+        font-size: 1.05vw;
+    }
+    .card-text{
+        font-size: 1.35vw;
+        padding: 1.5vw 1.2vw 2.5vw;
+    }
+    .card-btn{
+        margin-bottom: 1.5vw;
+    }
+    .card-btn button{
+        font-size: 1.65vw;
+        padding: 0.55vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1.55vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 0.7vw 3.5vw;
+        font-size: 1.6vw;
+    }
+    /*----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 7vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 100px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 500px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 2vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 1.5vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 7vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 5vw 100px 0;
+    }
+    .text h6{
+        font-size: 1.9vw;
+        padding-bottom: 0.5vw;
+    }
+    .text p{
+        font-size: 1.5vw;
+        margin: 2vw 0vw;
+        width: 400px;
+        line-height: 25px;
+    }
+    input{
+        width: 30vw;
+        height: 40px;
+        font-size: 1.4vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 30vw;
+        font-size: 1.4vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        font-size: 1.7vw;
+        padding: 0.4vw 3vw;
+    }
+    /*-------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 4vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.85vw;
+    }
+    footer a{
+        font-size: 2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.95vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 901px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.3vw;
+        gap: 3vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*---------------------------------------*/
+    .under_header{
+        /* position: relative; */
+        padding-top: 10vh;
+        height: 100vh;
+        width: 100%;
+    }
+    .logotip{
+        margin-top: 30vw;
+    }
+    .logotip img{
+        width: auto;
+        height: 13vw;
+    }
+    /*----------------------------------------------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 11vw;
+        margin-left: 2.5vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 3.65vw;
+        margin: 0 75px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 2.1vw;
+    }
+    .text_one img{
+        width: auto;
+        height: 35vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 30px;
+        font-size: 2.1vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 35vw;
+    }
+    .title2 {
+        margin-left: 1.5vw;
+        margin-right: 2.5vw;
+    }
+    .title2 img {
+        margin-top: -5vw;
+        width: auto;
+        height: 25vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 3vw;
+    }
+    .to1{
+        margin-top: 7vw;
+    }
+    .wrappe2 {
+        gap: 5vw;
+        margin: 0vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 215px;
+        height: 300px;
+        gap: 1.5vw;
+        border: 1px solid white;
+    }
+    .globa1 img {
+        width: auto;
+        height: 17vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 2.5vw;
+        font-weight: normal;
+    }
+    .globa1 p {
+        font-size: 2.2vw;
+    }
+    .btn_to1 {
+        margin: 0.5vw 0;
+    }
+    .btn_to1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 1.9vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 0.5vw;
+    }
+    .in1 {
+        width: 215px;
+        margin-bottom: 0.5vw;
+        height: 35px;
+        font-size: 1.7vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 26vw);
+        gap:  8vw  8vw;
+        margin: 7vw 100px 7.5vw 100px;
+    }
+    .card img{
+        width: auto;
+        height: 14.35vw;
+    }
+    .card-title{
+        padding: 1.5vw 1.2vw 0;
+        font-size: 1.2vw;
+    }
+    .card-text{
+        font-size: 1.55vw;
+        padding: 1.5vw 1.2vw 2.5vw;
+    }
+    .card-btn{
+        margin-bottom: 1.5vw;
+    }
+    .card-btn button{
+        font-size: 1.8vw;
+        padding: 0.6vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1.55vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 0.7vw 3.5vw;
+        font-size: 1.8vw;
+    }
+    /*----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 7vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 100px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 500px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 2.2vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 1.7vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 7vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 5vw 100px 0;
+    }
+    .text h6{
+        font-size: 2vw;
+        padding-bottom: 0.5vw;
+    }
+    .text p{
+        font-size: 1.6vw;
+        margin: 2vw 0vw;
+        width: 350px;
+        line-height: 25px;
+    }
+    input{
+        width: 30vw;
+        height: 40px;
+        font-size: 1.5vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 30vw;
+        font-size: 1.5vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        font-size: 1.8vw;
+        padding: 0.4vw 3vw;
+    }
+    /*-------------------------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3.7vh;
+        margin-bottom: 3.7vh;
+    }
+    .conf > a{
+        font-size: 2vw;
+    }
+    footer a{
+        font-size: 2.2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 841px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 2.1vw;
+        margin-bottom: 2.1vw;
+        font-size: 2.4vw;
+        gap: 2.5vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.15vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.15vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 769px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navbar{
+        margin: 2vw 0;
+        justify-content: space-around;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 250px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 3vw;
+        flex-direction: column;
+        /*background-color: #191D21;*/
+        background-color: #191d21ed;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+        transition: 2s;
+        margin: 0;
+        padding: 6vw 0;
+    }
+    .navigation li{
+        font-size: 2.7vw;
+    }
+    .navigation.active{
+        left: 0;
+    }
+    /*---------------------------------------*/
+    .under_header{
+        /* position: relative; */
+        padding-top: 10vh;
+        height: 100vh;
+        width: 100%;
+    }
+    .logotip{
+        margin-top: 40vw;
+    }
+    .logotip img{
+        width: auto;
+        height: 15vw;
+    }
+    /*----------------------------------------------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 15vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 4vw;
+        margin: 0 50px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 50px;
+    }
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 2.4vw;
+    }
+    .text_one img{
+        width: auto;
+        height: 35vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 30px;
+        font-size: 2.4vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 35vw;
+    }
+    .title2 {
+        margin-left: -1vw;
+    }
+    .title2 img {
+        margin-top: -5vw;
+        width: auto;
+        height: 25vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*----------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .to1{
+        margin-top: 7vw;
+    }
+    .wrappe2 {
+        gap: 5vw;
+        margin: 7vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 215px;
+        height: 300px;
+        gap: 3vw;
+        border: 1px solid white;
+    }
+    .globa1 img {
+        width: auto;
+        height: 19vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 3vw;
+        font-weight: normal;
+    }
+    .globa1 p {
+        font-size: 2.5vw;
+    }
+    .btn_to1 {
+        margin: 0.7vw 0;
+    }
+    .btn_to1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 2.2vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    .in1 {
+        width: 215px;
+        height: 35px;
+        font-size: 1.9vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 28vw);
+        gap:  8vw  8vw;
+        margin: 10vw 100px 7.5vw 100px;
+    }
+    .card img{
+        width: auto;
+        height: 15.5vw;
+    }
+    .card-title{
+        padding: 2.2vw 1.2vw 0;
+        font-size: 1.45vw;
+    }
+    .card-text{
+        font-size: 1.8vw;
+        padding: 2.2vw 1.2vw 3.5vw;
+    }
+    .card-btn{
+        margin-bottom: 2.5vw;
+    }
+    .card-btn button{
+        font-size: 2.1vw;
+        padding: 0.7vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 1.95vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 0.9vw 3.5vw;
+        font-size: 2.2vw;
+    }
+    /*----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 17vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 100px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 500px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 2.4vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 1.8vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 14vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 5vw 100px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text h6{
+        font-size: 2.7vw;
+        padding-bottom: 1vw;
+    }
+    .text p{
+        font-size: 2vw;
+        margin: 3vw 0vw;
+        width: 500px;
+        line-height: 25px;
+    }
+    input{
+        width: 50vw;
+        height: 40px;
+        font-size: 2vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 50vw;
+        font-size: 2vw;
+        padding: 2vw 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        margin:0 100px ;
+        font-size: 2.5vw;
+        padding: 1.2vw 4vw;
+    }
+    /*-------------------------------------*/
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.35vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 701px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navigation li{
+        font-size: 3vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*----------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 15vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 4.5vw;
+        margin: 0 50px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 50px;
+    }
+    .text_one {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        width: 40%;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 2.7vw;
+    }
+    .text_one img{
+        width: auto;
+        height: 35vw;
+    }
+    .text_two {
+        margin-top: 5vw;
+        gap: 2.5vw;
+        margin-left: 50px;
+        width: 40%;
+    }
+    .text_two p{
+        line-height: 30px;
+        font-size: 2.7vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 35vw;
+    }
+    .title2 {
+        margin-left: -1vw;
+    }
+    .title2 img {
+        margin-top: -1vw;
+        width: auto;
+        height: 30vw;
+    }
+    .title2 p {
+        font-size: 7vw;
+        line-height: 200px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .wrappe2 {
+        gap: 5vw;
+        margin: 7vw 100px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 215px;
+        height: 300px;
+        gap: 3vw;
+        border: 1px solid white;
+    }
+    .globa1 img {
+        width: auto;
+        height: 21vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 3.3vw;
+        font-weight: normal;
+    }
+    .globa1 p {
+        font-size: 2.75vw;
+    }
+    .btn_to1 {
+        margin: 0.7vw 0;
+    }
+    .btn_to1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 2.4vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    .in1 {
+        width: 215px;
+        height: 35px;
+        font-size: 2.1vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 29vw);
+        gap:  8vw  8vw;
+        margin: 10vw 100px 12.5vw 100px;
+    }
+    .card img{
+        width: auto;
+        height: 16vw;
+    }
+    .card-title{
+        padding: 2.2vw 1.2vw 0;
+        font-size: 1.5vw;
+    }
+    .card-text{
+        font-size: 1.9vw;
+        padding: 2.2vw 1.2vw 3.5vw;
+    }
+    .card-btn{
+        margin-bottom: 2.5vw;
+    }
+    .card-btn button{
+        font-size: 2.2vw;
+        padding: 0.65vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 2vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 1vw 3.5vw;
+        font-size: 2.3vw;
+    }
+    /*----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 17vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 100px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 500px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 2.7vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 2vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 14vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 7vw 100px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text h6{
+        font-size: 3vw;
+        padding-bottom: 1vw;
+    }
+    .text p{
+        font-size: 2.3vw;
+        margin: 3vw 0vw;
+        width: 500px;
+        line-height: 25px;
+    }
+    input{
+        width: 60vw;
+        height: 40px;
+        font-size: 2.2vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 60vw;
+        font-size: 2.2vw;
+        padding: 2vw 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        margin:0 100px ;
+        font-size: 2.7vw;
+        padding: 1vw 4vw;
+    }
+    /*-------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 12vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.55vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 589px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4.7vw;
+    }
+    .navbar{
+        margin: 3vw 0;
+    }
+    .navigation{
+        padding: 8vw 0;
+        gap: 4.5vw;
+    }
+    .navigation li{
+        font-size: 3.7vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*---------------------------------------*/
+    .under_header{
+        /* position: relative; */
+        padding-top: 10vh;
+        height: 100vh;
+        width: 100%;
+    }
+    .logotip{
+        margin-top: 55vw;
+    }
+    .logotip img{
+        width: auto;
+        height: 15vw;
+    }
+    /*----------------------------------------------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 18vw;
+    }
+    .title1 p {
+        font-size: 12vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 4.5vw;
+        margin: 0 50px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 50px;
+        gap: 3vw;
+        flex-direction: column;
+    }
+    .text_one {
+        margin-top: 5vw;
+        gap: 3vw;
+        width: 100%;
+        flex-direction: row;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 3vw;
+        text-align: left;
+    }
+    .text_one img{
+        width: auto;
+        height: 40vw;
+    }
+    .text_two {margin: 0;
+        gap: 3vw;
+        width: 100%;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+    }
+    .text_two p{
+        text-align: left;
+        line-height: 30px;
+        font-size: 3vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 40vw;
+    }
+    .title2{
+        margin-top: 2vw;
+    }
+    .title2 img {
+        width: auto;
+        height: 40vw;
+    }
+    .title2 p {
+        font-size: 10vw;
+        line-height: 200px;
+    }
+    /*почему именно мы*/
+    .text_three{
+        margin: 5vw 50px 7vw;
+        row-gap: 2vw;
+    }
+    .text_three p{
+        line-height: 40px;
+        font-size: 3vw;
+    }
+    .text_three img{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 30vw;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .wrappe2 {
+        gap: 5vw;
+        margin: 7vw 75px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 215px;
+        height: 280px;
+        gap: 3vw;
+        border: 1px solid white;
+    }
+    .globa1 img {
+        width: auto;
+        height: 23vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 3.7vw;
+        font-weight: normal;
+    }
+    .globa1 p {
+        font-size: 3.2vw;
+    }
+    .btn_to1 {
+        margin: 0.7vw 0;
+    }
+    .btn_to1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 2.7vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    .in1 {
+        width: 215px;
+        height: 35px;
+        font-size: 2.3vw;
+    }
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 40vw);
+        gap:  8vw  8vw;
+        margin: 12vw 100px 12.5vw 100px;
+    }
+    .card img{
+        width: auto;
+        height: 22.2vw;
+    }
+    .card-title{
+        padding: 2.2vw 2vw 0;
+        font-size: 1.9vw;
+    }
+    .card-text{
+        font-size: 2.4vw;
+        padding: 2.2vw 2vw 5vw;
+    }
+    .card-btn{
+        margin-bottom: 4vw;
+    }
+    .card-btn button{
+        font-size: 2.7vw;
+        padding: 0.85vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 2.5vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 1.45vw 3.5vw;
+        font-size: 2.65vw;
+    }
+    /*---------------------------------------------*/
+    /*----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 17vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 75px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 350px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 3.5vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 2.5vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 14vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 10vw 75px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text h6{
+        font-size: 3.5vw;
+        padding-bottom: 1vw;
+    }
+    .text p{
+        font-size: 2.7vw;
+        margin: 4vw 0vw;
+        width: 400px;
+        line-height: 25px;
+    }
+    input{
+        width: 60vw;
+        height: 40px;
+        font-size: 2.6vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 60vw;
+        font-size: 2.6vw;
+        padding: 2vw 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        margin:0 100px ;
+        font-size: 3.2vw;
+        padding: 1vw 10vw;
+    }
+    /*-------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 15vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 471px){
+    /*шапка*/
+    .logo > a{
+        font-size: 5.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 125px;
+    }
+    .navigation{
+        padding: 9.5vw 0;
+        gap: 5.5vw;
+    }
+    .navigation li{
+        font-size: 4.2vw;
+    }
+    /*---------------------------------------*/
+    .under_header{
+        /* position: relative; */
+        padding-top: 10vh;
+        height: 70vh;
+        width: 100%;
+    }
+    .logotip{
+        margin-top: 40vw;
+    }
+    .logotip img{
+        width: auto;
+        height: 15vw;
+    }
+    /*----------------------------------------------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 10vw;
+    }
+    .title1 p {
+        font-size: 14vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 5.5vw;
+        margin: 0 50px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 50px;
+        gap: 5vw;
+        flex-direction: column;
+    }
+    .text_one {
+        margin-top: 8vw;
+        gap: 5vw;
+        width: 100%;
+        flex-direction: column;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 3.7vw;
+        text-align: center;
+    }
+    .text_one img{
+        width: auto;
+        height: 60vw;
+    }
+    .text_two {
+        margin: 0;
+        gap: 5vw;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .text_two p{
+        text-align: center;
+        line-height: 30px;
+        font-size: 3.7vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 60vw;
+    }
+    .title2{
+        margin-top: 2vw;
+    }
+    .title2 img {
+        width: auto;
+        height: 42vw;
+    }
+    .title2 p {
+        font-size: 11vw;
+        line-height: 200px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 2vw;
+    }
+    .wrappe2 {
+        gap: 5vw;
+        margin: 7vw 75px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 250px;
+        height: 300px;
+        gap: 7vw;
+        border: 1px solid white;
+    }
+    .globa1 img {
+        width: auto;
+        height: 30vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 5vw;
+        font-weight: normal;
+    }
+    .globa1 p {
+        font-size: 4.5vw;
+    }
+    .btn_to1 {
+        margin: 0.7vw 0;
+    }
+    .btn_to1_more1 {
+        width: 250px;
+        height: 35px;
+        font-size: 3.5vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 2vw;
+        margin-top: 2vw;
+    }
+    .in1 {
+        width: 250px;
+        height: 35px;
+        font-size: 3.5vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 55vw);
+        gap: 8vw 8vw;
+        margin: 15vw 100px 12.5vw;
+    }
+    .card img{
+        width: auto;
+        height: 30.55vw;
+    }
+    .card-title{
+        padding: 2.5vw 2.5vw 0;
+        font-size: 2.4vw;
+    }
+    .card-text{
+        font-size: 2.9vw;
+        padding: 2.2vw 2vw 5vw;
+    }
+    .card-btn{
+        margin-bottom: 4vw;
+    }
+    .card-btn button{
+        font-size: 3.5vw;
+        padding: 0.85vw 4vw;
+    }
+    .card-btn button > a{
+        font-size: 3.5vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 1.55vw 3.5vw;
+        font-size: 3.5vw;
+    }
+    /*----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 17vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 75px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 350px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 4vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 3vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 17vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 10vw 75px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text h6{
+        font-size: 4vw;
+        padding-bottom: 1vw;
+    }
+    .text p{
+        font-size: 3vw;
+        margin: 5vw 0vw;
+        width: 400px;
+        line-height: 25px;
+    }
+    input{
+        width: 60vw;
+        height: 40px;
+        font-size: 3vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 60vw;
+        font-size: 3vw;
+        padding: 2vw 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        margin:0 100px ;
+        font-size: 3.7vw;
+        padding: 1vw 10vw;
+    }
+    /*-------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 6.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 15vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3.9vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 426px){
+    /*шапка*/
+    .logo > a{
+        font-size: 6.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 100px;
+    }
+    .navigation{
+        padding: 10.5vw 0;
+        gap: 6.5vw;
+    }
+    .navigation li{
+        font-size: 5vw;
+    }
+    /*----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 17vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 75px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 350px;
+        padding: 15px 30px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 4vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 3vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 17vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 10vw 75px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text h6{
+        font-size: 4vw;
+        padding-bottom: 1vw;
+    }
+    .text p{
+        font-size: 3vw;
+        margin: 5vw 0vw;
+        width: 350px;
+        line-height: 25px;
+    }
+    input{
+        width: 60vw;
+        height: 40px;
+        font-size: 3vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 60vw;
+        font-size: 3vw;
+        padding: 2vw 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        margin:0 100px ;
+        font-size: 3.7vw;
+        padding: 1vw 10vw;
+    }
+    /*-------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 7.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1.5vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.2vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 376px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 7.5vw;
+    }
+    .navbar{
+        margin: 5vw 0;
+    }
+    .hamburger{
+        padding-left: 50px;
+    }
+    .navigation{
+        padding: 12.5vw 0;
+        gap: 8.5vw;
+    }
+    .navigation li{
+        font-size: 6vw;
+    }
+    /*---------------------------------------*/
+    .under_header{
+        /* position: relative; */
+        padding-top: 10vh;
+        height: 50vh;
+        width: 100%;
+    }
+    .logotip{
+        margin-top: 30vw;
+    }
+    .logotip img{
+        width: auto;
+        height: 17vw;
+    }
+    /*----------------------------------------------*/
+    /**/
+    .title1 {
+        display: flex;
+        margin-top: 10vw;
+    }
+    .title1 p {
+        font-size: 14vw;
+    }
+    h3 {
+        line-height: 25px;
+        font-size: 7vw;
+        margin: 0 25px;
+        padding-bottom: 2vw;
+    }
+    /*блок о нас*/
+    .info{
+        margin: 0 25px;
+        gap: 5vw;
+        flex-direction: column;
+    }
+    .text_one {
+        margin-top: 8vw;
+        gap: 5vw;
+        width: 100%;
+        flex-direction: column;
+    }
+    .text_one p {
+        line-height: 30px;
+        font-size: 4.5vw;
+        text-align: center;
+    }
+    .text_one img{
+        width: auto;
+        height: 60vw;
+    }
+    .text_two {
+        margin: 0;
+        gap: 5vw;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .text_two p{
+        text-align: center;
+        line-height: 30px;
+        font-size: 4.5vw;
+    }
+    .text_two img{
+        width: auto;
+        height: 60vw;
+    }
+    .title2{
+        margin-top: 2vw;
+    }
+    .title2 img {
+        width: auto;
+        height: 45vw;
+    }
+    .title2 p {
+        font-size: 11vw;
+        line-height: 200px;
+    }
+    /*---------------------------------------------*/
+    /*Начало блока популярные товары*/
+    .new{
+        margin-top: 20vw;
+    }
+    .wrappe2 {
+        gap: 15vw;
+        margin: 7vw 75px 10vw;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .globa1 {
+        width: 215px;
+        height: 315px;
+        gap: 7vw;
+        border: 1px solid white;
+    }
+    .globa1 img {
+        width: auto;
+        height: 45vw;
+        border-radius: 50%;
+    }
+    .globa1 h5 {
+        font-size: 6.5vw;
+        font-weight: normal;
+    }
+    .globa1 p {
+        font-size: 5vw;
+    }
+    .btn_to1 {
+        margin: 0.7vw 0;
+    }
+    .btn_to1_more1 {
+        width: 215px;
+        height: 35px;
+        font-size: 4.5vw;
+        letter-spacing: 2.5px;
+        margin-bottom: 2.5vw;
+        margin-top: 2.5vw;
+    }
+    .in1 {
+        width: 215px;
+        height: 35px;
+        font-size: 4.5vw;
+    }
+    /*---------------------------------------------*/
+    /*статьи*/
+    .container {
+        grid-template-columns: repeat(auto-fill, 60vw);
+        gap: 8vw 8vw;
+        margin: 15vw 50px 12.5vw;
+    }
+    .card img{
+        width: auto;
+        height: 33.2vw;
+    }
+    .card-title{
+        font-size: 3vw;
+        padding: 5vw 2vw 0;
+    }
+    .card-text{
+        font-size: 4vw;
+        padding: 7vw 2vw 10vw;
+    }
+    .card-btn{
+        margin-bottom: 4.5vw;
+    }
+    .card-btn button{
+        font-size: 4.3vw;
+        padding: 1.5vw 6vw;
+    }
+    .card-btn button > a{
+        font-size: 4.3vw;
+    }
+    .btn{
+        margin: 6vw 0;
+    }
+    .btn a {
+        padding: 2vw 3.5vw;
+        font-size: 4.3vw;
+    }
+    /*----------------------*/
+    /*Начало блока отзывы*/
+    .reviews{
+        margin-top: 17vw;
+    }
+    .container2{
+        gap: 5vw;
+        margin: 10vw 50px;
+    }
+    .rev{
+        background-color: #191d21;
+        width: 350px;
+        padding: 15px 20px;
+        gap: 1vw;
+    }
+    .rev h5{
+        line-height: 25px;
+        font-size: 4.5vw;
+        padding-bottom: 0.5vw;
+    }
+    .rev p{
+        line-height: 40px;
+        font-size: 3.5vw;
+    }
+    /*-----------------------*/
+    /*Начало блока напишите нам*/
+    .napishite{
+        margin-top: 17vw;
+        margin-bottom: 5vw;
+    }
+    .container3{
+        margin: 10vw 50px 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text h6{
+        font-size: 5vw;
+        padding-bottom: 1vw;
+    }
+    .text p{
+        font-size: 3.7vw;
+        margin: 5vw 0vw;
+        width: 300px;
+        line-height: 25px;
+    }
+    input{
+        width: 70vw;
+        height: 40px;
+        font-size: 3.7vw;
+        padding: 5px;
+        padding-left: 2vw;
+        margin-bottom: 1vw;
+    }
+    textarea{
+        width: 70vw;
+        font-size: 3.7vw;
+        padding: 2vw 2vw;
+        margin-bottom: 1vw;
+    }
+    .btn_top1{
+        margin:0 75px ;
+        font-size: 4.7vw;
+        padding: 1vw 10vw;
+    }
+    /*-------------------------------------*/
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 8vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 17vw;
+    }
+    .conf{
+        margin-top: 1vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.65vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
