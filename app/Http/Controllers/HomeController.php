@@ -103,6 +103,7 @@ class HomeController extends Controller
             $order->fio = $data->fio;
             $order->email = $data->email;
             $order->user_id = $data->user_id;
+            $order->phone = $request->input('phone');
             $order->devil = $request->input('devil');
             $order->address = $request->input('address');
             $order->towar_name = $data->towar_name;

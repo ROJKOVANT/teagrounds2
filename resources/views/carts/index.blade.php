@@ -67,12 +67,6 @@
 </header>
 
     <section class="paragraph">
-        @if(session()->has('message'))
-        <div>
-            <button type="button" data-dismiss="alert" aria-hidden="true">X</button>
-            {{session()->get('message')}}
-        </div>
-        @endif
         <h3>Корзина</h3>
 
         <table class="table-block">
@@ -114,33 +108,35 @@
                 <form action="{{route('cash_order')}}" method="P0ST">
                     @csrf
                     @method('patch')
-                    <div>
-                        <label for="devil">Выберите тип доставки товара</label>
-                        <input type="text" name="devil" list="devils" />
-                        <datalist id="devils">
-                            <option value="забрать из магазина" />
-                            <option value="доставка на дом" />
-                        </datalist>
+                    <div class="table">
+                        <label for="devil">Введите свой номер телефона</label>
+                        <input type="tel" name="phone" required
+                               placeholder="+7 (900) 123-45-67" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"/>
                     </div>
-{{--                    <div>--}}
-{{--                        <label for="devil">Выберите тип доставки товара</label>--}}
-{{--                        <input type="text" name="address" value="ул.Полесская, 12" size="25">--}}
-{{--                    </div>--}}
-                    <div>
-                        <label for="address">Выберите адресс доставки </label>
-                        <input type="text" name="address" list="address"/>
-                        <select id="address">
-                            <option value="ул.Полесская, 12">забрать из магазина</option>
-                            <option value="Введите адресс">доставка на дом</option>
-                        </select>
+                    <div class="table2">
+                        <div  class="table">
+                            <label for="devil">Выберите тип доставки товара</label>
+                            <input type="text" name="devil" list="devils" required >
+                            <datalist id="devils">
+                                <option value="забрать из магазина"/>
+                                <option value="доставка на дом"/>
+                            </datalist>
+                        </div>
+                        <div  class="table">
+                            <label for="address">Выберите адресс доставки </label>
+                            <input type="text" name="address" list="address" required >
+                            <select id="address">
+                                <option value="ул.Полесская, 12">забрать из магазина</option>
+                                <option value="Введите адресс">доставка на дом</option>
+                            </select>
+                        </div>
                     </div>
-
                     <div class="buy">
                         <button type="submit" class="btn_top1_more1"
                                 onclick="return confirm('Подтвердите свой заказ и мы получилим его.Ожидайте доставки!')">
                                 Оплата наличными
                         </button>
-                        <a href="/cardOnline">Оплата картой</a>
+                        <button class="btn_top1_more1"><a href="/cardOnline">Оплата картой</a></button>
                     </div>
                 </form>
             </div>

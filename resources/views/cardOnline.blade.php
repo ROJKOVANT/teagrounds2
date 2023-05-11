@@ -67,38 +67,62 @@
 </header>
 
 <section class="paragraph">
-    @if(session()->has('message'))
-        <div>
-            <button type="button" data-dismiss="alert" aria-hidden="true">X</button>
-            {{session()->get('message')}}
-        </div>
-    @endif
     <h3>Оплата картой</h3>
-        <div class="container">
-            <h1>Donate to Our Cause</h1>
-            <p>Your contribution will help us make a difference!</p>
-            <form id="payment-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe">
-                </div>
-                <div class="form-group">
-                    <label for="amount">Amount</label>
-                    <div class="input-group">
-                        <span class="input-group-addon">$</span>
-                        <input type="number" id="amount" name="amount" placeholder="25.00" min="1" step="0.01">
+        <div class="data">
+            <div class="address">
+                <form action="{{route('cash_order')}}" method="P0ST">
+                    @csrf
+                    @method('patch')
+                    <div class="table">
+                        <label for="devil">Введите свой номер телефона</label>
+                        <input type="tel" name="phone" required
+                               placeholder="+7 (900) 123-45-67" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"/>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label for="card-element">Credit or debit card</label>
-                    <div id="card-element"></div>
-                    <div id="card-errors" role="alert"></div>
-                </div>
-                <button type="submit" class="btn_top1_more1"
-                        onclick="return confirm('Подтвердите свой заказ и мы получилим его.Ожидайте доставки!')">
-                    Оплатить
-                </button>
-            </form>
+                    <div class="table2">
+                        <div  class="table">
+                            <label for="devil">Выберите тип доставки товара</label>
+                            <input type="text" name="devil" list="devils" required >
+                            <datalist id="devils">
+                                <option value="забрать из магазина"/>
+                                <option value="доставка на дом"/>
+                            </datalist>
+                        </div>
+                        <div  class="table">
+                            <label for="address">Выберите адресс доставки </label>
+                            <input type="text" name="address" list="address" required >
+                            <select id="address">
+                                <option value="ул.Полесская, 12">забрать из магазина</option>
+                                <option value="Введите адресс">доставка на дом</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div  class="table3">
+                        <div  class="table">
+                            <label for="address">Введите имя </label>
+{{--                            <input type="text" required >--}}
+                            <input type="text" class="input-upper" placeholder="Ivan Ivanov" required>
+                        </div>
+                        <div  class="table">
+                            <label for="address">Введите номер карты </label>
+                            <input type="text" id="bank-card-input"  placeholder="0000 0000 0000 0000" required>
+                        </div>
+                        <div  class="table">
+                            <label for="address">Введите месяц/год </label>
+                            <input type="text" id="bank-code-input" placeholder="00/00" required>
+                        </div>
+                        <div  class="table">
+                            <label for="cvc">Введите CVC карты </label>
+                            <input type="text" id="bank-input" placeholder="000" required>
+                        </div>
+                    </div>
+                    <div class="buy">
+                        <button type="submit" class="btn_top1_more1"
+                                onclick="return confirm('Подтвердите свой заказ и мы получилим его.Ожидайте доставки!')">
+                            Оплатить
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
 </section>
 
@@ -119,5 +143,10 @@
     </div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="{{asset('js/adress.js')}}"></script>
+<script src="{{asset('js/cardOnline.js')}}"></script>
+<script src="{{asset('js/codeBank.js')}}"></script>
+<script src="{{asset('js/cvc.js')}}"></script>
+<script src="{{asset('js/devil.js')}}"></script>
 </body>
 </html>

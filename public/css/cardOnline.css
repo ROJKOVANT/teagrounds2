@@ -51,10 +51,118 @@ header {
     width: 100%;
     transition: width 0.3s;
 }
-
 /*Конец шапки сайта*/
-
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
+/**/
+.order {
+    margin: 2vw 17vw 0;
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Philosopher';
+}
+.data {
+    margin: 3vw 17vw 7vw;
+    display: flex;
+    gap: 2vw;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.itog {
+    color: white;
+    font-size: 0.9vw;
+}
+.buy {
+    display: flex;
+    gap: 2.5vw;
+}
+.buy a {
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Philosopher';
+}
+.table{
+    display: flex;
+    flex-direction: column;
+}
+.table2{
+    display: flex;
+    gap: 5vw;
+}
+.table3{
+    display: flex;
+    gap: 2vw;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+label{
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2vw;
+    line-height: 50px;
+    color: white;
+}
+input {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9vw;
+    border: 1px solid white;
+    color: white;
+    background-color: #212529;
+    padding: 0.5vw 1vw;
+    width: 17vw;
+}
+select{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8vw;
+    width: 17vw;
+    border: 1px solid white;
+    color: white;
+    background-color: #212529;
+    margin-top: 1vw;
+    padding: 0.5vw;
+}
+.btn_top1 {
+    display: flex;
+    justify-content: center;
+    margin: 0.5vw 0;
+}
+.btn_top1_more1 {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 250px;
+    height: 40px;
+    font-size: 1.1vw;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2.5px;
+}
+.btn_top1_more1 a{
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    width: 250px;
+    height: 40px;
+    font-size: 1.1vw;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2.5px;
+}
+.btn_top1_more1:hover {
+    background: white;
+    color: black;
+    transition: 2s;
+}
+.btn_top1_more1 a:hover {
+    color: black;
+    transition: 2s;
+}
 
 /*Начало блока корзина*/
 .paragraph {

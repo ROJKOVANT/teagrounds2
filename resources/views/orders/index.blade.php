@@ -57,7 +57,7 @@
         <table class="table-block">
             <tr class="table-title">
                 <th>ФИО</th>
-                <th>Почта</th>
+                <th>Телефон</th>
                 <th>Тип доставки</th>
                 <th>Адрес</th>
                 <th>Изображение товара</th>
@@ -71,7 +71,7 @@
             @foreach($order as $el)
             <tr class="table-content">
                 <th>{{$el->fio}}</th>
-                <th>{{$el->email}}</th>
+                <th>{{$el->phone}}</th>
                 <th>{{$el->devil}}</th>
                 <th>{{$el->address}}</th>
                 <th><img src="{{$el->picture}}" style="height: 5vw; width: 5vw;" alt=""></th>
@@ -93,9 +93,7 @@
                             <input type="text" name="delivery_status" list="delivery_statuses" class="input-form" value="{{$el->delivery_status}}">
                             <datalist id="delivery_statuses">
                                 <option value="в обработке"/>
-                                <option value="в магазине"/>
                                 <option value="передан курьеру"/>
-                                <option value="в пути"/>
                                 <option value="пришел"/>
                             </datalist>
                         </div>
