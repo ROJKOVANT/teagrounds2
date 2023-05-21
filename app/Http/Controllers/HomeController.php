@@ -173,7 +173,7 @@ class HomeController extends Controller
         $user = Auth::user();
         $userid = $user->id;
         $order = Order::where('user_id', '=', $userid)->where('delivery_status', '=', 'получен')->get();
-        return view('product', compact('order'));
+        return view('history', compact('order'));
     }
     /*информация о заказе*/
     public function productMore($id)

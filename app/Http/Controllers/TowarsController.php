@@ -25,7 +25,7 @@ class TowarsController extends Controller
     /*вывод статьей по категории в каталоге*/
     public function index($categoriesId = 0)
     {
-        if($categoriesId === 0){
+        if ($categoriesId === 0) {
             return redirect()->back();
         }
         $towars = Towar::all();
@@ -34,7 +34,7 @@ class TowarsController extends Controller
         }
         return view('catalog')
             ->with('towars', Towar::all()->where('category_id', $categoriesId))
-            ->with('category',Category::find($categoriesId));
+            ->with('category', Category::find($categoriesId));
     }
     /**
      * Show the form for creating a new resource.
@@ -69,7 +69,7 @@ class TowarsController extends Controller
 
         ]);
 
-//        $picture = new File(__DIR__ . '\..\..\\public\\img\\towars\\');
+        //        $picture = new File(__DIR__ . '\..\..\\public\\img\\towars\\');
         $picture = $request->picture;
         $path = Storage::disk('public')->put('/towars', $picture);
 
@@ -85,7 +85,7 @@ class TowarsController extends Controller
             "price" => $request->input('price'),
             "count" => $request->input('count'),
             "category_id" => $request->input('category_id'),
-            "picture" => '/storage/'.$path,
+            "picture" => '/storage/' . $path,
             "slug" => $request->input('title') //str_slug($request->title)
         ]);
 
@@ -195,5 +195,26 @@ class TowarsController extends Controller
     public function allAdminTowars()
     {
         return view('adminTovar')->with('towars', DB::table('towars')->orderBy('created_at', 'DESC')->get());
+    }
+
+    public function sort(Request $request)
+    {
+        if ($request->input('price') != null && ($request->input('languages1') != null || $request->input('languages2') != null || $request->input('languages3') != null || $request->input('languages4') != null)) {
+            if ($request->input('price') == 'Дешевый') {
+                return view('shop')->with('towarsall', DB::table('towars')->whereIn('country', [$request->input('languages1'), $request->input('languages2'), $request->input('languages3'), $request->input('languages4')])->orderBy('price', 'ASC')->get());
+            } elseif ($request->input('price') == 'Дорогой') {
+                return view('shop')->with('towarsall', DB::table('towars')->whereIn('country', [$request->input('languages1'), $request->input('languages2'), $request->input('languages3'), $request->input('languages4')])->orderBy('price', 'DESC')->get());
+            }
+        } elseif ($request->input('price') == null) {
+            if ($request->input('languages1') != null || $request->input('languages2') != null || $request->input('languages3') != null || $request->input('languages4') != null) {
+                return view('shop')->with('towarsall', DB::table('towars')->whereIn('country', [$request->input('languages1'), $request->input('languages2'), $request->input('languages3'), $request->input('languages4')])->get());
+            }
+        } else {
+            if ($request->input('price') == 'Дешевый') {
+                return view('shop')->with('towarsall', DB::table('towars')->orderBy('price', 'ASC')->get());
+            } elseif ($request->input('price') == 'Дорогой') {
+                return view('shop')->with('towarsall', DB::table('towars')->orderBy('price', 'DESC')->get());
+            }
+        }
     }
 }

@@ -1,6 +1,15 @@
+<!doctype html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset("css/history.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/product.css") }}">
+    <title>Document</title>
 </head>
+<body>
 <div class="navigation">
     @php
         use Illuminate\Support\Facades\Auth;
@@ -12,6 +21,7 @@
         {
             $count +=$count_cart[$i]['quantity'];
         }
+         $gifts = \App\Models\Gift::where('user_id', Auth::user()->id)->where('delivery_status','=', 'получен')->get();
     @endphp
     <div class="navigation-f1">
         <li class="log"><a href="/">Tea Grounds</a></li>
@@ -51,23 +61,50 @@
         <div class="point">
             <p>История заказов</p>
         </div>
-        {{-- @php--}}
-        {{-- $order = \App\Models\Order::all();--}}
-        {{-- @endphp--}}
-        {{--Товары--}}
         <div class="container1">
             @foreach($order as $el)
-            <div class="card">
-                <h4 class="card-title">Товар {{$el->delivery_status}}</h4>
-                <img src="/{{$el->picture}}" alt="">
-                <p class="card-text">{{$el->towar_name}}</p>
-                <p class="card-text">{{$el->price}} ₽/50гр.</p>
-                <p class="card-text">{{$el->payment_status}}</p>
-                <div class="btn_top1">
-                    <a href="{{route('products.more', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
+                <div class="card">
+                    <h4 class="card-title">Товар {{$el->delivery_status}}</h4>
+                    <img src="{{$el->picture}}" alt="">
+                    <p class="card-text">{{$el->towar_name}}</p>
+                    <p class="card-text">{{$el->price}} ₽/50гр.</p>
+                    <p class="card-text">{{$el->payment_status}}</p>
+                    <div class="btn_top1">
+                        <a href="{{route('products.more', ['id'=> $el->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
+                    </div>
                 </div>
-            </div>
+            @endforeach
+            @foreach($gifts as $eli)
+                <div class="card">
+                    <h4 class="card-title">Товар {{$eli->delivery_status}}</h4>
+                    <img src="{{$eli->picture}}" alt="">
+                    @switch($eli->box_type)
+                        @case('1')
+                        <p class="card-text">Пластиковый пакет на бумажной основе</p>
+                        @break
+
+                        @case('2')
+                        <p class="card-text">Бумажные обечайки на малые коробки</p>
+                        @break
+
+                        @case('3')
+                        <p class="card-text">Бумажные обечайки на средние коробки</p>
+                        @break
+
+                        @case('4')
+                        <p class="card-text">Бумажные обечайки на большие коробки</p>
+                        @break
+                    @endswitch
+                    <p class="card-text">{{$eli->price}} ₽/50гр.</p>
+                    <p class="card-text">{{$eli->payment_status}}</p>
+                    <div class="btn_top1">
+                        <a href="{{route('box', ['id'=> $eli->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
+                    </div>
+                </div>
             @endforeach
         </div>
     </div>
 </div>
+</body>
+</html>
+

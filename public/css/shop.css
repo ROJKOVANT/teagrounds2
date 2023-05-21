@@ -226,6 +226,71 @@ input {
 }
 /*---------------------------------------------*/
 /*!*Начало блока товары*!*/
+.wrapper3{
+    margin-top: -5vw;
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid white;
+}
+.container6{
+    margin: 0 2vw;
+    border-right: 2px solid white;
+    width: 500px;
+}
+.filtr {
+    display: flex;
+    flex-direction: column;
+}
+.filtr h6 {
+    margin: 5vw 2.5vw 0;
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Philosopher', sans-serif;
+}
+.country {
+    display: flex;
+    flex-direction: column;
+}
+.country h6 {
+    margin: 2vw 0vw 1vw;
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Philosopher', sans-serif;
+}
+.country_form {
+    display: flex;
+    flex-direction: column;
+    margin: 1vw 2.5vw 0;
+}
+.country_form label {
+    color: white;
+    font-size: 1.2vw;
+    font-family: 'Philosopher', sans-serif;
+}
+.country_form input {
+    width: 0.8vw;
+    height: 0.8vw;
+}
+.btn1 {
+    margin: 2vw 0;
+}
+.btn_more1 {
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 155px;
+    height: 35px;
+    font-size: 1.2vw;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 2.5px;
+}
+.btn_more1:hover {
+    background: white;
+    color: black;
+    transition: 2s;
+}
+    /*все товары*/
 .towar{
     margin-top: 2vw;
 }
@@ -234,177 +299,17 @@ input {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4vw;
-    margin: -2vw 7.5vw 10vw;
+    margin: 5vw 2vw 7vw;
 }
-/*.tovar {*/
-/*    margin: 5vw 0 0;*/
-/*    display: flex;*/
-/*    border-top: 2px solid white;*/
-/*    flex-direction: column;*/
-/*}*/
-/*!**!*/
-/*.filtr {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-
-/*}*/
-/*.filtr h6 {*/
-/*    margin: 5vw 2.5vw 0;*/
-/*    color: white;*/
-/*    font-size: 1.5vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*}*/
-/*!**!*/
-/*.country {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-/*.country h6 {*/
-/*    margin: 2vw 2.5vw 0;*/
-/*    color: white;*/
-/*    font-size: 1.5vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*}*/
-/*.country_form {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    margin: 1vw 2.5vw 0;*/
-/*}*/
-/*.country_form label {*/
-/*    color: white;*/
-/*    font-size: 1.2vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*}*/
-/*.country_form input {*/
-/*    width: 0.8vw;*/
-/*    height: 0.8vw;*/
-/*}*/
-/*!**!*/
-/*.price {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-/*.price h6 {*/
-/*    margin: 2vw 2.5vw 0;*/
-/*    color: white;*/
-/*    font-size: 1.5vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*}*/
-/*.price_form {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    margin: 1vw 2.5vw 0;*/
-/*}*/
-/*.price_form label {*/
-/*    color: white;*/
-/*    font-size: 1.2vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*}*/
-/*.price_form input {*/
-/*    width: 0.8vw;*/
-/*    height: 0.8vw;*/
-/*}*/
-/*.btn1 {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    margin: 2vw 2.5vw 0;*/
-/*}*/
-/*.btn_more1 {*/
-/*    text-decoration: none;*/
-/*    background-color: transparent;*/
-/*    color: white;*/
-/*    border: 1px solid white;*/
-/*    width: 155px;*/
-/*    height: 35px;*/
-/*    font-size: 1.2vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*    letter-spacing: 2.5px;*/
-/*}*/
-/*.btn_more1:hover {*/
-/*    background: white;*/
-/*    color: black;*/
-/*    transition: 2s;*/
-/*}*/
-/*.btn2 {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    margin: 1vw 2.5vw 0;*/
-/*}*/
-/*.btn_more2 {*/
-/*    text-decoration: none;*/
-/*    background-color: transparent;*/
-/*    color: white;*/
-/*    border: 1px solid white;*/
-/*    width: 155px;*/
-/*    height: 35px;*/
-/*    font-size: 1.2vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*    letter-spacing: 2.5px;*/
-/*}*/
-/*.btn_more2:hover {*/
-/*    background: white;*/
-/*    color: black;*/
-/*    transition: 2s;*/
-/*}*/
-/*.teg {*/
-/*    display: flex;*/
-/*}*/
-/*.teg p {*/
-/*    font-size: 5vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*    transform: rotate(90deg);*/
-/*}*/
-/*.separation {*/
-/*    border-right: 2px solid white;*/
-/*    margin-left: 70px;*/
-/*}*/
-/*!*новые товары*!*/
-/*заказы*/
-/* товары*/
-/*-----------------------------*/
-/*!*плагинация*!*/
-/*.pagination {*/
-/*    display: flex;*/
-/*}*/
-
-/*.pagination a {*/
-/*    border: 2px solid white;*/
-/*    color: white;*/
-/*    float: left;*/
-/*    padding: 8px 16px;*/
-/*    text-decoration: none;*/
-/*    transition: background-color 2s;*/
-/*}*/
-
-/*.pagination a.active {*/
-/*    background-color: rgb(255, 255, 255);*/
-/*    color: black;*/
-/*}*/
-
-/*.pagination a:hover:not(.active) {*/
-/*    background-color: rgb(255, 255, 255);*/
-/*    color: black;*/
-/*}*/
-
-/*.teg {*/
-/*    flex-direction: column;*/
-/*    position: absolute;*/
-/*    width: auto;*/
-/*    margin-top: 12vw;*/
-/*    margin-left: -16vw;*/
-/*}*/
-
-/*.teg p {*/
-/*    color: rgba(255, 255, 255, 0.2);*/
-/*    font-size: 8vw;*/
-/*    font-family: 'Philosopher', sans-serif;*/
-/*    transform: rotate(-90deg);*/
-/*    margin-top: 10vw;*/
-
-/*}*/
-/*!*Конец блока Товары*!*/
-/*-----------------------------*/
-/*кнопка на вверх*/
+.tovar {
+    margin: 5vw 0 0;
+    display: flex;
+    border-top: 2px solid white;
+    flex-direction: column;
+}
+/* Конец блока Товары*! */
+/* -----------------------------
+кнопка на вверх */
 .go-top {
     position: fixed;
     bottom: 2em;

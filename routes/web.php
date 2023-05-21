@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TowarsController;
+use App\Models\Towar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,25 +60,31 @@ Route::get('/OpenTovar/{id}', [App\Http\Controllers\TowarsController::class, 'to
 //   return view('history');
 //});
 Route::get('/history', [App\Http\Controllers\HomeController::class, 'producthistory'])->name('history');/*вывод заказов в истории которые пришли*/
-
+//Route::get('/podarochistory', [App\Http\Controllers\GiftController::class, 'podarochistory'])->name('history');/*вывод подарков в истории которые пришли*/
 
 //----------------
 // Статус на получен
 Route::patch('/product/status/{id}', [HomeController::class, 'setStatus'])->name('statusEnd');
-
+Route::patch('/product/status/{id}', [\App\Http\Controllers\GiftController::class, 'setStatus'])->name('statusEnd');
 //------------------
 
 Route::get('/help', function () {
     return view('help');
 });
 Route::get('/shop', function () {
-    return view('shop');
+    $towarsall = Towar::all();
+    return view('shop', compact('towarsall'));
 });
 Route::get('/constructor', function () {
     return view('constructor');
 });
+Route::get('/constructorCreate', function () {
+    return view('constructorCreate');
+});
+Route::post('/constructorCreate', [App\Http\Controllers\GiftController::class, 'constructor'])->name('constructorCreate');/*подарок*/
+
 //Route::get('/shop', [App\Http\Controllers\TowarsController::class, 'fourNewTovarAll'])->name('shop'); //вывод 4ех товара по новизне
-Route::get('/shop', [App\Http\Controllers\TowarsController::class, 'all'])->name('shop'); //вывод всех товаров по новизне
+// Route::get('/shop', [App\Http\Controllers\TowarsController::class, 'all'])->name('shop'); //вывод всех товаров по новизне
 
 //Route::get('/helpReview', function () {
 //    return view('helpReview');
@@ -88,6 +96,9 @@ Route::get('/admin', function () {
     return view('admin');
 });
 
+//Route::get('/podaroc', function () {
+//    return view('orders.podaroc');
+//})->name('podaroc');
 
 
 
@@ -159,10 +170,25 @@ Route::get('/cardOnline', function () {
 /*заказы*/
 Route::get('/orders', [App\Http\Controllers\HomeController::class, 'ordersAdmin'])->name('orders.index');/*вывод всех заказов*/
 Route::post('/delivered/{id}', [App\Http\Controllers\HomeController::class, 'delivered'])->name('orders.index');/*вывод всех заказов*/
-Route::post('/delivered/update/{id}', [App\Http\Controllers\HomeController::class, 'update_delivered'])->name('orders.index');/*сохранить изменение товара*/
+Route::patch('/delivered/update/{id}', [App\Http\Controllers\HomeController::class, 'update_delivered'])->name('orders.index');/*сохранить изменен*/
 Route::get('/product', [App\Http\Controllers\HomeController::class, 'ordersUser'])->name('product');/*вывод всех заказов у пользователя*/
-Route::get('/products/more/{id}', [App\Http\Controllers\HomeController::class, 'productMore'])->name('products.more');/*вывод всех заказов у пользователя*/
+Route::get('/products/more/{id}', [App\Http\Controllers\HomeController::class, 'productMore'])->name('products.more');/*вывод информации о заказе*/
 
+/*подарок*/
+Route::get('/podaroc', [App\Http\Controllers\GiftController::class, 'podarocAdmin'])->name('orders.podaroc');/*вывод всех заказов*/
+Route::post('/podarocdelivered/{id}', [App\Http\Controllers\GiftController::class, 'delivered'])->name('orders.podaroc');/*вывод всех заказов*/
+Route::patch('/podarocdelivered/update/{id}', [App\Http\Controllers\GiftController::class, 'update_delivered'])->name('orders.podaroc');/*сохранить изменение товара*/
+//Route::get('/podarocproduct', [App\Http\Controllers\GiftController::class, 'podarocUser'])->name('product');/*вывод всех заказов у пользователя*/
+Route::get('/box/{id}', function ($id) {
+    $box = \App\Models\Gift::find($id);
+    $arr = json_decode($box->products);
+    $newArr = [];
+    foreach ($arr as $item){
+        $newArr[] = Towar::find($item);
+    }
+    $box->products = $newArr;
+    return view('products.box')->with('gifts',$box);
+})->name('box');/*вывод информации о подарке*/
 
 /*отзыв на сайт*/
 Route::post('/home', [App\Http\Controllers\SiteReviewController::class, 'store'])->name('home');/*добавить отзыв*/
@@ -170,3 +196,7 @@ Route::get('/', [App\Http\Controllers\SiteReviewController::class, 'randomreview
 
 /*сообщение для помощи*/
 Route::post('/', [App\Http\Controllers\HelpReviewController::class, 'store'])->name('welcome');/*добавить сообщение о помощи*/
+
+
+// Фильтры
+Route::post('/sort', [TowarsController::class, 'sort'])->name('sort');

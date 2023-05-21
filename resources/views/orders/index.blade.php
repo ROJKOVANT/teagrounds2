@@ -89,6 +89,7 @@
                     @else
                     <form action="{{route('orders.index', ['id' => $el->id])}}" method="POST">
                         @csrf
+                        @method('PATCH')
                         <div>
                             <input type="text" name="delivery_status" list="delivery_statuses" class="input-form" value="{{$el->delivery_status}}">
                             <datalist id="delivery_statuses">

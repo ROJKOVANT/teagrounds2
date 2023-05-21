@@ -1,0 +1,11 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    color: white;
+    font-size: 1.2vw;
+}
+input{
+    outline: none;
+}

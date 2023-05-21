@@ -77,7 +77,7 @@
             </h3>
             <p>Для этого просто нажмите “начать”</p>
             <div class="card-btn">
-                <a href="#"><button class="btn_top1_more1">Начать</button></a>
+                <a href="/constructorCreate"><button class="btn_top1_more1">Начать</button></a>
             </div>
         </div>
         <img src="img/const.png" alt="">

@@ -12,7 +12,10 @@
         {
             $count +=$count_cart[$i]['quantity'];
         }
+                $gifts = \App\Models\Gift::where('user_id', Auth::user()->id)->where('delivery_status', '!=', 'получен')->get();;
     @endphp
+
+
     <div class="navigation-f1">
         <li class="log"><a href="/">Tea Grounds</a></li>
     </div>
@@ -73,6 +76,43 @@
                 @endif
             </div>
             @endforeach
+            @foreach($gifts as $eli)
+                    <div class="card">
+                        <h4 class="card-title">Товар {{$eli->delivery_status}}</h4>
+                        <img src="{{$eli->picture}}" alt="">
+                        @switch($eli->box_type)
+                            @case('1')
+                            <p class="card-text">Пластиковый пакет на бумажной основе</p>
+                            @break
+
+                            @case('2')
+                            <p class="card-text">Бумажные обечайки на малые коробки</p>
+                            @break
+
+                            @case('3')
+                            <p class="card-text">Бумажные обечайки на средние коробки</p>
+                            @break
+
+                            @case('4')
+                            <p class="card-text">Бумажные обечайки на большие коробки</p>
+                            @break
+                        @endswitch
+                        <p class="card-text">{{$eli->price}} ₽/50гр.</p>
+                        <p class="card-text">{{$eli->payment_status}}</p>
+                        @if($eli->delivery_status=="пришел")
+                            <div class="btn_top1">
+                                <form class="btn_top1" action="{{route('statusEnd', ['id'=> $eli->id])}}" method="POST">
+                                    @csrf
+                                    @method('PATCH')
+                                    <button type="submit" class="btn_top1_more1">Получен</button>
+                                </form>
+                                <a href="{{route('box', ['id'=> $eli->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
+                            </div>
+                        @else
+                            <a href="{{route('box', ['id'=> $eli->id])}}"><button class="btn_top1_more1">Подробнее о заказе</button></a>
+                        @endif
+                    </div>
+                @endforeach
         </div>
     </div>
 </div>

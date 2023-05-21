@@ -25,7 +25,7 @@ return new class extends Migration
             $table->text('view');
             $table->text('taste');
             $table->text('description');
-            $table->string('price');
+            $table->integer('price');
             $table->unsignedInteger('count')->default(0);
             $table->string('category_id');
             $table->string('slug');
