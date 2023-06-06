@@ -58,9 +58,7 @@
 
         <!--Клиенты-->
         <div class="container7">
-            <li>
-                <a href="categorys">Информация о заказе</a>
-            </li>
+                <p>Информация о заказе</p>
             <table class="table-block">
                 <tr class="table-title">
                     <th>Изображение товара</th>
@@ -71,7 +69,7 @@
                     <th>Статус</th>
                 </tr>
                 <tr class="table-content">
-                    <th><img src="{{$orders->picture}}" style="height: 5vw; width: 5vw;" alt=""></th>
+                    <th><img src="{{$orders->picture}}" alt=""></th>
                     <th>{{$orders->towar_name}}</th>
                     <th>{{$orders->quantity}} шт.</th>
                     <th>{{$orders->price}} ₽/50гр.</th>

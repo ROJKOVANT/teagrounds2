@@ -183,7 +183,7 @@ summary {
     padding: .5em 1.3rem;
     list-style: none;
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     transition: height 1s ease;
 }
 summary:hover{
@@ -230,6 +230,25 @@ details[open] div{
     }
 }
 @media screen and (max-width: 1600px) {
+    /*шапка*/
+    .navigation{
+        font-size: 1.6vw;
+        padding-right: 50px;
+    }
+    .log{
+        font-size: 2.1vw;
+    }
+    .navigation li {
+        width: auto;
+    }
+    .navigation-f1 {
+        margin-top: 4vw;
+    }
+    .point {
+        width: 270px;
+        height: 60px;
+        padding-left: 50px;
+    }
     .point {
         width: 225px;
         height: 50px;
@@ -239,7 +258,7 @@ details[open] div{
     .container {
         margin-left: 8vw;
     }
-    .info p{ 
+    .info p{
         font-size: 1.3vw;
     }
     details{
@@ -260,33 +279,27 @@ details[open] div{
         font-size: 1.1vw;
         font-family: 'Philosopher';
     }
-    .navigation {
-        font-size: 1.7vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 70px;
-        background-color: #212529;
-    }
-    .navigation li {
-        width: 250px;
-    }
 }
 @media screen and (max-width: 1400px) {
-    .navigation {
+    .navigation{
         font-size: 1.7vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 60px;
-        background-color: #212529;
+        padding-right: 50px;
+    }
+    .log{
+        font-size: 2.2vw;
     }
     .point {
         width: 200px;
         height: 50px;
-        padding-left: 30px;
-        background: rgba(25, 29, 33, 0.9);
+        padding-left: 50px;
+    }
+    .point p {
+        font-size: 1.7vw;
     }
     .container {
         margin-left: 9vw;
     }
-    .info p{ 
+    .info p{
         font-size: 1.4vw;
     }
     details{
@@ -309,20 +322,20 @@ details[open] div{
     }
 }
 @media screen and (max-width: 1300px) {
+    .navigation{
+        font-size: 1.9vw;
+        gap: 2vw;
+    }
+    .log{
+        font-size: 2.7vw;
+    }
     .point {
-        width: 180px;
+        width: 210px;
         height: 50px;
         padding-left: 50px;
-        background: rgba(25, 29, 33, 0.9);
     }
-    .point p{
-        font-size: 1.6vw;
-    }
-    .navigation {
-        font-size: 1.7vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 50px;
-        background-color: #212529;
+    .point p {
+        font-size: 1.9vw;
     }
     .container {
         margin-left: 10vw;
@@ -359,17 +372,24 @@ details[open] div{
     }
 }
 @media screen and (max-width: 1250px) {
-    .container {
-        margin-left: 9.5vw;
+    .navigation{
+        font-size: 2vw;
+        gap: 2vw;
+        padding-right: 30px;
+    }
+    .log{
+        font-size: 2.9vw;
     }
     .point {
-        width: 180px;
+        width: 210px;
         height: 50px;
-        padding-left: 30px;
-        background: rgba(25, 29, 33, 0.9);
+        padding-left: 50px;
     }
-    .point p{
-        font-size: 1.7vw;
+    .point p {
+        font-size: 2vw;
+    }
+    .container {
+        margin-left: 9.5vw;
     }
     .info{
         background: rgba(25, 29, 33, 0.9);
@@ -382,15 +402,6 @@ details[open] div{
         box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
         width: 750px;
         height: auto;
-    }
-    .navigation {
-        font-size: 2vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 50px;
-        background-color: #212529;
-    }
-    .navigation li {
-        width: 225px;
     }
 }
 @media screen and (max-width: 1200px) {
@@ -443,34 +454,47 @@ details[open] div{
     }
 }
 @media screen and (max-width: 1100px) {
-    .container {
-        margin-left: 11.5vw;
-    }
-    .navigation {
-        font-size: 2.2vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 45px;
-        background-color: #212529;
-    }
-    .navigation li {
-        width: 225px;
+    /*шапка*/
+    .navigation{
+        font-size: 2vw;
+        gap: 2vw;
+        padding-right: 30px;
     }
     .log{
-        font-size: 2.7vw;
+        font-size: 2.9vw;
+    }
+    .point {
+        width: 210px;
+        height: 50px;
+        padding-left: 50px;
+    }
+    .point p {
+        font-size: 2.2vw;
+    }
+    .container {
+        margin-left: 11.5vw;
     }
 }
 @media screen and (max-width: 1050px) {
-    .container {
-        margin-left: 11.5vw;
+    .navigation{
+        font-size: 2.2vw;
+        gap: 2vw;
+        padding-right: 40px;
+        padding-left: 50px;
+    }
+    .log{
+        font-size: 3vw;
     }
     .point {
-        width: 180px;
+        width: 210px;
         height: 50px;
-        padding-left: 30px;
-        background: rgba(25, 29, 33, 0.9);
+        padding-left: 50px;
     }
-    .point p{
-        font-size: 1.9vw;
+    .point p {
+        font-size: 2.2vw;
+    }
+    .container {
+        margin-left: 11.5vw;
     }
     .info{
         background: rgba(25, 29, 33, 0.9);

@@ -4,15 +4,16 @@
     list-style-type: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: 'Philosopher';
 }
 /* бокавая панель управления*/
 .navigation {
+    font-family: 'Philosopher';
     display: flex;
     color: white;
     justify-content: space-around;
     align-items: center;
     font-size: 1.5vw;
-    font-family: "Philosopher", sans-serif;
     flex-direction: column;
     align-items: flex-start;
     gap: 1vw;
@@ -26,10 +27,11 @@
 }
 .navigation li {
     width: 300px;
+    font-family: 'Philosopher';
 }
 .navigation a {
     color: white;
-    font-family: "Philosopher";
+    font-family: 'Philosopher';
 }
 .navigation-f1 {
     margin-top: 3vw;
@@ -87,8 +89,8 @@
     background: rgba(25, 29, 33, 0.9);
 }
 .point p {
+    font-family: 'Philosopher';
     color: white;
-    font-family: "Comfortaa";
     font-size: 1.5vw;
 }
 /*поле данные*/
@@ -103,8 +105,8 @@
     flex-direction: column;
 }
 .info p {
+    font-family: 'Philosopher';
     color: white;
-    font-family: Arial;
     font-size: 1vw;
 }
 .block {
@@ -120,15 +122,13 @@
     padding-right: 100px;
     border-right: 2px solid white;
 }
-.elips {
+.elips img{
     width: 150px;
     height: 150px;
-    background-color: beige;
-    border-radius: 50%;
 }
 .info-avatar p {
     color: white;
-    font-family: Arial;
+    font-family: 'Philosopher';
     font-size: 1.2vw;
 }
 .info-info {
@@ -148,7 +148,7 @@
 p {
     color: white;
     font-size: 1.2vw;
-    font-family: Arial;
+    font-family: 'Comfortaa';
 }
 .info-password {
     display: flex;
@@ -159,7 +159,7 @@ p {
 p {
     color: white;
     font-size: 1.2vw;
-    font-family: Arial;
+    font-family: 'Comfortaa';
 }
 .info-email {
     display: flex;
@@ -170,7 +170,7 @@ p {
 p {
     color: white;
     font-size: 1.2vw;
-    font-family: Arial;
+    font-family: 'Comfortaa';
 }
 /*поле карта лояльности*/
 .card {
@@ -186,7 +186,7 @@ p {
 }
 .card p {
     color: white;
-    font-family: Arial;
+    font-family: 'Comfortaa';
     font-size: 1vw;
 }
 .card-info {
@@ -216,7 +216,7 @@ form{
 }
 .btn_top1{
     font-size: 0.8vw;
-    font-family: 'Philosopher', sans-serif;
+    font-family: 'Philosopher';
     border: 1px solid white;
     color: white;
     background-color: #212529;
@@ -227,419 +227,772 @@ form{
     background-color: white;
     color: black;
 }
-@media screen and (max-width: 1800px) {
+/*верстка адаптива*/
+
+@media screen and (max-width: 1581px) {
+    /*шапка*/
+    .navigation{
+        font-size: 1.5vw;
+    }
+    .logo{
+        font-size: 2vw;
+    }
+    /*шапка*/
     .container {
-        display: flex;
         margin-top: 3.5vw;
-        flex-direction: column;
         gap: 5vw;
-        margin-left: 9vw;
-    }
-}
-@media screen and (max-width: 1650px) {
-    .container {
-        display: flex;
-        margin-top: 3.5vw;
-        flex-direction: column;
-        gap: 5vw;
-        margin-left: 11vw;
-    }
-}
-@media screen and (max-width: 1600px) {
-    .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 850px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-    .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 850px;
-        height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 1500px) {
-    .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 825px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-    .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 825px;
-        height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 1450px) {
-    .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 850px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-    .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 850px;
-        height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
-    }
-    .card-info p {
-        color: white;
-        font-size: 1.2vw;
-        font-family: Arial;
-    }
-    .card p {
-        color: white;
-        font-family: Arial;
-        font-size: 1.4vw;
+        margin-left: 10vw;
     }
     .info p {
-        color: white;
-        font-family: Arial;
-        font-size: 1.4vw;
+        font-size: 1.3vw;
     }
-}
-@media screen and (max-width: 1420px) {
-    .container {
-        display: flex;
-        margin-top: 3.5vw;
-        flex-direction: column;
-        gap: 5vw;
-        margin-left: 13vw;
+    .info-login h4{
+        font-size: 1.3vw;
     }
-}
-@media screen and (max-width: 1400px) {
-    .navigation {
-        font-size: 2vw;
-        font-family: "Philosopher", sans-serif;
-    }
-}
-@media screen and (max-width: 1350px) {
-    .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 825px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
+    .info-email h4{
+        font-size: 1.3vw;
     }
     .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 825px;
-        height: auto;
-        padding: 25px 50px 25px;
+        box-shadow: 14px 14px 20px rgba(0, 0, 0, 0.49);
+        width: 1000px;
+        height: 460px;
+        padding: 25px 50px 0;
         gap: 2vw;
+        margin-bottom: 10vw;
     }
-}
-@media screen and (max-width: 1300px) {
-    .info-avatar {
-        padding-right: 60px;
+    .card p {
+        font-size: 1.3vw;
     }
-    .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 750px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-    .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 750px;
-        height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
-    }
-    .container {
-        margin-left: 15vw;
-    }
-    .point p {
-        color: white;
-        font-family: "Comfortaa";
-        font-size: 1.7vw;
-    }
-    button {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: auto;
-        height: auto;
-        padding: 10px 20px;
+    .textarea-form {
+        margin-top: 1vw;
+        margin-bottom: 1.5vw;
         font-size: 1.2vw;
-        font-family: "Philosopher";
-        letter-spacing: 2.5px;
-        text-align: center;
+        border: 1.5px solid white;
+        padding: 1vw;
     }
-}
-@media screen and (max-width: 1250px) {
-    .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 725px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-    .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 725px;
-        height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
-    }
-    .container {
-        margin-left: 18vw;
-    }
-    button {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
+    .btn_top1 {
+        font-size: 1vw;
         border: 1px solid white;
-        width: auto;
-        height: auto;
-        padding: 10px 20px;
-        font-size: 1.4vw;
-        font-family: "Philosopher";
-        letter-spacing: 2.5px;
-        text-align: center;
+        color: white;
+        background-color: #212529;
+        padding: 0.4vw 3vw;
+        transition: 2s;
     }
 }
-@media screen and (max-width: 1200px) {
-    .point {
-        display: flex;
-        width: 225px;
-        height: 60px;
-        padding-left: 50px;
-        align-items: center;
-        background: rgba(25, 29, 33, 0.9);
+@media screen and (max-width: 1441px){
+    .navigation {
+        font-size: 1.7vw;
+        gap: 1vw;
+        border-right: 2px solid white;
+        padding-left: 70px;
+        width: 23vw;
+        margin: 0;
     }
-    .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 700px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-    .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 700px;
-        height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
-    }
-    .info-password h4,
-    p {
-        color: white;
-        font-size: 1.5vw;
-        font-family: Arial;
-    }
-    .info-email h4,
-    p {
-        color: white;
-        font-size: 1.4vw;
-        font-family: Arial;
-    }
-    .info-login h4,
-    p {
-        color: white;
-        font-size: 1.5vw;
-        font-family: Arial;
-    }
-}
-@media screen and (max-width: 1150px) {
-    .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 650px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-    .info-avatar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        gap: 2vw;
-        padding: 0;
-        padding-bottom: 4vw;
-        border: none;
+    .navigation-f2 {
+        margin-top: 3vw;
+        gap: 1.5vw;
+        padding-bottom: 1vw;
         border-bottom: 2px solid white;
     }
-    .info-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2vw;
-        align-items: center;
+    .navigation-f3 {
+        margin-top: 2vw;
+        gap: 1.5vw;
+        padding-bottom: 1vw;
+        border-bottom: 2px solid white;
     }
-    .block {
-        display: flex;
-        flex-direction: column;
-        gap: 4.5vw;
-        text-align: center;
-        justify-content: center;
+    .navigation li {
+        width: auto;
     }
-    .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 650px;
-        height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
-    }
-    .container {
-        margin-left: 20vw;
-    }
-}
-@media screen and (max-width: 1100px) {
-    .container {
-        margin-left: 18vw;
+    .navigation-f4 {
+         margin-top: 2vw;
+         gap: 1.5vw;
+         margin-bottom: 50vw;
+     }
+    .d-f {
+        gap: 7vw;
+        margin-left: 22vw;
     }
     .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 600px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
-    }
-    .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 600px;
-        height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
+        width: 900px;
+        height: 320px;
+        padding: 25px 50px 0;
+        gap: 3vw;
     }
     .info p {
         color: white;
-        font-family: Arial;
-        font-size: 1.6vw;
+        font-size: 1.4vw;
     }
-    .info-password h4,
-    p {
-        color: white;
-        font-size: 1.8vw;
-        font-family: Arial;
+    .elips img {
+        width: auto;
+        height: 135px;
     }
-    .info-email h4,
-    p {
-        color: white;
-        font-size: 1.8vw;
-        font-family: Arial;
+    .info-info {
+        gap: 3vw;
     }
-    .info-login h4,
-    p {
-        color: white;
-        font-size: 1.8vw;
-        font-family: Arial;
+    .info-login h4{
+        font-size: 1.5vw;
+    }
+    .info-email h4{
+        font-size: 1.5vw;
+    }
+    /*отзыв*/
+    .card {
+        width: 900px;
+        height: auto;
+        padding: 25px 50px 25px;
+        gap: 3vw;
+        margin-bottom: 10vw;
     }
     .card p {
-        color: white;
-        font-family: Arial;
-        font-size: 1.6vw;
+        font-size: 1.3vw;
     }
-    button {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: auto;
-        height: auto;
-        padding: 10px 20px;
-        font-size: 1.6vw;
-        font-family: "Philosopher";
-        letter-spacing: 2.5px;
-        text-align: center;
+    .textarea-form {
+        margin: 0 0 30px;
+        font-size: 1.2vw;
+        padding: 1vw;
+        resize: none;
     }
-    .navigation li {
-        width: 225px;
+    .btn_top1 {
+        font-size: 1.2vw;
+        padding: 0.7vw 3vw;
+        transition: 2s;
     }
 }
-@media screen and (max-width: 1050px) {
-    .navigation {
-        font-size: 2.3vw;
-        font-family: "Philosopher", sans-serif;
+@media screen and (max-width: 1301px){
+    /*шапка*/
+    .navigation{
+        font-size: 1.9vw;
+        gap: 2vw;
     }
-    .log {
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*шапка*/
+    /*заголовыок*/
+    .point {
+        width: 250px;
+        height: 60px;
+        padding-left: 50px;
+    }
+    .point p {
+        font-size: 1.8vw;
+    }
+    /*инфо*/
+    .info {
+        width: 850px;
+        height: 320px;
+        padding: 25px 50px 0;
+        gap: 4vw;
+    }
+    .info p {
+        font-size: 1.6vw;
+    }
+    .elips img {
+        width: auto;
+        height: 120px;
+    }
+    .info-avatar {
+        gap: 3vw;
+        padding-right: 100px;
+    }
+    .info-login {
+        gap: 2vw;
+        padding-bottom: 0.35vw;
+    }
+    .info-login h4 {
+        font-size: 1.6vw;
+    }
+    .info-email {
+        gap: 1vw;
+        padding-bottom: 0.35vw;
+    }
+    .info-email h4 {
+        font-size: 1.6vw;
+    }
+    /*отзыв*/
+    .card {
+        width: 850px;
+        height: auto;
+        padding: 25px 50px 25px;
+        gap: 3vw;
+        margin-bottom: 10vw;
+    }
+    .card p {
+        font-size: 1.6vw;
+    }
+    .textarea-form {
+        margin: 0 0 30px;
+        font-size: 1.4vw;
+        padding: 1.2vw;
+    }
+    .btn_top1 {
+        font-size: 1.3vw;
+        padding: 0.7vw 3vw;
+        transition: 2s;
+    }
+}
+@media screen and (max-width: 1282px){
+    /*шапка*/
+    .navigation{
+        font-size: 1.7vw;
+    }
+    .logo > a{
+        font-size: 2.5vw;
+    }
+    /*шапка*/
+}
+@media screen and (max-width: 1221px){
+    .navigation {
+        font-size: 2vw;
+        width: 25vw;
+    }
+    .navigation-f1 {
+        margin-top: 4vw;
+    }
+    /*инфо*/
+    .info {
+        width: 780px;
+        height: 305px;
+        padding: 25px 50px 0;
+        gap: 4vw;
+    }
+    .info p {
+        font-size: 1.75vw;
+    }
+    .info-avatar {
+        gap: 3vw;
+        padding-right: 80px;
+    }
+    .elips img {
+        width: auto;
+        height: 110px;
+    }
+    .info-login {
+        gap: 2vw;
+        padding-bottom: 0.35vw;
+    }
+    .info-login h4 {
+        font-size: 1.7vw;
+    }
+    .info-email {
+        gap: 1vw;
+        padding-bottom: 0.35vw;
+    }
+    .info-email h4 {
+        font-size: 1.7vw;
+    }
+    /*отзыв*/
+    .card {
+        width: 780px;
+        height: auto;
+        padding: 25px 50px 25px;
+        gap: 3vw;
+        margin-bottom: 10vw;
+    }
+    .card p {
+        font-size: 1.75vw;
+    }
+    .btn_top1 {
+        font-size: 1.4vw;
+        padding: 0.7vw 3vw;
+        transition: 2s;
+    }
+}
+@media screen and (max-width: 1141px){
+    /*шапка*/
+    .navigation{
+        font-size: 2.1vw;
+        gap: 2vw;
+    }
+    .logo > a{
+        font-size: 2.7vw;
+    }
+    /*инфо*/
+    .point {
+        width: 200px;
+        height: 60px;
+        padding-left: 50px;
+    }
+    .container {
+        margin-top: 3.5vw;
+        gap: 5vw;
+        margin-left: 10vw;
+    }
+    .info {
+        width: 680px;
+        height: 295px;
+        padding: 25px 50px 0;
+        gap: 4vw;
+    }
+    .info-avatar {
+        gap: 3vw;
+        padding-right: 50px;
+    }
+    .block {
+        gap: 2vw;
+    }
+    /*отзыв*/
+    .card {
+        width: 680px;
+        height: auto;
+        padding: 25px 50px 25px;
+        gap: 3vw;
+        margin-bottom: 10vw;
+    }
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 3.5vw;
+    }
+}
+@media screen and (max-width: 1041px){
+    /*шапка*/
+    .navigation{
+        font-size: 2.2vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    .navigation-f1 {
+        margin-top: 5vw;
+    }
+    /*заголовок*/
+    .d-f {
+        margin-left: 20vw;
+    }
+    .point {
+        width: 200px;
+        height: 50px;
+        padding-left: 30px;
+    }
+    .point p {
+        font-size: 2.2vw;
+    }
+    /*инфо*/
+    .info {
+        width: 620px;
+        height: 295px;
+        padding: 25px 30px 0;
+        gap: 4vw;
+    }
+    .info-avatar {
+        gap: 3vw;
+        padding-right: 30px;
+    }
+    .info p {
+        font-size: 1.9vw;
+    }
+    .info-login h4 {
+        font-size: 1.9vw;
+    }
+    .info-login {
+        gap: 2vw;
+        padding-bottom: 0.5vw;
+    }
+    .info-email h4 {
+        font-size: 1.9vw;
+    }
+    .info-email {
+        gap: 1vw;
+        padding-bottom: 0.5vw;
+    }
+    /*отзыв*/
+    .card {
+        width: 620px;
+        height: auto;
+        padding: 25px 30px 25px;
+        gap: 3vw;
+        margin-bottom: 10vw;
+    }
+    .card p {
+        font-size: 1.9vw;
+    }
+    .textarea-form {
+        margin: 0 0 30px;
+        font-size: 1.6vw;
+        padding: 1.3vw;
+    }
+    .btn_top1 {
+        font-size: 1.5vw;
+        padding: 0.7vw 3vw;
+        transition: 2s;
+    }
+}
+@media screen and (max-width: 1000px){
+    /*шапка*/
+    .navigation{
+        font-size: 2.2vw;
+    }
+    .logo > a{
         font-size: 3vw;
     }
 }
-@media screen and (max-width: 1000px) {
-    .container {
-        margin-left: 18vw;
+@media screen and (max-width: 901px){
+    /*шапка*/
+    .navigation{
+        font-size: 2.5vw;
+        padding-left: 50px;
+    }
+    .log > a{
+        font-size: 3vw;
     }
     .info {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 575px;
-        height: auto;
-        padding: 25px 25px 25px;
-        gap: 2vw;
-        flex-direction: column;
+        width: 580px;
+        height: 295px;
+        padding: 25px 30px 0;
+        gap: 4vw;
     }
     .card {
-        display: flex;
-        background: rgba(25, 29, 33, 0.9);
-        box-shadow: 14px 14px 20px rgb(0 0 0 / 49%);
-        width: 575px;
+        width: 580px;
         height: auto;
-        padding: 25px 50px 25px;
-        gap: 2vw;
+        padding: 25px 30px 25px;
+        gap: 3vw;
+        margin-bottom: 10vw;
     }
 }
-/*планшет*/
+@media screen and (max-width: 841px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 2.1vw;
+        margin-bottom: 2.1vw;
+        font-size: 2.4vw;
+        gap: 2.5vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*шапка*/
+
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.15vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.15vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 769px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navbar{
+        margin: 2vw 0;
+        justify-content: space-around;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 250px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 3vw;
+        flex-direction: column;
+        /*background-color: #191D21;*/
+        background-color: #191d21ed;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+        transition: 2s;
+        margin: 0;
+        padding: 6vw 0;
+    }
+    .navigation li{
+        font-size: 2.7vw;
+    }
+    .navigation.active{
+        left: 0;
+    }
+    /*шапка*/
+
+
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.35vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 701px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navigation li{
+        font-size: 3vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*шапка*/
+
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.55vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 589px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4.7vw;
+    }
+    .navbar{
+        margin: 3vw 0;
+    }
+    .navigation{
+        padding: 8vw 0;
+        gap: 4.5vw;
+    }
+    .navigation li{
+        font-size: 3.7vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*шапка*/
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 471px){
+    /*шапка*/
+    .logo > a{
+        font-size: 5.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 125px;
+    }
+    .navigation{
+        padding: 9.5vw 0;
+        gap: 5.5vw;
+    }
+    .navigation li{
+        font-size: 4.2vw;
+    }
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 6.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3.9vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 426px){
+    /*шапка*/
+    .logo > a{
+        font-size: 6.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 100px;
+    }
+    .navigation{
+        padding: 10.5vw 0;
+        gap: 6.5vw;
+    }
+    .navigation li{
+        font-size: 5vw;
+    }
+    /*шапка*/
+
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 7.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1.5vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.2vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 376px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 7.5vw;
+    }
+    .navbar{
+        margin: 5vw 0;
+    }
+    .hamburger{
+        padding-left: 50px;
+    }
+    .navigation{
+        padding: 12.5vw 0;
+        gap: 8.5vw;
+    }
+    .navigation li{
+        font-size: 6vw;
+    }
+    /*шапка*/
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 8vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.65vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+

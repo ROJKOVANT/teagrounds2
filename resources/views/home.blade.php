@@ -62,7 +62,9 @@
             <p>Ваши данные</p>
             <div class="block">
                 <div class="info-avatar">
-                    <div class="elips"></div>
+                    <div class="elips">
+                        <img src="img/user.png" alt="">
+                    </div>
                     <p>{{Auth::user()->fio}}</p>
                 </div>
                 <div class="info-info">

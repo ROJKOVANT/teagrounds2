@@ -74,9 +74,7 @@
 
             <!--Клиенты-->
             <div class="container7">
-                <li>
-                    <a href="categorys">Информация о заказе</a>
-                </li>
+                <p>Информация о заказе</p>
                 <table class="table-block">
                     <tr class="table-title">
                         <th>Изображение товара</th>

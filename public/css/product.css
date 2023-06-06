@@ -28,7 +28,6 @@ body{
     padding-left: 70px;
     background-color: #212529;
 }
-
 .navigation li {
     width: 300px;
 }
@@ -37,11 +36,9 @@ body{
     color: white;
     font-family: "Philosopher";
 }
-
 .navigation-f1 {
     margin-top: 3vw;
 }
-
 .navigation-f2 {
     display: flex;
     flex-direction: column;
@@ -50,7 +47,6 @@ body{
     padding-bottom: 1vw;
     border-bottom: 2px solid white;
 }
-
 .navigation-f3 {
     display: flex;
     flex-direction: column;
@@ -59,7 +55,6 @@ body{
     padding-bottom: 1vw;
     border-bottom: 2px solid white;
 }
-
 .navigation-f4 {
     display: flex;
     flex-direction: column;
@@ -67,7 +62,6 @@ body{
     gap: 1.5vw;
     margin-bottom: 50vw;
 }
-
 /*начало Задайте нам свой вопрос*/
 .d-f {
     display: flex;
@@ -135,24 +129,22 @@ body{
     font-size: 1.2vw;
     font-family: 'Philosopher';
 }
-
 .card img {
-    width: 175px;
+    width: auto;
     height: 175px;
+    border-radius: 50%;
 }
-
 .card-text {
     color: white;
     font-size: 1.3vw;
     font-family: 'Philosopher';
+    text-align: center;
 }
-
 .btn_top1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
 .btn_top1_more1 {
     text-decoration: none;
     background-color: transparent;
@@ -171,686 +163,687 @@ body{
     color: black;
     transition: 2s;
 }
+/*верстка адаптива*/
 
-/*АДАПТИВ*/
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1581px) {
+    /*шапка*/
+    .navigation{
+        font-size: 1.6vw;
+        padding-right: 50px;
+    }
+    .log{
+        font-size: 2.1vw;
+    }
+    .navigation li {
+        width: auto;
+    }
+    .navigation-f1 {
+        margin-top: 4vw;
+    }
     .point {
-        width: 220px;
+        width: 270px;
+        height: 60px;
+        padding-left: 50px;
+    }
+    .card img {
+        width: auto;
+        height: 11vw;
+        border-radius: 50%;
+    }
+    .btn_top1_more1 {
+        width: 13vw;
+        margin-bottom: 1vw;
+        height: 35px;
+        font-size: 0.9vw;
+    }
+}
+@media screen and (max-width: 1441px){
+    .navigation{
+        font-size: 1.7vw;
+        padding-right: 50px;
+    }
+    .log{
+        font-size: 2.2vw;
+    }
+    .point {
+        width: 200px;
         height: 50px;
         padding-left: 50px;
-        background: rgba(25, 29, 33, 0.9);
     }
-
-    .container {
-        margin-left: 9vw;
-    }
-
-    .container7 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 5vw;
-        row-gap: 5vw;
-    }
-}
-
-@media screen and (max-width: 1600px) {
-    .container {
-        margin-left: 10vw;
-    }
-
-    .navigation {
-        font-size: 1.7vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 60px;
-        background-color: #212529;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    .container {
-        margin-left: 9.5vw;
-    }
-
-    .container7 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 4vw;
-        row-gap: 5vw;
-    }
-
-    .navigation {
-        font-size: 1.8vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 60px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 275px;
-    }
-
-    .point {
-        width: 225px;
-        height: 50px;
-        padding-left: 30px;
-        background: rgba(25, 29, 33, 0.9);
-    }
-
     .point p {
         font-size: 1.7vw;
     }
-
-    .global1 h4 {
+    .d-f {
+        gap: 7vw;
+        margin-left: 20vw;
+    }
+    .card {
+        border: 2px solid white;
+        gap: 1.5vw;
+    }
+    .card-title {
+        margin-top: 1vw;
         font-size: 1.4vw;
     }
-
-    .global1 h5 {
-        font-size: 1.3vw;
-    }
-
-    .global2 h4 {
-        font-size: 1.4vw;
-    }
-
-    .global2 h5 {
-        font-size: 1.3vw;
-    }
-
-    .btn_top1_more1 {
-        border: 1px solid white;
-        font-size: 1.3vw;
-    }
-
-    .btn_top2_more2 {
-        border: 1px solid white;
-        font-size: 1.3vw;
-    }
-}
-
-@media screen and (max-width: 1450px) {
-    .btn_top1_more1 {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: auto;
-        height: auto;
-        padding: 8px 25px;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-        letter-spacing: 2.5px;
-    }
-
-    .btn_top2_more2 {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: auto;
-        height: auto;
-        padding: 8px 25px;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-        letter-spacing: 2.5px;
-    }
-
-    .container {
-        margin-left: 9vw;
-    }
-
-    .navigation {
-        font-size: 1.8vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 55px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 250px;
-    }
-}
-
-@media screen and (max-width: 1422px) {
-    .container7 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 2vw;
-        row-gap: 5vw;
-    }
-}
-
-@media screen and (max-width: 1400px) {
-    .container7 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 3vw;
-        row-gap: 5vw;
-    }
-
-    .global1 h4 {
-        font-size: 1.4vw;
-    }
-
-    .global1 h5 {
-        font-size: 1.3vw;
-    }
-
-    .global1 p {
+    .card-text {
         font-size: 1.5vw;
     }
-
-    .global2 h4 {
-        font-size: 1.4vw;
-    }
-
-    .global2 h5 {
-        font-size: 1.3vw;
-    }
-
-    .global2 p {
-        font-size: 1.5vw;
-    }
-
-    .global1 {
-        background-color: #191D21;
-        width: 275px;
-        height: 400px;
-        border: 1px solid white;
-    }
-
-    .global2 {
-        background-color: #191D21;
-        width: 275px;
-        height: 400px;
-        border: 1px solid white;
+    .btn_top1_more1 {
+        width: 13vw;
+        margin-bottom: 1vw;
+        height: 35px;
+        font-size: 1.1vw;
     }
 }
-
-@media screen and (max-width: 1374px) {
-    .container7 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 2vw;
-        row-gap: 5vw;
+@media screen and (max-width: 1301px){
+    /*шапка*/
+    .navigation{
+        font-size: 1.9vw;
+        gap: 2vw;
     }
-}
-
-@media screen and (max-width: 1350px) {
-    .container7 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 3vw;
-        row-gap: 5vw;
+    .log{
+        font-size: 2.7vw;
     }
-
-    .navigation {
-        font-size: 1.8vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 50px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 225px;
-    }
-
-    .container {
-        margin-left: 7vw;
-    }
-
     .point {
-        width: 200px;
+        width: 210px;
         height: 50px;
-        padding-left: 30px;
-        background: rgba(25, 29, 33, 0.9);
-    }
-
-    .point p {
-        font-size: 1.7vw;
-    }
-}
-
-@media screen and (max-width: 1330px) {
-    .container7 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 2vw;
-        row-gap: 5vw;
-    }
-}
-
-@media screen and (max-width: 1300px) {
-    .container7 {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        column-gap: 2vw;
-        row-gap: 5vw;
-    }
-
-    .navigation {
-        font-size: 1.8vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 40px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 215px;
-    }
-
-    .btn_top1_more1 {
-        border: 1px solid white;
-        font-size: 1.3vw;
-    }
-
-    .btn_top2_more2 {
-        border: 1px solid white;
-        font-size: 1.3vw;
-    }
-
-    .container {
-        margin-left: 6vw;
-    }
-
-    .global1 {
-        background-color: #191D21;
-        width: 275px;
-        height: 375px;
-        border: 1px solid white;
-    }
-
-    .global2 {
-        background-color: #191D21;
-        width: 275px;
-        height: 375px;
-        border: 1px solid white;
-    }
-}
-
-@media screen and (max-width: 1270px) {
-    .navigation {
-        font-size: 2vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 45px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 225px;
-    }
-
-    .container {
-        margin-left: 9vw;
-    }
-
-    .container7 {
-        column-gap: 3vw;
-        row-gap: 5vw;
-    }
-
-    .global1 {
-        display: flex;
-        background-color: #191D21;
-        width: 250px;
-        height: 400px;
-        border: 1px solid white;
-        gap: 1vw;
-    }
-
-    .global2 {
-        display: flex;
-        background-color: #191D21;
-        width: 250px;
-        height: 400px;
-        border: 1px solid white;
-        gap: 1vw;
-    }
-
-    .global1 h4 {
-        font-size: 1.5vw;
-    }
-
-    .global1 h5 {
-        font-size: 1.4vw;
-    }
-
-    .global1 p {
-        font-size: 1.6vw;
-    }
-
-    .global2 h4 {
-        font-size: 1.5vw;
-    }
-
-    .global2 h5 {
-        font-size: 1.4vw;
-    }
-
-    .global2 p {
-        font-size: 1.6vw;
-    }
-
-    .btn_top1_more1 {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: auto;
-        height: auto;
-        padding: 8px 25px;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-        letter-spacing: 2.5px;
-    }
-
-    .btn_top2_more2 {
-        text-decoration: none;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        width: auto;
-        height: auto;
-        padding: 8px 25px;
-        font-size: 1.3vw;
-        font-family: 'Philosopher';
-        letter-spacing: 2.5px;
-    }
-}
-
-@media screen and (max-width: 1250px) {
-    .global1 {
-        display: flex;
-        background-color: #191D21;
-        width: 240px;
-        height: 380px;
-        border: 1px solid white;
-        gap: 1vw;
-    }
-
-    .global2 {
-        display: flex;
-        background-color: #191D21;
-        width: 240px;
-        height: 380px;
-        border: 1px solid white;
-        gap: 1vw;
-    }
-
-    .global1 img {
-        width: 200px;
-        height: 125px;
-    }
-
-    .global2 img {
-        width: 200px;
-        height: 125px;
-    }
-
-    .global1 h4 {
-        font-size: 1.6vw;
-    }
-
-    .global1 h5 {
-        font-size: 1.5vw;
-    }
-
-    .global1 p {
-        font-size: 1.7vw;
-    }
-
-    .global2 h4 {
-        font-size: 1.6vw;
-    }
-
-    .global2 h5 {
-        font-size: 1.5vw;
-    }
-
-    .global2 p {
-        font-size: 1.7vw;
-    }
-
-    .btn_top1_more1 {
-        border: 1px solid white;
-        font-size: 1.4vw;
-        font-family: 'Philosopher';
-    }
-
-    .btn_top2_more2 {
-        border: 1px solid white;
-        font-size: 1.4vw;
-        font-family: 'Philosopher';
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .global1 {
-        display: flex;
-        background-color: #191D21;
-        width: 240px;
-        height: 350px;
-        border: 1px solid white;
-        gap: 1vw;
-    }
-
-    .global2 {
-        display: flex;
-        background-color: #191D21;
-        width: 240px;
-        height: 350px;
-        border: 1px solid white;
-        gap: 1vw;
-    }
-
-    .navigation {
-        font-size: 2vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 40px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 215px;
-    }
-
-    .container {
-        margin-left: 8vw;
-    }
-}
-
-@media screen and (max-width: 1180px) {
-    .navigation {
-        font-size: 2vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 35px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 200px;
-    }
-
-    .container {
-        margin-left: 8vw;
-    }
-
-    .container7 {
-        column-gap: 2vw;
-        row-gap: 5vw;
-    }
-}
-
-@media screen and (max-width: 1150px) {
-    .container {
-        margin-left: 6.5vw;
-    }
-}
-
-@media screen and (max-width: 1125px) {
-    .navigation {
-        font-size: 2vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 30px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 200px;
-    }
-}
-
-@media screen and (max-width: 1117px) {
-    .navigation {
-        font-size: 2vw;
-        font-family: "Philosopher", sans-serif;
-        padding-left: 30px;
-        background-color: #212529;
-    }
-
-    .navigation li {
-        width: 190px;
-    }
-
-    .container {
-        margin-left: 6vw;
-    }
-}
-
-@media screen and (max-width: 1108px) {
-    .navigation {
-        font-size: 2.4vw;
-        font-family: "Philosopher", sans-serif;
         padding-left: 50px;
-        background-color: #212529;
     }
-
-    .log {
+    .point p {
+        font-size: 1.9vw;
+    }
+    .d-f {
+        margin-left: 21vw;
+    }
+    .card {
+        border: 2px solid white;
+        gap: 2vw;
+    }
+    .card img {
+        width: auto;
+        height: 12vw;
+        border-radius: 50%;
+    }
+    .card-title {
+        margin-top: 1vw;
+        font-size: 1.5vw;
+    }
+    .card-text {
+        font-size: 1.6vw;
+    }
+    .btn_top1_more1 {
+        width: 13vw;
+        margin-bottom: 1vw;
+        height: 4vw;
+        font-size: 1.2vw;
+    }
+}
+@media screen and (max-width: 1282px){
+    /*шапка*/
+    .navigation{
+        font-size: 2vw;
+        gap: 2vw;
+        padding-right: 30px;
+    }
+    .log{
         font-size: 2.9vw;
     }
-
-    .navigation li {
-        width: 225px;
+    .point {
+        width: 210px;
+        height: 50px;
+        padding-left: 50px;
     }
-
-    .container {
-        margin-left: 16vw;
-    }
-
-    .global1 h4 {
-        font-size: 1.7vw;
-    }
-
-    .global1 h5 {
-        font-size: 1.6vw;
-    }
-
-    .global1 p {
-        font-size: 1.8vw;
-    }
-
-    .global2 h4 {
-        font-size: 1.7vw;
-    }
-
-    .global2 h5 {
-        font-size: 1.6vw;
-    }
-
-    .global2 p {
-        font-size: 1.8vw;
-    }
-
-    .btn_top1_more1 {
-        border: 1px solid white;
-        font-size: 1.5vw;
-        font-family: 'Philosopher';
-    }
-
-    .btn_top2_more2 {
-        border: 1px solid white;
-        font-size: 1.5vw;
-        font-family: 'Philosopher';
-    }
-
-    .container7 {
-        column-gap: 5vw;
-        row-gap: 5vw;
-    }
-
     .point p {
         font-size: 2vw;
     }
-}
-
-@media screen and (max-width: 1050px) {
-    .container {
-        margin-left: 18vw;
+    .d-f {
+        margin-left: 21vw;
+    }
+    .container1 {
+        grid-template-columns: repeat(auto-fill, 19vw);
+        gap: 5.2vw 3vw;
+    }
+    .card {
+        border: 2px solid white;
+        gap: 2vw;
+    }
+    .card img {
+        width: auto;
+        height: 13vw;
+        border-radius: 50%;
+    }
+    .card-title {
+        margin-top: 2vw;
+        font-size: 1.6vw;
+    }
+    .card-text {
+        font-size: 1.8vw;
+    }
+    .btn_top1_more1 {
+        width: 13vw;
+        margin-bottom: 2vw;
+        height: 4vw;
+        font-size: 1.4vw;
     }
 }
-
-@media screen and (max-width:1025px) {
-    .navigation {
-        font-size: 2.5vw;
-        font-family: "Philosopher", sans-serif;
+@media screen and (max-width: 1141px){
+    /*шапка*/
+    .navigation{
+        font-size: 2vw;
+        gap: 2vw;
+        padding-right: 30px;
+    }
+    .log{
+        font-size: 2.9vw;
+    }
+    .point {
+        width: 210px;
+        height: 50px;
         padding-left: 50px;
-        background-color: #212529;
     }
-
     .point p {
         font-size: 2.2vw;
     }
-
-    .log {
-        font-size: 3vw;
+    .d-f {
+        margin-left: 22vw;
     }
-
-    .navigation li {
-        width: 225px;
+    .container1 {
+        grid-template-columns: repeat(auto-fill, 19vw);
+        gap: 5.2vw 3vw;
     }
-
-    .global1 h4 {
+    .card {
+        border: 2px solid white;
+        gap: 2vw;
+    }
+    .card img {
+        width: auto;
+        height: 14vw;
+        border-radius: 50%;
+    }
+    .card-title {
+        margin-top: 2vw;
         font-size: 1.8vw;
     }
-
-    .global1 h5 {
-        font-size: 1.7vw;
+    .card-text {
+        font-size: 2vw;
     }
-
-    .global1 p {
-        font-size: 1.9vw;
-    }
-
-    .global2 h4 {
-        font-size: 1.8vw;
-    }
-
-    .global2 h5 {
-        font-size: 1.7vw;
-    }
-
-    .global2 p {
-        font-size: 1.9vw;
-    }
-
     .btn_top1_more1 {
-        border: 1px solid white;
+        width: 13vw;
+        margin-bottom: 2vw;
+        height: 4vw;
         font-size: 1.6vw;
-        font-family: 'Philosopher';
-    }
-
-    .btn_top2_more2 {
-        border: 1px solid white;
-        font-size: 1.6vw;
-        font-family: 'Philosopher';
     }
 }
+@media screen and (max-width: 1041px){
+    /*шапка*/
+    .navigation{
+        font-size: 2.2vw;
+        gap: 2vw;
+        padding-right: 40px;
+        padding-left: 50px;
+    }
+    .log{
+        font-size: 3vw;
+    }
+    .point {
+        width: 210px;
+        height: 50px;
+        padding-left: 50px;
+    }
+    .point p {
+        font-size: 2.2vw;
+    }
+    .d-f {
+        margin-left: 22vw;
+    }
+    .container1 {
+        grid-template-columns: repeat(auto-fill, 19vw);
+        gap: 5.2vw 3vw;
+    }
+    .card {
+        border: 2px solid white;
+        gap: 2vw;
+    }
+    .card img {
+        width: auto;
+        height: 14vw;
+        border-radius: 50%;
+    }
+    .card-title {
+        margin-top: 2vw;
+        font-size: 1.8vw;
+    }
+    .card-text {
+        font-size: 2vw;
+    }
+    .btn_top1_more1 {
+        width: 13vw;
+        margin-bottom: 2vw;
+        height: 4vw;
+        font-size: 1.6vw;
+    }
+}
+@media screen and (max-width: 1000px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.1vw;
+        gap: 4vw;
+    }
+    .logo > a{
+        font-size: 2.8vw;
+    }
+    /*шапка*/
 
-/*адаптив планшет*/
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 4vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.85vw;
+    }
+    footer a{
+        font-size: 2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.95vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
+    }
+}
+@media screen and (max-width: 901px){
+    /*шапка*/
+    .navigation{
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        font-size: 2.3vw;
+        gap: 3vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*шапка*/
+
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3.7vh;
+        margin-bottom: 3.7vh;
+    }
+    .conf > a{
+        font-size: 2vw;
+    }
+    footer a{
+        font-size: 2.2vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 841px) {
+    /*шапка*/
+    .navigation{
+        margin-top: 2.1vw;
+        margin-bottom: 2.1vw;
+        font-size: 2.4vw;
+        gap: 2.5vw;
+    }
+    .logo > a{
+        font-size: 3vw;
+    }
+    /*шапка*/
+
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 3vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.15vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.15vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 769px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navbar{
+        margin: 2vw 0;
+        justify-content: space-around;
+    }
+    .hamburger{
+        display: block;
+        padding-left: 250px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navigation{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 3vw;
+        flex-direction: column;
+        /*background-color: #191D21;*/
+        background-color: #191d21ed;
+        border-bottom: 2px solid white;
+        width: 100%;
+        text-align: center;
+        transition: 2s;
+        margin: 0;
+        padding: 6vw 0;
+    }
+    .navigation li{
+        font-size: 2.7vw;
+    }
+    .navigation.active{
+        left: 0;
+    }
+    /*шапка*/
+
+
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.35vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 701px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4vw;
+    }
+    .navigation li{
+        font-size: 3vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*шапка*/
+
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2.7vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:2.55vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 2.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 589px){
+    /*шапка*/
+    .logo > a{
+        font-size: 4.7vw;
+    }
+    .navbar{
+        margin: 3vw 0;
+    }
+    .navigation{
+        padding: 8vw 0;
+        gap: 4.5vw;
+    }
+    .navigation li{
+        font-size: 3.7vw;
+    }
+    .hamburger{
+        padding-left: 200px;
+    }
+    /*шапка*/
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 5.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 471px){
+    /*шапка*/
+    .logo > a{
+        font-size: 5.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 125px;
+    }
+    .navigation{
+        padding: 9.5vw 0;
+        gap: 5.5vw;
+    }
+    .navigation li{
+        font-size: 4.2vw;
+    }
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 6.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 2vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:3.9vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 3.8vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 426px){
+    /*шапка*/
+    .logo > a{
+        font-size: 6.5vw;
+    }
+    .navbar{
+        margin: 4vw 0;
+    }
+    .hamburger{
+        padding-left: 100px;
+    }
+    .navigation{
+        padding: 10.5vw 0;
+        gap: 6.5vw;
+    }
+    .navigation li{
+        font-size: 5vw;
+    }
+    /*шапка*/
+
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 7.5vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1.5vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.2vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.2vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
+@media screen and (max-width: 376px) {
+    /*шапка*/
+    .logo > a{
+        font-size: 7.5vw;
+    }
+    .navbar{
+        margin: 5vw 0;
+    }
+    .hamburger{
+        padding-left: 50px;
+    }
+    .navigation{
+        padding: 12.5vw 0;
+        gap: 8.5vw;
+    }
+    .navigation li{
+        font-size: 6vw;
+    }
+    /*шапка*/
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 8vw;
+    }
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 1vh;
+        margin-bottom: 3.2vh;
+    }
+    .conf > a{
+        font-size:4.65vw;
+    }
+    footer a{
+        font-size: 2.4vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 4.7vw;
+        width: 100%;
+        padding-top: 3.5vh;
+        padding-bottom: 3.5vh;
+    }
+}
