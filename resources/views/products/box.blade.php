@@ -3,7 +3,7 @@
 @section('content')
 
     <head>
-        <link rel="stylesheet" href="{{ asset("css/more.css") }}">
+        <link rel="stylesheet" href="{{ asset("css/box.css") }}">
     </head>
     <div class="navigation">
         @php
@@ -53,7 +53,7 @@
     <div class="d-f">
         <div class="container">
             <div class="point">
-                <p>@switch($gifts->box_type)
+                @switch($gifts->box_type)
                     @case('1')
                     <p class="card-text">Пластиковый пакет на бумажной основе</p>
                     @break
@@ -69,7 +69,7 @@
                     @case('4')
                     <p class="card-text">Бумажные обечайки на большие коробки</p>
                     @break
-                    @endswitch</p>
+                    @endswitch
             </div>
 
             <!--Клиенты-->
@@ -85,7 +85,24 @@
                         <th>Статус</th>
                     </tr>
                     <tr class="table-content">
-                        <th><img src="{{$gifts->picture}}" style="height: 5vw; width: 5vw;" alt=""></th>
+                        <th>@switch($gifts->box_type)
+                                @case('1')
+                                <img class="box" src="/img/image 33.png" alt="">
+                                @break
+
+                                @case('2')
+                                <img class="box" src="/img/image 37.png" alt="">
+                                @break
+
+                                @case('3')
+                                <img class="box" src="/img/image 35.png" alt="">
+                                @break
+
+                                @case('4')
+                                <img class="box" src="/img/image 36.png" alt="">
+                                @break
+                            @endswitch
+                        </th>
                         <th>@switch($gifts->box_type)
                                 @case('1')
                                 <p class="card-text">Пластиковый пакет на бумажной основе</p>

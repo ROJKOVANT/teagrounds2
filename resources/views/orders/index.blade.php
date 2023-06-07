@@ -11,21 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset("css/order.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/constructor.css") }}">
     <title>Корзина</title>
 </head>
 
 <body>
 <!--блок шапка-->
 <!--блок шапка-->
+<!--блок шапка-->
 <header>
     <div class="navbar">
         <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
         <ul class="navigation">
-            <li class="nav-item"><a href="/about" class="link-effect">О нас</a></li>
-            <li class="nav-item"><a href="/shop" class="link-effect">Магазин</a></li>
-            <li class="nav-item"><a href="/blog" class="link-effect">Блог</a></li>
-            <li class="nav-item"><a href="/constructor" class="link-effect">Конструктор</a></li>
-            <li class="nav-item"><a href="/carts" class="link-effect">Корзина</a></li>
+            <li class="nav-item"><a href="adminTovar" class="link-effect">Товары</a></li>
+            <li class="nav-item"><a href="adminBlog" class="link-effect">Статьи</a></li>
+            <li class="nav-item"><a href="/orders" class="link-effect">Заказы</a></li>
+            <li class="nav-item"><a href="/podaroc" class="link-effect">Наборы</a></li>
+            <li class="nav-item"><a href="/helpReview" class="link-effect">Запросы</a></li>
             <li class="nav-item"><a href="/register">
                     @auth
                         {{ Auth::user()->name }}
@@ -109,22 +111,35 @@
         </table>
     </section>
 
-    <!--блок footer-->
-    <footer>
-        <ul class="navigation_footer">
-            <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
-            <li><a href="/about" class="link-effect">О нас</a></li>
-            <li><a href="/shop" class="link-effect">Магазин</a></li>
-            <li><a href="/blog" class="link-effect">Блог</a></li>
-            <li><a href="/constructor" class="link-effect">Конструктор</a></li>
+<!--блок footer-->
+<footer>
+    <nav class="navbar">
+        <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
+        <ul class="navigation">
+            <li class="nav-item"><a href="adminTovar" class="link-effect">Товары</a></li>
+            <li class="nav-item"><a href="adminBlog" class="link-effect">Статьи</a></li>
+            <li class="nav-item"><a href="/orders" class="link-effect">Заказы</a></li>
+            <li class="nav-item"><a href="/podaroc" class="link-effect">Наборы</a></li>
+            <li class="nav-item"><a href="/helpReview" class="link-effect">Запросы</a></li>
+            <li class="nav-item"><a href="/register">
+                    @auth
+                        {{ Auth::user()->name }}
+                    @endauth
+
+                    @guest
+                        Войти
+                    @endguest
+                </a>
+            </li>
         </ul>
-        <div class="conf">
-            <a href="" class="link-effect">Политика конфидециальности</a>
-        </div>
-        <div class="cop">
-            <p>Tea Grounds © 2022 Все права защищены</p>
-        </div>
-    </footer>
+    </nav>
+    <div class="conf">
+        <a href="">Политика конфидециальности</a>
+    </div>
+    <div class="cop">
+        <p>Tea Grounds © 2022 Все права защищены</p>
+    </div>
+</footer>
 </body>
 
 </html>

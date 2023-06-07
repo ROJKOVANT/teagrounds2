@@ -21,11 +21,12 @@
     padding-left: 70px;
     background-color: #212529;
 }
-
+.log{
+    font-size: 2vw;
+}
 .navigation li {
     width: 300px;
 }
-
 .navigation a {
     color: white;
     font-family: 'Philosopher'
@@ -128,8 +129,8 @@
 }
 
 .global1 img {
-    width: 175px;
-    height: 175px;
+    width: auto;
+    height: 150px;
 }
 
 .global1 h4 {

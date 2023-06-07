@@ -5,13 +5,6 @@
     text-decoration: none;
     box-sizing: border-box;
 }
-body{
-    background-image: url("../img/imgheader1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-}
 /* бокавая панель управления*/
 .navigation {
     display: flex;
@@ -36,11 +29,9 @@ body{
     color: white;
     font-family: "Philosopher";
 }
+
 .navigation-f1 {
     margin-top: 3vw;
-}
-.log{
-    font-size: 2vw;
 }
 .navigation-f2 {
     display: flex;
@@ -65,104 +56,81 @@ body{
     gap: 1.5vw;
     margin-bottom: 50vw;
 }
-/*начало Задайте нам свой вопрос*/
+/*начало добавить товар*/
 .d-f {
     display: flex;
-    flex-direction: column;
+    /* margin: 0 100px 0 0; */
     gap: 7vw;
     margin-left: 18vw;
-    height: auto;
+    background-image: url("../img/imgheader1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height:100vh;
+    /*height: auto;*/
 }
-
 .container {
     display: flex;
     margin-top: 3.5vw;
     flex-direction: column;
     gap: 5vw;
-    margin-left: 7vw;
-    margin-bottom: 10.75vw;
+    margin-left: 5vw;
+    margin-bottom: 5vw;
 }
-
 /*поле ссылки*/
 .point {
     display: flex;
-    width: 300px;
-    height: 60px;
+    width: 600px;
+    height: 5vh;
     padding-left: 50px;
     align-items: center;
     background: rgba(25, 29, 33, 0.9);
 }
-
 .point p {
     color: white;
     font-family: 'Comfortaa';
     font-size: 1.5vw;
 }
-
 /*--------------*/
-/*заказы*/
-.container1 {
-    display: grid;
-    height: auto;
-    grid-template-columns: repeat(auto-fill, 15vw);
-    justify-content: start;
-    gap: 5.2vw 3vw;
-}
-
-.card {
+.container7 {
     display: flex;
-    background-color: #191D21;
-    width: auto;
-    height: auto;
-    border: 2px solid white;
     flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 1.5vw;
+    flex-wrap: wrap;
+    row-gap: 2vw;
 }
-
-.card-title {
-    margin-top: 1vw;
+.container7 p{
     color: white;
     font-size: 1.2vw;
-    font-family: 'Philosopher';
+    font-family: "Philosopher";
 }
-.card img {
-    width: auto;
-    height: 150px;
-}
-.box{
-    width: auto;
-    height: 2vw;
-}
-.card-text {
+.table-block {
     color: white;
-    font-size: 1.3vw;
-    font-family: 'Philosopher';
+    background-color: #212529;
+    margin: 2vw 0 16.8vw;
+}
+img{
+    width: auto;
+    height: 8vw;
+}
+th {
+    padding: 1.2vw 1.2vw;
+    border: 1px solid white;
     text-align: center;
 }
-.btn_top1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.btn_top1_more1 {
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    width: 250px;
-    margin-bottom: 1vw;
-    height: 35px;
-    font-size: 0.9vw;
+.table-title {
+    font-size: 1.1vw;
     font-family: 'Philosopher';
-    letter-spacing: 2.5px;
 }
 
-.btn_top1_more1:hover {
-    background: white;
-    color: black;
-    transition: 2s;
+.table-content {
+    font-size: 0.9vw;
+    font-family: 'Comfortaa';
+}
+
+.table-content a {
+    color: white;
+    font-size: 1vw;
 }
 /*верстка адаптива*/
 
@@ -181,21 +149,17 @@ body{
     .navigation-f1 {
         margin-top: 4vw;
     }
-    .point {
-        width: 270px;
-        height: 60px;
-        padding-left: 50px;
+    .d-f {
+        margin-left: 16vw;
     }
-    .card img {
-        width: auto;
-        height: 11vw;
-        border-radius: 50%;
+    .container7 p {
+        font-size: 1.4vw;
     }
-    .btn_top1_more1 {
-        width: 13vw;
-        margin-bottom: 1vw;
-        height: 35px;
-        font-size: 0.9vw;
+    .table-title {
+        font-size: 1.3vw;
+    }
+    .table-content {
+        font-size: 1vw;
     }
 }
 @media screen and (max-width: 1441px){
@@ -206,33 +170,19 @@ body{
     .log{
         font-size: 2.2vw;
     }
-    .point {
-        width: 200px;
-        height: 50px;
-        padding-left: 50px;
-    }
     .point p {
         font-size: 1.7vw;
     }
     .d-f {
-        gap: 7vw;
-        margin-left: 20vw;
+        margin-left: 18vw;
     }
-    .card {
-        border: 2px solid white;
-        gap: 1.5vw;
-    }
-    .card-title {
-        margin-top: 1vw;
-        font-size: 1.4vw;
-    }
-    .card-text {
+    .container7 p {
         font-size: 1.5vw;
     }
-    .btn_top1_more1 {
-        width: 13vw;
-        margin-bottom: 1vw;
-        height: 35px;
+    .table-title {
+        font-size: 1.4vw;
+    }
+    .table-content {
         font-size: 1.1vw;
     }
 }
@@ -241,41 +191,18 @@ body{
     .navigation{
         font-size: 1.9vw;
         gap: 2vw;
+        padding-right: 30px;
     }
     .log{
         font-size: 2.7vw;
     }
-    .point {
-        width: 210px;
-        height: 50px;
-        padding-left: 50px;
+    .container7 p {
+        font-size: 1.8vw;
     }
-    .point p {
-        font-size: 1.9vw;
-    }
-    .d-f {
-        margin-left: 21vw;
-    }
-    .card {
-        border: 2px solid white;
-        gap: 2vw;
-    }
-    .card img {
-        width: auto;
-        height: 12vw;
-        border-radius: 50%;
-    }
-    .card-title {
-        margin-top: 1vw;
+    .table-title {
         font-size: 1.5vw;
     }
-    .card-text {
-        font-size: 1.6vw;
-    }
-    .btn_top1_more1 {
-        width: 13vw;
-        margin-bottom: 1vw;
-        height: 4vw;
+    .table-content {
         font-size: 1.2vw;
     }
 }
@@ -285,143 +212,88 @@ body{
         font-size: 2vw;
         gap: 2vw;
         padding-right: 30px;
+        padding-left: 50px;
     }
     .log{
         font-size: 2.9vw;
     }
-    .point {
-        width: 210px;
-        height: 50px;
-        padding-left: 50px;
-    }
-    .point p {
-        font-size: 2vw;
-    }
-    .d-f {
-        margin-left: 21vw;
-    }
-    .container1 {
-        grid-template-columns: repeat(auto-fill, 19vw);
-        gap: 5.2vw 3vw;
-    }
-    .card {
-        border: 2px solid white;
-        gap: 2vw;
-    }
-    .card img {
-        width: auto;
-        height: 13vw;
-        border-radius: 50%;
-    }
-    .card-title {
-        margin-top: 2vw;
-        font-size: 1.6vw;
-    }
-    .card-text {
-        font-size: 1.8vw;
-    }
-    .btn_top1_more1 {
-        width: 13vw;
-        margin-bottom: 2vw;
-        height: 4vw;
-        font-size: 1.4vw;
-    }
+
 }
 @media screen and (max-width: 1141px){
     /*шапка*/
     .navigation{
-        font-size: 2vw;
-        gap: 2vw;
-        padding-right: 30px;
-    }
-    .log{
-        font-size: 2.9vw;
-    }
-    .point {
-        width: 210px;
-        height: 50px;
-        padding-left: 50px;
-    }
-    .point p {
-        font-size: 2.2vw;
-    }
-    .d-f {
-        margin-left: 22vw;
-    }
-    .container1 {
-        grid-template-columns: repeat(auto-fill, 19vw);
-        gap: 5.2vw 3vw;
-    }
-    .card {
-        border: 2px solid white;
-        gap: 2vw;
-    }
-    .card img {
-        width: auto;
-        height: 14vw;
-        border-radius: 50%;
-    }
-    .card-title {
-        margin-top: 2vw;
+        margin-top: 1.8vw;
+        margin-bottom: 1.8vw;
         font-size: 1.8vw;
+        gap: 5vw;
     }
-    .card-text {
-        font-size: 2vw;
+    .logo > a{
+        font-size: 2.6vw;
     }
-    .btn_top1_more1 {
-        width: 13vw;
-        margin-bottom: 2vw;
-        height: 4vw;
-        font-size: 1.6vw;
+    /*шапка*/
+
+
+    /*кнопка на вверх*/
+    .go-top img{
+        width: auto;
+        height: 3.5vw;
+    }
+    footer{
+        height: 100%;
+        margin-top: 6vw;
+    }
+    .conf{
+        margin-top: 4.5vh;
+        margin-bottom: 4.5vh;
+    }
+    .conf > a{
+        font-size:1.55vw;
+    }
+    footer a{
+        font-size: 1.8vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.7vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
     }
 }
 @media screen and (max-width: 1041px){
     /*шапка*/
     .navigation{
-        font-size: 2.2vw;
-        gap: 2vw;
-        padding-right: 40px;
-        padding-left: 50px;
-    }
-    .log{
-        font-size: 3vw;
-    }
-    .point {
-        width: 210px;
-        height: 50px;
-        padding-left: 50px;
-    }
-    .point p {
-        font-size: 2.2vw;
-    }
-    .d-f {
-        margin-left: 22vw;
-    }
-    .container1 {
-        grid-template-columns: repeat(auto-fill, 19vw);
-        gap: 5.2vw 3vw;
-    }
-    .card {
-        border: 2px solid white;
-        gap: 2vw;
-    }
-    .card img {
-        width: auto;
-        height: 14vw;
-        border-radius: 50%;
-    }
-    .card-title {
-        margin-top: 2vw;
-        font-size: 1.8vw;
-    }
-    .card-text {
+        margin-top: 1.9vw;
+        margin-bottom: 1.9vw;
         font-size: 2vw;
     }
-    .btn_top1_more1 {
-        width: 13vw;
-        margin-bottom: 2vw;
-        height: 4vw;
-        font-size: 1.6vw;
+    .logo > a{
+        font-size: 2.7vw;
+    }
+    /*шапка*/
+
+
+    /*Начало блока Footer*/
+    footer{
+        height: 100%;
+        margin-top: 7.5vw;
+    }
+    .conf{
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    .conf > a{
+        font-size:1.75vw;
+    }
+    footer a{
+        font-size: 1.9vw;
+        margin-top: 2.5vh;
+    }
+    .cop{
+        font-size: 1.85vw;
+        width: 100%;
+        padding-top: 4vh;
+        padding-bottom: 4vh;
     }
 }
 @media screen and (max-width: 1000px){

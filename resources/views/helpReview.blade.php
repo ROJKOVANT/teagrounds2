@@ -11,40 +11,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset("css/helpReview.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/constructor.css") }}">
     <title>Корзина</title>
 </head>
 
 <body>
 <!--блок шапка-->
 <header>
-    <ul class="navigation">
-        @php
-            use Illuminate\Support\Facades\Auth;
-            use App\Models\Cart;
-
-            $count_cart = Cart::where('user_id', Auth::user()->id)->get();
-            $count = 0;
-            for ($i=0; $i < count($count_cart); $i++)
-            {
-                $count +=$count_cart[$i]['quantity'];
-            }
-        @endphp
+    <div class="navbar">
         <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
-        <li><a href="/about" class="link-effect">О нас</a></li>
-        <li><a href="/shop" class="link-effect">Магазин</a></li>
-        <li><a href="/blog" class="link-effect">Блог</a></li>
-        <li><a href="/constructor" class="link-effect">Конструктор</a></li>
-        <li><a href="/carts" class="link-effect">Корзина{{$count}}</a></li>
-        <li class="login"><a href="/register">
-                @auth
-                    {{ Auth::user()->name }}
-                @endauth
+        <ul class="navigation">
+            <li class="nav-item"><a href="adminTovar" class="link-effect">Товары</a></li>
+            <li class="nav-item"><a href="adminBlog" class="link-effect">Статьи</a></li>
+            <li class="nav-item"><a href="/orders" class="link-effect">Заказы</a></li>
+            <li class="nav-item"><a href="/podaroc" class="link-effect">Наборы</a></li>
+            <li class="nav-item"><a href="/helpReview" class="link-effect">Запросы</a></li>
+            <li class="nav-item"><a href="/register">
+                    @auth
+                        {{ Auth::user()->name }}
+                    @endauth
 
-                @guest
-                    Войти
-                @endguest
-            </a></li>
-    </ul>
+                    @guest
+                        Войти
+                    @endguest
+                </a>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
 </header>
 <section class="paragraph">
     @if(session()->has('message'))
@@ -79,15 +77,28 @@
 
 <!--блок footer-->
 <footer>
-    <ul class="navigation_footer">
+    <nav class="navbar">
         <li class="logo"><a href="/" class="link-effect">Tea Grounds</a></li>
-        <li><a href="/about" class="link-effect">О нас</a></li>
-        <li><a href="/shop" class="link-effect">Магазин</a></li>
-        <li><a href="/blog" class="link-effect">Блог</a></li>
-        <li><a href="/constructor" class="link-effect">Конструктор</a></li>
-    </ul>
+        <ul class="navigation">
+            <li class="nav-item"><a href="adminTovar" class="link-effect">Товары</a></li>
+            <li class="nav-item"><a href="adminBlog" class="link-effect">Статьи</a></li>
+            <li class="nav-item"><a href="/orders" class="link-effect">Заказы</a></li>
+            <li class="nav-item"><a href="/podaroc" class="link-effect">Наборы</a></li>
+            <li class="nav-item"><a href="/helpReview" class="link-effect">Запросы</a></li>
+            <li class="nav-item"><a href="/register">
+                    @auth
+                        {{ Auth::user()->name }}
+                    @endauth
+
+                    @guest
+                        Войти
+                    @endguest
+                </a>
+            </li>
+        </ul>
+    </nav>
     <div class="conf">
-        <a href="" class="link-effect">Политика конфидециальности</a>
+        <a href="">Политика конфидециальности</a>
     </div>
     <div class="cop">
         <p>Tea Grounds © 2022 Все права защищены</p>

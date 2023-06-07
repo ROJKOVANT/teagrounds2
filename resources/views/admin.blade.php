@@ -51,7 +51,8 @@
             <p>Данные клиента</p>
             <div class="block">
                 <div class="info-avatar">
-                    <div class="elips"></div>
+                    <img src="img/user.png" alt="">
+                </div>
                     <p>{{$el->fio}}</p>
                 </div>
                 <div class="info-info">

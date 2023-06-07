@@ -99,7 +99,28 @@ th {
     color: white;
     font-size: 1vw;
 }
-
+.btn_top1 {
+    font-size: 1vw;
+    font-family: 'Philosopher', sans-serif;
+    border: 1px solid white;
+    color: white;
+    background-color: #212529;
+    padding: 0.3vw 0.7vw;
+    transition: 2s;
+}
+.btn_top1:hover{
+    background-color: white;
+    color: black;
+}
+.btn_top2{
+    font-size: 1vw;
+    font-family: 'Philosopher', sans-serif;
+    border: 1px solid white;
+    color: white;
+    background-color: #212529;
+    padding: 0.5vw 4vw;
+    transition: 2s;
+}
 /*Конец  блока корзина*/
 
 /*--------------------------------------------------------------------------------------------------------------------------------------*/

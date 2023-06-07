@@ -54,7 +54,25 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+        ],
+                    [
+                       'fio.required' => 'ФИО должны быть заполнено',
+                       'fio.string' => 'Поле ФИО должно быть строкой',
+
+                       'name.required' => 'Логин должнен быть заполнен',
+                       'name.string' => 'Логин должнен быть строкой',
+
+                       'email.required' => 'Почта должна быть заполнена',
+                       'email.unique' => 'Почта уже занята',
+                       'email.email' => 'Поле почта некорректна',
+                        'password.confirmed' => 'Ваши пароли не совпадают!',
+                       'password.required' => 'Пароль должен быть заполнен',
+                        'password.min' => 'Пароль должен быть больше 8 символов',
+                       'password-confirm' => 'Повторный Пароль должен быть заполнен',
+
+                       'rules.required' => 'Вы не согласились с обработкой персональных данных'
+                   ]
+        );
     }
 
     /**

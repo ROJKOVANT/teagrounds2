@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Admin
 {
@@ -16,10 +17,15 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (\Auth::user()->admin){
-            return $next($request);
+        $user = Auth::user();
+        if($user){
+            if($user->admin == 1){
+                return $next($request);
+            } else {
+                return redirect()->route('welcome');
+            }
+        } else {
+            return redirect()->route('welcome');
         }
-
-        return redirect('home');
     }
 }

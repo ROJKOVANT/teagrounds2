@@ -501,6 +501,25 @@ textarea{
     background-color: white;
     color: black;
 }
+.block{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 1vw;
+    height: 1vw;
+    margin-bottom: 2vw;
+}
+.block input{
+    width: 3vw;
+    height: 1vw;
+    margin: 0;
+}
+.block p{
+    color: white;
+    font-family: 'Philosopher';
+    font-size: 1vw;
+}
 /*Конец блока напишите нам*/
 
 /*-------------------------------------*/

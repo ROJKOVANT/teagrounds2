@@ -79,21 +79,24 @@
             @foreach($gifts as $eli)
                     <div class="card">
                         <h4 class="card-title">Товар {{$eli->delivery_status}}</h4>
-                        <img src="{{$eli->picture}}" alt="">
                         @switch($eli->box_type)
                             @case('1')
+                            <img class="box" src="img/image 33.png" alt="">
                             <p class="card-text">Пластиковый пакет на бумажной основе</p>
                             @break
 
                             @case('2')
+                            <img class="box" src="img/image 37.png" alt="">
                             <p class="card-text">Бумажные обечайки на малые коробки</p>
                             @break
 
                             @case('3')
+                            <img class="box" src="img/image 35.png" alt="">
                             <p class="card-text">Бумажные обечайки на средние коробки</p>
                             @break
 
                             @case('4')
+                            <img class="box" src="img/image 36.png" alt="">
                             <p class="card-text">Бумажные обечайки на большие коробки</p>
                             @break
                         @endswitch

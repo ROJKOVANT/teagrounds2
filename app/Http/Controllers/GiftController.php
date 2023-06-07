@@ -23,19 +23,23 @@ class GiftController extends Controller
         switch ($request->input('box')){
         case '1':
             if($count > 3){
-               return redirect('/constructorCreate');}
+                return redirect()->back()->withErrors(['all' => 'Вы выбрали больше трех товаров!']);
+            }
            break;
         case '2':
             if($count > 5){
-               return redirect('/constructorCreate');}
+                return redirect()->back()->withErrors(['all' => 'Вы выбрали больше 5 товаров!']);
+            }
            break;
         case '3':
             if($count > 8){
-               return redirect('/constructorCreate');}
+                return redirect()->back()->withErrors(['all' => 'Вы выбрали больше 8 товаров!']);
+            }
            break;
         case '4':
             if($count > 10){
-               return redirect('/constructorCreate');}
+                return redirect()->back()->withErrors(['all' => 'Вы выбрали больше 10 товаров!']);
+            }
             break;}$json = json_encode($items);
         Gift::create([
             'user_id'=>$user->id,
@@ -51,7 +55,7 @@ class GiftController extends Controller
             'payment_status' => 'Оплата наличными',
             'delivery_status' => 'в обработке',
         ]);
-        return  redirect('/');
+        return  redirect('/constructor');
     }
 
     /*заказы у админа*/

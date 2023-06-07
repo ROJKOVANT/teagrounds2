@@ -202,14 +202,18 @@
         </div>
         <form name="{{route('welcome')}}" method="Post">
             @csrf
-            <input name="name" type="text" placeholder="Введите имя">
+            <input name="name" type="text" placeholder="Введите имя" required>
             <br>
-            <input name="email" type="text" placeholder="Введите почту">
+            <input name="email" type="text" placeholder="Введите почту" required>
             <br>
-            <input size="30" name="header" type="text" placeholder="Введите название темы" />
+            <input size="30" name="header" type="text" placeholder="Введите название темы" required/>
             <br>
-            <textarea name="message" placeholder="Введите сообщение" cols="40" rows="15"></textarea>
+            <textarea name="message" placeholder="Введите сообщение" cols="40" rows="15" required></textarea>
             <br>
+            <div class="block">
+                <input type="checkbox" name="rules" class="check" required>
+                <p class="check-p">Вы соглашаетесь на обработку данных</p>
+            </div>
             <button type="submit" class="btn_top1">Отправить</button>
         </form>
     </div>

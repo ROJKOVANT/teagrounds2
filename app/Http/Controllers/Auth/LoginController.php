@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Validator;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,26 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ],
+            [
+                'email.required' => 'Почта должна быть заполнена',
+                'email.unique' => 'Почта уже занята',
+                'email.email' => 'Поле почта некорректна',
+
+                'password.confirmed' => 'Подтверждение пароля не совпадает.',
+                'password.required' => 'Пароль должен быть заполнен',
+                'password.min' => 'Пароль должен быть больше 8 символов',
+
+
+                'rules.required' => 'Вы не согласились с обработкой персональных данных'
+            ]
+        );
     }
 }
