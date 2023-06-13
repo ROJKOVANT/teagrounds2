@@ -89,7 +89,7 @@
                     @if($el->delivery_status=="пришел")
                     <p style="color: orange">Пришел</p>
                     @else
-                    <form action="{{route('orders.index', ['id' => $el->id])}}" method="POST">
+                    <form action="{{route('orders.status.update', ['id' => $el->id])}}" method="POST">
                         @csrf
                         @method('PATCH')
                         <div>

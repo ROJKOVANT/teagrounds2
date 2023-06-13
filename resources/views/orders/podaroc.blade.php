@@ -72,7 +72,23 @@
                 <th>{{$el->phone}}</th>
                 <th>{{$el->devil}}</th>
                 <th>{{$el->address}}</th>
-                <th><img src="{{$el->picture}}" style="height: 5vw; width: 5vw;" alt=""></th>
+                <th>@switch($el->box_type)
+                        @case('1')
+                        <img class="box" src="img/image 33.png" alt="" style="width: auto; height: 5vw;">
+                        @break
+
+                        @case('2')
+                        <img class="box" src="img/image 37.png" alt="">
+                        @break
+
+                        @case('3')
+                        <img class="box" src="img/image 35.png" alt="">
+                        @break
+
+                        @case('4')
+                        <img class="box" src="img/image 36.png" alt="">
+                @break
+                @endswitch
                 <th>@switch($el->box_type)
                         @case('1')
                         <p class="card-text">Пластиковый пакет на бумажной основе</p>
@@ -100,7 +116,7 @@
                         @if($el->delivery_status=="пришел")
                             <p style="color: orange">Пришел</p>
                         @else
-                            <form action="{{route('orders.podaroc', ['id' => $el->id])}}" method="POST">
+                            <form action="{{route('orders.podaroc.update', ['id' => $el->id])}}" method="POST">
                                 @csrf
                                 @method('PATCH')
                                 <div>

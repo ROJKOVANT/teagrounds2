@@ -126,8 +126,8 @@
                             <label for="address">Выберите адресс доставки </label>
                             <input type="text" name="address" list="address" required >
                             <select id="address">
-                                <option value="ул.Полесская, 12">забрать из магазина</option>
-                                <option value="Введите адресс">доставка на дом</option>
+                                <option selected value="ул.Полесская, 12">забрать из магазина</option>
+                                <option  value="Введите адресс">доставка на дом</option>
                             </select>
                         </div>
                     </div>

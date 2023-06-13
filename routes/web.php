@@ -116,14 +116,14 @@ Route::get('/cardOnline', function () {
 
 
 /*заказы*/
-Route::post('/delivered/{id}', [App\Http\Controllers\HomeController::class, 'delivered'])->name('orders.index');/*вывод всех заказов*/
-Route::patch('/delivered/update/{id}', [App\Http\Controllers\HomeController::class, 'update_delivered'])->name('orders.index');/*сохранить изменен*/
+Route::post('/delivered/{id}', [App\Http\Controllers\HomeController::class, 'delivered'])->name('orders.status');/*вывод всех заказов*/
+Route::patch('/delivered/update/{id}', [App\Http\Controllers\HomeController::class, 'update_delivered'])->name('orders.status.update');/*сохранить изменен*/
 Route::get('/product', [App\Http\Controllers\HomeController::class, 'ordersUser'])->name('product');/*вывод всех заказов у пользователя*/
 Route::get('/products/more/{id}', [App\Http\Controllers\HomeController::class, 'productMore'])->name('products.more');/*вывод информации о заказе*/
 
 /*подарок*/
-Route::post('/podarocdelivered/{id}', [App\Http\Controllers\GiftController::class, 'delivered'])->name('orders.podaroc');/*вывод всех заказов*/
-Route::patch('/podarocdelivered/update/{id}', [App\Http\Controllers\GiftController::class, 'update_delivered'])->name('orders.podaroc');/*сохранить изменение товара*/
+Route::post('/podarocdelivered/{id}', [App\Http\Controllers\GiftController::class, 'delivered'])->name('orders.podaroc.status');/*вывод всех заказов*/
+Route::patch('/podarocdelivered/update/{id}', [App\Http\Controllers\GiftController::class, 'update_delivered'])->name('orders.podaroc.update');/*сохранить изменение товара*/
 //Route::get('/podarocproduct', [App\Http\Controllers\GiftController::class, 'podarocUser'])->name('product');/*вывод всех заказов у пользователя*/
 Route::get('/box/{id}', function ($id) {
     $box = \App\Models\Gift::find($id);

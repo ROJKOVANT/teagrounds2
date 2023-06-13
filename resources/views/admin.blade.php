@@ -45,29 +45,28 @@
         $data = \App\Models\User::all();
     @endphp
 
-        @foreach($data as $el)
+    @foreach($data as $el)
         <!--Клиенты-->
-        <div class="info">
-            <p>Данные клиента</p>
-            <div class="block">
-                <div class="info-avatar">
-                    <img src="img/user.png" alt="">
-                </div>
-                    <p>{{$el->fio}}</p>
-                </div>
-                <div class="info-info">
-                    <div class="info-login">
-                        <h4>Логин:</h4>
-                        <p>{{$el->name}}</p>
+            <div class="info">
+                <p>Данные клиента</p>
+                <div class="block">
+                    <div class="info-avatar">
+                        <img src="img/user.png" alt="">
+                        <p>{{$el->fio}}</p>
                     </div>
-                    <div class="info-email">
-                        <h4>Почта:</h4>
-                        <p>{{$el->email}}</p>
+                    <div class="info-info">
+                        <div class="info-login">
+                            <h4>Логин:</h4>
+                            <p>{{$el->name}}</p>
+                        </div>
+                        <div class="info-email">
+                            <h4>Почта:</h4>
+                            <p>{{$el->email}}</p>
+                        </div>
+                        <a href="{{route('admin.deleteInfo', ['id'=> $el->id])}}"><button type="submit" class="">Удалить клиента</button></a>
                     </div>
-                    <a href="{{route('admin.deleteInfo', ['id'=> $el->id])}}"><button type="submit" class="">Удалить клиента</button></a>
                 </div>
             </div>
-        </div>
-            @endforeach
+        @endforeach
     </div>
 </div>
